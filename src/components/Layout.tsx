@@ -57,6 +57,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
           <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
           <NavItem isActive={isActive('/contact')} onClick={() => handleNavigation('/contact')}>Contact</NavItem>
+          <NavItem isActive={isActive('/consultation')} onClick={() => handleNavigation('/consultation')}>Book a consultation</NavItem>
           <NavItem isActive={isActive('/about')} onClick={() => handleNavigation('/about')}>About</NavItem>
         </Nav>
       </Sidebar>
@@ -75,6 +76,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
             <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
             <NavItem isActive={isActive('/contact')} onClick={() => handleNavigation('/contact')}>Contact</NavItem>
+            <NavItem isActive={isActive('/consultation')} onClick={() => handleNavigation('/consultation')}>Book a consultation</NavItem>
             <NavItem isActive={isActive('/about')} onClick={() => handleNavigation('/about')}>About</NavItem>
           </Nav>
         </MobileDrawer>
