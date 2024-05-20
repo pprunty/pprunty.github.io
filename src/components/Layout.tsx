@@ -53,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Nav>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
           <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-          <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Creative Writing</NavItem>
+          <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Writing</NavItem>
           <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Products</NavItem>
           <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
           <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
@@ -73,7 +73,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Nav>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-            <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Creative Writing</NavItem>
+            <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Writing</NavItem>
             <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Products</NavItem>
             <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
             <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
@@ -94,7 +94,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f0f0f0; /* Ensure consistent background color */
+  background-color: #FFFFFF; /* Ensure consistent background color */
   @media (min-width: 520px) {
     flex-direction: row;
   }

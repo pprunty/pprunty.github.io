@@ -7,7 +7,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
+  background-color: #FFFFFF;
   padding: 20px;
 `;
 
@@ -55,7 +55,7 @@ const VideoWrapper = styled.div<{ videoCount: number }>`
 
   iframe {
     width: 100%;
-      height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '350px')}; /* Maintain 16:9 aspect ratio */
+      height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '220px')}; /* Maintain 16:9 aspect ratio */
 
       @media (min-width: 480px) {
         height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '350px')}; /* Maintain 16:9 aspect ratio */
@@ -79,7 +79,6 @@ const JigsawAcademy: React.FC = () => {
 
   return (
     <Container>
-      <Title>Welcome to My Next.js JigsawAcademy Page!</Title>
       <Grid videoCount={videoCount}>
         {playlists.map((playlistId, index) => (
           <VideoWrapper key={index} videoCount={videoCount}>

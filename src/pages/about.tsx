@@ -7,7 +7,7 @@ const Container = styled.div`
   align-items: center;
 //   justify-content: center;
   padding: 25px;
-  background-color: #f0f0f0;
+  background-color: #FFFFFF;
   margin-top: 20px;
   min-height: 100vh; /* Ensure it covers the full viewport height */
 `;
@@ -30,8 +30,9 @@ const About: React.FC = () => {
   return (
     <Container>
       <Description>
-        I have a B.A in Mathematics and English Literature, a MSc. in High-Performance Computing, over 4 years of experience working as a full-stack developer in areas of Healthcare and Artificial Intelligence.
-        My name is Patrick Prunty... in my spare time I train triathlon, Brasillian Jiu Jitsu, hike and spent time with my loved ones.
+My name is Patrick Prunty and I’m a Fullstack Software Engineer at Optum Healthcare. Previously, I studied MSc. in High-Performance Computing at Trinity College Dublin and B.A Joint Honours in Mathematics and English Literature at University College Dublin (with minor in Portuguese). I am currently working on a couple of open source projects and the release of a mobile application to the iOS and Android app stores.
+
+I do triathlon (swim, cycle and run), travel and follow Chelsea Football Club. I also write on a variety of topics ranging from science and technology to creative prose.        My name is Patrick Prunty... in my spare time I train triathlon, Brasillian Jiu Jitsu, hike and spent time with my loved ones.
       </Description>
       <Description>
         I offer a number of high-quality and free educational content on my YouTube channel Jigsaw Academy, which includes
