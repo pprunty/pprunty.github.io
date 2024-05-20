@@ -162,6 +162,7 @@ const MobileNavbar = styled.div`
 const MobileLogoWrapper = styled.div`
   font-size: 1.5rem;
   margin-top: 25px;
+  cursor: pointer;
   width: 300px;
   img {
     width: 300px; /* Adjust based on your design */
