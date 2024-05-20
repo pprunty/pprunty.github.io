@@ -1,6 +1,7 @@
 import React, { useState, ReactNode } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import ExportedImage from "next-image-export-optimizer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -24,7 +25,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Container>
       <Sidebar>
-        <Title onClick={() => handleNavigation('/')}>PATRICK PRUNTY</Title>
+        <LogoWrapper onClick={() => handleNavigation('/')}>
+          <BoldImage src="/images/logo4.svg" alt="Logo" layout="fixed" width={600} height={100} />
+        </LogoWrapper>
         <Nav>
           <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
@@ -37,7 +40,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </Sidebar>
       <Content isMenuOpen={isMenuOpen}>
         <MobileNavbar>
-          <MobileTitle>PATRICK PRUNTY</MobileTitle>
+          <MobileLogoWrapper>
+            <BoldImage src="/images/logo4.svg" alt="Logo" layout="fixed" width={300} height={100} />
+          </MobileLogoWrapper>
           <MenuButton onClick={toggleMenu}>MENU</MenuButton>
         </MobileNavbar>
         <MobileDrawer isMenuOpen={isMenuOpen}>
@@ -70,7 +75,7 @@ const Container = styled.div`
 `;
 
 const Sidebar = styled.div`
-  width: 250px;
+  width: 270px;
   background-color: inherit; /* Inherit background color from parent */
   color: black;
   display: flex;
@@ -82,11 +87,13 @@ const Sidebar = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  margin-bottom: 20px;
+const LogoWrapper = styled.div`
   cursor: pointer;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.5rem;
+  width: 600px;
+`;
+
+const BoldImage = styled(ExportedImage)`
+  filter: brightness(0) saturate(300%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(300%) contrast(400%);
 `;
 
 const Nav = styled.nav`
@@ -129,8 +136,10 @@ const MobileNavbar = styled.div`
   }
 `;
 
-const MobileTitle = styled.h1`
+const MobileLogoWrapper = styled.div`
   font-size: 1.5rem;
+  margin-top: 28px;
+  width: 150px;
 `;
 
 const MenuButton = styled.button`
