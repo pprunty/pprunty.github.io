@@ -24,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Container>
       <Sidebar>
-        <Title>PATRICK PRUNTY</Title>
+        <Title onClick={() => handleNavigation('/')}>PATRICK PRUNTY</Title>
         <Nav>
           <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
@@ -76,7 +76,6 @@ const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-//   padding: 20px;
   @media (max-width: 520px) {
     display: none;
   }
@@ -114,7 +113,7 @@ const NavItem = styled.div<{ isActive: boolean }>`
 const MobileNavbar = styled.div`
   display: none;
   width: 100%;
-  padding: 0px 10px;
+  padding: 0 10px;
   height: 50px;
   background-color: inherit;
   color: black;
@@ -136,10 +135,10 @@ const MenuButton = styled.button`
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-   &:hover {
-      color: #9F9793;
-      text-decoration: none;
-    }
+  &:hover {
+    color: #9F9793;
+    text-decoration: none;
+  }
 `;
 
 const MobileDrawer = styled.div<{ isMenuOpen: boolean }>`
