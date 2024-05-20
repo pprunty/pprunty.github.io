@@ -109,7 +109,7 @@ const Sidebar = styled.div`
   color: black;
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 20px;
   align-items: flex-start;
   @media (max-width: 520px) {
     display: none;

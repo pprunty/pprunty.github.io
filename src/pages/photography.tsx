@@ -34,15 +34,18 @@ const Grid = styled.div`
   max-width: 1200px;
 
   @media (min-width: 480px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
   }
 `;
 
