@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
-const Layout: React.FC = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
 
