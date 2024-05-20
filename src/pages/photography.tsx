@@ -74,7 +74,16 @@ const Photography: React.FC = () => {
            const imagePath = isExport ? `/patrickprunty${src}` : src;
            return (
              <ImageWrapper key={index}>
-               <ExportedImage src={imagePath} alt={`Photography ${index + 1}`} layout="responsive" width={600} height={500} objectFit="cover" />
+               <ExportedImage
+               src={imagePath}
+               alt={`Photography ${index + 1}`}
+               layout="responsive"
+               width={600}
+               height={500}
+               objectFit="cover"
+                                placeholder={'blur'}
+
+                />
              </ImageWrapper>
            );
          })}
