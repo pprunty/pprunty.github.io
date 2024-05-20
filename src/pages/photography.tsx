@@ -50,7 +50,7 @@ const Grid = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-//   width: 100%;
+  width: 100%;
   height: auto;
   max-width: 600px;
 `;
