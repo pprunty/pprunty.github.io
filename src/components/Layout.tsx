@@ -51,25 +51,24 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={200} height={100} />
         </LogoWrapper>
         <Nav>
-          <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
+          <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
+          <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
           <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
           <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
-          <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
           <NavItem isActive={isActive('/contact')} onClick={() => handleNavigation('/contact')}>Contact</NavItem>
           <NavItem isActive={isActive('/about')} onClick={() => handleNavigation('/about')}>About</NavItem>
         </Nav>
       </Sidebar>
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
         <MobileNavbar>
-          <MobileLogoWrapper>
+          <MobileLogoWrapper onClick={() => handleNavigation('/')}>
             <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={150} height={75} />
           </MobileLogoWrapper>
           <MenuButton onClick={toggleMenu}>MENU</MenuButton>
         </MobileNavbar>
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
           <Nav>
-            <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
             <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>

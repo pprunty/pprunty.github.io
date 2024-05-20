@@ -50,8 +50,9 @@ const Grid = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  width: 100%;
+//   width: 100%;
   height: auto;
+  max-width: 600px;
 `;
 
 const images = [
@@ -73,7 +74,7 @@ const Photography: React.FC = () => {
            const imagePath = isExport ? `/patrickprunty${src}` : src;
            return (
              <ImageWrapper key={index}>
-               <ExportedImage src={imagePath} alt={`Photography ${index + 1}`} layout="responsive" width={500} height={500} objectFit="cover" />
+               <ExportedImage src={imagePath} alt={`Photography ${index + 1}`} layout="responsive" width={600} height={500} objectFit="cover" />
              </ImageWrapper>
            );
          })}

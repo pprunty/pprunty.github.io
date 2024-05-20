@@ -4,7 +4,6 @@ import { Theme } from './theme'; // Import your Theme interface
 export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   body {
     background-color: ${({ theme }) => theme.colorBackground};
-    background: ${({ theme }) => theme.colorBackground};
     color: ${({ theme }) => theme.colorTextPrimary};
     margin: 0;
     padding: 0;
