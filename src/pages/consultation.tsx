@@ -26,7 +26,13 @@ const Description = styled.p`
 const Consultation: React.FC = () => {
   return (
     <Container>
-      <Title>Welcome to My Next.js Consultation Page!</Title>
+      <Description>Welcome to My Next.js Consultation Page!</Description>
+      <Description>General chat: €</Description>
+      <Description>Welcome to My Next.js Consultation Page!</Description>
+      <Description>Welcome to My Next.js Consultation Page!</Description>
+      <Description>Welcome to My Next.js Consultation Page!</Description>
+      <Description>Welcome to My Next.js Consultation Page!</Description>
+
     </Container>
   );
 };

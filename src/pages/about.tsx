@@ -6,9 +6,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 //   justify-content: center;
-  padding: 20px;
+  padding: 25px;
   background-color: #f0f0f0;
-  margin-top: 40px;
+  margin-top: 20px;
   min-height: 100vh; /* Ensure it covers the full viewport height */
 `;
 
@@ -30,10 +30,11 @@ const About: React.FC = () => {
   return (
     <Container>
       <Description>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
+        I have a B.A in Mathematics and English Literature, a MSc. in High-Performance Computing, over 4 years of experience working as a full-stack developer in areas of Healthcare and Artificial Intelligence.
+        My name is Patrick Prunty... in my spare time I train triathlon, Brasillian Jiu Jitsu, hike and spent time with my loved ones.
       </Description>
       <Description>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+        I offer a number of high-quality and free educational content on my YouTube channel Jigsaw Academy, which includes
       </Description>
       <Description>
         Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.

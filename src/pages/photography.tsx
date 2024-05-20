@@ -4,7 +4,7 @@ import ExportedImage from "next-image-export-optimizer";
 
 const Container = styled.div`
   display: flex;
-  margin-top: 40px;
+  margin-top: 25px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@ const Grid = styled.div`
 
 const ImageWrapper = styled.div`
   width: 100%;
-  height: auto;
+  max-height: auto;
   max-width: 600px;
 `;
 
