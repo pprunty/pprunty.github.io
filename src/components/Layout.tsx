@@ -13,7 +13,6 @@ const logoPath = isExport ? `/patrickprunty/images/logo4.svg` : "/images/logo4.s
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [drawerHeight, setDrawerHeight] = useState(0);
-  const [hasMounted, setHasMounted] = useState(false);
   const router = useRouter();
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -29,10 +28,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const isActive = (path: string) => router.pathname === path;
 
   useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  useEffect(() => {
     // Calculate the drawer height after the component mounts
     const calculateHeight = () => {
       if (drawerRef.current) {
@@ -40,22 +35,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       }
     };
 
-    if (hasMounted) {
-      calculateHeight();
+    calculateHeight();
 
-      // Add event listener to recalculate height on window resize
-      window.addEventListener('resize', calculateHeight);
-      return () => {
-        window.removeEventListener('resize', calculateHeight);
-      };
-    }
-  }, [hasMounted, isMenuOpen]);
+    // Add event listener to recalculate height on window resize
+    window.addEventListener('resize', calculateHeight);
+    return () => {
+      window.removeEventListener('resize', calculateHeight);
+    };
+  }, []);
 
   return (
     <Container>
       <Sidebar>
         <LogoWrapper onClick={() => handleNavigation('/')}>
-          <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={600} height={100} />
+          <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={200} height={100} />
         </LogoWrapper>
         <Nav>
           <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
@@ -70,7 +63,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
         <MobileNavbar>
           <MobileLogoWrapper>
-            <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={400} height={75} />
+            <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={150} height={75} />
           </MobileLogoWrapper>
           <MenuButton onClick={toggleMenu}>MENU</MenuButton>
         </MobileNavbar>
@@ -137,7 +130,7 @@ const NavItem = styled.div<{ isActive: boolean }>`
   text-transform: uppercase;
   color: ${({ isActive }) => (isActive ? '#FF70CF' : 'black')};
   font-weight: bold;
-  cursor: default;
+  cursor: pointer;
   transition: color 80ms ease-in-out;
   font-size: 16px;
   &:hover {
@@ -192,12 +185,17 @@ const MobileDrawer = styled.div<{ isMenuOpen: boolean; drawerHeight: number }>`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `0px` : `-${drawerHeight}px`)};
+  top: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? '0px' : `-${drawerHeight}px`)};
   left: 0;
   width: 100%;
   background-color: black;
   z-index: 1;
   transition: top 150ms ease-in-out;
+  overflow: hidden;
+  max-height: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `${drawerHeight}px` : '0')};
+  @media (min-width: 520px) {
+    display: none;
+  }
 `;
 
 const Content = styled.main<{ isMenuOpen: boolean; drawerHeight: number }>`
