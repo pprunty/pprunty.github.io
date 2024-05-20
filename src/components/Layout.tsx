@@ -152,7 +152,7 @@ const MobileDrawer = styled.div<{ isMenuOpen: boolean }>`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: ${({ isMenuOpen }) => (isMenuOpen ? '0px' : '-252px')}; /* Adjust based on content height */
+  top: ${({ isMenuOpen }) => (isMenuOpen ? '0px' : '-255px')}; /* Adjust based on content height */
   left: 0;
   width: 100%;
   background-color: black;
@@ -165,7 +165,7 @@ const Content = styled.main<{ isMenuOpen: boolean }>`
   display: flex;
   flex-direction: column;
   padding: 5px;
-  margin-top: ${({ isMenuOpen }) => (isMenuOpen ? '252px' : '0')}; /* Adjust based on content height */
+  margin-top: ${({ isMenuOpen }) => (isMenuOpen ? '255px' : '0')}; /* Adjust based on content height */
   transition: margin-top 150ms ease-in-out;
   @media (min-width: 520px) {
     margin-top: 0; /* Reset margin-top for desktop */
