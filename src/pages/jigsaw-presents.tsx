@@ -37,12 +37,12 @@ const Grid = styled.div<{ videoCount: number }>`
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: ${({ videoCount }) => (videoCount === 1 ? '1fr' : 'repeat(2, 1fr)')};
+    grid-template-columns: ${({ videoCount }) => (videoCount === 1 ? '1fr' : 'repeat(1, 1fr)')};
     gap: 10px;
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: ${({ videoCount }) => (videoCount === 1 ? '1fr' : 'repeat(3, 1fr)')};
+    grid-template-columns: ${({ videoCount }) => (videoCount === 1 ? '1fr' : 'repeat(2, 1fr)')};
     gap: 20px;
   }
 `;
@@ -55,18 +55,14 @@ const VideoWrapper = styled.div<{ videoCount: number }>`
 
   iframe {
     width: 100%;
-      height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '250px')}; /* Maintain 16:9 aspect ratio */
+      height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '350px')}; /* Maintain 16:9 aspect ratio */
 
       @media (min-width: 480px) {
-        height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '250px')}; /* Maintain 16:9 aspect ratio */
-      }
-
-      @media (min-width: 768px) {
-        height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '230px')}; /* Maintain 16:9 aspect ratio */
+        height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '350px')}; /* Maintain 16:9 aspect ratio */
       }
 
       @media (min-width: 1024px) {
-        height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '215px')}; /* Maintain 16:9 aspect ratio */
+        height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '320px')}; /* Maintain 16:9 aspect ratio */
       }
       object-fit: cover; /* Cover the container to avoid black bars */
   }
