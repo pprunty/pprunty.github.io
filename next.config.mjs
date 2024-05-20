@@ -17,7 +17,7 @@ const nextConfig = {
     nextImageExportOptimizer_remoteImageCacheTTL: "86400", // Cache for 1 day
   },
 //   trailingSlash: true,
-  assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '',
+  assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX,
   eslint: {
     ignoreDuringBuilds: true,
   },
