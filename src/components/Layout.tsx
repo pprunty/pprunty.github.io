@@ -75,7 +75,8 @@ const Sidebar = styled.div`
   color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 15px;
+  align-items: flex-start;
   @media (max-width: 520px) {
     display: none;
   }
@@ -94,19 +95,21 @@ const Nav = styled.nav`
 `;
 
 const NavItem = styled.div<{ isActive: boolean }>`
-  margin: 2px 0;
+  margin: 1px 0;
   text-transform: uppercase;
   color: ${({ isActive }) => (isActive ? '#FF70CF' : 'black')};
   font-weight: bold;
   cursor: default;
   transition: color 120ms ease-in-out;
+  font-size: 16px;
   &:hover {
-    color: #9F9793;
+    color: #B3B3B3;
     text-decoration: none;
   }
   @media (max-width: 520px) {
     font-size: 18px;
-    color: ${({ isActive }) => (isActive ? '#FF70CF' : 'white')};
+    margin 10px 0;
+    color: ${({ isActive }) => (isActive ? 'white' : '#B3B3B3')};
   }
 `;
 
@@ -136,22 +139,23 @@ const MenuButton = styled.button`
   font-weight: bold;
   cursor: pointer;
   &:hover {
-    color: #9F9793;
+    color: #B3B3B3;
     text-decoration: none;
   }
 `;
 
 const MobileDrawer = styled.div<{ isMenuOpen: boolean }>`
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: ${({ isMenuOpen }) => (isMenuOpen ? '50px' : '-150px')}; /* Adjust based on content height */
+  top: ${({ isMenuOpen }) => (isMenuOpen ? '0px' : '-177px')}; /* Adjust based on content height */
   left: 0;
   width: 100%;
   background-color: black;
   z-index: 1;
-  transition: top 0.3s ease-in-out;
+  transition: top 150ms ease-in-out;
 `;
 
 const Content = styled.main<{ isMenuOpen: boolean }>`
@@ -159,8 +163,8 @@ const Content = styled.main<{ isMenuOpen: boolean }>`
   display: flex;
   flex-direction: column;
   padding: 5px;
-  margin-top: ${({ isMenuOpen }) => (isMenuOpen ? '200px' : '0')}; /* Adjust based on content height */
-  transition: margin-top 0.3s ease-in-out;
+  margin-top: ${({ isMenuOpen }) => (isMenuOpen ? '177px' : '0')}; /* Adjust based on content height */
+  transition: margin-top 150ms ease-in-out;
   @media (min-width: 520px) {
     margin-top: 0; /* Reset margin-top for desktop */
   }
