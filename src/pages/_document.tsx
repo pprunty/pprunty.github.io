@@ -34,7 +34,6 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
             <meta name="theme-color" content="#F8F8F8" />
-            <script src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
           {/* Here you can add custom scripts, stylesheets, meta tags, etc.
            <script src="https://accounts.google.com/gsi/client" async defer></script>
            */}
