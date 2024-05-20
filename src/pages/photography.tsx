@@ -60,18 +60,23 @@ const images = [
 //   '/images/c57ad8ca-ee1e-4d3d-a9f6-9b0222e211da.JPG'
 ];
 
+const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
+
 const Photography: React.FC = () => {
-  return (
-    <Container>
-      <Grid>
-        {images.map((src, index) => (
-          <ImageWrapper key={index}>
-            <ExportedImage src={src} alt={`Photography ${index + 1}`} layout="responsive" width={500} height={500} objectFit="cover" />
-          </ImageWrapper>
-        ))}
-      </Grid>
-    </Container>
-  );
+ return (
+     <Container>
+       <Grid>
+         {images.map((src, index) => {
+           const imagePath = isExport ? `/patrickprunty${src}` : src;
+           return (
+             <ImageWrapper key={index}>
+               <ExportedImage src={imagePath} alt={`Photography ${index + 1}`} layout="responsive" width={500} height={500} objectFit="cover" />
+             </ImageWrapper>
+           );
+         })}
+       </Grid>
+     </Container>
+   );
 };
 
 export default Photography;
