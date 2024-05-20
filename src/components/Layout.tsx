@@ -95,7 +95,7 @@ const Container = styled.div`
   flex-direction: column;
   min-height: 100vh;
   background-color: #FFFFFF; /* Ensure consistent background color */
-  @media (min-width: 520px) {
+  @media (min-width: 736px) {
     flex-direction: row;
   }
 `;
@@ -108,7 +108,7 @@ const Sidebar = styled.div`
   flex-direction: column;
   padding: 20px;
   align-items: flex-start;
-  @media (max-width: 520px) {
+  @media (max-width: 736px) {
     display: none;
   }
 `;
@@ -143,7 +143,7 @@ const NavItem = styled.div<{ isActive: boolean }>`
     text-decoration: none;
   }
 
-  @media (max-width: 520px) {
+  @media (max-width: 736px) {
     font-size: 22px;
     color: ${({ isActive }) => (isActive ? 'white' : '#B3B3B3')};
 
@@ -162,7 +162,7 @@ const MobileNavbar = styled.div`
   color: black;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 520px) {
+  @media (max-width: 736px) {
     display: flex;
   }
 `;
@@ -204,7 +204,7 @@ const MobileDrawer = styled.div<{ isMenuOpen: boolean; drawerHeight: number }>`
   transition: top 150ms ease-in-out;
   overflow: hidden;
   max-height: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `${drawerHeight}px` : '0')};
-  @media (min-width: 520px) {
+  @media (min-width: 736px) {
     display: none;
   }
 `;
@@ -216,7 +216,7 @@ const Content = styled.main<{ isMenuOpen: boolean; drawerHeight: number }>`
   padding: 5px;
   margin-top: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `${drawerHeight}px` : '0')};
   transition: margin-top 150ms ease-in-out;
-  @media (min-width: 520px) {
+  @media (min-width: 736px) {
     margin-top: 0; /* Reset margin-top for desktop */
   }
 `;
