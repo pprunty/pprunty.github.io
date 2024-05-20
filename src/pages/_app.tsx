@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { AppProps } from 'next/app';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
-import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../components/Layout';
 import { lightTheme } from '../styles/theme';
 import Head from 'next/head';
@@ -32,7 +31,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <link rel="icon" href="/assets/images/favicon.ico" />
       </Head>
     <StyledThemeProvider theme={lightTheme}>
-      <GlobalStyles />
       <Layout>
         <Component {...pageProps} />
       </Layout>
