@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import GlobalStyle from '../styles/GlobalStyles';
 import { lightTheme } from '../styles/theme';
 import Head from 'next/head';
+import Footer from '../components/Footer';
 
 const updateMetaThemeColor = (color: string) => {
   const metaThemeColor = document.querySelector("meta[name=theme-color]");
@@ -36,6 +37,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      {/*<Footer/>*/}
     </StyledThemeProvider>
     </>
   );

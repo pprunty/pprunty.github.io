@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import ExportedImage from "next-image-export-optimizer";
+import Footer from './Footer'; // Adjust the path if needed
 
 interface LayoutProps {
   children: ReactNode;
@@ -54,7 +55,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
           <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
           <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Writing</NavItem>
-          <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Products</NavItem>
+          <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Services</NavItem>
           <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
           <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
           <NavItem isActive={isActive('/consultation')} onClick={() => handleNavigation('/consultation')}>Book a consultation</NavItem>
@@ -74,7 +75,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
             <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Writing</NavItem>
-            <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Products</NavItem>
+            <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Services</NavItem>
             <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
             <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
             <NavItem isActive={isActive('/consultation')} onClick={() => handleNavigation('/consultation')}>Book a consultation</NavItem>
