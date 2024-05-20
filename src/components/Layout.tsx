@@ -92,6 +92,9 @@ const Title = styled.h1`
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
+  gap: 3px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 `;
 
 const NavItem = styled.div<{ isActive: boolean }>`
@@ -107,8 +110,7 @@ const NavItem = styled.div<{ isActive: boolean }>`
     text-decoration: none;
   }
   @media (max-width: 520px) {
-    font-size: 18px;
-    margin 10px 0;
+    font-size: 22px;
     color: ${({ isActive }) => (isActive ? 'white' : '#B3B3B3')};
   }
 `;
@@ -150,7 +152,7 @@ const MobileDrawer = styled.div<{ isMenuOpen: boolean }>`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: ${({ isMenuOpen }) => (isMenuOpen ? '0px' : '-177px')}; /* Adjust based on content height */
+  top: ${({ isMenuOpen }) => (isMenuOpen ? '0px' : '-252px')}; /* Adjust based on content height */
   left: 0;
   width: 100%;
   background-color: black;
@@ -163,7 +165,7 @@ const Content = styled.main<{ isMenuOpen: boolean }>`
   display: flex;
   flex-direction: column;
   padding: 5px;
-  margin-top: ${({ isMenuOpen }) => (isMenuOpen ? '177px' : '0')}; /* Adjust based on content height */
+  margin-top: ${({ isMenuOpen }) => (isMenuOpen ? '252px' : '0')}; /* Adjust based on content height */
   transition: margin-top 150ms ease-in-out;
   @media (min-width: 520px) {
     margin-top: 0; /* Reset margin-top for desktop */
