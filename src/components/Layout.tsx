@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from 'react';
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import ExportedImage from "next-image-export-optimizer";
@@ -7,9 +7,15 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
+const logoPath = isExport ? `/patrickprunty/images/logo4.svg` : "/images/logo4.svg";
+
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [drawerHeight, setDrawerHeight] = useState(0);
+  const [hasMounted, setHasMounted] = useState(false);
   const router = useRouter();
+  const drawerRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -22,11 +28,34 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const isActive = (path: string) => router.pathname === path;
 
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  useEffect(() => {
+    // Calculate the drawer height after the component mounts
+    const calculateHeight = () => {
+      if (drawerRef.current) {
+        setDrawerHeight(drawerRef.current.scrollHeight);
+      }
+    };
+
+    if (hasMounted) {
+      calculateHeight();
+
+      // Add event listener to recalculate height on window resize
+      window.addEventListener('resize', calculateHeight);
+      return () => {
+        window.removeEventListener('resize', calculateHeight);
+      };
+    }
+  }, [hasMounted, isMenuOpen]);
+
   return (
     <Container>
       <Sidebar>
         <LogoWrapper onClick={() => handleNavigation('/')}>
-          <BoldImage src="/images/logo4.svg" alt="Logo" layout="fixed" width={600} height={100} />
+          <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={600} height={100} />
         </LogoWrapper>
         <Nav>
           <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
@@ -38,14 +67,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <NavItem isActive={isActive('/about')} onClick={() => handleNavigation('/about')}>About</NavItem>
         </Nav>
       </Sidebar>
-      <Content isMenuOpen={isMenuOpen}>
+      <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
         <MobileNavbar>
           <MobileLogoWrapper>
-            <BoldImage src="/images/logo4.svg" alt="Logo" layout="fixed" width={300} height={100} />
+            <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={400} height={75} />
           </MobileLogoWrapper>
           <MenuButton onClick={toggleMenu}>MENU</MenuButton>
         </MobileNavbar>
-        <MobileDrawer isMenuOpen={isMenuOpen}>
+        <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
           <Nav>
             <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
@@ -75,7 +104,7 @@ const Container = styled.div`
 `;
 
 const Sidebar = styled.div`
-  width: 270px;
+  width: 250px;
   background-color: inherit; /* Inherit background color from parent */
   color: black;
   display: flex;
@@ -89,11 +118,10 @@ const Sidebar = styled.div`
 
 const LogoWrapper = styled.div`
   cursor: pointer;
-  width: 600px;
-`;
-
-const BoldImage = styled(ExportedImage)`
-  filter: brightness(0) saturate(300%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(300%) contrast(400%);
+  width: 400px;
+  img {
+    width: 400px; /* Adjust based on your design */
+  }
 `;
 
 const Nav = styled.nav`
@@ -110,7 +138,7 @@ const NavItem = styled.div<{ isActive: boolean }>`
   color: ${({ isActive }) => (isActive ? '#FF70CF' : 'black')};
   font-weight: bold;
   cursor: default;
-  transition: color 120ms ease-in-out;
+  transition: color 80ms ease-in-out;
   font-size: 16px;
   &:hover {
     color: #B3B3B3;
@@ -138,8 +166,11 @@ const MobileNavbar = styled.div`
 
 const MobileLogoWrapper = styled.div`
   font-size: 1.5rem;
-  margin-top: 28px;
-  width: 150px;
+  margin-top: 25px;
+  width: 300px;
+  img {
+    width: 300px; /* Adjust based on your design */
+  }
 `;
 
 const MenuButton = styled.button`
@@ -155,13 +186,13 @@ const MenuButton = styled.button`
   }
 `;
 
-const MobileDrawer = styled.div<{ isMenuOpen: boolean }>`
+const MobileDrawer = styled.div<{ isMenuOpen: boolean; drawerHeight: number }>`
   display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: ${({ isMenuOpen }) => (isMenuOpen ? '0px' : '-255px')}; /* Adjust based on content height */
+  top: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `0px` : `-${drawerHeight}px`)};
   left: 0;
   width: 100%;
   background-color: black;
@@ -169,12 +200,12 @@ const MobileDrawer = styled.div<{ isMenuOpen: boolean }>`
   transition: top 150ms ease-in-out;
 `;
 
-const Content = styled.main<{ isMenuOpen: boolean }>`
+const Content = styled.main<{ isMenuOpen: boolean; drawerHeight: number }>`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   padding: 5px;
-  margin-top: ${({ isMenuOpen }) => (isMenuOpen ? '255px' : '0')}; /* Adjust based on content height */
+  margin-top: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `${drawerHeight}px` : '0')};
   transition: margin-top 150ms ease-in-out;
   @media (min-width: 520px) {
     margin-top: 0; /* Reset margin-top for desktop */
