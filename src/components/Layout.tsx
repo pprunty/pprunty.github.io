@@ -70,7 +70,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
         <MobileNavbar>
           <MobileLogoWrapper onClick={() => handleNavigation('/')}>
-            <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={150} height={75} />
+            <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={250} height={75}
+                                                       placeholder={'blur'}
+             />
           </MobileLogoWrapper>
           <MenuButton onClick={toggleMenu}>MENU</MenuButton>
         </MobileNavbar>
