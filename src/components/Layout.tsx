@@ -58,7 +58,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Nav>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
           <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
-          <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Writing</NavItem>
+         { /* <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Writing</NavItem> */ }
           <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Services</NavItem>
           <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
           <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
@@ -80,7 +80,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Nav>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
-            <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Writing</NavItem>
+         { /* <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Writing</NavItem> */ }
             <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Products</NavItem>
             <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
             <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>

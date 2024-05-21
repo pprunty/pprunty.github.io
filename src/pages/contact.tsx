@@ -53,8 +53,9 @@ const ContactList = styled.ul`
 
 const ContactItem = styled.li`
   margin: 0.5rem 0;
+  font-size: 22px;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
-
   a {
     color: #FF70CF; /* Update link color */
     text-decoration: none;

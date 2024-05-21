@@ -25,6 +25,7 @@ const Description = styled.p`
   text-align: center;
   max-width: 600px;
   margin-top: 0.25rem;
+  font-weight: 600;
 
     @media (max-width: 736px) {
     font-size: 16px;
