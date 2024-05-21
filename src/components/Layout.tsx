@@ -49,7 +49,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <Container>
       <Sidebar>
         <LogoWrapper onClick={() => handleNavigation('/')}>
-          <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={200} height={100} />
+          <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={200}
+          height={100}
+                                          placeholder={'blur'}
+
+           />
         </LogoWrapper>
         <Nav>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
