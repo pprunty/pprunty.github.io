@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import ExportedImage from "next-image-export-optimizer";
+import markdownToHtml from '../../../lib/markdownToHtml';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
@@ -13,6 +14,7 @@ interface Post {
   date: string;
   image: string;
   description: string;
+  excerpt: string;
 }
 
 interface BlogListProps {
@@ -43,18 +45,26 @@ export default function BlogList({ posts }: BlogListProps) {
           <PostList>
             {postsByYear[year].map((post) => (
               <PostItem key={post.slug} onClick={() => router.push(`/blog/${post.slug}`)}>
-                <PostImageWrapper>
-                  <ExportedImage
-                    src={isExport ? `/patrickprunty${post.image}` : post.image}
-                    alt={post.title}
-                    layout="responsive"
-                    width={800}
-                    height={400}
-                    placeholder={'blur'}
-                  />
-                </PostImageWrapper>
-                <PostTitle>{post.title}</PostTitle>
-                <PostDescription>{post.description}</PostDescription>
+                <PostContent>
+                  <PostText>
+                    <PostDateAuthor>{post.date} <em>by</em> Patrick Prunty</PostDateAuthor>
+                    <PostTitle>{post.title}</PostTitle>
+                    <PostExcerpt>
+                      {post.excerpt}... <SeeMore onClick={() => router.push(`/blog/${post.slug}`)}>Read more</SeeMore>
+                    </PostExcerpt>
+                  </PostText>
+                  <PostImageWrapper>
+                    <ExportedImage
+                      src={isExport ? `/patrickprunty${post.image}` : post.image}
+                      alt={post.title}
+                      layout="responsive"
+                      width={800}
+                      height={400}
+                      objectFit="cover"
+                      placeholder={'blur'}
+                    />
+                  </PostImageWrapper>
+                </PostContent>
               </PostItem>
             ))}
           </PostList>
@@ -67,13 +77,15 @@ export default function BlogList({ posts }: BlogListProps) {
 export async function getStaticProps() {
   const postsDirectory = path.join(process.cwd(), 'posts');
   const filenames = fs.readdirSync(postsDirectory);
-  const posts: Post[] = filenames.map((filename) => {
+  const posts: Post[] = await Promise.all(filenames.map(async (filename) => {
     const filePath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(filePath, 'utf8');
-    const { data } = matter(fileContents);
+    const { data, content } = matter(fileContents);
+    const htmlContent = await markdownToHtml(content);
+    const excerpt = htmlContent.replace(/<[^>]*>?/gm, '').substring(0, 200); // Remove HTML tags and take first 200 characters
     const slug = filename.replace(/\.md$/, '');
-    return { slug, ...data } as Post;
-  });
+    return { slug, ...data, excerpt } as Post;
+  }));
 
   // Sort posts by date in descending order
   posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -84,12 +96,12 @@ export async function getStaticProps() {
 // Styled Components
 const Container = styled.div`
   display: flex;
-  margin-top: 25px;
+  margin-top: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #FFFFFF;
-  padding: 20px;
+  padding: 18px;
 `;
 
 const PostTitle = styled.h3`
@@ -98,6 +110,8 @@ const PostTitle = styled.h3`
   margin: 10px 0;
   color: black;
   text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:hover {
     text-decoration: none;
@@ -111,8 +125,8 @@ const YearSection = styled.div`
 `;
 
 const YearHeader = styled.h2`
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
 `;
 
 const PostList = styled.ul`
@@ -123,27 +137,89 @@ const PostList = styled.ul`
 `;
 
 const PostItem = styled.li`
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 18px;
+  padding: 18px;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  transition: box-shadow 0.2s;
+  transition: border-color 0.2s;
   cursor: pointer; /* Add cursor pointer to indicate clickable item */
 
   &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #333; /* Darken the border color on hover */
+  }
+`;
+
+const PostContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+const PostText = styled.div`
+  flex: 1;
+  margin-right: 18px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 18px;
   }
 `;
 
 const PostImageWrapper = styled.div`
-  width: 100%;
-  height: 200px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+  width: 200px;
+  height: 150px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  img {
+//     object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
 `;
 
-const PostDescription = styled.p`
-  font-size: 1rem;
+const PostExcerpt = styled.p`
+  font-size: 16px;
   color: #555;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* Limit to 4 lines */
+  overflow: hidden;
+  max-height: 6em; /* 1.5em * 4 lines */
+  min-height: 4em; /* Ensure minimum height */
+
+  @media (max-width: 480px) {
+    -webkit-line-clamp: 3; /* Limit to 3 lines on mobile */
+    max-height: 4.5em; /* 1.5em * 3 lines */
+    min-height: 3em; /* Ensure minimum height */
+  }
+`;
+
+const SeeMore = styled.span`
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const PostDateAuthor = styled.p`
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+  margin-bottom: 10px;
+
+  em {
+    font-style: italic;
+  }
 `;

@@ -5,10 +5,11 @@ import markdownToHtml from '../../../lib/markdownToHtml';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import ExportedImage from "next-image-export-optimizer";
+import Head from 'next/head';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
-export default function BlogPost({ title, date, content, image }) {
+export default function BlogPost({ title, date, content, image, description }) {
   const router = useRouter();
   const imagePath = isExport ? `/patrickprunty${image}` : image;
 
@@ -17,22 +18,33 @@ export default function BlogPost({ title, date, content, image }) {
   };
 
   return (
-    <Container>
-      <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
-      <ImageWrapper>
-        <ExportedImage
-          src={imagePath}
-          alt={title}
-          layout="responsive"
-          width={800}
-          height={400}
-          placeholder={'blur'}
-        />
-      </ImageWrapper>
-      <Title>{title}</Title>
-      <Date>{date}</Date>
-      <Content dangerouslySetInnerHTML={{ __html: content }} />
-    </Container>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={imagePath} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${router.asPath}`} />
+      </Head>
+      <Container>
+        <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
+        <ImageWrapper>
+          <ExportedImage
+            src={imagePath}
+            alt={title}
+            layout="responsive"
+            width={800}
+            height={400}
+            placeholder={'blur'}
+          />
+        </ImageWrapper>
+        <Title>{title}</Title>
+        <Date>{date}</Date>
+        <Content dangerouslySetInnerHTML={{ __html: content }} />
+      </Container>
+    </>
   );
 }
 
@@ -61,7 +73,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #FFFFFF;
-  padding: 20px;
+  padding: 18px;
 `;
 
 const BackArrow = styled.div`
@@ -75,8 +87,7 @@ const BackArrow = styled.div`
   text-decoration: none; /* Ensure no underline */
 
   @media (max-width: 480px) {
-    grid-template-columns: repeat(1, 1fr);
-  margin-bottom: 40px;
+    margin-bottom: 40px;
   }
 
   &:hover {
@@ -87,9 +98,18 @@ const BackArrow = styled.div`
 
 const ImageWrapper = styled.div`
   width: 100%;
-  max-width: 800px;
+  max-width: 800px; /* Default max-width for larger screens */
   margin-bottom: 20px;
+
+  @media (min-width: 1024px) {
+    max-width: 400px; /* Smaller max-width for desktop devices */
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 800px; /* Original max-width for smaller screens */
+  }
 `;
+
 
 const Title = styled.h1`
   font-size: 2.5rem; /* Increased font size */
@@ -98,16 +118,24 @@ const Title = styled.h1`
   color: #333; /* Darker color */
   text-align: center; /* Center alignment */
   line-height: 1.2; /* Better line height */
+
+  @media (max-width: 768px) {
+    font-size: 2rem; /* Smaller font size on tablets */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem; /* Smaller font size on mobile devices */
+  }
 `;
 
 const Date = styled.p`
   font-size: 1rem;
   color: #777;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 `;
 
 const Content = styled.div`
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.6;
   color: #333;
   max-width: 800px;
@@ -129,5 +157,29 @@ const Content = styled.div`
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem; /* Smaller font size on tablets */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px; /* Smaller font size on mobile devices */
+  }
+`;
+
+const Description = styled.p`
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem; /* Smaller font size on tablets */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.7rem; /* Smaller font size on mobile devices */
   }
 `;
