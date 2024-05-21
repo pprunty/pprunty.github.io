@@ -7,11 +7,23 @@ import ExportedImage from "next-image-export-optimizer";
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
-export default function BlogList({ posts }) {
+interface Post {
+  slug: string;
+  title: string;
+  date: string;
+  image: string;
+  description: string;
+}
+
+interface BlogListProps {
+  posts: Post[];
+}
+
+export default function BlogList({ posts }: BlogListProps) {
   const router = useRouter();
 
   // Group posts by year
-  const postsByYear = posts.reduce((acc, post) => {
+  const postsByYear = posts.reduce<Record<number, Post[]>>((acc, post) => {
     const year = new Date(post.date).getFullYear();
     if (!acc[year]) {
       acc[year] = [];
@@ -21,7 +33,7 @@ export default function BlogList({ posts }) {
   }, {});
 
   // Get an array of years sorted in descending order
-  const years = Object.keys(postsByYear).sort((a, b) => b - a);
+  const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
 
   return (
     <Container>
@@ -55,16 +67,16 @@ export default function BlogList({ posts }) {
 export async function getStaticProps() {
   const postsDirectory = path.join(process.cwd(), 'posts');
   const filenames = fs.readdirSync(postsDirectory);
-  const posts = filenames.map((filename) => {
+  const posts: Post[] = filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(fileContents);
     const slug = filename.replace(/\.md$/, '');
-    return { slug, ...data };
+    return { slug, ...data } as Post;
   });
 
   // Sort posts by date in descending order
-  posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return { props: { posts } };
 }
