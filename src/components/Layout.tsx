@@ -170,11 +170,11 @@ const MobileNavbar = styled.div`
 
 const MobileLogoWrapper = styled.div`
   font-size: 1.5rem;
-  margin-top: 25px;
+  margin-top: 28px;
   cursor: pointer;
-  width: 300px;
+  width: 480px;
   img {
-    width: 300px; /* Adjust based on your design */
+    width: 480px; /* Adjust based on your design */
   }
 `;
 
