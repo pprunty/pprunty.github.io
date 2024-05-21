@@ -20,7 +20,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: black;
   text-align: center;
   max-width: 600px;
