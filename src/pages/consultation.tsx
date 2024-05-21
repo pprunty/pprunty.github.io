@@ -28,7 +28,7 @@ const Consultation: React.FC = () => {
   return (
   <>
           <Head>
-              <title>Patrick Prunty - Consultation</title>
+              <title>Patrick Prunty - Consultations</title>
               <meta name="viewport" content="width=device-width, initial-scale=1" />
               <meta name="description" content="Book a consultation service with me." />
               <link rel="icon" href="/patrickprunty/images/favicon.ico" />
