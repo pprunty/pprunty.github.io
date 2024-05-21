@@ -21,6 +21,13 @@ interface BlogListProps {
   posts: Post[];
 }
 
+// Utility function to format the date
+function formatDate(dateString: string): string {
+  const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat('en-US', options).format(date);
+}
+
 export default function BlogList({ posts }: BlogListProps) {
   const router = useRouter();
 
@@ -47,7 +54,7 @@ export default function BlogList({ posts }: BlogListProps) {
               <PostItem key={post.slug} onClick={() => router.push(`/blog/${post.slug}`)}>
                 <PostContent>
                   <PostText>
-                    <PostDateAuthor>{post.date} <em>by</em> Patrick Prunty</PostDateAuthor>
+                    <PostDateAuthor>{formatDate(post.date)} by Patrick Prunty</PostDateAuthor>
                     <PostTitle>{post.title}</PostTitle>
                     <PostExcerpt>
                       {post.excerpt}... <SeeMore onClick={() => router.push(`/blog/${post.slug}`)}>Read more</SeeMore>

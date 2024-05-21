@@ -22,6 +22,8 @@ export default function BlogPost({ title, date, content, image, description }) {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+
+        {/* Open Graph tags */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={imagePath} />
@@ -29,6 +31,16 @@ export default function BlogPost({ title, date, content, image, description }) {
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${router.asPath}`} />
+        <meta property="og:site_name" content="Your Site Name" />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={imagePath} />
+
+        {/* Additional tags for SEO */}
+        <link rel="canonical" href={`${router.asPath}`} />
       </Head>
       <Container>
         <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
