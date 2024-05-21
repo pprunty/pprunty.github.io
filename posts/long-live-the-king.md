@@ -1,7 +1,7 @@
 ---
-title: "Ode to Pokémon"
-date: "2023-08-05"
-image: "/images/pokemon.png"
+title: "Long Live The King"
+date: "2024-08-05"
+image: "/images/afro.png"
 description: "How a video game quietly shaped my childhood."
 ---
 

@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import markdownToHtml from '../../../lib/markdownToHtml';
-import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import styled from 'styled-components';
 import ExportedImage from "next-image-export-optimizer";
 import Head from 'next/head';
+import markdownToHtml from '../../../lib/markdownToHtml';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
@@ -25,6 +25,8 @@ export default function BlogPost({ title, date, content, image, description }) {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={imagePath} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${router.asPath}`} />
       </Head>
@@ -79,13 +81,17 @@ const Container = styled.div`
 const BackArrow = styled.div`
   align-self: flex-start;
   margin-bottom: 20px;
-  font-size: 0.9rem;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #000; /* Change color to black */
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  text-decoration: none; /* Ensure no underline */
-
+  &:hover {
+    color: #B3B3B3;
+    text-decoration: none;
+  }
   @media (max-width: 480px) {
     margin-bottom: 40px;
   }
@@ -109,7 +115,6 @@ const ImageWrapper = styled.div`
     max-width: 800px; /* Original max-width for smaller screens */
   }
 `;
-
 
 const Title = styled.h1`
   font-size: 2.5rem; /* Increased font size */

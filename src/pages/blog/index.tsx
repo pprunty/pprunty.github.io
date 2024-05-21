@@ -60,7 +60,7 @@ export default function BlogList({ posts }: BlogListProps) {
                       layout="responsive"
                       width={800}
                       height={400}
-                      objectFit="cover"
+//                       objectFit="cover"
                       placeholder={'blur'}
                     />
                   </PostImageWrapper>
@@ -96,7 +96,7 @@ export async function getStaticProps() {
 // Styled Components
 const Container = styled.div`
   display: flex;
-  margin-top: 10px;
+  margin-top: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -104,8 +104,8 @@ const Container = styled.div`
   padding: 18px;
 `;
 
-const PostTitle = styled.h3`
-  font-size: 1.5rem;
+const PostTitle = styled.div`
+  font-size: 1.3rem;
   font-weight: 700;
   margin: 10px 0;
   color: black;
@@ -124,8 +124,9 @@ const YearSection = styled.div`
   margin-bottom: 40px;
 `;
 
-const YearHeader = styled.h2`
-  font-size: 1.3rem;
+const YearHeader = styled.div`
+  font-size: 1.1rem;
+  font-weight: 600;
   margin-bottom: 18px;
 `;
 
@@ -140,11 +141,16 @@ const PostItem = styled.li`
   margin-bottom: 18px;
   padding: 18px;
   border: 1px solid #ddd;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s, opacity 0.2s; /* Add transform and opacity transitions */
   cursor: pointer; /* Add cursor pointer to indicate clickable item */
 
   &:hover {
     border-color: #333; /* Darken the border color on hover */
+  }
+
+  &:active {
+    transform: scale(0.98); /* Scale down slightly when pressed */
+    opacity: 0.8; /* Slightly reduce opacity when pressed */
   }
 `;
 
@@ -214,7 +220,7 @@ const SeeMore = styled.span`
 `;
 
 const PostDateAuthor = styled.p`
-  font-size: 14px;
+  font-size: 12px;
   color: #777;
   margin: 0;
   margin-bottom: 10px;
