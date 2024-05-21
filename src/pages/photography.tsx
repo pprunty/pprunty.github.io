@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ExportedImage from "next-image-export-optimizer";
+import Head from 'next/head';
 
 const Container = styled.div`
   display: flex;
@@ -68,6 +69,12 @@ const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
 const Photography: React.FC = () => {
  return (
+ <>
+               <Head>
+                   <title>Patrick Prunty - Photography</title>
+                   <meta name="viewport" content="width=device-width, initial-scale=1" />
+                   <link rel="icon" href="/patrickprunty/images/favicon.ico" />
+               </Head>
      <Container>
        <Grid>
          {images.map((src, index) => {
@@ -89,6 +96,7 @@ const Photography: React.FC = () => {
          })}
        </Grid>
      </Container>
+     </>
    );
 };
 

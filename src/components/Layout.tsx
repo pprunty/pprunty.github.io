@@ -53,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </LogoWrapper>
         <Nav>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
-          <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
+          <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
           <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Writing</NavItem>
           <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Services</NavItem>
           <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
@@ -73,9 +73,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
           <Nav>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
-            <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
+            <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
             <NavItem isActive={isActive('/writing')} onClick={() => handleNavigation('/writing')}>Writing</NavItem>
-            <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Services</NavItem>
+            <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Products</NavItem>
             <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
             <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
             <NavItem isActive={isActive('/consultation')} onClick={() => handleNavigation('/consultation')}>Book a consultation</NavItem>
@@ -202,7 +202,7 @@ const MobileDrawer = styled.div<{ isMenuOpen: boolean; drawerHeight: number }>`
   width: 100%;
   background-color: black;
   z-index: 1;
-  transition: top 150ms ease-in-out;
+  transition: top 180ms ease-in-out;
   overflow: hidden;
   max-height: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `${drawerHeight}px` : '0')};
   @media (min-width: 736px) {
@@ -216,7 +216,7 @@ const Content = styled.main<{ isMenuOpen: boolean; drawerHeight: number }>`
   flex-direction: column;
   padding: 5px;
   margin-top: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `${drawerHeight}px` : '0')};
-  transition: margin-top 150ms ease-in-out;
+  transition: margin-top 180ms ease-in-out;
   @media (min-width: 736px) {
     margin-top: 0; /* Reset margin-top for desktop */
   }

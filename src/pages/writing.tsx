@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const Container = styled.div`
   display: flex;
@@ -106,6 +107,12 @@ const Post: React.FC<{ post: { title: string; description: string; link: string 
 
 const Writing: React.FC = () => {
   return (
+  <>
+                 <Head>
+                     <title>Patrick Prunty - Writing</title>
+                     <meta name="viewport" content="width=device-width, initial-scale=1" />
+                     <link rel="icon" href="/patrickprunty/images/favicon.ico" />
+                 </Head>
     <Container>
       <Title>Welcome to My Next.js Writing Page!</Title>
       <Grid>
@@ -114,6 +121,7 @@ const Writing: React.FC = () => {
         ))}
       </Grid>
     </Container>
+    </>
   );
 };
 

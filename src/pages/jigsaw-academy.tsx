@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const Container = styled.div`
   display: flex;
@@ -54,11 +55,11 @@ const VideoWrapper = styled.div<{ videoCount: number }>`
   overflow: hidden; /* Ensure the video doesn't overflow */
 
   iframe {
-    width: 100%;
-      height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '220px')}; /* Maintain 16:9 aspect ratio */
+      width: 100%;
+      height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '210px')}; /* Maintain 16:9 aspect ratio */
 
       @media (min-width: 480px) {
-        height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '350px')}; /* Maintain 16:9 aspect ratio */
+        height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '280px')}; /* Maintain 16:9 aspect ratio */
       }
 
       @media (min-width: 1024px) {
@@ -78,6 +79,13 @@ const JigsawAcademy: React.FC = () => {
   const videoCount = playlists.length;
 
   return (
+  <>
+            <Head>
+                <title>Patrick Prunty - Jigsaw Academy</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="description" content="YouTube educational series." />
+                <link rel="icon" href="/patrickprunty/images/favicon.ico" />
+            </Head>
     <Container>
       <Grid videoCount={videoCount}>
         {playlists.map((playlistId, index) => (
@@ -93,6 +101,7 @@ const JigsawAcademy: React.FC = () => {
         ))}
       </Grid>
     </Container>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const Container = styled.div`
   display: flex;
@@ -25,9 +26,16 @@ const Description = styled.p`
 
 const Software: React.FC = () => {
   return (
+  <>
+                 <Head>
+                     <title>Patrick Prunty - Software Products</title>
+                     <meta name="viewport" content="width=device-width, initial-scale=1" />
+                     <link rel="icon" href="/patrickprunty/images/favicon.ico" />
+                 </Head>
     <Container>
       <Title>Welcome to My Next.js Software Page!</Title>
     </Container>
+    </>
   );
 };
 

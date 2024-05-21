@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const Container = styled.div`
   display: flex;
@@ -68,6 +69,12 @@ const Videos: React.FC = () => {
   const videoCount = videos.length;
 
   return (
+  <>
+                 <Head>
+                     <title>Patrick Prunty - Videos</title>
+                     <meta name="viewport" content="width=device-width, initial-scale=1" />
+                     <link rel="icon" href="/patrickprunty/images/favicon.ico" />
+                 </Head>
     <Container>
       <Grid videoCount={videoCount}>
         {videos.map((videoId, index) => (
@@ -83,6 +90,7 @@ const Videos: React.FC = () => {
         ))}
       </Grid>
     </Container>
+    </>
   );
 };
 
