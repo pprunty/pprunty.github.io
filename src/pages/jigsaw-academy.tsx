@@ -71,8 +71,8 @@ const VideoWrapper = styled.div<{ videoCount: number }>`
 
 const playlists = [
   'si=wtVfkUH8tj3EYFmc&amp;list=PLn6yDpEottdjri2wzWn8tFTXNLplVGqjU', // Replace with your own YouTube playlist IDs
-  'eHp7JEu4lKg?si=PpC4UmX0ntbGcvSr',
-  'PLbpi6ZahtOH4nD11R9QZmi7wT_9S_NJQw',
+  'si=SosBov0FywktTDz3&amp;list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK',
+  'si=zq6SjUQ3OONc-lCb&amp;list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_',
 ];
 
 const JigsawAcademy: React.FC = () => {
