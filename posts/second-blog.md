@@ -1,7 +1,7 @@
 ---
 title: "🐉 Ode to Pokémon"
 date: "2023-08-05"
-image: "images/pokemon.png"
+image: "/images/pokemon.png"
 description: "How a video game quietly shaped my childhood."
 ---
 
