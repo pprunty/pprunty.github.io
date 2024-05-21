@@ -27,12 +27,12 @@ const Description = styled.p`
 const StyledIframe = styled.iframe`
   width: 100%;
   max-width: 555px;
-  height: 80vh;
+  height: 150vh;
   max-height: 720px;
   border: 0;
 
   @media (max-width: 768px) {
-    height: 70vh; /* Adjust height for tablets and smaller screens */
+    height: 150vh; /* Adjust height for tablets and smaller screens */
   }
 
   @media (max-width: 480px) {
@@ -52,7 +52,7 @@ const Consultation: React.FC = () => {
       <Container>
         <StyledIframe
           src="https://patrick0dys.setmore.com/patrick?lang=english"
-          scrolling="no"
+          scrolling="yes"
           allowFullScreen
         />
       </Container>
