@@ -55,7 +55,11 @@ const VideoWrapper = styled.div<{ videoCount: number }>`
 
   iframe {
     width: 100%;
-    height: ${({ videoCount }) => videoCount === 1 ? '450px' : '212px'}; // Adjust height as needed
+    height: 212px; // Default height
+
+    @media (min-width: 480px) {
+      height: ${({ videoCount }) => videoCount === 1 ? '450px' : '212px'};
+    }
   }
 `;
 
@@ -69,27 +73,27 @@ const Videos: React.FC = () => {
   const videoCount = videos.length;
 
   return (
-  <>
-                 <Head>
-                     <title>Patrick Prunty - Videos</title>
-                     <meta name="viewport" content="width=device-width, initial-scale=1" />
-                     <link rel="icon" href="/patrickprunty/images/favicon.ico" />
-                 </Head>
-    <Container>
-      <Grid videoCount={videoCount}>
-        {videos.map((videoId, index) => (
-          <VideoWrapper key={index} videoCount={videoCount}>
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title={`YouTube video player ${index + 1}`}
-            ></iframe>
-          </VideoWrapper>
-        ))}
-      </Grid>
-    </Container>
+    <>
+      <Head>
+        <title>Patrick Prunty - Videos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/patrickprunty/images/favicon.ico" />
+      </Head>
+      <Container>
+        <Grid videoCount={videoCount}>
+          {videos.map((videoId, index) => (
+            <VideoWrapper key={index} videoCount={videoCount}>
+              <iframe
+                src={`https://www.youtube.com/embed/${videoId}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title={`YouTube video player ${index + 1}`}
+              ></iframe>
+            </VideoWrapper>
+          ))}
+        </Grid>
+      </Container>
     </>
   );
 };
