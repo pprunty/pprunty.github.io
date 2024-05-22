@@ -35,11 +35,14 @@ const Description = styled.p`
 const Home: React.FC = () => {
   return (
   <>
-        <Head>
-            <title>Patrick Prunty - Home</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/images/favicon.ico" />
-        </Head>
+      <Head>
+          <title>Patrick Prunty</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="description" content="Software products, YouTube educational & entertainment series and consultations." />
+          <meta property="og:image" content="/images/collage.png" />
+          <meta property="og:type" content="profile" />
+          <link rel="icon" href="/images/favicon.ico" />
+      </Head>
     <Container>
       <Description>
 My name is Patrick Prunty and I’m a Fullstack Software Engineer at Optum Healthcare. Previously, I studied MSc. in High-Performance Computing at Trinity College Dublin and B.A Joint Honours in Mathematics and English Literature at University College Dublin (with minor in Portuguese). I am currently working on a couple of open source projects and the release of a mobile application to the iOS and Android app stores.

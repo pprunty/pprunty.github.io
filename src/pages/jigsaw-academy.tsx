@@ -84,6 +84,8 @@ const JigsawAcademy: React.FC = () => {
                 <title>Patrick Prunty - Jigsaw Academy</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="description" content="YouTube educational series." />
+                        <meta property="og:type" content="video" />
+
                 <link rel="icon" href="/images/favicon.ico" />
             </Head>
     <Container>

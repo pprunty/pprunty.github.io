@@ -84,6 +84,7 @@ const JigsawPresents: React.FC = () => {
                   <title>Patrick Prunty - Jigsaw Presents</title>
                   <meta name="viewport" content="width=device-width, initial-scale=1" />
                   <meta name="description" content="YouTube entertainment series." />
+                          <meta property="og:type" content="video" />
                   <link rel="icon" href="/images/favicon.ico" />
               </Head>
     <Container>

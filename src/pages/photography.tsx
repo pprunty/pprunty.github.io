@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ExportedImage from 'next-image-export-optimizer';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const Container = styled.div`
   display: flex;
@@ -68,6 +69,8 @@ const images = [
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
 const Photography: React.FC = () => {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -75,6 +78,10 @@ const Photography: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:image" content="/images/collage.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${router.asPath}`} />
       </Head>
       <Container>
         <Grid>

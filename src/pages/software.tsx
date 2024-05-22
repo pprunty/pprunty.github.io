@@ -30,6 +30,7 @@ const Software: React.FC = () => {
                  <Head>
                      <title>Patrick Prunty - Software Products</title>
                      <meta name="viewport" content="width=device-width, initial-scale=1" />
+                             <meta property="og:type" content="software" />
                      <link rel="icon" href="/images/favicon.ico" />
                  </Head>
     <Container>
