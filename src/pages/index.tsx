@@ -1,36 +1,59 @@
 import React from 'react';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+//   justify-content: center;
+  padding: 25px;
   background-color: #FFFFFF;
+  margin-top: 20px;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
 `;
 
 const Title = styled.h1`
   font-size: 2.5rem;
   color: #333;
+  margin-bottom: 20px;
 `;
 
 const Description = styled.p`
-  font-size: 1.25rem;
-  color: #666;
+  font-size: 1rem;
+  color: black;
   text-align: center;
   max-width: 600px;
-  margin-top: 1rem;
+  margin-top: 0.25rem;
+  font-weight: 600;
+
+    @media (max-width: 736px) {
+    font-size: 16px;
+    }
 `;
 
 const Home: React.FC = () => {
   return (
+  <>
+        <Head>
+            <title>Patrick Prunty - Home</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/images/favicon.ico" />
+        </Head>
     <Container>
-      <Title>Welcome to My Next.js Site!</Title>
       <Description>
-        This is a basic example of a Next.js project using TypeScript and styled-components.
+My name is Patrick Prunty and I’m a Fullstack Software Engineer at Optum Healthcare. Previously, I studied MSc. in High-Performance Computing at Trinity College Dublin and B.A Joint Honours in Mathematics and English Literature at University College Dublin (with minor in Portuguese). I am currently working on a couple of open source projects and the release of a mobile application to the iOS and Android app stores.
+
+I do triathlon (swim, cycle and run), travel and follow Chelsea Football Club. I also write on a variety of topics ranging from science and technology to creative prose.        My name is Patrick Prunty... in my spare time I train triathlon, Brasillian Jiu Jitsu, hike and spent time with my loved ones.
+      </Description>
+      <Description>
+        I offer a number of high-quality and free educational content on my YouTube channel Jigsaw Academy, which includes
+      </Description>
+      <Description>
+        Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
       </Description>
     </Container>
+    </>
   );
 };
 

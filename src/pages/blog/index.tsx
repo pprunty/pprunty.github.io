@@ -145,8 +145,8 @@ const PostList = styled.ul`
 `;
 
 const PostItem = styled.li`
-  margin-bottom: 18px;
-  padding: 18px;
+  margin-bottom: 1rem;
+  padding: 1rem;
   border: 1px solid #ddd;
   transition: border-color 0.2s, transform 0.2s, opacity 0.2s; /* Add transform and opacity transitions */
   cursor: pointer; /* Add cursor pointer to indicate clickable item */
@@ -159,6 +159,10 @@ const PostItem = styled.li`
     transform: scale(0.98); /* Scale down slightly when pressed */
     opacity: 0.8; /* Slightly reduce opacity when pressed */
   }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 `;
 
 const PostContent = styled.div`
@@ -178,7 +182,7 @@ const PostText = styled.div`
 
   @media (max-width: 768px) {
     margin-right: 0;
-    margin-bottom: 18px;
+//     margin-bottom: 18px;
   }
 `;
 
