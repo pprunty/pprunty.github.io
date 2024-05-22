@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import ExportedImage from "next-image-export-optimizer";
 import markdownToHtml from '../../../lib/markdownToHtml';
+import Head from 'next/head';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
