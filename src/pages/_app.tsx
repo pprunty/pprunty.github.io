@@ -30,7 +30,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <title>Patrick Prunty</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="description" content="Software products, YouTube educational & entertainment series and consultations." />
-          <link rel="icon" href="/patrickprunty/images/favicon.ico" />
+          <link rel="icon" href="/images/favicon.ico" />
       </Head>
     <StyledThemeProvider theme={lightTheme}>
      <GlobalStyle theme={lightTheme}/>

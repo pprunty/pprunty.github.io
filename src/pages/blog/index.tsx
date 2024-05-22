@@ -62,7 +62,7 @@ export default function BlogList({ posts }: BlogListProps) {
                   </PostText>
                   <PostImageWrapper>
                     <ExportedImage
-                      src={isExport ? `/patrickprunty${post.image}` : post.image}
+                      src={isExport ? `${post.image}` : post.image}
                       alt={post.title}
                       layout="responsive"
                       width={800}

@@ -47,7 +47,7 @@ const Consultation: React.FC = () => {
         <title>Patrick Prunty - Consultations</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Book a consultation service with me." />
-        <link rel="icon" href="/patrickprunty/images/favicon.ico" />
+        <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <Container>
         <StyledIframe

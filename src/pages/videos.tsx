@@ -77,7 +77,7 @@ const Videos: React.FC = () => {
       <Head>
         <title>Patrick Prunty - Videos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/patrickprunty/images/favicon.ico" />
+        <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <Container>
         <Grid videoCount={videoCount}>

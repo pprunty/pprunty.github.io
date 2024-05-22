@@ -73,12 +73,12 @@ const Photography: React.FC = () => {
                <Head>
                    <title>Patrick Prunty - Photography</title>
                    <meta name="viewport" content="width=device-width, initial-scale=1" />
-                   <link rel="icon" href="/patrickprunty/images/favicon.ico" />
+                   <link rel="icon" href="/images/favicon.ico" />
                </Head>
      <Container>
        <Grid>
          {images.map((src, index) => {
-           const imagePath = isExport ? `/patrickprunty${src}` : src;
+           const imagePath = isExport ? `${src}` : src;
            return (
              <ImageWrapper key={index}>
                <ExportedImage

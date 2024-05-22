@@ -11,7 +11,7 @@ const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
 export default function BlogPost({ title, date, content, image, description }) {
   const router = useRouter();
-  const imagePath = isExport ? `/patrickprunty${image}` : image;
+  const imagePath = isExport ? `${image}` : image;
 
   const handleBackClick = () => {
     router.back();
