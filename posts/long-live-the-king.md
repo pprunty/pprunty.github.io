@@ -5,6 +5,8 @@ image: "/images/afro.png"
 description: "How a video game quietly shaped my childhood."
 ---
 
-Mauris viverra feugiat egestas. Aenean mauris nibh, blandit sit amet leo sagittis, tincidunt fringilla orci. Cras hendrerit dolor in efficitur placerat. Quisque suscipit sit amet quam congue pretium. Cras dapibus congue erat, sed malesuada velit vestibulum ut. Suspendisse gravida tincidunt sollicitudin. Vestibulum ac odio tempus, auctor sem non, interdum dolor. Aenean ultrices ex ac magna dapibus tempus. Proin a tristique urna. In in cursus est, eu porta eros.
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-Mauris viverra feugiat egestas. Aenean mauris nibh, blandit sit amet leo sagittis, tincidunt fringilla orci. Cras hendrerit dolor in efficitur placerat. Quisque suscipit sit amet quam congue pretium. Cras dapibus congue erat, sed malesuada velit vestibulum ut. Suspendisse gravida tincidunt sollicitudin. Vestibulum ac odio tempus, auctor sem non, interdum dolor. Aenean ultrices ex ac magna dapibus tempus. Proin a tristique urna. In in cursus est, eu porta eros.
+```bash
+def hello_world()
+```

@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import ExportedImage from "next-image-export-optimizer";
+import ExportedImage from 'next-image-export-optimizer';
 import Head from 'next/head';
 import markdownToHtml from '../../../lib/markdownToHtml';
 

@@ -45,6 +45,14 @@ export default function BlogList({ posts }: BlogListProps) {
   const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
 
   return (
+  <>
+              <Head>
+                  <title>Patrick Prunty - Blog</title>
+                  <meta name="viewport" content="width=device-width, initial-scale=1" />
+                  <meta name="description" content="My personal blog." />
+                  <meta property="og:type" content="blog" />
+                  <link rel="icon" href="/images/favicon.ico" />
+              </Head>
     <Container>
       {years.map((year) => (
         <YearSection key={year}>
@@ -78,6 +86,7 @@ export default function BlogList({ posts }: BlogListProps) {
         </YearSection>
       ))}
     </Container>
+    </>
   );
 }
 
