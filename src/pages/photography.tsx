@@ -73,7 +73,7 @@ const Photography: React.FC = () => {
       <Head>
         <title>Patrick Prunty - Photography</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/images/favicon.ico" />
+        <link rel="icon" href="/images/collage.png" />
         <meta property="og:image" content="/images/collage.jpg" />
       </Head>
       <Container>

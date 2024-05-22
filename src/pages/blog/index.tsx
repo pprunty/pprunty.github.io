@@ -64,10 +64,10 @@ export default function BlogList({ posts }: BlogListProps) {
                     <ExportedImage
                       src={isExport ? `${post.image}` : post.image}
                       alt={post.title}
-                      layout="responsive"
+                      layout="fixed"
                       width={800}
-                      height={400}
-//                       objectFit="cover"
+                      height={500} // Adjust height to match the new dimensions
+                      objectFit="cover"
                       placeholder={'blur'}
                     />
                   </PostImageWrapper>
@@ -183,8 +183,8 @@ const PostText = styled.div`
 `;
 
 const PostImageWrapper = styled.div`
-  width: 200px;
-  height: 150px;
+  width: 150px; // Increase width
+  height: 150px; // Increase height
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -192,11 +192,10 @@ const PostImageWrapper = styled.div`
   }
 
   img {
-//     object-fit: cover;
     width: 100%;
     height: 100%;
+    object-fit: cover; // Ensure the image covers the entire wrapper
   }
-
 `;
 
 const PostExcerpt = styled.p`
