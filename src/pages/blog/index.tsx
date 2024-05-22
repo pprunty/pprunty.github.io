@@ -218,7 +218,7 @@ const PostExcerpt = styled.p`
 const SeeMore = styled.span`
   color: black;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 550;
 
   &:hover {
     text-decoration: underline;
