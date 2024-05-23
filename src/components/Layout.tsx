@@ -9,7 +9,7 @@ interface LayoutProps {
 }
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
-const logoPath = isExport ? `/images/logo4.svg` : "/images/logo4.svg";
+const logoPath = isExport ? `/images/logo.svg` : "/images/logo.svg";
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);

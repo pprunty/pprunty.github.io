@@ -85,6 +85,9 @@ const JigsawPresents: React.FC = () => {
                   <meta name="viewport" content="width=device-width, initial-scale=1" />
                   <meta name="description" content="YouTube entertainment series." />
                           <meta property="og:type" content="video" />
+                                      <meta property="og:image" content="/images/jigsaw-presents.jpg" />
+                                      <meta property="og:image:width" content="1200" />
+                                      <meta property="og:image:height" content="630" />
                   <link rel="icon" href="/images/favicon.ico" />
               </Head>
     <Container>

@@ -84,9 +84,11 @@ const JigsawAcademy: React.FC = () => {
                 <title>Patrick Prunty - Jigsaw Academy</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="description" content="YouTube educational series." />
-                        <meta property="og:type" content="video" />
-
-                <link rel="icon" href="/images/favicon.ico" />
+            <meta property="og:type" content="video" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta property="og:image" content="/images/jigsaw-academy.WEBP" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
             </Head>
     <Container>
       <Grid videoCount={videoCount}>
