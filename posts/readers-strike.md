@@ -1,7 +1,7 @@
 ---
 title: "Readers' Strike"
 date: "2023-08-05"
-image: "/images/protestors.png"
+image: "/images/protestors.WEBP"
 description: "How a video game quietly shaped my childhood."
 artwork: "DALL-E 2"
 ---

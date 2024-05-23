@@ -120,7 +120,7 @@ const Artwork = styled.p`
     font-style: italic;
     color: #555; /* Adjust the color as needed */
     text-align: center; /* Center alignment */
-    margin-top: 10px; /* Adjust margin as needed */
+//     margin-top: 10px; /* Adjust margin as needed */
     font-size: 0.9rem; /* Adjust font size as needed */
     font-weight: 300;
 
@@ -148,26 +148,26 @@ const ImageWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem; /* Increased font size */
+  font-size: 2.8rem; /* Increased font size */
   font-weight: 700; /* Bold */
-  margin-bottom: 15px;
+//   margin-bottom: 15px;
   color: #333; /* Darker color */
   text-align: center; /* Center alignment */
   line-height: 1.2; /* Better line height */
 
   @media (max-width: 768px) {
-    font-size: 2rem; /* Smaller font size on tablets */
+    font-size: 2.3rem; /* Smaller font size on tablets */
   }
 
   @media (max-width: 480px) {
-    font-size: 1.5rem; /* Smaller font size on mobile devices */
+    font-size: 1.8rem; /* Smaller font size on mobile devices */
   }
 `;
 
 const Date = styled.p`
   font-size: 1rem;
   color: #777;
-  margin-bottom: 18px;
+//   margin-bottom: 18px;
 `;
 
 const Content = styled.div`

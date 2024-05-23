@@ -1,7 +1,7 @@
 ---
 title: "Long Live The King"
 date: "2024-08-05"
-image: "/images/afro.png"
+image: "/images/afro.WEBP"
 description: "How a video game quietly shaped my childhood."
 artwork: "DALL-E 2"
 ---

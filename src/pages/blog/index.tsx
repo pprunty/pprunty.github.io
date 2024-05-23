@@ -166,7 +166,7 @@ const PostItem = styled.li`
   }
 
   &:active {
-    transform: scale(0.98); /* Scale down slightly when pressed */
+    transform: scale(0.99); /* Scale down slightly when pressed */
     opacity: 0.8; /* Slightly reduce opacity when pressed */
   }
     @media (max-width: 768px) {
