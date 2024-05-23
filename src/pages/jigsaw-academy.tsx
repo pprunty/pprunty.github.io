@@ -86,7 +86,7 @@ const JigsawAcademy: React.FC = () => {
                 <meta name="description" content="YouTube educational series." />
             <meta property="og:type" content="video" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta property="og:image" content="/images/jigsaw-academy.WEBP" />
+            <meta property="og:image" content="/images/jigsaw-academy.jpg" />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
             </Head>
