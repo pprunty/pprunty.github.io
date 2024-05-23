@@ -56,7 +56,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
            />
         </LogoWrapper>
         <Nav>
-          <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>PATRICK PRUNTY</NavItem>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
           <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
           <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
@@ -77,7 +76,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </MobileNavbar>
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
           <Nav>
-            <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>PATRICK PRUNTY</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
             <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
