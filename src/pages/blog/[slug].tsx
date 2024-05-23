@@ -7,6 +7,7 @@ import ExportedImage from 'next-image-export-optimizer';
 import Head from 'next/head';
 import markdownToHtml from '../../../lib/markdownToHtml';
 
+
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
 export default function BlogPost({ title, date, content, image, description }) {
