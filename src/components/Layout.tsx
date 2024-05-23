@@ -9,7 +9,7 @@ interface LayoutProps {
 }
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
-const logoPath = isExport ? `/images/logo.svg` : "/images/logo.svg";
+const logo2Path = isExport ? `/images/logo2.svg` : "/images/logo2.svg";
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -48,13 +48,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Container>
       <Sidebar>
-        <LogoWrapper onClick={() => handleNavigation('/')}>
-          <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={200}
+        <logo2Wrapper onClick={() => handleNavigation('/')}>
+          <ExportedImage src={logo2Path} alt="logo2" layout="responsive" width={200}
           height={100}
                                           placeholder={'blur'}
 
            />
-        </LogoWrapper>
+        </logo2Wrapper>
         <Nav>
                               <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
@@ -68,11 +68,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </Sidebar>
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
         <MobileNavbar>
-          <MobileLogoWrapper onClick={() => handleNavigation('/')}>
-            <ExportedImage src={logoPath} alt="Logo" layout="responsive" width={250} height={75}
+          <Mobilelogo2Wrapper onClick={() => handleNavigation('/')}>
+            <ExportedImage src={logo2Path} alt="logo2" layout="responsive" width={250} height={75}
                                                        placeholder={'blur'}
              />
-          </MobileLogoWrapper>
+          </Mobilelogo2Wrapper>
           <MenuButton onClick={toggleMenu}>MENU</MenuButton>
         </MobileNavbar>
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
@@ -118,7 +118,7 @@ const Sidebar = styled.div`
   }
 `;
 
-const LogoWrapper = styled.div`
+const logo2Wrapper = styled.div`
   cursor: pointer;
   width: 400px;
   img {
@@ -172,7 +172,7 @@ const MobileNavbar = styled.div`
   }
 `;
 
-const MobileLogoWrapper = styled.div`
+const Mobilelogo2Wrapper = styled.div`
   font-size: 1.5rem;
   margin-top: 28px;
   cursor: pointer;
