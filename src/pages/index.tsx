@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ExportedImage from 'next-image-export-optimizer';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -41,6 +42,12 @@ const Link = styled.a`
   }
 `;
 
+const ImageWrapper = styled.div`
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+`;
+
 const Home: React.FC = () => {
   const router = useRouter();
 
@@ -58,10 +65,21 @@ const Home: React.FC = () => {
         <meta property="og:image" content="/images/favicon.ico" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-          <link rel="icon" href="/images/favicon.ico" />
+        <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:type" content="profile" />
       </Head>
       <Container>
+        <ImageWrapper>
+          <ExportedImage
+            src="/images/me.JPG"
+            alt="Patrick Prunty"
+            layout="responsive"
+            width={600}
+            height={500}
+            objectFit="cover"
+            placeholder="blur"
+          />
+        </ImageWrapper>
         <Description>
           I'm Patrick Prunty, a full-stack web developer with a passion for <Link href="#" onClick={handleNavigation('/photography')}>photography</Link>, video creation, and education. 🧑🏼‍💻
         </Description>

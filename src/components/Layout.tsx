@@ -48,13 +48,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Container>
       <Sidebar>
-        <logo2Wrapper onClick={() => handleNavigation('/')}>
-          <ExportedImage src={logo2Path} alt="logo2" layout="responsive" width={200}
+        <LogoWrapper onClick={() => handleNavigation('/')}>
+          <ExportedImage src={logo2Path} alt="logo2" layout="responsive"
+          width={200}
           height={100}
-                                          placeholder={'blur'}
-
+          placeholder={'blur'}
            />
-        </logo2Wrapper>
+        </LogoWrapper>
         <Nav>
                               <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
@@ -68,11 +68,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </Sidebar>
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
         <MobileNavbar>
-          <Mobilelogo2Wrapper onClick={() => handleNavigation('/')}>
-            <ExportedImage src={logo2Path} alt="logo2" layout="responsive" width={250} height={75}
+          <MobileLogoWrapper onClick={() => handleNavigation('/')}>
+            <ExportedImage src={'/images/favicon.ico'} alt="logo2" layout="responsive" width={250} height={75}
                                                        placeholder={'blur'}
              />
-          </Mobilelogo2Wrapper>
+          </MobileLogoWrapper>
           <MenuButton onClick={toggleMenu}>MENU</MenuButton>
         </MobileNavbar>
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
@@ -118,11 +118,11 @@ const Sidebar = styled.div`
   }
 `;
 
-const logo2Wrapper = styled.div`
+const LogoWrapper = styled.div`
   cursor: pointer;
-  width: 400px;
+  width: 230px;
   img {
-    width: 400px; /* Adjust based on your design */
+    width: 230px; /* Adjust based on your design */
   }
 `;
 
@@ -172,7 +172,7 @@ const MobileNavbar = styled.div`
   }
 `;
 
-const Mobilelogo2Wrapper = styled.div`
+const MobileLogoWrapper = styled.div`
   font-size: 1.5rem;
   margin-top: 28px;
   cursor: pointer;
@@ -180,6 +180,10 @@ const Mobilelogo2Wrapper = styled.div`
   img {
     width: 480px; /* Adjust based on your design */
   }
+    @media (max-width: 736px) {
+      margin-top: .5rem;
+      width: 50px;
+    }
 `;
 
 const MenuButton = styled.button`
