@@ -56,6 +56,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
            />
         </LogoWrapper>
         <Nav>
+          <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>PATRICK PRUNTY</NavItem>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
           <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
           <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
@@ -63,7 +64,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
           <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
           <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Book a consultation</NavItem>
-          <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>About</NavItem>
         </Nav>
       </Sidebar>
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
@@ -77,6 +77,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </MobileNavbar>
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
           <Nav>
+            <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>PATRICK PRUNTY</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
             <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
@@ -84,7 +85,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
             <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
             <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Book a consultation</NavItem>
-            <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>About</NavItem>
           </Nav>
         </MobileDrawer>
         {children}

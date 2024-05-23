@@ -138,7 +138,7 @@ const PostTitle = styled.div`
 const YearSection = styled.div`
   width: 100%;
   max-width: 800px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 `;
 
 const YearHeader = styled.div`
@@ -155,7 +155,7 @@ const PostList = styled.ul`
 `;
 
 const PostItem = styled.li`
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
   padding: 1rem;
   border: 1px solid #ddd;
   transition: border-color 0.2s, transform 0.2s, opacity 0.2s; /* Add transform and opacity transitions */
@@ -172,6 +172,15 @@ const PostItem = styled.li`
     @media (max-width: 768px) {
       flex-direction: column;
       align-items: flex-start;
+      padding: 0px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 1 px solid #ddd;
+
+        &:hover {
+          border-color: #ddd; /* Darken the border color on hover */
+        }
     }
 `;
 
@@ -181,8 +190,10 @@ const PostContent = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
   }
 `;
 
@@ -202,8 +213,14 @@ const PostImageWrapper = styled.div`
   overflow: hidden;
 
   @media (max-width: 768px) {
-    display: none;
+     width: 125px; // Increase width
+     height: 125px; // Increase height
   }
+
+    @media (max-width: 520px) {
+       width: 110px; // Increase width
+       height: 110px; // Increase height
+    }
 
   img {
     width: 100%;

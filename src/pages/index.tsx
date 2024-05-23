@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-//   justify-content: center;
   padding: 25px;
   background-color: #FFFFFF;
   margin-top: 20px;
@@ -27,35 +27,52 @@ const Description = styled.p`
   margin-top: 0.25rem;
   font-weight: 600;
 
-    @media (max-width: 736px) {
+  @media (max-width: 736px) {
     font-size: 16px;
-    }
+  }
+`;
+
+const Link = styled.a`
+  color: #FF70CF;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Home: React.FC = () => {
-  return (
-  <>
-      <Head>
-          <title>Patrick Prunty</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="description" content="Software products, YouTube educational & entertainment series and consultations." />
-          <meta property="og:image" content="/images/collage.png" />
-          <meta property="og:type" content="profile" />
-          <link rel="icon" href="/images/favicon.ico" />
-      </Head>
-    <Container>
-      <Description>
-My name is Patrick Prunty and I’m a Fullstack Software Engineer at Optum Healthcare. Previously, I studied MSc. in High-Performance Computing at Trinity College Dublin and B.A Joint Honours in Mathematics and English Literature at University College Dublin (with minor in Portuguese). I am currently working on a couple of open source projects and the release of a mobile application to the iOS and Android app stores.
+  const router = useRouter();
 
-I do triathlon (swim, cycle and run), travel and follow Chelsea Football Club. I also write on a variety of topics ranging from science and technology to creative prose.        My name is Patrick Prunty... in my spare time I train triathlon, Brasillian Jiu Jitsu, hike and spent time with my loved ones.
-      </Description>
-      <Description>
-        I offer a number of high-quality and free educational content on my YouTube channel Jigsaw Academy, which includes
-      </Description>
-      <Description>
-        Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
-      </Description>
-    </Container>
+  const handleNavigation = (path: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    router.push(path);
+  };
+
+  return (
+    <>
+      <Head>
+        <title>Patrick Prunty</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Software products, YouTube educational & entertainment series and consultations." />
+        <meta property="og:image" content="/images/collage.png" />
+        <meta property="og:type" content="profile" />
+        <link rel="icon" href="/images/favicon.ico" />
+      </Head>
+      <Container>
+        <Description>
+          I'm Patrick Prunty, a full-stack web developer with a passion for <Link href="#" onClick={handleNavigation('/photography')}>photography</Link>, video creation, and education. 🧑🏼‍💻
+        </Description>
+        <Description>
+          Dive into my <Link href="#" onClick={handleNavigation('/software')}>software services</Link>, <Link href="#" onClick={handleNavigation('/blog')}>read my blog</Link>, <Link href="#" onClick={handleNavigation('/videos')}>watch my videos</Link>, and discover more about what drives me. Whether you're here to learn, collaborate, or just explore, there's something for everyone. 🌐
+        </Description>
+        <Description>
+          When I'm not coding, you can find me training for triathlons, practicing Brazilian Jiu Jitsu, hiking, or enjoying quality time with my loved ones. These activities fuel my creativity and keep me balanced. 🧘🏼
+        </Description>
+        <Description>
+          Interested in a deeper conversation over coffee or have something specific in mind? Schedule a free general call with me through the <Link href="#" onClick={handleNavigation('/consultations')}>book a consultation</Link> tab. I'm always excited to connect and share ideas. ☕️
+        </Description>
+      </Container>
     </>
   );
 };
