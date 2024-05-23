@@ -10,7 +10,7 @@ import markdownToHtml from '../../../lib/markdownToHtml';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
-export default function BlogPost({ title, date, content, image, description }) {
+export default function BlogPost({ title, date, content, image, description, artwork }) {
   const router = useRouter();
   const imagePath = isExport ? `${image}` : image;
 
@@ -54,6 +54,7 @@ export default function BlogPost({ title, date, content, image, description }) {
             height={400}
             placeholder={'blur'}
           />
+          {artwork && <Artwork>Artwork: {artwork}</Artwork>}
         </ImageWrapper>
         <Title>{title}</Title>
         <Date>{date}</Date>
@@ -73,11 +74,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), 'posts', `${params.slug}.md`);
-  const fileContents = fs.readFileSync(filePath, 'utf8');
-  const { data, content } = matter(fileContents);
-  const htmlContent = await markdownToHtml(content);
-  return { props: { ...data, content: htmlContent } };
+    const filePath = path.join(process.cwd(), 'posts', `${params.slug}.md`);
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const { data, content } = matter(fileContents);
+    const htmlContent = await markdownToHtml(content);
+    return { props: { ...data, content: htmlContent, artwork: data.artwork || null } };
 }
 
 // Styled Components
@@ -113,6 +114,23 @@ const BackArrow = styled.div`
     text-decoration: none; /* Ensure no underline on hover */
     color: #555; /* Optional: slightly lighter color on hover */
   }
+`;
+
+const Artwork = styled.p`
+    font-style: italic;
+    color: #555; /* Adjust the color as needed */
+    text-align: center; /* Center alignment */
+    margin-top: 10px; /* Adjust margin as needed */
+    font-size: 0.9rem; /* Adjust font size as needed */
+    font-weight: 300;
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem; /* Smaller font size on tablets */
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.7rem; /* Smaller font size on mobile devices */
+    }
 `;
 
 const ImageWrapper = styled.div`
