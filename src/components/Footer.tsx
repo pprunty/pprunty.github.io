@@ -32,10 +32,10 @@ const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  margin-top: 4rem;
+  margin-top: 40px;
 
   @media (max-width: 767px) {
-    margin-top: 2rem;
+    margin-top: 20px;
   }
 `;
 

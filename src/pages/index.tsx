@@ -74,7 +74,7 @@ const AboutMeTitle = styled.h2`
 const AboutMeDescription = styled.p`
   font-size: 1.2rem;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 `;
 
 const CaseStudyLabel = styled.div`
