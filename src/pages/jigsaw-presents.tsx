@@ -91,7 +91,7 @@ const JigsawPresents: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <Title>Jigsaw Presents</Title>
-      <Subtitle>Providing analysis and insight into popular movies, series, books, and gaming.</Subtitle>
+      <Subtitle>Explore my entertainment YouTube channel. Providing analysis and insight into popular movies, series, books, and gaming.</Subtitle>
       <Grid>
         {videos.map((videoId, index) => (
           <VideoWrapper key={index}>

@@ -92,7 +92,7 @@ const JigsawAcademy: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <Title>Jigsaw Academy</Title>
-      <Subtitle>Explore our educational YouTube series. Dive into a variety of topics and expand your knowledge with our curated playlists.</Subtitle>
+        <Subtitle>Discover my educational YouTube channel. Immerse yourself in a diverse array of topics and broaden your knowledge with expertly curated playlists, including "Mastering FastAPI: From Basics to Advanced", "Laws of UI/UX Design" and "How to Brew Stout Beer."</Subtitle>
       <Grid>
         {playlists.map((playlistId, index) => (
           <VideoWrapper key={index}>

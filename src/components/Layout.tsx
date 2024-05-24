@@ -110,7 +110,7 @@ const Navbar = styled.div`
   width: 100%;
   padding: 3px;
   background-color: inherit;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid #B3B3B3;
   color: black;
   @media (max-width: 1000px) {
     display: none;
