@@ -3,16 +3,31 @@ import styled from 'styled-components';
 import Head from 'next/head';
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 6vw;
+  font-weight: 600;
+  line-height: .9em;
+  color: black;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px; /* Add margin to separate title from case studies */
+
+  @media(max-width: 768px) {
+    font-size: 8vw;
+  }
 `;
 
-const Description = styled.p`
-  font-size: 1.25rem;
+const Subtitle = styled.p`
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5em;
   color: #666;
-  text-align: center;
-  max-width: 600px;
-  margin-top: 1rem;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
+
+  @media(max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 const StyledIframe = styled.iframe`
@@ -38,14 +53,16 @@ const Consultation: React.FC = () => {
         <title>Patrick Prunty - Consultations</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Book a consultation service with me." />
-                <meta property="og:type" content="product" />
+        <meta property="og:type" content="product" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
-        <StyledIframe
-          src="https://patrick0dys.setmore.com/patrick?lang=english"
-          scrolling="yes"
-          allowFullScreen
-        />
+      <Title>Consultation Services</Title>
+      <Subtitle>Book a one-on-one consultation with me to discuss your projects, ideas, or any questions you have. I look forward to connecting with you and helping you achieve your goals.</Subtitle>
+      <StyledIframe
+        src="https://patrick0dys.setmore.com/patrick?lang=english"
+        scrolling="yes"
+        allowFullScreen
+      />
     </>
   );
 };

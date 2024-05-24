@@ -159,7 +159,7 @@ const Date = styled.p`
 `;
 
 const Content = styled.div`
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   color: #333;
   max-width: 800px;

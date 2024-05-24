@@ -4,28 +4,32 @@ import ExportedImage from 'next-image-export-optimizer';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-const Container = styled.div`
-  display: flex;
-  margin-top: 25px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFFFFF;
-  padding: 20px;
-`;
-
 const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 6vw;
+  font-weight: 600;
+  line-height: .9em;
+  color: black;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px; /* Add margin to separate title from case studies */
+
+  @media(max-width: 768px) {
+    font-size: 8vw;
+  }
 `;
 
-const Description = styled.p`
-  font-size: 1.25rem;
+const Subtitle = styled.p`
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5em;
   color: #666;
-  text-align: center;
-  max-width: 600px;
-  margin-top: 1rem;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
+
+  @media(max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 const Grid = styled.div`
@@ -83,26 +87,26 @@ const Photography: React.FC = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${router.asPath}`} />
       </Head>
-      <Container>
-        <Grid>
-          {images.map((src, index) => {
-            const imagePath = isExport ? `${src}` : src;
-            return (
-              <ImageWrapper key={index}>
-                <ExportedImage
-                  src={imagePath}
-                  alt={`Photography ${index + 1}`}
-                  layout="responsive"
-                  width={600}
-                  height={500}
-                  objectFit="cover"
-                  placeholder={'blur'}
-                />
-              </ImageWrapper>
-            );
-          })}
-        </Grid>
-      </Container>
+      <Title>Patrick Prunty's Photography</Title>
+      <Subtitle>Discover the world through my lens. Here are some of my favorite shots capturing moments and stories from around the globe.</Subtitle>
+      <Grid>
+        {images.map((src, index) => {
+          const imagePath = isExport ? `${src}` : src;
+          return (
+            <ImageWrapper key={index}>
+              <ExportedImage
+                src={imagePath}
+                alt={`Photography ${index + 1}`}
+                layout="responsive"
+                width={600}
+                height={500}
+                objectFit="cover"
+                placeholder={'blur'}
+              />
+            </ImageWrapper>
+          );
+        })}
+      </Grid>
     </>
   );
 };

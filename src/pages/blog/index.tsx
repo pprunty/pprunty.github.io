@@ -46,14 +46,16 @@ export default function BlogList({ posts }: BlogListProps) {
   const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
 
   return (
-  <>
-              <Head>
-                  <title>Patrick Prunty - Blog</title>
-                  <meta name="viewport" content="width=device-width, initial-scale=1" />
-                  <meta name="description" content="My personal blog." />
-                  <meta property="og:type" content="blog" />
-                  <link rel="icon" href="/images/favicon.ico" />
-              </Head>
+    <>
+      <Head>
+        <title>Patrick Prunty - Blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="My personal blog." />
+        <meta property="og:type" content="blog" />
+        <link rel="icon" href="/images/favicon.ico" />
+      </Head>
+        <Title>Blog</Title>
+        <Subtitle>Welcome to my personal blog where I share insights, stories, and updates on my work and interests. Explore the posts below to read more.</Subtitle>
       {years.map((year) => (
         <YearSection key={year}>
           <YearHeader>{year}</YearHeader>
@@ -110,10 +112,40 @@ export async function getStaticProps() {
 
 // Styled Components
 
+
+const Title = styled.h1`
+  font-size: 6vw;
+  font-weight: 600;
+  line-height: .9em;
+  color: black;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+
+  @media(max-width: 768px) {
+    font-size: 8vw;
+  }
+`;
+
+const Subtitle = styled.p`
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #666;
+  width: 100%;
+  text-align: left;
+//   margin-bottom: 40px;
+
+  @media(max-width: 768px) {
+    font-size: 1.25rem;
+  }
+//   padding-bottom: 40px;
+//   border-bottom: 2px solid black;
+`;
+
 const PostTitle = styled.div`
   font-size: 2rem;
   font-weight: 700;
-//   margin: 10px 0;
   color: black;
   text-decoration: none;
   overflow: hidden;
@@ -122,9 +154,9 @@ const PostTitle = styled.div`
   &:hover {
     text-decoration: none;
   }
-   @media (max-width: 768px) {
-  font-size: 1.3rem;
-      }
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const YearSection = styled.div`
@@ -133,10 +165,14 @@ const YearSection = styled.div`
 `;
 
 const YearHeader = styled.div`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 18px;
+     @media (max-width: 768px) {
+    font-size: 1.2rem;
+        }
 `;
+
 
 const PostList = styled.ul`
   list-style: none;
@@ -160,20 +196,20 @@ const PostItem = styled.li`
     transform: scale(0.99); /* Scale down slightly when pressed */
     opacity: 0.8; /* Slightly reduce opacity when pressed */
   }
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0px;
-      border-top: none;
-      padding-right: 5px;
-      border-right: none;
-      border-left: none;
-      border-bottom: 1 px solid black;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    border-top: none;
+    padding-right: 5px;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid black;
 
-        &:hover {
-          border-color: black; /* Darken the border color on hover */
-        }
+    &:hover {
+      border-color: black; /* Darken the border color on hover */
     }
+  }
 `;
 
 const PostContent = styled.div`
@@ -195,7 +231,6 @@ const PostText = styled.div`
 
   @media (max-width: 768px) {
     margin-right: 0;
-//     margin-bottom: 18px;
   }
 `;
 
@@ -205,14 +240,14 @@ const PostImageWrapper = styled.div`
   overflow: hidden;
 
   @media (max-width: 768px) {
-     width: 125px; // Increase width
-     height: 125px; // Increase height
+    width: 125px; // Increase width
+    height: 125px; // Increase height
   }
 
-    @media (max-width: 520px) {
-       width: 110px; // Increase width
-       height: 110px; // Increase height
-    }
+  @media (max-width: 520px) {
+    width: 110px; // Increase width
+    height: 110px; // Increase height
+  }
 
   img {
     width: 100%;
@@ -250,7 +285,7 @@ const SeeMore = styled.span`
 `;
 
 const PostDateAuthor = styled.p`
-  font-size: 12px;
+  font-size: 14px;
   color: #777;
   margin: 0;
   margin-bottom: 10px;
@@ -258,4 +293,7 @@ const PostDateAuthor = styled.p`
   em {
     font-style: italic;
   }
+    @media(max-width: 768px) {
+      font-size: 12px;
+    }
 `;

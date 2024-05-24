@@ -3,16 +3,31 @@ import styled from 'styled-components';
 import Head from 'next/head';
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 6vw;
+  font-weight: 600;
+  line-height: .9em;
+  color: black;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px; /* Add margin to separate title from case studies */
+
+  @media(max-width: 768px) {
+    font-size: 8vw;
+  }
 `;
 
-const Description = styled.p`
-  font-size: 0.9rem;
+const Subtitle = styled.p`
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5em;
   color: #666;
-  text-align: center;
-  max-width: 600px;
-  margin-top: 1rem;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
+
+  @media(max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 const Grid = styled.div`
@@ -41,8 +56,8 @@ const VideoWrapper = styled.div`
 const videos = [
   'C5TyJa_igy8?si=PBXXa7-TY-TrK9Ai', // Replace with your own YouTube video IDs
   'C5TyJa_igy8?si=PBXXa7-TY-TrK9Ai', // Replace with your own YouTube video IDs
-//   '3JZ_D3ELwOQ',
-//   'E8gmARGvPlI',
+  // '3JZ_D3ELwOQ',
+  // 'E8gmARGvPlI',
 ];
 
 const Videos: React.FC = () => {
@@ -56,19 +71,21 @@ const Videos: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:type" content="video" />
       </Head>
-        <Grid>
-          {videos.map((videoId, index) => (
-            <VideoWrapper key={index}>
-              <iframe
-                src={`https://www.youtube.com/embed/${videoId}`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title={`YouTube video player ${index + 1}`}
-              ></iframe>
-            </VideoWrapper>
-          ))}
-        </Grid>
+      <Title>Patrick Prunty's Videos</Title>
+      <Subtitle>Watch my latest videos, tutorials, and creative projects. Dive into a variety of topics and enjoy my curated video content.</Subtitle>
+      <Grid>
+        {videos.map((videoId, index) => (
+          <VideoWrapper key={index}>
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}`}
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title={`YouTube video player ${index + 1}`}
+            ></iframe>
+          </VideoWrapper>
+        ))}
+      </Grid>
     </>
   );
 };

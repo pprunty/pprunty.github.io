@@ -3,16 +3,31 @@ import styled from 'styled-components';
 import Head from 'next/head';
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 6vw;
+  font-weight: 600;
+  line-height: .9em;
+  color: black;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px; /* Add margin to separate title from case studies */
+
+  @media(max-width: 768px) {
+    font-size: 8vw;
+  }
 `;
 
-const Description = styled.p`
-  font-size: 0.9rem;
+const Subtitle = styled.p`
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5em;
   color: #666;
-  text-align: center;
-  max-width: 600px;
-  margin-top: 1rem;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
+
+  @media(max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 const Grid = styled.div`
@@ -21,19 +36,33 @@ const Grid = styled.div`
   gap: 20px;
   width: 100%;
   max-width: 1200px;
+
+  @media (min-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 `;
 
 const VideoWrapper = styled.div`
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 600px;
 
   iframe {
     width: 100%;
     height: 212px; // Default height
 
     @media (min-width: 720px) {
-      height: 450px;
+      height: 205px;
     }
   }
 `;
@@ -48,24 +77,26 @@ const JigsawPresents: React.FC = () => {
   const videoCount = videos.length;
 
   return (
-  <>
-              <Head>
-                  <title>Patrick Prunty - Jigsaw Presents</title>
-                  <meta name="viewport" content="width=device-width, initial-scale=1" />
-                  <meta name="description" content="YouTube entertainment series." />
-                          <meta property="og:type" content="video" />
-                                      <meta property="og:image" content="/images/jigsaw-presents.jpg" />
-                                      <meta property="og:image:width" content="1200" />
-                                      <meta property="og:image:height" content="630" />
-                  <link rel="icon" href="/images/favicon.ico" />
-              </Head>
+    <>
+      <Head>
+        <title>Patrick Prunty - Jigsaw Presents</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="YouTube entertainment series." />
+        <meta property="og:type" content="video" />
+        <meta property="og:image" content="/images/jigsaw-presents.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <link rel="icon" href="/images/favicon.ico" />
+      </Head>
+      <Title>Jigsaw Presents</Title>
+      <Subtitle>Providing analysis and insight into popular movies, series, books, and gaming.</Subtitle>
       <Grid>
         {videos.map((videoId, index) => (
           <VideoWrapper key={index}>
             <iframe
               src={`https://www.youtube.com/embed/${videoId}`}
               frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture frameborder='0'"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               title={`YouTube video player ${index + 1}`}
             ></iframe>

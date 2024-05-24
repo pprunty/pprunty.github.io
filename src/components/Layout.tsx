@@ -56,7 +56,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </LogoWrapper>
         <Nav>
           <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
-          <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Education</NavItem>
+          <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>jigsaw academy</NavItem>
           <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
           <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
@@ -76,7 +76,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
           <Nav>
             <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
-            <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Education</NavItem>
+            <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>jigsaw academy</NavItem>
             <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
             <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
@@ -166,7 +166,6 @@ const MobileNavbar = styled.div`
   color: black;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid black;
   @media (max-width: 736px) {
     display: flex;
   }
