@@ -54,7 +54,7 @@ export default function BlogList({ posts }: BlogListProps) {
         <meta property="og:type" content="blog" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
-        <Title>Blog</Title>
+        <Title>Patrick Prunty's Blog</Title>
         <Subtitle>Welcome to my personal blog where I share insights, stories, and updates on my work and interests. Explore the posts below to read more.</Subtitle>
       {years.map((year) => (
         <YearSection key={year}>
