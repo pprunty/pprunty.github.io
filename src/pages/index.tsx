@@ -1,60 +1,66 @@
 import React from 'react';
 import styled from 'styled-components';
-import ExportedImage from 'next-image-export-optimizer';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import CaseStudy from '../components/CaseStudy'; // Adjust the import path as necessary
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25px;
+  padding: 20px;
   background-color: #FFFFFF;
   margin-top: 20px;
   min-height: 100vh; /* Ensure it covers the full viewport height */
+  width: 100%;
+  box-sizing: border-box; /* Include padding in the width calculation */
+
+  @media(min-width: 768px) {
+    width: 80%; /* Increase the width to 90% on larger screens */
+    max-width: 1400px; /* Optionally increase the max-width */
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
-`;
-
-const Description = styled.p`
-  font-size: 1rem;
-  color: black;
-  text-align: center;
-  max-width: 600px;
-  margin-top: 0.25rem;
+  font-size: 6vw;
   font-weight: 600;
-
-  @media (max-width: 736px) {
-    font-size: 16px;
-  }
-`;
-
-const Link = styled.a`
-  color: #FF70CF;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-const ImageWrapper = styled.div`
+  line-height: .9em;
+  color: black;
   width: 100%;
-  max-width: 600px;
-  margin: 20px 0;
+  text-align: left;
+  margin-bottom: 20px; /* Add margin to separate title from case studies */
+
+  @media(max-width: 768px) {
+    font-size: 8vw;
+  }
+`;
+
+const Subtitle = styled.p`
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #666;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
+
+  @media(max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 const Home: React.FC = () => {
-  const router = useRouter();
-
-  const handleNavigation = (path: string) => (e: React.MouseEvent) => {
-    e.preventDefault();
-    router.push(path);
-  };
+  // Example case studies data
+  const caseStudies = [
+    {
+      title: "TrackR",
+      description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
+      imageUrl: "/images/afro.WEBP", // Update with the correct image path
+      link: "trackr",
+    },
+    // Add more case studies here
+  ];
 
   return (
     <>
@@ -69,29 +75,17 @@ const Home: React.FC = () => {
         <meta property="og:type" content="profile" />
       </Head>
       <Container>
-        <ImageWrapper>
-          <ExportedImage
-            src="/images/me.JPG"
-            alt="Patrick Prunty"
-            layout="responsive"
-            width={600}
-            height={500}
-            objectFit="cover"
-            placeholder="blur"
+        <Title>The Product & Design Work of Patrick Prunty</Title>
+        <Subtitle>I am a full-stack web developer with a passion for software, education, consultations, and creative media. Explore my case studies below to learn more about my work.</Subtitle>
+        {caseStudies.map((caseStudy, index) => (
+          <CaseStudy
+            key={index}
+            title={caseStudy.title}
+            description={caseStudy.description}
+            imageUrl={caseStudy.imageUrl}
+            link={caseStudy.link}
           />
-        </ImageWrapper>
-        <Description>
-          I'm Patrick Prunty, a full-stack web developer with a passion for <Link href="#" onClick={handleNavigation('/photography')}>photography</Link>, video creation, and education. 🧑🏼‍💻
-        </Description>
-        <Description>
-          Dive into my <Link href="#" onClick={handleNavigation('/software')}>software services</Link>, <Link href="#" onClick={handleNavigation('/blog')}>read my blog</Link>, <Link href="#" onClick={handleNavigation('/videos')}>watch my videos</Link>, and discover more about what drives me. Whether you're here to learn, collaborate, or just explore, there's something for everyone. 🌐
-        </Description>
-        <Description>
-          When I'm not coding, you can find me training for triathlons, practicing Brazilian Jiu Jitsu, hiking, or enjoying quality time with my loved ones. These activities fuel my creativity and keep me balanced. 🧘🏼
-        </Description>
-        <Description>
-          Interested in a deeper conversation over coffee or have something specific in mind? Schedule a free general call with me through the <Link href="#" onClick={handleNavigation('/consultations')}>book a consultation</Link> tab. I'm always excited to connect and share ideas. ☕️
-        </Description>
+        ))}
       </Container>
     </>
   );

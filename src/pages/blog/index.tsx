@@ -176,10 +176,10 @@ const PostItem = styled.li`
       border-top: none;
       border-right: none;
       border-left: none;
-      border-bottom: 1 px solid #B3B3B3;
+      border-bottom: 1 px solid black;
 
         &:hover {
-          border-color: #B3B3B3; /* Darken the border color on hover */
+          border-color: black; /* Darken the border color on hover */
         }
     }
 `;

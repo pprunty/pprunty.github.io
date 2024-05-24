@@ -42,7 +42,7 @@ const VideoWrapper = styled.div`
     width: 100%;
     height: 212px; // Default height
 
-    @media (min-width: 480px) {
+    @media (min-width: 720px) {
       height: 450px;
     }
   }
@@ -70,9 +70,9 @@ const JigsawAcademy: React.FC = () => {
             <meta property="og:image:height" content="630" />
             </Head>
     <Container>
-      <Grid videoCount={videoCount}>
+      <Grid>
         {playlists.map((playlistId, index) => (
-          <VideoWrapper key={index} videoCount={videoCount}>
+          <VideoWrapper key={index}>
             <iframe
               src={`https://www.youtube.com/embed/videoseries?${playlistId}`}
               frameBorder="0"

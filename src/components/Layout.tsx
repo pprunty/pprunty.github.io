@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import ExportedImage from "next-image-export-optimizer";
-import Footer from './Footer'; // Adjust the path if needed
 
 interface LayoutProps {
   children: ReactNode;
@@ -13,6 +12,7 @@ const logo2Path = isExport ? `/images/logo2.svg` : "/images/logo2.svg";
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMediaDropdownOpen, setMediaDropdownOpen] = useState(false);
   const [drawerHeight, setDrawerHeight] = useState(0);
   const router = useRouter();
   const drawerRef = useRef<HTMLDivElement>(null);
@@ -21,9 +21,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const toggleMediaDropdown = () => {
+    setMediaDropdownOpen(!isMediaDropdownOpen);
+  };
+
   const handleNavigation = (path: string) => {
     router.push(path);
     setMenuOpen(false); // Close menu after navigation
+    setMediaDropdownOpen(false); // Close media dropdown after navigation
   };
 
   const isActive = (path: string) => router.pathname === path;
@@ -47,44 +52,48 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <Container>
-      <Sidebar>
+      <Navbar>
         <LogoWrapper onClick={() => handleNavigation('/')}>
-          <ExportedImage src={logo2Path} alt="logo2" layout="responsive"
-          width={200}
-          height={100}
-          placeholder={'blur'}
-           />
+          <ExportedImage src={'/images/favicon.ico'} alt="logo2" layout="responsive"
+            width={200}
+            height={100}
+            placeholder={'blur'}
+          />
         </LogoWrapper>
         <Nav>
-                              <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
-          <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
-          <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
+                  <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
+          <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Education</NavItem>
+          <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
           <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
-          <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Services</NavItem>
-          <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
-          <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
-          <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Book a consultation</NavItem>
+                    <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>consultations</NavItem>
+          <DropdownNavItem onClick={toggleMediaDropdown}>
+            Media
+            <DropdownMenu isOpen={isMediaDropdownOpen}>
+              <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
+              <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
+            </DropdownMenu>
+          </DropdownNavItem>
         </Nav>
-      </Sidebar>
+      </Navbar>
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
         <MobileNavbar>
           <MobileLogoWrapper onClick={() => handleNavigation('/')}>
             <ExportedImage src={'/images/favicon.ico'} alt="logo2" layout="responsive" width={250} height={75}
-                                                       placeholder={'blur'}
-             />
+              placeholder={'blur'}
+            />
           </MobileLogoWrapper>
           <MenuButton onClick={toggleMenu}>MENU</MenuButton>
         </MobileNavbar>
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
           <Nav>
             <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
+            <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Education</NavItem>
+            <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Products</NavItem>
+            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
+            <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Book a consultation</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
-            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
-            <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Products</NavItem>
             <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
-            <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
-            <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Book a consultation</NavItem>
           </Nav>
         </MobileDrawer>
         {children}
@@ -100,19 +109,17 @@ const Container = styled.div`
   flex-direction: column;
   min-height: 100vh;
   background-color: #FFFFFF; /* Ensure consistent background color */
-  @media (min-width: 736px) {
-    flex-direction: row;
-  }
 `;
 
-const Sidebar = styled.div`
-  width: 250px;
-  background-color: inherit; /* Inherit background color from parent */
-  color: black;
+const Navbar = styled.div`
   display: flex;
-  flex-direction: column;
-  padding: 20px;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3px;
+  background-color: inherit;
+  border-bottom: 2px solid black;
+  color: black;
   @media (max-width: 736px) {
     display: none;
   }
@@ -120,26 +127,29 @@ const Sidebar = styled.div`
 
 const LogoWrapper = styled.div`
   cursor: pointer;
-  width: 230px;
+  width: 40px;
   img {
-    width: 230px; /* Adjust based on your design */
+    width: 40px; /* Adjust based on your design */
   }
 `;
 
 const Nav = styled.nav`
   display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  flex-direction: row;
+  gap: 20px;
+  padding-right: 10px;
+  @media (max-width: 736px) {
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 4px;
+  }
 `;
 
-const NavItem = styled.div<{ isActive: boolean }>`
-  margin: 1px 0;
+const NavItem = styled.div<{ isActive?: boolean }>`
   text-transform: uppercase;
   color: ${({ isActive }) => (isActive ? '#FF70CF' : 'black')};
   font-weight: bold;
-  margin-bottom: 2px;
   cursor: pointer;
   transition: color 80ms ease-in-out;
   font-size: 16px;
@@ -155,6 +165,38 @@ const NavItem = styled.div<{ isActive: boolean }>`
 
     &:hover {
       color: ${({ isActive }) => (isActive ? 'white' : '#B3B3B3')};
+    }
+  }
+`;
+
+const DropdownNavItem = styled(NavItem)`
+  position: relative;
+
+  &:hover > div {
+    display: block;
+  }
+`;
+
+const DropdownMenu = styled.div<{ isOpen: boolean }>`
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  position: absolute;
+  top: 100%;
+  margin-bottom: 20px;
+  right: 0;
+  background-color: black;
+  border: 1px solid black;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 160px;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  white-space: nowrap;
+
+  & > ${NavItem} {
+    color: white;
+    &:hover {
+      color: #B3B3B3;
     }
   }
 `;
@@ -181,10 +223,10 @@ const MobileLogoWrapper = styled.div`
   img {
     width: 480px; /* Adjust based on your design */
   }
-    @media (max-width: 736px) {
-      margin-top: .5rem;
-      width: 50px;
-    }
+  @media (max-width: 736px) {
+    margin-top: .5rem;
+    width: 50px;
+  }
 `;
 
 const MenuButton = styled.button`
@@ -194,6 +236,7 @@ const MenuButton = styled.button`
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+
   &:hover {
     color: #B3B3B3;
     text-decoration: none;
@@ -214,6 +257,7 @@ const MobileDrawer = styled.div<{ isMenuOpen: boolean; drawerHeight: number }>`
   transition: top 180ms ease-in-out;
   overflow: hidden;
   max-height: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `${drawerHeight}px` : '0')};
+
   @media (min-width: 736px) {
     display: none;
   }

@@ -42,7 +42,7 @@ const VideoWrapper = styled.div`
     width: 100%;
     height: 212px; // Default height
 
-    @media (min-width: 480px) {
+    @media (min-width: 720px) {
       height: 450px;
     }
   }

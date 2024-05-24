@@ -42,7 +42,7 @@ const VideoWrapper = styled.div`
     width: 100%;
     height: 212px; // Default height
 
-    @media (min-width: 480px) {
+    @media (min-width: 720px) {
       height: 450px;
     }
   }
@@ -70,9 +70,9 @@ const JigsawPresents: React.FC = () => {
                   <link rel="icon" href="/images/favicon.ico" />
               </Head>
     <Container>
-      <Grid videoCount={videoCount}>
+      <Grid>
         {videos.map((videoId, index) => (
-          <VideoWrapper key={index} videoCount={videoCount}>
+          <VideoWrapper key={index}>
             <iframe
               src={`https://www.youtube.com/embed/${videoId}`}
               frameBorder="0"
