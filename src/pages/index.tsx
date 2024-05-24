@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import CaseStudy from '../components/CaseStudy'; // Adjust the import path as necessary
 
-
 const Title = styled.h1`
   font-size: 6vw;
   font-weight: 600;
@@ -41,6 +40,18 @@ const Home: React.FC = () => {
       imageUrl: "/images/afro.WEBP", // Update with the correct image path
       link: "trackr",
     },
+     {
+          title: "thelastmanstanding.io",
+          description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
+          imageUrl: "/images/IMG_5948.JPG", // Update with the correct image path
+          link: "trackr",
+        },
+             {
+                  title: "Jigsaw Academy",
+                  description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
+                  imageUrl: "/images/jigsaw-academy.jpg", // Update with the correct image path
+                  link: "trackr",
+                },
     // Add more case studies here
   ];
 
@@ -61,6 +72,7 @@ const Home: React.FC = () => {
         {caseStudies.map((caseStudy, index) => (
           <CaseStudy
             key={index}
+            index={index} // Pass the index here
             title={caseStudy.title}
             description={caseStudy.description}
             imageUrl={caseStudy.imageUrl}

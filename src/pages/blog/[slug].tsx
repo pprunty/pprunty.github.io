@@ -14,9 +14,13 @@ export default function BlogPost({ title, date, content, image, description, art
   const router = useRouter();
   const imagePath = isExport ? `${image}` : image;
 
-  const handleBackClick = () => {
-    router.back();
-  };
+   const handleBackClick = () => {
+      if (window.history.length > 1) {
+        router.back();
+      } else {
+        router.push('/blog');
+      }
+    };
 
   return (
     <>

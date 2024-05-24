@@ -7,7 +7,6 @@ const CaseStudyContainer = styled.div`
   display: flex;
   align-items: center;
   padding: 20px 0;
-  border-bottom: 2px solid black;
   border-top: 2px solid black;
   cursor: pointer;
   flex-direction: column;
@@ -109,13 +108,14 @@ const ImageWrapper = styled.div`
 `;
 
 interface CaseStudyProps {
+  index: number;
   title: string;
   description: string;
   imageUrl: string;
   link: string;
 }
 
-const CaseStudy: React.FC<CaseStudyProps> = ({ title, description, imageUrl, link }) => {
+const CaseStudy: React.FC<CaseStudyProps> = ({ index, title, description, imageUrl, link }) => {
   const router = useRouter();
 
   const navigateToCaseStudy = () => {
@@ -125,7 +125,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ title, description, imageUrl, lin
   return (
     <CaseStudyContainer onClick={navigateToCaseStudy}>
       <TextContainer>
-        <CaseStudyLabel>● Project</CaseStudyLabel>
+        <CaseStudyLabel>● Project {index + 1}</CaseStudyLabel>
         <CenteredContent>
           <CaseStudyTitle>{title}</CaseStudyTitle>
           <CaseStudyDescription>{description}</CaseStudyDescription>
