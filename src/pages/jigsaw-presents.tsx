@@ -23,10 +23,12 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-  margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
+  padding-bottom: 40px;
+//   border-bottom: 2px solid black;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
+      padding-bottom: 5px;
   }
 `;
 

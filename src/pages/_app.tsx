@@ -61,7 +61,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
         </Container>
       </Layout>
-      {/*<Footer/>*/}
+      <Footer/>
     </StyledThemeProvider>
     </>
   );

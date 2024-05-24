@@ -134,10 +134,12 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-//   margin-bottom: 40px;
+  padding-bottom: 40px;
+//   border-bottom: 2px solid black;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
+      padding-bottom: 5px;
   }
 //   padding-bottom: 40px;
 //   border-bottom: 2px solid black;
@@ -235,8 +237,8 @@ const PostText = styled.div`
 `;
 
 const PostImageWrapper = styled.div`
-  width: 150px; // Increase width
-  height: 150px; // Increase height
+  width: 200px; // Increase width
+  height: 200px; // Increase height
   overflow: hidden;
 
   @media (max-width: 768px) {

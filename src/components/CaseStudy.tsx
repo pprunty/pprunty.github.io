@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 const CaseStudyContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: stretch; /* Ensure children stretch to full height */
   padding: 20px 0;
   border-top: 2px solid black;
   cursor: pointer;
@@ -22,13 +22,11 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   flex: 1;
-  border-right: none;
   margin-bottom: 20px;
 
   @media(min-width: 768px) {
-    padding-right: 40px;
+    padding-right: 20px;
     border-right: 2px solid black;
     margin-bottom: 0;
   }
@@ -119,7 +117,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ index, title, description, imageU
   const router = useRouter();
 
   const navigateToCaseStudy = () => {
-    router.push(`/case-study/${link}`);
+    router.push(`/${link}`);
   };
 
   return (

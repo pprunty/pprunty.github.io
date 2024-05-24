@@ -52,42 +52,41 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             width={200}
             height={100}
             placeholder={'blur'}
+            unoptimized={true}
           />
         </LogoWrapper>
         <Nav>
          <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
-                               <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
-                               <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
-                               <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
-                               <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-                               <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>jigsaw academy</NavItem>
-                               <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>jigsaw presents</NavItem>
-
-                               <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
-
-                             </Nav>
+         <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
+         <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
+         <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
+         <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
+         <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
+         <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
+         <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
+       </Nav>
       </Navbar>
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
         <MobileNavbar>
           <MobileLogoWrapper onClick={() => handleNavigation('/')}>
             <ExportedImage src={'/images/favicon.ico'} alt="logo2" layout="responsive" width={250} height={75}
               placeholder={'blur'}
+              unoptimized={true}
             />
           </MobileLogoWrapper>
           <MenuButton onClick={toggleMenu}>MENU</MenuButton>
         </MobileNavbar>
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
           <Nav>
-              <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
-                      <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
-                      <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
-                      <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
-                      <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-                      <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>jigsaw academy</NavItem>
-                      <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>jigsaw presents</NavItem>
-
-                      <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
-                     </Nav>
+            <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
+            <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
+            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
+            <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
+            <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
+            <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
+            <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
+            <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
+          </Nav>
         </MobileDrawer>
         {children}
       </Content>
@@ -113,7 +112,7 @@ const Navbar = styled.div`
   background-color: inherit;
   border-bottom: 2px solid black;
   color: black;
-  @media (max-width: 736px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `;
@@ -131,7 +130,7 @@ const Nav = styled.nav`
   flex-direction: row;
   gap: 20px;
   padding-right: 10px;
-  @media (max-width: 736px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -152,7 +151,7 @@ const NavItem = styled.div<{ isActive?: boolean }>`
     text-decoration: none;
   }
 
-  @media (max-width: 736px) {
+  @media (max-width: 1000px) {
     font-size: 22px;
     color: ${({ isActive }) => (isActive ? 'white' : '#B3B3B3')};
 
@@ -171,7 +170,7 @@ const MobileNavbar = styled.div`
   color: black;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 736px) {
+  @media (max-width: 1000px) {
     display: flex;
   }
 `;
@@ -184,7 +183,7 @@ const MobileLogoWrapper = styled.div`
   img {
     width: 480px; /* Adjust based on your design */
   }
-  @media (max-width: 736px) {
+  @media (max-width: 1000px) {
     margin-top: .5rem;
     width: 45px;
   }
@@ -219,7 +218,7 @@ const MobileDrawer = styled.div<{ isMenuOpen: boolean; drawerHeight: number }>`
   overflow: hidden;
   max-height: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `${drawerHeight}px` : '0')};
 
-  @media (min-width: 736px) {
+  @media (min-width: 1000px) {
     display: none;
   }
 `;
@@ -231,7 +230,7 @@ const Content = styled.main<{ isMenuOpen: boolean; drawerHeight: number }>`
   padding: 5px;
   margin-top: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `${drawerHeight}px` : '0')};
   transition: margin-top 180ms ease-in-out;
-  @media (min-width: 736px) {
+  @media (min-width: 1000px) {
     margin-top: 0; /* Reset margin-top for desktop */
   }
 `;
