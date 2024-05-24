@@ -124,7 +124,7 @@ const Container = styled.div`
 const PostTitle = styled.div`
   font-size: 1.3rem;
   font-weight: 700;
-  margin: 10px 0;
+//   margin: 10px 0;
   color: black;
   text-decoration: none;
   overflow: hidden;

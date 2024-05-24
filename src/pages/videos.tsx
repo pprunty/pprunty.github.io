@@ -25,32 +25,17 @@ const Description = styled.p`
   margin-top: 1rem;
 `;
 
-const Grid = styled.div<{ videoCount: number }>`
+const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   width: 100%;
   max-width: 1200px;
-
-  @media (min-width: 480px) {
-    grid-template-columns: ${({ videoCount }) => videoCount === 1 ? '1fr' : 'repeat(1, 1fr)'};
-    gap: 5px;
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: ${({ videoCount }) => videoCount === 1 ? '1fr' : 'repeat(2, 1fr)'};
-    gap: 10px;
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: ${({ videoCount }) => videoCount === 1 ? '1fr' : 'repeat(3, 1fr)'};
-    gap: 20px;
-  }
 `;
 
-const VideoWrapper = styled.div<{ videoCount: number }>`
+const VideoWrapper = styled.div`
   width: 100%;
-  max-width: ${({ videoCount }) => videoCount === 1 ? '800px' : '600px'};
+  max-width: 800px;
   margin: 0 auto;
 
   iframe {
@@ -58,12 +43,13 @@ const VideoWrapper = styled.div<{ videoCount: number }>`
     height: 212px; // Default height
 
     @media (min-width: 480px) {
-      height: ${({ videoCount }) => videoCount === 1 ? '450px' : '212px'};
+      height: 450px;
     }
   }
 `;
 
 const videos = [
+  'C5TyJa_igy8?si=PBXXa7-TY-TrK9Ai', // Replace with your own YouTube video IDs
   'C5TyJa_igy8?si=PBXXa7-TY-TrK9Ai', // Replace with your own YouTube video IDs
 //   '3JZ_D3ELwOQ',
 //   'E8gmARGvPlI',
@@ -81,9 +67,9 @@ const Videos: React.FC = () => {
         <meta property="og:type" content="video" />
       </Head>
       <Container>
-        <Grid videoCount={videoCount}>
+        <Grid>
           {videos.map((videoId, index) => (
-            <VideoWrapper key={index} videoCount={videoCount}>
+            <VideoWrapper key={index}>
               <iframe
                 src={`https://www.youtube.com/embed/${videoId}`}
                 frameBorder="0"

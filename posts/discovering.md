@@ -1,5 +1,5 @@
 ---
-title: "Discovering"
+title: "Discovering all things that go around"
 date: "2024-08-05"
 image: "/images/haiyang.WEBP"
 description: "How a video game quietly shaped my childhood."

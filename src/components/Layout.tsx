@@ -139,6 +139,7 @@ const NavItem = styled.div<{ isActive: boolean }>`
   text-transform: uppercase;
   color: ${({ isActive }) => (isActive ? '#FF70CF' : 'black')};
   font-weight: bold;
+  margin-bottom: 2px;
   cursor: pointer;
   transition: color 80ms ease-in-out;
   font-size: 16px;

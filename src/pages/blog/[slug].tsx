@@ -121,11 +121,11 @@ const Artwork = styled.p`
     color: #555; /* Adjust the color as needed */
     text-align: center; /* Center alignment */
 //     margin-top: 10px; /* Adjust margin as needed */
-    font-size: 0.9rem; /* Adjust font size as needed */
+    font-size: .95rem; /* Adjust font size as needed */
     font-weight: 300;
 
-    @media (max-width: 768px) {
-        font-size: 0.8rem; /* Smaller font size on tablets */
+    @media (min-width: 768px) {
+        font-size: .8rem; /* Smaller font size on tablets */
     }
 
     @media (max-width: 480px) {

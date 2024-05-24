@@ -25,47 +25,26 @@ const Description = styled.p`
   margin-top: 1rem;
 `;
 
-const Grid = styled.div<{ videoCount: number }>`
+const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 20px;
   width: 100%;
   max-width: 1200px;
-
-  @media (min-width: 480px) {
-    grid-template-columns: ${({ videoCount }) => (videoCount === 1 ? '1fr' : 'repeat(1, 1fr)')};
-    gap: 15px;
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: ${({ videoCount }) => (videoCount === 1 ? '1fr' : 'repeat(1, 1fr)')};
-    gap: 10px;
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: ${({ videoCount }) => (videoCount === 1 ? '1fr' : 'repeat(2, 1fr)')};
-    gap: 20px;
-  }
 `;
 
-const VideoWrapper = styled.div<{ videoCount: number }>`
+const VideoWrapper = styled.div`
   width: 100%;
-  max-width: ${({ videoCount }) => (videoCount === 1 ? '800px' : 'auto')};
+  max-width: 800px;
   margin: 0 auto;
-  overflow: hidden; /* Ensure the video doesn't overflow */
 
   iframe {
-      width: 100%;
-      height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '210px')}; /* Maintain 16:9 aspect ratio */
+    width: 100%;
+    height: 212px; // Default height
 
-      @media (min-width: 480px) {
-        height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '280px')}; /* Maintain 16:9 aspect ratio */
-      }
-
-      @media (min-width: 1024px) {
-        height: ${({ videoCount }) => (videoCount === 1 ? '450px' : '320px')}; /* Maintain 16:9 aspect ratio */
-      }
-      object-fit: cover; /* Cover the container to avoid black bars */
+    @media (min-width: 480px) {
+      height: 450px;
+    }
   }
 `;
 
