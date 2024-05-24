@@ -60,7 +60,7 @@ const CaseStudyTitle = styled.h2`
 `;
 
 const CaseStudyDescription = styled.p`
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #666;
   margin-bottom: 20px;
 `;

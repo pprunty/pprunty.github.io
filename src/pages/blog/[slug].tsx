@@ -43,7 +43,6 @@ export default function BlogPost({ title, date, content, image, description, art
         {/* Additional tags for SEO */}
         <link rel="canonical" href={`${router.asPath}`} />
       </Head>
-      <Container>
         <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
         <ImageWrapper>
           <ExportedImage
@@ -59,7 +58,6 @@ export default function BlogPost({ title, date, content, image, description, art
         <Title>{title}</Title>
         <Date>{date}</Date>
         <Content dangerouslySetInnerHTML={{ __html: content }} />
-      </Container>
     </>
   );
 }
@@ -81,16 +79,6 @@ export async function getStaticProps({ params }) {
     return { props: { ...data, content: htmlContent, artwork: data.artwork || null } };
 }
 
-// Styled Components
-const Container = styled.div`
-  display: flex;
-  margin-top: 25px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFFFFF;
-  padding: 18px;
-`;
 
 const BackArrow = styled.div`
   align-self: flex-start;

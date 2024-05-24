@@ -2,15 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 1rem; /* Add some padding for small screens */
-`;
-
 const Title = styled.h1`
   font-size: 2.5rem;
   color: #333;
@@ -50,13 +41,11 @@ const Consultation: React.FC = () => {
                 <meta property="og:type" content="product" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
-      <Container>
         <StyledIframe
           src="https://patrick0dys.setmore.com/patrick?lang=english"
           scrolling="yes"
           allowFullScreen
         />
-      </Container>
     </>
   );
 };

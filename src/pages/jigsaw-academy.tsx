@@ -2,15 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 
-const Container = styled.div`
-  display: flex;
-  margin-top: 25px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFFFFF;
-  padding: 20px;
-`;
 
 const Title = styled.h1`
   font-size: 2.5rem;
@@ -69,7 +60,6 @@ const JigsawAcademy: React.FC = () => {
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
             </Head>
-    <Container>
       <Grid>
         {playlists.map((playlistId, index) => (
           <VideoWrapper key={index}>
@@ -83,7 +73,6 @@ const JigsawAcademy: React.FC = () => {
           </VideoWrapper>
         ))}
       </Grid>
-    </Container>
     </>
   );
 };

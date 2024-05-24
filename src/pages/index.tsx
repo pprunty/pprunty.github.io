@@ -3,24 +3,6 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import CaseStudy from '../components/CaseStudy'; // Adjust the import path as necessary
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #FFFFFF;
-  margin-top: 20px;
-  min-height: 100vh; /* Ensure it covers the full viewport height */
-  width: 100%;
-  box-sizing: border-box; /* Include padding in the width calculation */
-
-  @media(min-width: 768px) {
-    width: 80%; /* Increase the width to 90% on larger screens */
-    max-width: 1400px; /* Optionally increase the max-width */
-    margin-left: auto;
-    margin-right: auto;
-  }
-`;
 
 const Title = styled.h1`
   font-size: 6vw;
@@ -74,7 +56,6 @@ const Home: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:type" content="profile" />
       </Head>
-      <Container>
         <Title>The Product & Design Work of Patrick Prunty</Title>
         <Subtitle>I am a full-stack web developer with a passion for software, education, consultations, and creative media. Explore my case studies below to learn more about my work.</Subtitle>
         {caseStudies.map((caseStudy, index) => (
@@ -86,7 +67,6 @@ const Home: React.FC = () => {
             link={caseStudy.link}
           />
         ))}
-      </Container>
     </>
   );
 };

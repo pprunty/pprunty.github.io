@@ -6,6 +6,7 @@ import GlobalStyle from '../styles/GlobalStyles';
 import { lightTheme } from '../styles/theme';
 import Head from 'next/head';
 import Footer from '../components/Footer';
+import styled from 'styled-components';
 
 const updateMetaThemeColor = (color: string) => {
   const metaThemeColor = document.querySelector("meta[name=theme-color]");
@@ -18,6 +19,24 @@ const updateMetaThemeColor = (color: string) => {
     document.getElementsByTagName('head')[0].appendChild(metaTag);
   }
 };
+
+const Container = styled.div`
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  padding: 18px;
+  width: 100%;
+
+    @media(min-width: 768px) {
+      width: 80%; /* Increase the width to 90% on larger screens */
+      max-width: 1200px; /* Optionally increase the max-width */
+      margin-left: auto;
+      margin-right: auto;
+    }
+`;
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
@@ -38,7 +57,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <StyledThemeProvider theme={lightTheme}>
      <GlobalStyle theme={lightTheme}/>
       <Layout>
+        <Container>
         <Component {...pageProps} />
+        </Container>
       </Layout>
       {/*<Footer/>*/}
     </StyledThemeProvider>

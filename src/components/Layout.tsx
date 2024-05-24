@@ -12,7 +12,6 @@ const logo2Path = isExport ? `/images/logo2.svg` : "/images/logo2.svg";
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isMediaDropdownOpen, setMediaDropdownOpen] = useState(false);
   const [drawerHeight, setDrawerHeight] = useState(0);
   const router = useRouter();
   const drawerRef = useRef<HTMLDivElement>(null);
@@ -21,14 +20,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     setMenuOpen(!isMenuOpen);
   };
 
-  const toggleMediaDropdown = () => {
-    setMediaDropdownOpen(!isMediaDropdownOpen);
-  };
-
   const handleNavigation = (path: string) => {
     router.push(path);
     setMenuOpen(false); // Close menu after navigation
-    setMediaDropdownOpen(false); // Close media dropdown after navigation
   };
 
   const isActive = (path: string) => router.pathname === path;
@@ -61,18 +55,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           />
         </LogoWrapper>
         <Nav>
-                  <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
+          <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
           <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Education</NavItem>
           <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
           <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
-                    <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>consultations</NavItem>
-          <DropdownNavItem onClick={toggleMediaDropdown}>
-            Media
-            <DropdownMenu isOpen={isMediaDropdownOpen}>
-              <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
-              <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-            </DropdownMenu>
-          </DropdownNavItem>
+          <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
+          <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
+          <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
         </Nav>
       </Navbar>
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
@@ -88,12 +77,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Nav>
             <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
             <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Education</NavItem>
-            <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software Products</NavItem>
+            <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
             <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
-            <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Book a consultation</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
-            <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videos</NavItem>
-            <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
+            <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
+            <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
           </Nav>
         </MobileDrawer>
         {children}
@@ -169,38 +157,6 @@ const NavItem = styled.div<{ isActive?: boolean }>`
   }
 `;
 
-const DropdownNavItem = styled(NavItem)`
-  position: relative;
-
-  &:hover > div {
-    display: block;
-  }
-`;
-
-const DropdownMenu = styled.div<{ isOpen: boolean }>`
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
-  position: absolute;
-  top: 100%;
-  margin-bottom: 20px;
-  right: 0;
-  background-color: black;
-  border: 1px solid black;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  min-width: 160px;
-  flex-direction: column;
-  gap: 4px;
-  padding: 10px;
-  white-space: nowrap;
-
-  & > ${NavItem} {
-    color: white;
-    &:hover {
-      color: #B3B3B3;
-    }
-  }
-`;
-
 const MobileNavbar = styled.div`
   display: none;
   width: 100%;
@@ -210,6 +166,7 @@ const MobileNavbar = styled.div`
   color: black;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid black;
   @media (max-width: 736px) {
     display: flex;
   }
@@ -217,7 +174,7 @@ const MobileNavbar = styled.div`
 
 const MobileLogoWrapper = styled.div`
   font-size: 1.5rem;
-  margin-top: 28px;
+  margin-top: 15px;
   cursor: pointer;
   width: 480px;
   img {
@@ -225,7 +182,7 @@ const MobileLogoWrapper = styled.div`
   }
   @media (max-width: 736px) {
     margin-top: .5rem;
-    width: 50px;
+    width: 45px;
   }
 `;
 

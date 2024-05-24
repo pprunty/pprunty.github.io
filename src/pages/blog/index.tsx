@@ -54,7 +54,6 @@ export default function BlogList({ posts }: BlogListProps) {
                   <meta property="og:type" content="blog" />
                   <link rel="icon" href="/images/favicon.ico" />
               </Head>
-    <Container>
       {years.map((year) => (
         <YearSection key={year}>
           <YearHeader>{year}</YearHeader>
@@ -86,7 +85,6 @@ export default function BlogList({ posts }: BlogListProps) {
           </PostList>
         </YearSection>
       ))}
-    </Container>
     </>
   );
 }
@@ -99,7 +97,7 @@ export async function getStaticProps() {
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
     const htmlContent = await markdownToHtml(content);
-    const excerpt = htmlContent.replace(/<[^>]*>?/gm, '').substring(0, 200); // Remove HTML tags and take first 200 characters
+    const excerpt = htmlContent.replace(/<[^>]*>?/gm, '').substring(0, 390); // Remove HTML tags and take first 200 characters
     const slug = filename.replace(/\.md$/, '');
     return { slug, ...data, excerpt } as Post;
   }));
@@ -111,18 +109,9 @@ export async function getStaticProps() {
 }
 
 // Styled Components
-const Container = styled.div`
-  display: flex;
-  margin-top: 20px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFFFFF;
-  padding: 18px;
-`;
 
 const PostTitle = styled.div`
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: 700;
 //   margin: 10px 0;
   color: black;
@@ -133,11 +122,13 @@ const PostTitle = styled.div`
   &:hover {
     text-decoration: none;
   }
+   @media (max-width: 768px) {
+  font-size: 1.3rem;
+      }
 `;
 
 const YearSection = styled.div`
   width: 100%;
-  max-width: 800px;
   margin-bottom: 20px;
 `;
 
@@ -158,7 +149,7 @@ const PostItem = styled.li`
   margin-bottom: 20px;
   padding: 1rem;
   border: 1px solid #ddd;
-  transition: border-color 0.2s, transform 0.2s, opacity 0.2s; /* Add transform and opacity transitions */
+  transition: border-color 0.2s, border 0.2s, transform 0.2s, opacity 0.2s; /* Add transform and opacity transitions */
   cursor: pointer; /* Add cursor pointer to indicate clickable item */
 
   &:hover {
@@ -174,6 +165,7 @@ const PostItem = styled.li`
       align-items: flex-start;
       padding: 0px;
       border-top: none;
+      padding-right: 5px;
       border-right: none;
       border-left: none;
       border-bottom: 1 px solid black;
@@ -230,19 +222,20 @@ const PostImageWrapper = styled.div`
 `;
 
 const PostExcerpt = styled.p`
-  font-size: 16px;
+  font-size: 1.2rem;
   color: #555;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4; /* Limit to 4 lines */
+  -webkit-line-clamp: 6; /* Increase to 6 lines */
   overflow: hidden;
-  max-height: 6em; /* 1.5em * 4 lines */
+  max-height: 9em; /* 1.5em * 6 lines */
   min-height: 4em; /* Ensure minimum height */
 
-  @media (max-width: 480px) {
+  @media (max-width: 720px) {
     -webkit-line-clamp: 3; /* Limit to 3 lines on mobile */
     max-height: 4.5em; /* 1.5em * 3 lines */
     min-height: 3em; /* Ensure minimum height */
+    font-size: 1rem;
   }
 `;
 
