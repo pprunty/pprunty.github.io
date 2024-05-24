@@ -125,7 +125,7 @@ const Home: React.FC = () => {
     },
     {
       title: "thelastmanstanding.io",
-      description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
+      description: "Facilitating sweepstake and last-man-standing competitions among friend groups, enabling  digital payments, automated email notifications, and custom wagers. The product currently covers football events such as the FIFA World Cup, European Championship, and Premier League.",
       imageUrl: "/images/IMG_5948.JPG", // Update with the correct image path
       link: "trackr",
     },
@@ -137,8 +137,8 @@ const Home: React.FC = () => {
     },
     {
       title: "Jigsaw Academy",
-      description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
-      imageUrl: "/images/jigsaw-academy.jpg", // Update with the correct image path
+      description: "An educational YouTube channel, providing free, high-quality education to those who need it most.",
+      imageUrl: "/images/jigsaw-academy-logo.png", // Update with the correct image path
       link: "jigsaw-academy",
     },
     // Add more case studies here

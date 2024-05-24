@@ -75,7 +75,7 @@ const Videos: React.FC = () => {
         <meta property="og:type" content="video" />
       </Head>
       <Title>Patrick Prunty's Videos</Title>
-      <Subtitle>Watch my latest videos, tutorials, and creative projects. Dive into a variety of topics and enjoy my curated video content.</Subtitle>
+        <Subtitle>Explore my personal YouTube channel, where I share a variety of creative, non-educational, and non-analytical videos.</Subtitle>
       <Grid>
         {videos.map((videoId, index) => (
           <VideoWrapper key={index}>
