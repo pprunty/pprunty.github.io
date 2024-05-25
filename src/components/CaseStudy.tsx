@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import ExportedImage from 'next-image-export-optimizer';
 import { useRouter } from 'next/router';
 
 const CaseStudyContainer = styled.div`
   display: flex;
-  align-items: stretch; /* Ensure children stretch to full height */
+  align-items: stretch;
   padding: 20px 0;
   border-top: 2px solid black;
   cursor: pointer;
   flex-direction: column;
-  width: 100%; /* Make sure it takes full width */
+  width: 100%;
 
   @media(min-width: 768px) {
     flex-direction: row;
@@ -70,7 +70,7 @@ const ViewCaseStudyButton = styled.button`
   background-color: #fff;
   text-decoration: none;
   border: 2px solid #333;
-  border-radius: 0px;
+  border-radius: 0;
   cursor: pointer;
   font-weight: 600;
   transition: border-radius 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -78,7 +78,7 @@ const ViewCaseStudyButton = styled.button`
   &:hover {
     background-color: #333;
     color: #fff;
-    border-radius: 30px;
+    border-radius: 40px;
   }
 `;
 
@@ -113,7 +113,7 @@ interface CaseStudyProps {
   link: string;
 }
 
-const CaseStudy: React.FC<CaseStudyProps> = ({ index, title, description, imageUrl, link }) => {
+const CaseStudyComponent: React.FC<CaseStudyProps> = ({ index, title, description, imageUrl, link }) => {
   const router = useRouter();
 
   const navigateToCaseStudy = () => {
@@ -136,11 +136,11 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ index, title, description, imageU
           alt={title}
           layout="responsive"
           width={730}
-          height={200} // Adjusted to fit the design
+          height={200}
         />
       </ImageWrapper>
     </CaseStudyContainer>
   );
 };
 
-export default CaseStudy;
+export default memo(CaseStudyComponent);

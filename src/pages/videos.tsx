@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 
@@ -9,7 +9,7 @@ const Title = styled.h1`
   color: black;
   width: 100%;
   text-align: left;
-  margin-bottom: 20px; /* Add margin to separate title from case studies */
+  margin-bottom: 20px;
 
   @media(max-width: 768px) {
     font-size: 8vw;
@@ -23,13 +23,12 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-  margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
+  margin-bottom: 40px;
   padding-bottom: 40px;
-//   border-bottom: 2px solid black;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
-      padding-bottom: 5px;
+    padding-bottom: 5px;
   }
 `;
 
@@ -48,7 +47,7 @@ const VideoWrapper = styled.div`
 
   iframe {
     width: 100%;
-    height: 212px; // Default height
+    height: 212px;
 
     @media (min-width: 720px) {
       height: 450px;
@@ -57,15 +56,23 @@ const VideoWrapper = styled.div`
 `;
 
 const videos = [
-  'C5TyJa_igy8?si=PBXXa7-TY-TrK9Ai', // Replace with your own YouTube video IDs
-  'C5TyJa_igy8?si=PBXXa7-TY-TrK9Ai', // Replace with your own YouTube video IDs
-  // '3JZ_D3ELwOQ',
-  // 'E8gmARGvPlI',
+  'C5TyJa_igy8?si=PBXXa7-TY-TrK9Ai',
+  'C5TyJa_igy8?si=PBXXa7-TY-TrK9Ai',
 ];
 
-const Videos: React.FC = () => {
-  const videoCount = videos.length;
+const MemoizedVideoWrapper = memo(({ videoId, index }: { videoId: string, index: number }) => (
+  <VideoWrapper key={index}>
+    <iframe
+      src={`https://www.youtube.com/embed/${videoId}`}
+      frameBorder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title={`YouTube video player ${index + 1}`}
+    ></iframe>
+  </VideoWrapper>
+));
 
+const Videos: React.FC = () => {
   return (
     <>
       <Head>
@@ -75,18 +82,10 @@ const Videos: React.FC = () => {
         <meta property="og:type" content="video" />
       </Head>
       <Title>Patrick Prunty's Videos</Title>
-        <Subtitle>Explore my personal YouTube channel, where I share a variety of creative, non-educational, and non-analytical videos.</Subtitle>
+      <Subtitle>Explore my personal YouTube channel, where I share a variety of creative, non-educational, and non-analytical videos.</Subtitle>
       <Grid>
         {videos.map((videoId, index) => (
-          <VideoWrapper key={index}>
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title={`YouTube video player ${index + 1}`}
-            ></iframe>
-          </VideoWrapper>
+          <MemoizedVideoWrapper key={index} videoId={videoId} index={index} />
         ))}
       </Grid>
     </>

@@ -22,13 +22,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const handleNavigation = (path: string) => {
     router.push(path);
-    setMenuOpen(false); // Close menu after navigation
+    setMenuOpen(false);
   };
 
   const isActive = (path: string) => router.pathname === path;
 
   useEffect(() => {
-    // Calculate the drawer height after the component mounts
     const calculateHeight = () => {
       if (drawerRef.current) {
         setDrawerHeight(drawerRef.current.scrollHeight);
@@ -37,7 +36,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
     calculateHeight();
 
-    // Add event listener to recalculate height on window resize
     window.addEventListener('resize', calculateHeight);
     return () => {
       window.removeEventListener('resize', calculateHeight);
@@ -48,7 +46,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <Container>
       <Navbar>
         <LogoWrapper onClick={() => handleNavigation('/')}>
-          <ExportedImage src={'/images/favicon.ico'} alt="logo2" layout="responsive"
+          <ExportedImage
+            src={'/images/favicon.ico'}
+            alt="logo2"
+            layout="responsive"
             width={200}
             height={100}
             placeholder={'blur'}
@@ -56,20 +57,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           />
         </LogoWrapper>
         <Nav>
-         <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
-         <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
-         <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
-         <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
-         <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-         <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
-         <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
-         <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
-       </Nav>
+          <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Projects</NavItem>
+          <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
+          <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
+          <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
+          <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
+        </Nav>
       </Navbar>
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
         <MobileNavbar>
           <MobileLogoWrapper onClick={() => handleNavigation('/')}>
-            <ExportedImage src={'/images/favicon.ico'} alt="logo2" layout="responsive" width={250} height={75}
+            <ExportedImage
+              src={'/images/favicon.ico'}
+              alt="logo2"
+              layout="responsive"
+              width={250}
+              height={75}
               placeholder={'blur'}
               unoptimized={true}
             />
@@ -78,13 +81,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </MobileNavbar>
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
           <Nav>
-            <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Home</NavItem>
-            <NavItem isActive={isActive('/software')} onClick={() => handleNavigation('/software')}>Software</NavItem>
-            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
+            <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Projects</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-            <NavItem isActive={isActive('/jigsaw-academy')} onClick={() => handleNavigation('/jigsaw-academy')}>Jigsaw Academy</NavItem>
-            <NavItem isActive={isActive('/jigsaw-presents')} onClick={() => handleNavigation('/jigsaw-presents')}>Jigsaw Presents</NavItem>
+            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
             <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
           </Nav>
         </MobileDrawer>
@@ -94,13 +94,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
-export default Layout;
+export default React.memo(Layout);
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #FFFFFF; /* Ensure consistent background color */
+  background-color: #FFFFFF;
 `;
 
 const Navbar = styled.div`
@@ -108,10 +108,11 @@ const Navbar = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 3px;
+  padding: 0 40px;
   background-color: inherit;
   border-bottom: 1px solid #B3B3B3;
   color: black;
+
   @media (max-width: 1000px) {
     display: none;
   }
@@ -120,8 +121,9 @@ const Navbar = styled.div`
 const LogoWrapper = styled.div`
   cursor: pointer;
   width: 40px;
+
   img {
-    width: 40px; /* Adjust based on your design */
+    width: 40px;
   }
 `;
 
@@ -129,7 +131,7 @@ const Nav = styled.nav`
   display: flex;
   flex-direction: row;
   gap: 20px;
-  padding-right: 10px;
+
   @media (max-width: 1000px) {
     flex-direction: column;
     padding-top: 10px;
@@ -144,7 +146,7 @@ const NavItem = styled.div<{ isActive?: boolean }>`
   font-weight: bold;
   cursor: pointer;
   transition: color 80ms ease-in-out;
-  font-size: 16px;
+  font-size: 14px;
 
   &:hover {
     color: ${({ isActive }) => (isActive ? '#FF70CF' : '#B3B3B3')};
@@ -170,6 +172,7 @@ const MobileNavbar = styled.div`
   color: black;
   justify-content: space-between;
   align-items: center;
+
   @media (max-width: 1000px) {
     display: flex;
   }
@@ -180,12 +183,18 @@ const MobileLogoWrapper = styled.div`
   margin-top: 15px;
   cursor: pointer;
   width: 480px;
+
   img {
-    width: 480px; /* Adjust based on your design */
+    width: 480px;
   }
+
   @media (max-width: 1000px) {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     width: 45px;
+
+    img {
+      width: 45px;
+    }
   }
 `;
 
@@ -230,7 +239,8 @@ const Content = styled.main<{ isMenuOpen: boolean; drawerHeight: number }>`
   padding: 5px;
   margin-top: ${({ isMenuOpen, drawerHeight }) => (isMenuOpen ? `${drawerHeight}px` : '0')};
   transition: margin-top 180ms ease-in-out;
+
   @media (min-width: 1000px) {
-    margin-top: 0; /* Reset margin-top for desktop */
+    margin-top: 0;
   }
 `;

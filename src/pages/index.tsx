@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import CaseStudy from '../components/CaseStudy'; // Adjust the import path as necessary
@@ -11,7 +11,7 @@ const Title = styled.h1`
   color: black;
   width: 100%;
   text-align: left;
-  margin-bottom: 20px; /* Add margin to separate title from case studies */
+  margin-bottom: 20px;
 
   @media(max-width: 768px) {
     font-size: 8vw;
@@ -25,11 +25,11 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-  margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
+  margin-bottom: 40px;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
-      padding-bottom: 5px;
+    padding-bottom: 5px;
   }
 `;
 
@@ -39,7 +39,7 @@ const AboutMeContainer = styled.div`
   align-items: center;
   padding: 20px 0;
   border-top: 2px solid black;
-  width: 100%; /* Make sure it takes full width */
+  width: 100%;
   flex-direction: column;
 
   @media(min-width: 768px) {
@@ -79,7 +79,6 @@ const AboutMeDescription = styled.p`
 
 const CaseStudyLabel = styled.div`
   position: absolute;
-//   left: 10px;
   font-size: 0.875rem;
   color: #333;
   text-transform: uppercase;
@@ -95,17 +94,12 @@ const AboutMeImageWrapper = styled.div`
   max-width: 100%;
   overflow: hidden;
   cursor: pointer;
-//   transition: border-radius 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
   margin-left: 0;
 
   @media(min-width: 768px) {
     width: 50%;
     margin-right: 20px;
   }
-
-//   &:hover {
-//     border-radius: 60px;
-//   }
 
   img {
     width: 100%;
@@ -114,34 +108,43 @@ const AboutMeImageWrapper = styled.div`
   }
 `;
 
+const CaseStudyComponent = memo(({ title, description, imageUrl, link, index }) => (
+  <CaseStudy
+    key={index}
+    index={index}
+    title={title}
+    description={description}
+    imageUrl={imageUrl}
+    link={link}
+  />
+));
+
 const Home: React.FC = () => {
-  // Example case studies data
   const caseStudies = [
     {
       title: "TrackR",
       description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
-      imageUrl: "/images/afro.WEBP", // Update with the correct image path
+      imageUrl: "/images/afro.WEBP",
       link: "trackr",
     },
     {
       title: "thelastmanstanding.io",
-      description: "Facilitating sweepstake and last-man-standing competitions among friend groups, enabling  digital payments, automated email notifications, and custom wagers. The product currently covers football events such as the FIFA World Cup, European Championship, and Premier League.",
-      imageUrl: "/images/IMG_5948.JPG", // Update with the correct image path
+      description: "Facilitating sweepstake and last-man-standing competitions among friend groups, enabling digital payments, automated email notifications, and custom wagers. The product currently covers football events such as the FIFA World Cup, European Championship, and Premier League.",
+      imageUrl: "/images/IMG_5948.JPG",
       link: "trackr",
     },
     {
       title: "Jigsaw Presents",
       description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
-      imageUrl: "/images/jigsaw-presents.jpg", // Update with the correct image path
+      imageUrl: "/images/jigsaw-presents.jpg",
       link: "jigsaw-presents",
     },
     {
       title: "Jigsaw Academy",
       description: "An educational YouTube channel, providing free, high-quality education to those who need it most.",
-      imageUrl: "/images/jigsaw-academy-logo.png", // Update with the correct image path
+      imageUrl: "/images/jigsaw-academy-logo.png",
       link: "jigsaw-academy",
     },
-    // Add more case studies here
   ];
 
   return (
@@ -161,9 +164,9 @@ const Home: React.FC = () => {
         I am a full-stack web developer with a passion for software, education, and creative media. Explore my projects below to learn more about my work. If you wish to connect, I offer one-on-one consultations to discuss projects, ideas, or any questions you have.
       </Subtitle>
       {caseStudies.map((caseStudy, index) => (
-        <CaseStudy
+        <CaseStudyComponent
           key={index}
-          index={index} // Pass the index here
+          index={index}
           title={caseStudy.title}
           description={caseStudy.description}
           imageUrl={caseStudy.imageUrl}
@@ -174,11 +177,11 @@ const Home: React.FC = () => {
         <CaseStudyLabel>● About</CaseStudyLabel>
         <AboutMeImageWrapper>
           <ExportedImage
-            src="/images/me.JPG" // Update with the correct image path
+            src="/images/me.JPG"
             alt="About Me"
             layout="responsive"
             width={730}
-            height={200} // Adjusted to fit the design
+            height={200}
           />
         </AboutMeImageWrapper>
         <AboutMeTextContainer>
@@ -188,7 +191,6 @@ const Home: React.FC = () => {
           </AboutMeDescription>
         </AboutMeTextContainer>
       </AboutMeContainer>
-
     </>
   );
 };

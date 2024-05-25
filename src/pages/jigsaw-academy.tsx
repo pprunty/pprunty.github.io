@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 
@@ -9,7 +9,7 @@ const Title = styled.h1`
   color: black;
   width: 100%;
   text-align: left;
-  margin-bottom: 20px; /* Add margin to separate title from case studies */
+  margin-bottom: 20px;
 
   @media(max-width: 768px) {
     font-size: 8vw;
@@ -23,13 +23,12 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-  margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
+  margin-bottom: 40px;
   padding-bottom: 40px;
-//   border-bottom: 2px solid black;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
-      padding-bottom: 5px;
+    padding-bottom: 5px;
   }
 `;
 
@@ -62,7 +61,7 @@ const VideoWrapper = styled.div`
 
   iframe {
     width: 100%;
-    height: 212px; // Default height
+    height: 212px;
 
     @media (min-width: 720px) {
       height: 205px;
@@ -71,14 +70,24 @@ const VideoWrapper = styled.div`
 `;
 
 const playlists = [
-  'si=wtVfkUH8tj3EYFmc&amp;list=PLn6yDpEottdjri2wzWn8tFTXNLplVGqjU', // Replace with your own YouTube playlist IDs
+  'si=wtVfkUH8tj3EYFmc&amp;list=PLn6yDpEottdjri2wzWn8tFTXNLplVGqjU',
   'si=SosBov0FywktTDz3&amp;list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK',
   'si=zq6SjUQ3OONc-lCb&amp;list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_',
 ];
 
-const JigsawAcademy: React.FC = () => {
-  const videoCount = playlists.length;
+const MemoizedVideoWrapper = memo(({ playlistId, index }: { playlistId: string, index: number }) => (
+  <VideoWrapper key={index}>
+    <iframe
+      src={`https://www.youtube.com/embed/videoseries?${playlistId}`}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title={`YouTube playlist player ${index + 1}`}
+    ></iframe>
+  </VideoWrapper>
+));
 
+const JigsawAcademy: React.FC = () => {
   return (
     <>
       <Head>
@@ -92,18 +101,10 @@ const JigsawAcademy: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <Title>Jigsaw Academy</Title>
-        <Subtitle>Discover my educational YouTube channel. Immerse yourself in a diverse array of topics and broaden your knowledge with expertly curated playlists, including "Mastering FastAPI: From Basics to Advanced", "Laws of UI/UX Design" and "How to Brew Stout Beer."</Subtitle>
+      <Subtitle>Discover my educational YouTube channel. Immerse yourself in a diverse array of topics and broaden your knowledge with expertly curated playlists, including "Mastering FastAPI: From Basics to Advanced", "Laws of UI/UX Design" and "How to Brew Stout Beer."</Subtitle>
       <Grid>
         {playlists.map((playlistId, index) => (
-          <VideoWrapper key={index}>
-            <iframe
-              src={`https://www.youtube.com/embed/videoseries?${playlistId}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title={`YouTube playlist player ${index + 1}`}
-            ></iframe>
-          </VideoWrapper>
+          <MemoizedVideoWrapper key={index} playlistId={playlistId} index={index} />
         ))}
       </Grid>
     </>
