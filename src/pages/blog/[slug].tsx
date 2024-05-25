@@ -260,7 +260,7 @@ const ScrollToTopButton = styled.button`
   background-color: rgba(0, 0, 0, 0.8);
   color: #F0F0F0;
   border: none;
-  border-radius: 50%;
+  border-radius: 100%;
   cursor: pointer;
   font-family: system-ui;
   display: flex;
