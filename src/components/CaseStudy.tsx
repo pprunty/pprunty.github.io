@@ -113,7 +113,7 @@ interface CaseStudyProps {
   link: string;
 }
 
-const CaseStudyComponent: React.FC<CaseStudyProps> = ({ index, title, description, imageUrl, link }) => {
+const CaseStudyComponent: React.FC<CaseStudyProps> = memo(({ index, title, description, imageUrl, link }) => {
   const router = useRouter();
 
   const navigateToCaseStudy = () => {
@@ -141,6 +141,6 @@ const CaseStudyComponent: React.FC<CaseStudyProps> = ({ index, title, descriptio
       </ImageWrapper>
     </CaseStudyContainer>
   );
-};
+});
 
-export default memo(CaseStudyComponent);
+export default CaseStudyComponent;

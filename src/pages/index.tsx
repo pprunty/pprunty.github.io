@@ -101,6 +101,10 @@ const AboutMeImageWrapper = styled.div`
     margin-right: 20px;
   }
 
+  @media(min-width: 1000px) {
+    width: 48%; /* Adjust the width as needed for larger screens */
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -108,7 +112,15 @@ const AboutMeImageWrapper = styled.div`
   }
 `;
 
-const CaseStudyComponent = memo(({ title, description, imageUrl, link, index }) => (
+interface CaseStudyProps {
+  index: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  link: string;
+}
+
+const CaseStudyComponent: React.FC<CaseStudyProps> = memo(({ title, description, imageUrl, link, index }) => (
   <CaseStudy
     key={index}
     index={index}
@@ -120,30 +132,34 @@ const CaseStudyComponent = memo(({ title, description, imageUrl, link, index }) 
 ));
 
 const Home: React.FC = () => {
-  const caseStudies = [
+  const caseStudies: CaseStudyProps[] = [
     {
       title: "TrackR",
       description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
       imageUrl: "/images/afro.WEBP",
       link: "trackr",
+      index: 0
     },
     {
       title: "thelastmanstanding.io",
       description: "Facilitating sweepstake and last-man-standing competitions among friend groups, enabling digital payments, automated email notifications, and custom wagers. The product currently covers football events such as the FIFA World Cup, European Championship, and Premier League.",
       imageUrl: "/images/IMG_5948.JPG",
       link: "trackr",
+      index: 1
     },
     {
       title: "Jigsaw Presents",
       description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
       imageUrl: "/images/jigsaw-presents.jpg",
       link: "jigsaw-presents",
+      index: 2
     },
     {
       title: "Jigsaw Academy",
       description: "An educational YouTube channel, providing free, high-quality education to those who need it most.",
       imageUrl: "/images/jigsaw-academy-logo.png",
       link: "jigsaw-academy",
+      index: 3
     },
   ];
 
@@ -163,10 +179,10 @@ const Home: React.FC = () => {
       <Subtitle>
         I am a full-stack web developer with a passion for software, education, and creative media. Explore my projects below to learn more about my work. If you wish to connect, I offer one-on-one consultations to discuss projects, ideas, or any questions you have.
       </Subtitle>
-      {caseStudies.map((caseStudy, index) => (
+      {caseStudies.map((caseStudy) => (
         <CaseStudyComponent
-          key={index}
-          index={index}
+          key={caseStudy.index}
+          index={caseStudy.index}
           title={caseStudy.title}
           description={caseStudy.description}
           imageUrl={caseStudy.imageUrl}
@@ -177,7 +193,7 @@ const Home: React.FC = () => {
         <CaseStudyLabel>● About</CaseStudyLabel>
         <AboutMeImageWrapper>
           <ExportedImage
-            src="/images/me.JPG"
+            src="/images/me.WEBP"
             alt="About Me"
             layout="responsive"
             width={730}
@@ -187,7 +203,7 @@ const Home: React.FC = () => {
         <AboutMeTextContainer>
           <AboutMeTitle>About Me</AboutMeTitle>
           <AboutMeDescription>
-            I am a passionate web developer with extensive experience in creating innovative solutions. I specialize in full-stack development, and I am dedicated to continuous learning and improvement.
+            When I am not coding or working on projects, I am training triathlon, hiking and spending time with loved ones. 🧘🏼
           </AboutMeDescription>
         </AboutMeTextContainer>
       </AboutMeContainer>
