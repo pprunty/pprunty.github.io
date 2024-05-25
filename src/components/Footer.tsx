@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <FooterContainer>
       <FooterContactDiv>
         <FooterLinkBlock href="https://www.linkedin.com/in/patrickprunty/" target="_blank">
-          <SocialLink>Linkedin</SocialLink>
+          <SocialLink>LinkedIn</SocialLink>
         </FooterLinkBlock>
         <FooterLinkBlock href="mailto:pprunty@tcd.ie">
           <SocialLink>Email</SocialLink>
