@@ -7,7 +7,6 @@ import ExportedImage from "next-image-export-optimizer";
 import markdownToHtml from '../../../lib/markdownToHtml';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import { useState, useEffect } from 'react';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
@@ -59,26 +58,6 @@ const BlogPost = ({ post, onClick }: { post: Post, onClick: () => void }) => (
 
 export default function BlogList({ posts }: BlogListProps) {
   const router = useRouter();
-  const [showScrollButton, setShowScrollButton] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log('Scroll Y:', window.scrollY); // Debug statement
-      if (window.scrollY > 300) {
-        setShowScrollButton(true);
-      } else {
-        setShowScrollButton(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   // Group posts by year
   const postsByYear = posts.reduce<Record<number, Post[]>>((acc, post) => {
@@ -112,7 +91,6 @@ export default function BlogList({ posts }: BlogListProps) {
           </PostList>
         </YearSection>
       ))}
-      {showScrollButton && <ScrollToTopButton onClick={scrollToTop}>^</ScrollToTopButton>}
     </>
   );
 }
@@ -321,45 +299,5 @@ const PostDateAuthor = styled.p`
 
   @media(max-width: 768px) {
     font-size: 12px;
-  }
-`;
-
-const ScrollToTopButton = styled.button`
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #F0F0F0;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  opacity: 0.7;
-  transition: opacity 0.3s, transform 0.3s;
-
-  &:hover {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-
-  @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    bottom: 20px;
-    right: 20px;
-  }
-
-  @media (max-width: 480px) {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-    bottom: 15px;
-    right: 15px;
   }
 `;

@@ -7,6 +7,7 @@ import ExportedImage from 'next-image-export-optimizer';
 import Head from 'next/head';
 import markdownToHtml from '../../../lib/markdownToHtml';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useState, useEffect } from 'react';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
@@ -18,15 +19,6 @@ interface BlogPostProps {
   description: string;
   artwork?: string;
 }
-
-// Utility function for back navigation
-const handleBackClick = (router) => {
-  if (window.history.length > 1) {
-    router.back();
-  } else {
-    router.push('/blog');
-  }
-};
 
 // Extracted components for reusability
 const BlogPostHeader = ({ title, description, imagePath, router }) => (
@@ -54,6 +46,7 @@ const BlogPostHeader = ({ title, description, imagePath, router }) => (
 
 const BlogPostContent: React.FC<{ title: string; date: string; content: string; imagePath: string; artwork?: string }> = ({ title, date, content, imagePath, artwork }) => {
   const router = useRouter();
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   const handleBackClick = () => {
     if (window.history.length > 1) {
@@ -61,6 +54,24 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
     } else {
       router.push('/blog');
     }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -80,6 +91,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
       <Title>{title}</Title>
       <Date>{date}</Date>
       <Content dangerouslySetInnerHTML={{ __html: content }} />
+      {showScrollButton && <ScrollToTopButton onClick={scrollToTop}><span>^</span></ScrollToTopButton>}
     </>
   );
 };
@@ -236,5 +248,59 @@ const Description = styled.p`
 
   @media (max-width: 480px) {
     font-size: 0.7rem;
+  }
+`;
+
+const ScrollToTopButton = styled.button`
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #F0F0F0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: system-ui;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: 200;
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000; /* Ensure the button is above other content */
+
+  span {
+    margin-top: 10px; /* Add margin-top to the span */
+  }
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+    bottom: 20px;
+    right: 20px;
+          span {
+            margin-top: 7px; /* Add margin-top to the span */
+          }
+  }
+
+  @media (max-width: 480px) {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    bottom: 15px;
+    right: 10px;
+
+      span {
+        margin-top: 5px; /* Add margin-top to the span */
+      }
   }
 `;
