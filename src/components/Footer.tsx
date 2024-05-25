@@ -31,7 +31,7 @@ const FooterContainer = styled.div`
 //   border-top: 2px solid #000;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #F0F0F0;
   margin-top: 40px;
 
   @media (max-width: 767px) {

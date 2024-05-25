@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-            <meta name="theme-color" content="#FFFFFF" />
+            <meta name="theme-color" content="#F0F0F0" />
           {/* Here you can add custom scripts, stylesheets, meta tags, etc.
            <script src="https://accounts.google.com/gsi/client" async defer></script>
            */}

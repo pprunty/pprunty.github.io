@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 25px;
-  background-color: #FFFFFF;
+  background-color: #F0F0F0;
   margin-top: 20px;
   min-height: 100vh; /* Ensure it covers the full viewport height */
 `;

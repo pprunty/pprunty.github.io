@@ -67,7 +67,7 @@ const ViewCaseStudyButton = styled.button`
   width: 170px;
   font-size: 1rem;
   color: #333;
-  background-color: #fff;
+  background-color: #F0F0F0;
   text-decoration: none;
   border: 2px solid #333;
   border-radius: 0;
@@ -77,7 +77,7 @@ const ViewCaseStudyButton = styled.button`
 
   &:hover {
     background-color: #333;
-    color: #fff;
+    color: #F0F0F0;
     border-radius: 40px;
   }
 `;

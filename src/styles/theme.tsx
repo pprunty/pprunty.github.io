@@ -21,6 +21,6 @@ const commonTheme = {
 
 export const lightTheme: Theme = {
   ...commonTheme,
-  colorBackground: '#FFFFFF',
+  colorBackground: '#F0F0F0',
   colorTextPrimary: 'black',
 };

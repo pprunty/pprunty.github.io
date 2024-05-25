@@ -47,7 +47,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Navbar>
         <LogoWrapper onClick={() => handleNavigation('/')}>
           <ExportedImage
-            src={'/images/favicon.ico'}
+            src={'/images/logo_p.svg'}
             alt="logo2"
             layout="responsive"
             width={200}
@@ -68,7 +68,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <MobileNavbar>
           <MobileLogoWrapper onClick={() => handleNavigation('/')}>
             <ExportedImage
-              src={'/images/favicon.ico'}
+              src={'/images/logo_p.svg'}
               alt="logo2"
               layout="responsive"
               width={250}
@@ -100,7 +100,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #FFFFFF;
+  background-color: #F0F0F0;
 `;
 
 const Navbar = styled.div`
@@ -155,11 +155,11 @@ const NavItem = styled.div<{ isActive?: boolean }>`
 
   @media (max-width: 1000px) {
     font-size: 22px;
-    color: ${({ isActive }) => (isActive ? 'white' : '#B3B3B3')};
+    color: ${({ isActive }) => (isActive ? '#F0F0F0' : '#B3B3B3')};
       margin-bottom: 3px;
 
     &:hover {
-      color: ${({ isActive }) => (isActive ? 'white' : '#B3B3B3')};
+      color: ${({ isActive }) => (isActive ? '#F0F0F0' : '#B3B3B3')};
     }
   }
 `;
