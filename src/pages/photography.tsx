@@ -67,6 +67,9 @@ const images = [
   '/images/0a94d7f5-834a-4567-86db-93f1ce8dc3ca.JPG',
   '/images/2d8324a2-e783-47d8-aa1c-3891e7a8b541.JPG',
   '/images/9977ee3f-d4bd-4ce6-a57c-04397898b222.JPG',
+  '/images/232afccf-fb3e-443d-af60-c1c67a6189d0.JPG',
+  '/images/60a53698-deec-4b91-94a8-5513e534c24a.JPG',
+  '/images/3cf5f5a9-843c-44e2-9482-45c765a84d30.JPG'
 ];
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';

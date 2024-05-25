@@ -156,6 +156,7 @@ const NavItem = styled.div<{ isActive?: boolean }>`
   @media (max-width: 1000px) {
     font-size: 22px;
     color: ${({ isActive }) => (isActive ? 'white' : '#B3B3B3')};
+      margin-bottom: 3px;
 
     &:hover {
       color: ${({ isActive }) => (isActive ? 'white' : '#B3B3B3')};

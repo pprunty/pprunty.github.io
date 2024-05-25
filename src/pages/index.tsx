@@ -34,7 +34,6 @@ const Subtitle = styled.p`
 `;
 
 const AboutMeContainer = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
   padding: 20px 0;
@@ -56,7 +55,7 @@ const AboutMeTextContainer = styled.div`
   margin-bottom: 20px;
 
   @media(min-width: 768px) {
-    padding-right: 20px;
+    padding-left: 20px;
     margin-bottom: 0;
   }
 `;
@@ -77,32 +76,32 @@ const AboutMeDescription = styled.p`
   margin-bottom: 0px;
 `;
 
-const CaseStudyLabel = styled.div`
-  position: absolute;
+const AboutMeLabel = styled.div`
   font-size: 0.875rem;
   color: #333;
   text-transform: uppercase;
   margin-bottom: 30px;
+//   text-align: flex-start;
 
   @media(max-width: 768px) {
-    top: 30px;
-    left: 10px;
+    text-align: left;
   }
 `;
 
 const AboutMeImageWrapper = styled.div`
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
   cursor: pointer;
   margin-left: 0;
+  margin-bottom: 20px;
 
   @media(min-width: 768px) {
     width: 50%;
-    margin-right: 20px;
+    margin-bottom: 0;
   }
 
   @media(min-width: 1000px) {
-    width: 48%; /* Adjust the width as needed for larger screens */
+    width: 44%; /* Adjust the width as needed for larger screens */
   }
 
   img {
@@ -135,6 +134,7 @@ const Home: React.FC = () => {
   const caseStudies: CaseStudyProps[] = [
     {
       title: "TrackR",
+      /* Description should be STAR */
       description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
       imageUrl: "/images/afro.WEBP",
       link: "trackr",
@@ -142,7 +142,7 @@ const Home: React.FC = () => {
     },
     {
       title: "thelastmanstanding.io",
-      description: "Facilitating sweepstake and last-man-standing competitions among friend groups, enabling digital payments, automated email notifications, and custom wagers. The product currently covers football events such as the FIFA World Cup, European Championship, and Premier League.",
+      description: "Developed a platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. The platform currently has over 2,000 global users, with plans to expand reach to other sports, including Rugby, Cricket, and American Football.",
       imageUrl: "/images/IMG_5948.JPG",
       link: "trackr",
       index: 1
@@ -150,7 +150,7 @@ const Home: React.FC = () => {
     {
       title: "Jigsaw Presents",
       description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
-      imageUrl: "/images/jigsaw-presents.jpg",
+      imageUrl: "/images/jigsaw-presents-logo.png",
       link: "jigsaw-presents",
       index: 2
     },
@@ -190,8 +190,8 @@ const Home: React.FC = () => {
         />
       ))}
       <AboutMeContainer>
-        <CaseStudyLabel>● About</CaseStudyLabel>
         <AboutMeImageWrapper>
+          <AboutMeLabel>● About</AboutMeLabel>
           <ExportedImage
             src="/images/me.WEBP"
             alt="About Me"
