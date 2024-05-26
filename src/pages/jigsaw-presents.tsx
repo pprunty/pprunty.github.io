@@ -123,12 +123,15 @@ const MemoizedVideoWrapper = memo(({ videoId, index }: { videoId: string, index:
 const JigsawPresents: React.FC = () => {
   const router = useRouter();
 
-  useEffect(() => {
-    // Enable scroll restoration
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
+  const handleBackClick = () => {
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      router.push('/');
     }
+  };
 
+  useEffect(() => {
     // Load YouTube IFrame API script
     const tag = document.createElement('script');
     tag.src = 'https://apis.google.com/js/platform.js';
@@ -141,33 +144,6 @@ const JigsawPresents: React.FC = () => {
       }
     };
     document.body.appendChild(tag);
-
-    return () => {
-      // Reset scroll restoration when component unmounts
-      if ('scrollRestoration' in window.history) {
-        window.history.scrollRestoration = 'auto';
-      }
-    };
-  }, []);
-
-  const handleBackClick = () => {
-    // Save current scroll position
-    const scrollPosition = window.scrollY;
-    sessionStorage.setItem('scrollPosition', scrollPosition.toString());
-
-    if (window.history.length > 1) {
-      router.back();
-    } else {
-      router.push('/');
-    }
-  };
-
-  useEffect(() => {
-    // Restore scroll position
-    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
-    if (savedScrollPosition) {
-      window.scrollTo(0, parseFloat(savedScrollPosition));
-    }
   }, []);
 
   return (
