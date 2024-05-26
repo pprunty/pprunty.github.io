@@ -156,7 +156,7 @@ const Home: React.FC = () => {
     },
     {
       title: "Jigsaw Academy",
-      description: "An educational YouTube channel, providing free, high-quality education to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'. Stay tuned for more exciting content!",
+      description: "An educational YouTube channel, providing free, high-quality education to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'.",
       imageUrl: "/images/jigsaw-academy-logo.png",
       link: "jigsaw-academy",
       index: 3

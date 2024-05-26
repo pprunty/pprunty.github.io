@@ -25,11 +25,10 @@ const Subtitle = styled.p`
   text-align: left;
   margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
   padding-bottom: 40px;
-//   border-bottom: 2px solid black;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
-      padding-bottom: 5px;
+    padding-bottom: 5px;
   }
 `;
 
@@ -38,7 +37,7 @@ const StyledIframe = styled.iframe`
   max-width: 555px;
   height: 150vh;
   max-height: 720px;
-  border: 0;
+  border: 1px solid black; /* Add the border here */
 
   @media (max-width: 768px) {
     height: 150vh; /* Adjust height for tablets and smaller screens */

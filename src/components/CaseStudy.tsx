@@ -95,7 +95,7 @@ const ImageWrapper = styled.div`
   }
 
   &:hover {
-    border-radius: 60px;
+    border-radius: 15%;
   }
 
   img {

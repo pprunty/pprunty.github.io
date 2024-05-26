@@ -23,8 +23,8 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-  margin-bottom: 20px;
-  padding-bottom: 40px;
+//   margin-bottom: 20px;
+//   padding-bottom: 40px;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
