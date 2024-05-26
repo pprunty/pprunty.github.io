@@ -1,8 +1,18 @@
 import React, { memo } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Head from 'next/head';
 import CaseStudy from '../components/CaseStudy'; // Adjust the import path as necessary
 import ExportedImage from 'next-image-export-optimizer';
+
+// Define keyframes for the fade-in animation
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const Title = styled.h1`
   font-size: 6vw;
@@ -11,9 +21,11 @@ const Title = styled.h1`
   color: black;
   width: 100%;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Add margin to separate title from case studies */
+  opacity: 0;
+  animation: ${fadeIn} 1.4s ease-in-out forwards;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 8vw;
   }
 `;
@@ -27,7 +39,7 @@ const Subtitle = styled.p`
   text-align: left;
   margin-bottom: 40px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 1.25rem;
     padding-bottom: 5px;
   }
@@ -41,7 +53,7 @@ const AboutMeContainer = styled.div`
   width: 100%;
   flex-direction: column;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     flex-direction: row;
     padding: 40px 0;
   }
@@ -54,7 +66,7 @@ const AboutMeTextContainer = styled.div`
   flex: 1;
   margin-bottom: 20px;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     padding-left: 20px;
     margin-bottom: 0;
   }
@@ -65,7 +77,7 @@ const AboutMeTitle = styled.h2`
   color: #333;
   margin-bottom: 20px;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     font-size: 1.5rem;
   }
 `;
@@ -81,9 +93,8 @@ const AboutMeLabel = styled.div`
   color: #333;
   text-transform: uppercase;
   margin-bottom: 30px;
-//   text-align: flex-start;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     text-align: left;
   }
 `;
@@ -95,12 +106,12 @@ const AboutMeImageWrapper = styled.div`
   margin-left: 0;
   margin-bottom: 20px;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     width: 50%;
     margin-bottom: 0;
   }
 
-  @media(min-width: 1000px) {
+  @media (min-width: 1000px) {
     width: 44%; /* Adjust the width as needed for larger screens */
   }
 
@@ -134,32 +145,31 @@ const Home: React.FC = () => {
   const caseStudies: CaseStudyProps[] = [
     {
       title: "TrackR",
-      /* Description should be STAR */
       description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
       imageUrl: "/images/afro.WEBP",
       link: "trackr",
-      index: 0
+      index: 0,
     },
     {
       title: "thelastmanstanding.io",
       description: "A platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. With a growing community of over 2,000 global users, future expansion plans aim to incorporate more international Football tournaments, as well as international Rugby and Cricket competitions.",
       imageUrl: "/images/IMG_5948.JPG",
       link: "https://thelastmanstanding.io",
-      index: 1
+      index: 1,
     },
     {
       title: "Jigsaw Presents",
       description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
       imageUrl: "/images/jigsaw-presents-logo.png",
       link: "jigsaw-presents",
-      index: 2
+      index: 2,
     },
     {
       title: "Jigsaw Academy",
       description: "An educational YouTube channel, providing free, high-quality education to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'.",
       imageUrl: "/images/jigsaw-academy-logo.png",
       link: "jigsaw-academy",
-      index: 3
+      index: 3,
     },
   ];
 
@@ -192,13 +202,7 @@ const Home: React.FC = () => {
       <AboutMeContainer>
         <AboutMeImageWrapper>
           <AboutMeLabel>● About</AboutMeLabel>
-          <ExportedImage
-            src="/images/me.WEBP"
-            alt="About Me"
-            layout="responsive"
-            width={730}
-            height={200}
-          />
+          <ExportedImage src="/images/me.WEBP" alt="About Me" layout="responsive" width={730} height={200} />
         </AboutMeImageWrapper>
         <AboutMeTextContainer>
           <AboutMeTitle>About Me</AboutMeTitle>
