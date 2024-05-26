@@ -142,9 +142,9 @@ const Home: React.FC = () => {
     },
     {
       title: "thelastmanstanding.io",
-      description: "Developed a platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. The platform currently has over 2,000 global users, with plans to expand reach to other sports, including Rugby, Cricket, and American Football.",
+      description: "Developed a platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. With a growing community of over 2,000 global users, future expansion plans aim to incorporate more international Football tournaments, as well as international Rugby and Cricket competitions.",
       imageUrl: "/images/IMG_5948.JPG",
-      link: "trackr",
+      link: "https://thelastmanstanding.io",
       index: 1
     },
     {
@@ -156,7 +156,7 @@ const Home: React.FC = () => {
     },
     {
       title: "Jigsaw Academy",
-      description: "An educational YouTube channel, providing free, high-quality education to those who need it most.",
+      description: "An educational YouTube channel, providing free, high-quality education to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'. Stay tuned for more exciting content!",
       imageUrl: "/images/jigsaw-academy-logo.png",
       link: "jigsaw-academy",
       index: 3
@@ -203,7 +203,7 @@ const Home: React.FC = () => {
         <AboutMeTextContainer>
           <AboutMeTitle>About Me</AboutMeTitle>
           <AboutMeDescription>
-            When I am not coding or working on side-projects, you will find me training triathlon, hiking or enjoying quality time with loved ones. I'm always open to connecting—feel free to reach out to me on my social media platforms below. 🧘🏼
+            When I'm not coding or working on side-projects, you'll find me training triathlon, hiking or enjoying quality time with loved ones. I'm always open to connecting—feel free to reach out to me on my social media platforms below. 🧘🏼
           </AboutMeDescription>
         </AboutMeTextContainer>
       </AboutMeContainer>

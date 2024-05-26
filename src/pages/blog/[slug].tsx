@@ -227,7 +227,7 @@ const Content = styled.div`
   }
 
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 20px;
   }
 
   @media (max-width: 480px) {
@@ -260,7 +260,7 @@ const ScrollToTopButton = styled.button`
   background-color: rgba(0, 0, 0, 0.8);
   color: #F0F0F0;
   border: none;
-  border-radius: 100%;
+  border-radius: 50%;
   cursor: pointer;
   font-family: system-ui;
   display: flex;
@@ -273,7 +273,7 @@ const ScrollToTopButton = styled.button`
   z-index: 1000; /* Ensure the button is above other content */
 
   span {
-    margin-top: 10px; /* Add margin-top to the span */
+    margin-top: 5px; /* Add margin-top to the span */
   }
 
   &:hover {
@@ -286,21 +286,23 @@ const ScrollToTopButton = styled.button`
     height: 55px;
     font-size: 30px;
     bottom: 20px;
-    right: 20px;
-          span {
-            margin-top: 7px; /* Add margin-top to the span */
-          }
+    right: 15px;
+
+    span {
+      margin-top: 4px; /* Adjust margin-top to the span */
+    }
   }
 
   @media (max-width: 480px) {
     width: 50px;
     height: 50px;
-    font-size: 30px;
+    font-size: 25px;
     bottom: 15px;
     right: 10px;
 
-      span {
-        margin-top: 5px; /* Add margin-top to the span */
-      }
+    span {
+      margin-top: 4px; /* Adjust margin-top to the span */
+    }
   }
 `;
+

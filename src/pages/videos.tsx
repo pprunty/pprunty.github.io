@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 
@@ -23,12 +23,22 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-bottom: 40px;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
     padding-bottom: 5px;
+  }
+`;
+
+const TextContainer = styled.div`
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px;
+
+  .g-ytsubscribe {
+    margin-top: 20px;
   }
 `;
 
@@ -73,6 +83,19 @@ const MemoizedVideoWrapper = memo(({ videoId, index }: { videoId: string, index:
 ));
 
 const Videos: React.FC = () => {
+  useEffect(() => {
+    // Load YouTube IFrame API script
+    const tag = document.createElement('script');
+    tag.src = "https://apis.google.com/js/platform.js";
+    tag.async = true;
+    tag.onload = () => {
+      window.gapi.load('client', () => {
+        // Initialize the API
+      });
+    };
+    document.body.appendChild(tag);
+  }, []);
+
   return (
     <>
       <Head>
@@ -82,7 +105,10 @@ const Videos: React.FC = () => {
         <meta property="og:type" content="video" />
       </Head>
       <Title>Patrick Prunty's Videos</Title>
-      <Subtitle>Explore my personal YouTube channel, where I share a variety of creative, non-educational, and non-analytical videos.</Subtitle>
+      <TextContainer>
+        <Subtitle>Explore my personal YouTube channel, where I share a variety of creative, non-educational, and non-analytical videos.</Subtitle>
+        <div className="g-ytsubscribe" data-channelid="UCYj_hDCY1XV9_kFwGSjgqxA" data-layout="default" data-count="default"></div>
+      </TextContainer>
       <Grid>
         {videos.map((videoId, index) => (
           <MemoizedVideoWrapper key={index} videoId={videoId} index={index} />

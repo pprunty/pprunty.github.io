@@ -266,13 +266,13 @@ const PostExcerpt = styled.p`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
   overflow: hidden;
-  max-height: 9em;
-  min-height: 4em;
+  max-height: 9em; // Adjust this if needed to ensure it fits the excerpt and the SeeMore link
+  min-height: 4em; // Adjust this to ensure visibility on all devices
 
   @media (max-width: 720px) {
-    -webkit-line-clamp: 3;
-    max-height: 4.5em;
-    min-height: 3em;
+    -webkit-line-clamp: 4; // Allows more text and makes sure "Read more" is visible
+    max-height: 6em; // Increase if needed to fit the text and "Read more" link
+    min-height: 4.5em; // Ensure this is enough to show the link
     font-size: 1rem;
   }
 `;
@@ -281,6 +281,7 @@ const SeeMore = styled.span`
   color: black;
   cursor: pointer;
   font-weight: 550;
+  display: inline !important; // Force it to always be inline
 
   &:hover {
     text-decoration: underline;

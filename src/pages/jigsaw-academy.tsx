@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 
@@ -23,12 +23,21 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-  margin-bottom: 40px;
-  padding-bottom: 40px;
+  margin-bottom: 20px;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
     padding-bottom: 5px;
+  }
+`;
+
+const TextContainer = styled.div`
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px;
+
+  .g-ytsubscribe {
+    margin-top: 20px;
   }
 `;
 
@@ -69,6 +78,11 @@ const VideoWrapper = styled.div`
   }
 `;
 
+const ChannelLink = styled.div`
+  margin-top: 20px;
+  display: inline-block;
+`;
+
 const playlists = [
   'si=wtVfkUH8tj3EYFmc&amp;list=PLn6yDpEottdjri2wzWn8tFTXNLplVGqjU',
   'si=SosBov0FywktTDz3&amp;list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK',
@@ -88,6 +102,19 @@ const MemoizedVideoWrapper = memo(({ playlistId, index }: { playlistId: string, 
 ));
 
 const JigsawAcademy: React.FC = () => {
+  useEffect(() => {
+    // Load YouTube IFrame API script
+    const tag = document.createElement('script');
+    tag.src = "https://apis.google.com/js/platform.js";
+    tag.async = true;
+    tag.onload = () => {
+      window.gapi.load('client', () => {
+        // Initialize the API
+      });
+    };
+    document.body.appendChild(tag);
+  }, []);
+
   return (
     <>
       <Head>
@@ -101,7 +128,10 @@ const JigsawAcademy: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <Title>Jigsaw Academy</Title>
-      <Subtitle>Discover my educational YouTube channel. Immerse yourself in a diverse array of topics and broaden your knowledge with expertly curated playlists, including "Mastering FastAPI: From Basics to Advanced", "Laws of UI/UX Design" and "How to Brew Stout Beer."</Subtitle>
+      <TextContainer>
+        <Subtitle>Discover my educational YouTube channel. Immerse yourself in a diverse array of topics and broaden your knowledge with expertly curated playlists, including "Mastering FastAPI: From Basics to Advanced", "Laws of UI/UX Design" and "How to Brew Stout Beer."</Subtitle>
+        <div className="g-ytsubscribe" data-channelid="UCiskkvzn7UMmqkwOhKCBkqw" data-layout="default" data-count="default"></div>
+      </TextContainer>
       <Grid>
         {playlists.map((playlistId, index) => (
           <MemoizedVideoWrapper key={index} playlistId={playlistId} index={index} />

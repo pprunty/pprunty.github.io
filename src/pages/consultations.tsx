@@ -60,7 +60,7 @@ const Consultation: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <Title>Consultation Services</Title>
-      <Subtitle>Book a one-on-one consultation with me to discuss your projects, ideas, or any questions you have. I look forward to connecting with you and helping you achieve your goals.</Subtitle>
+      <Subtitle>Interested in collaborating with me on a project, or looking for personal guidance? Book a one-on-one consultation with me to discuss your projects, ideas, or any questions you have. I look forward to connecting with you and helping you achieve your goals.</Subtitle>
       <StyledIframe
         src="https://patrick0dys.setmore.com/patrick?lang=english"
         scrolling="yes"

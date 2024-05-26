@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 
@@ -23,11 +23,21 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
     padding-bottom: 5px;
+  }
+`;
+
+const TextContainer = styled.div`
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px;
+
+  .g-ytsubscribe {
+    margin-top: 20px;
   }
 `;
 
@@ -87,6 +97,19 @@ const MemoizedVideoWrapper = memo(({ videoId, index }: { videoId: string, index:
 ));
 
 const JigsawPresents: React.FC = () => {
+  useEffect(() => {
+    // Load YouTube IFrame API script
+    const tag = document.createElement('script');
+    tag.src = "https://apis.google.com/js/platform.js";
+    tag.async = true;
+    tag.onload = () => {
+      window.gapi.load('client', () => {
+        // Initialize the API
+      });
+    };
+    document.body.appendChild(tag);
+  }, []);
+
   return (
     <>
       <Head>
@@ -100,7 +123,10 @@ const JigsawPresents: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <Title>Jigsaw Presents</Title>
-      <Subtitle>Explore my analytical YouTube channel. Providing analysis and insight into popular movies, series, books, and gaming.</Subtitle>
+      <TextContainer>
+        <Subtitle>Explore my analytical YouTube channel. Providing analysis and insight into popular movies, series, books, and gaming.</Subtitle>
+        <div className="g-ytsubscribe" data-channelid="UCx8iHEGQMyeInLgPQ81-EJA" data-layout="default" data-theme="dark" data-count="default"></div>
+      </TextContainer>
       <Grid>
         {videos.map((videoId, index) => (
           <MemoizedVideoWrapper key={index} videoId={videoId} index={index} />

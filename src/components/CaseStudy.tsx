@@ -100,7 +100,7 @@ const ImageWrapper = styled.div`
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
   }
 `;
@@ -117,7 +117,12 @@ const CaseStudyComponent: React.FC<CaseStudyProps> = memo(({ index, title, descr
   const router = useRouter();
 
   const navigateToCaseStudy = () => {
-    router.push(`/${link}`);
+    const isExternal = link.startsWith('http://') || link.startsWith('https://');
+    if (isExternal) {
+      window.open(link, '_blank', 'noopener,noreferrer');
+    } else {
+      router.push(link);
+    }
   };
 
   return (
@@ -136,7 +141,7 @@ const CaseStudyComponent: React.FC<CaseStudyProps> = memo(({ index, title, descr
           alt={title}
           layout="responsive"
           width={730}
-          height={200}
+          height={400}
         />
       </ImageWrapper>
     </CaseStudyContainer>
