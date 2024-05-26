@@ -38,6 +38,7 @@ const Subtitle = styled.p`
   width: 100%;
   text-align: left;
   margin-bottom: 40px;
+  animation: ${fadeIn} 2s ease-in-out forwards;
 
   @media (max-width: 768px) {
     font-size: 1.25rem;
