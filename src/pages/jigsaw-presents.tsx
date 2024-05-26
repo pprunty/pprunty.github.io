@@ -1,6 +1,7 @@
 import React, { memo, useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const Title = styled.h1`
   font-size: 6vw;
@@ -23,7 +24,6 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-//   padding-bottom: 20px;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
@@ -78,6 +78,30 @@ const VideoWrapper = styled.div`
   }
 `;
 
+const BackArrow = styled.div`
+  align-self: flex-start;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    color: #b3b3b3;
+    text-decoration: none;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: 40px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #555;
+  }
+`;
+
 const videos = [
   'R0krUthYxF4?si=41F2z4CR7XtljbET',
   'sLMRR9sWo6E?si=n9SVLcdywkaYMNvf',
@@ -97,17 +121,53 @@ const MemoizedVideoWrapper = memo(({ videoId, index }: { videoId: string, index:
 ));
 
 const JigsawPresents: React.FC = () => {
+  const router = useRouter();
+
   useEffect(() => {
+    // Enable scroll restoration
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
     // Load YouTube IFrame API script
     const tag = document.createElement('script');
-    tag.src = "https://apis.google.com/js/platform.js";
+    tag.src = 'https://apis.google.com/js/platform.js';
     tag.async = true;
     tag.onload = () => {
-      window.gapi.load('client', () => {
-        // Initialize the API
-      });
+      if (window.gapi) {
+        window.gapi.load('client', () => {
+          // Initialize the API
+        });
+      }
     };
     document.body.appendChild(tag);
+
+    return () => {
+      // Reset scroll restoration when component unmounts
+      if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'auto';
+      }
+    };
+  }, []);
+
+  const handleBackClick = () => {
+    // Save current scroll position
+    const scrollPosition = window.scrollY;
+    sessionStorage.setItem('scrollPosition', scrollPosition.toString());
+
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      router.push('/');
+    }
+  };
+
+  useEffect(() => {
+    // Restore scroll position
+    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseFloat(savedScrollPosition));
+    }
   }, []);
 
   return (
@@ -122,6 +182,7 @@ const JigsawPresents: React.FC = () => {
         <meta property="og:image:height" content="630" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
+      <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
       <Title>Jigsaw Presents</Title>
       <TextContainer>
         <Subtitle>Explore my analytical YouTube channel. Providing analysis and insight into popular movies, series, books, and gaming.</Subtitle>

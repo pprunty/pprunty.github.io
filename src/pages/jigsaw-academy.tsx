@@ -1,6 +1,7 @@
 import React, { memo, useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const Title = styled.h1`
   font-size: 6vw;
@@ -11,7 +12,7 @@ const Title = styled.h1`
   text-align: left;
   margin-bottom: 20px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 8vw;
   }
 `;
@@ -23,9 +24,8 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-//   margin-bottom: 20px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 1.25rem;
     padding-bottom: 5px;
   }
@@ -78,9 +78,28 @@ const VideoWrapper = styled.div`
   }
 `;
 
-const ChannelLink = styled.div`
-  margin-top: 20px;
-  display: inline-block;
+const BackArrow = styled.div`
+  align-self: flex-start;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    color: #b3b3b3;
+    text-decoration: none;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: 40px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #555;
+  }
 `;
 
 const playlists = [
@@ -102,15 +121,27 @@ const MemoizedVideoWrapper = memo(({ playlistId, index }: { playlistId: string, 
 ));
 
 const JigsawAcademy: React.FC = () => {
+  const router = useRouter();
+
+  const handleBackClick = () => {
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      router.push('/');
+    }
+  };
+
   useEffect(() => {
     // Load YouTube IFrame API script
     const tag = document.createElement('script');
-    tag.src = "https://apis.google.com/js/platform.js";
+    tag.src = 'https://apis.google.com/js/platform.js';
     tag.async = true;
     tag.onload = () => {
-      window.gapi.load('client', () => {
-        // Initialize the API
-      });
+      if (window.gapi) {
+        window.gapi.load('client', () => {
+          // Initialize the API
+        });
+      }
     };
     document.body.appendChild(tag);
   }, []);
@@ -127,6 +158,7 @@ const JigsawAcademy: React.FC = () => {
         <meta property="og:image:height" content="630" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
+      <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
       <Title>Jigsaw Academy</Title>
       <TextContainer>
         <Subtitle>Discover my educational YouTube channel. Immerse yourself in a diverse array of topics and broaden your knowledge with expertly curated playlists, including "Mastering FastAPI: From Basics to Advanced", "Laws of UI/UX Design" and "How to Brew Stout Beer."</Subtitle>
