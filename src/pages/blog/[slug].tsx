@@ -294,11 +294,11 @@ const ScrollToTopButton = styled.button`
   }
 
   @media (max-width: 480px) {
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
     bottom: 15px;
-    right: 10px;
+    right: 12px;
 
     span {
       margin-top: 4px; /* Adjust margin-top to the span */
