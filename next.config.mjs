@@ -21,11 +21,11 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-    optimizeFonts: true,
+  optimizeFonts: true,
   experimental: {
     swcMinify: true,
-            scrollRestoration: true,
-      },
+    scrollRestoration: true,
+  },
 };
 
 export default nextConfig;
