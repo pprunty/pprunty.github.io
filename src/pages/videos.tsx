@@ -106,7 +106,7 @@ const Videos: React.FC = () => {
       </Head>
       <Title>Patrick Prunty's Videos</Title>
       <TextContainer>
-        <Subtitle>Explore my personal YouTube channel, where I share a variety of creative, non-educational, and non-analytical videos.</Subtitle>
+        <Subtitle>Explore my personal YouTube channel, where I share a variety of creative videos.</Subtitle>
         <div className="g-ytsubscribe" data-channelid="UCYj_hDCY1XV9_kFwGSjgqxA" data-layout="default" data-count="default"></div>
       </TextContainer>
       <Grid>

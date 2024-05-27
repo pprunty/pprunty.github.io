@@ -21,8 +21,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+    optimizeFonts: true,
   experimental: {
-        scrollRestoration: true,
+    swcMinify: true,
+            scrollRestoration: true,
       },
 };
 
