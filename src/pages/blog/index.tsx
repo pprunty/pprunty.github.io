@@ -1,3 +1,4 @@
+/* todo: add pagination: https://chatgpt.com/c/7910bca0-c49e-49b1-8792-6b1c7ab92f88 */
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';

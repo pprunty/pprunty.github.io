@@ -286,7 +286,7 @@ const ScrollToTopButton = styled.button`
     height: 55px;
     font-size: 30px;
     bottom: 20px;
-    right: 15px;
+    right: 20px;
 
     span {
       margin-top: 4px; /* Adjust margin-top to the span */
@@ -298,7 +298,7 @@ const ScrollToTopButton = styled.button`
     height: 60px;
     font-size: 28px;
     bottom: 15px;
-    right: 12px;
+    right: 15px;
 
     span {
       margin-top: 4px; /* Adjust margin-top to the span */
