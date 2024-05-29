@@ -47,6 +47,7 @@ const BlogPostHeader = ({ title, description, imagePath, router }) => (
 const BlogPostContent: React.FC<{ title: string; date: string; content: string; imagePath: string; artwork?: string }> = ({ title, date, content, imagePath, artwork }) => {
   const router = useRouter();
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const [isLandscape, setIsLandscape] = useState(false);
 
   const handleBackClick = () => {
     if (window.history.length > 1) {
@@ -70,31 +71,41 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
     };
   }, []);
 
+  useEffect(() => {
+    const img = new Image();
+    img.src = imagePath;
+    img.onload = () => {
+      if (img.width > img.height) {
+        setIsLandscape(true);
+      }
+    };
+  }, [imagePath]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-      <Container>
-        <TopBackArrow onClick={handleBackClick}>&larr; Back</TopBackArrow>
-        <ImageWrapper>
-          <ExportedImage
-            src={imagePath}
-            alt={title}
-            layout="responsive"
-            width={800}
-            height={400}
-            placeholder={'blur'}
-          />
-          {artwork && <Artwork>Artwork: {artwork}</Artwork>}
-        </ImageWrapper>
-        <Title>{title}</Title>
-        <Date>{date}</Date>
-        <Content dangerouslySetInnerHTML={{ __html: content }} />
-        <BottomBackArrow onClick={handleBackClick}>&larr; Back</BottomBackArrow>
-        {showScrollButton && <ScrollToTopButton onClick={scrollToTop}><span>^</span></ScrollToTopButton>}
-      </Container>
-    );
+    <Container>
+      <TopBackArrow onClick={handleBackClick}>&larr; Back</TopBackArrow>
+      <ImageWrapper isLandscape={isLandscape}>
+        <ExportedImage
+          src={imagePath}
+          alt={title}
+          layout="responsive"
+          width={800}
+          height={400}
+          placeholder={'blur'}
+        />
+        {artwork && <Artwork>Artwork: {artwork}</Artwork>}
+      </ImageWrapper>
+      <Title>{title}</Title>
+      <Date>{date}</Date>
+      <Content dangerouslySetInnerHTML={{ __html: content }} />
+      <BottomBackArrow onClick={handleBackClick}>&larr; Back</BottomBackArrow>
+      {showScrollButton && <ScrollToTopButton onClick={scrollToTop}><span>^</span></ScrollToTopButton>}
+    </Container>
+  );
 };
 
 export default function BlogPost({ title, date, content, image, description, artwork }: BlogPostProps) {
@@ -193,21 +204,22 @@ const Artwork = styled.p`
   }
 `;
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled.div<{ isLandscape: boolean }>`
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 80px;
+  max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '800px')};
 
   @media (min-width: 1024px) {
-    max-width: 500px;
+    max-width: ${({ isLandscape }) => (isLandscape ? '700px' : '500px')};
   }
 
   @media (max-width: 1024px) {
-    max-width: 800px;
+    max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '800px')};
   }
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   font-size: 2.8rem;
   font-weight: 700;
   color: #333;

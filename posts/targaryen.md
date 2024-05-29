@@ -3,7 +3,7 @@ title: "House of the Dragon: Team Green or Team Black?"
 date: "2024-08-05"
 image: "/images/targaryen.jpeg"
 description: "Which division of the Targaryen house should you support in HOTD season 2?"
-artwork: "Wang Haiyang"
+artwork: "Marc Simonetti"
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in posuere enim, sed tempus ex. Praesent gravida pulvinar urna, in auctor purus dignissim et. Proin pharetra viverra pulvinar. Proin sollicitudin libero ac sem feugiat, egestas luctus libero aliquam. Praesent pellentesque id ipsum et fringilla. Mauris auctor augue risus, sit amet tincidunt nisi blandit vel. Fusce id pellentesque leo, aliquet vulputate ante. Duis a ultricies augue.
 
