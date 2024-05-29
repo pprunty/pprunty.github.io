@@ -1,13 +1,13 @@
-/* todo: add pagination: https://chatgpt.com/c/7910bca0-c49e-49b1-8792-6b1c7ab92f88 */
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import ExportedImage from "next-image-export-optimizer";
-import markdownToHtml from '../../../lib/markdownToHtml';
+import markdownToHtml from '../../../../lib/markdownToHtml';
 import Head from 'next/head';
-import { GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import Pagination from '../../../components/Pagination'; // Adjust the path as needed
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
@@ -22,6 +22,8 @@ interface Post {
 
 interface BlogListProps {
   posts: Post[];
+  currentPage: number;
+  totalPages: number;
 }
 
 // Utility function to format the date
@@ -57,7 +59,7 @@ const BlogPost = ({ post, onClick }: { post: Post, onClick: () => void }) => (
   </PostItem>
 );
 
-export default function BlogList({ posts }: BlogListProps) {
+export default function BlogList({ posts, currentPage, totalPages }: BlogListProps) {
   const router = useRouter();
 
   // Group posts by year
@@ -92,29 +94,60 @@ export default function BlogList({ posts }: BlogListProps) {
           </PostList>
         </YearSection>
       ))}
+      <Pagination currentPage={currentPage} totalPages={totalPages} />
     </>
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+const POSTS_PER_PAGE = 5;
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const page = params?.page ? parseInt(params.page as string, 10) : 1;
   const postsDirectory = path.join(process.cwd(), 'posts');
   const filenames = fs.readdirSync(postsDirectory);
 
-  const posts: Post[] = await Promise.all(filenames.map(async (filename) => {
-    const filePath = path.join(postsDirectory, filename);
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    const { data, content } = matter(fileContents);
-    const htmlContent = await markdownToHtml(content);
-    const excerpt = htmlContent.replace(/<[^>]*>?/gm, '').substring(0, 390);
-    const slug = filename.replace(/\.md$/, '');
-    return { slug, ...data, excerpt } as Post;
-  }));
+  const posts = await Promise.all(
+    filenames.map(async (filename) => {
+      const filePath = path.join(postsDirectory, filename);
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      const { data, content } = matter(fileContents);
+      const htmlContent = await markdownToHtml(content);
+      const excerpt = htmlContent.replace(/<[^>]*>?/gm, '').substring(0, 390);
+      const slug = filename.replace(/\.md$/, '');
+      return { slug, ...data, excerpt } as Post;
+    })
+  );
 
-  // Sort posts by date in descending order
   posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  return { props: { posts } };
-}
+  const totalPosts = posts.length;
+  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+  const paginatedPosts = posts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
+
+  return {
+    props: {
+      posts: paginatedPosts,
+      currentPage: page,
+      totalPages,
+    },
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const postsDirectory = path.join(process.cwd(), 'posts');
+  const filenames = fs.readdirSync(postsDirectory);
+  const totalPosts = filenames.length;
+  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+
+  const paths = Array.from({ length: totalPages }, (_, i) => ({
+    params: { page: (i + 1).toString() },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
 
 // Styled Components
 const Title = styled.h1`

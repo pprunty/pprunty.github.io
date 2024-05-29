@@ -1,3 +1,4 @@
+/* todo: update document theme-color on menu open using ThemeProvider */
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
@@ -25,7 +26,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     setMenuOpen(false);
   };
 
-  const isActive = (path: string) => router.pathname === path;
+  const isActive = (path: string) => {
+    if (path === '/blog') {
+      return router.pathname.startsWith('/blog/page');
+    }
+    return router.pathname === path;
+  };
 
   useEffect(() => {
     const calculateHeight = () => {
@@ -60,7 +66,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Projects</NavItem>
           <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
           <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-          <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
+          <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
           <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
         </Nav>
       </Navbar>
@@ -84,7 +90,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Projects</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog')}>Blog</NavItem>
+            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
             <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
           </Nav>
         </MobileDrawer>
