@@ -91,6 +91,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
       <Title>{title}</Title>
       <Date>{date}</Date>
       <Content dangerouslySetInnerHTML={{ __html: content }} />
+      <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
       {showScrollButton && <ScrollToTopButton onClick={scrollToTop}><span>^</span></ScrollToTopButton>}
     </>
   );
@@ -186,6 +187,7 @@ const Title = styled.h1`
   color: #333;
   text-align: center;
   line-height: 1.2;
+  max-width: 800px;
 
   @media (max-width: 768px) {
     font-size: 2.3rem;
