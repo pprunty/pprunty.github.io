@@ -10,6 +10,9 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
   const router = useRouter();
 
   const handlePageChange = (page: number) => {
+    // Avoid navigation if already on the requested page
+    if (page === currentPage) return;
+
     router.push(`/blog/page/${page}`);
   };
 
@@ -19,7 +22,10 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
         <PageNumber
           key={i}
           active={i + 1 === currentPage}
-          onClick={() => handlePageChange(i + 1)}
+          onClick={(e) => {
+            e.preventDefault();
+            handlePageChange(i + 1);
+          }}
         >
           {i + 1}
         </PageNumber>
@@ -44,13 +50,18 @@ const PageNumber = styled.button<{ active: boolean }>`
   border: 1px solid #000;
   cursor: pointer;
 
-  @media (max-width: 720px) {
-    font-size: 16px;
-    padding: 20px 20px;
+  &:hover {
+    background-color: ${({ active }) => (active ? '#000' : '#f0f0f0')};
   }
 
-  &:hover {
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.8;
     background-color: #000;
     color: #fff;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 16px;
   }
 `;
