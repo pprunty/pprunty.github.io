@@ -24,3 +24,17 @@ export const lightTheme: Theme = {
   colorBackground: '#F0F0F0',
   colorTextPrimary: 'black',
 };
+
+const updateMetaThemeColor = (color: string) => {
+  const metaThemeColor = document.querySelector("meta[name=theme-color]");
+  if (metaThemeColor) {
+    metaThemeColor.setAttribute("content", color);
+  } else {
+    const metaTag = document.createElement('meta');
+    metaTag.name = "theme-color";
+    metaTag.content = color;
+    document.getElementsByTagName('head')[0].appendChild(metaTag);
+  }
+};
+
+export { updateMetaThemeColor }; // Exporting the function separately

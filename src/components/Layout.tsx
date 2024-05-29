@@ -1,8 +1,9 @@
 /* todo: update document theme-color on menu open using ThemeProvider */
-import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import React, { useState, useEffect, useRef, ReactNode, useCallback } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import ExportedImage from "next-image-export-optimizer";
+import {updateMetaThemeColor,lightTheme} from '../styles/theme';
 
 interface LayoutProps {
   children: ReactNode;
@@ -33,6 +34,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return router.pathname === path;
   };
 
+  const memoizedUpdateMetaThemeColor = useCallback((color: string) => {
+    const metaThemeColor = document.querySelector("meta[name=theme-color]");
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", color);
+    } else {
+      const metaTag = document.createElement('meta');
+      metaTag.name = "theme-color";
+      metaTag.content = color;
+      document.getElementsByTagName('head')[0].appendChild(metaTag);
+    }
+  }, []);
+
   useEffect(() => {
     const calculateHeight = () => {
       if (drawerRef.current) {
@@ -47,6 +60,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       window.removeEventListener('resize', calculateHeight);
     };
   }, []);
+
+  useEffect(() => {
+    // Update the meta theme color based on the menu state
+    if (isMenuOpen) {
+      memoizedUpdateMetaThemeColor('black'); // Set to black when menu is open
+    } else {
+      memoizedUpdateMetaThemeColor(lightTheme.colorBackground); // Set to background color of light theme when menu is closed
+    }
+  }, [isMenuOpen, memoizedUpdateMetaThemeColor]);
+
 
   return (
     <Container>

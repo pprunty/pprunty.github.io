@@ -75,26 +75,26 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
   };
 
   return (
-    <>
-      <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
-      <ImageWrapper>
-        <ExportedImage
-          src={imagePath}
-          alt={title}
-          layout="responsive"
-          width={800}
-          height={400}
-          placeholder={'blur'}
-        />
-        {artwork && <Artwork>Artwork: {artwork}</Artwork>}
-      </ImageWrapper>
-      <Title>{title}</Title>
-      <Date>{date}</Date>
-      <Content dangerouslySetInnerHTML={{ __html: content }} />
-      <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
-      {showScrollButton && <ScrollToTopButton onClick={scrollToTop}><span>^</span></ScrollToTopButton>}
-    </>
-  );
+      <Container>
+        <TopBackArrow onClick={handleBackClick}>&larr; Back</TopBackArrow>
+        <ImageWrapper>
+          <ExportedImage
+            src={imagePath}
+            alt={title}
+            layout="responsive"
+            width={800}
+            height={400}
+            placeholder={'blur'}
+          />
+          {artwork && <Artwork>Artwork: {artwork}</Artwork>}
+        </ImageWrapper>
+        <Title>{title}</Title>
+        <Date>{date}</Date>
+        <Content dangerouslySetInnerHTML={{ __html: content }} />
+        <BottomBackArrow onClick={handleBackClick}>&larr; Back</BottomBackArrow>
+        {showScrollButton && <ScrollToTopButton onClick={scrollToTop}><span>^</span></ScrollToTopButton>}
+      </Container>
+    );
 };
 
 export default function BlogPost({ title, date, content, image, description, artwork }: BlogPostProps) {
@@ -151,6 +151,32 @@ const BackArrow = styled.div`
   }
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
+const TopBackArrow = styled(BackArrow)`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  @media (max-width: 480px) {
+    top: 10px;
+    left: 10px;
+  }
+`;
+
+const BottomBackArrow = styled(BackArrow)`
+  align-self: flex-start;
+  margin-top: 20px;
+`;
+
 const Artwork = styled.p`
   font-style: italic;
   color: #555;
@@ -169,11 +195,11 @@ const Artwork = styled.p`
 
 const ImageWrapper = styled.div`
   width: 100%;
-  max-width: 800px;
   margin-bottom: 20px;
+  margin-top: 80px;
 
   @media (min-width: 1024px) {
-    max-width: 400px;
+    max-width: 500px;
   }
 
   @media (max-width: 1024px) {
