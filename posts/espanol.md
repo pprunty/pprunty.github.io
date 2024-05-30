@@ -1,7 +1,7 @@
 ---
 title: "¿Hablas español?"
 date: "2024-08-05"
-image: "/images/espanol.webp"
+image: "/images/espanol.WEBP"
 description: "The strategy that works for me when learning a new language."
 artwork: "DALL-E 2"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Horsepacking 14 Days in Mongolia"
 date: "2024-08-05"
-image: "/images/mongolia2.jpg"
+image: "/images/mongolia.jpg"
 description: "My reflection on spending 14 days horsepacking with __ tribe in Mongolia."
 artwork: "Wang Haiyang"
 ---
@@ -15,4 +15,4 @@ Fusce finibus nisi risus, quis rutrum orci placerat vel. Ut magna enim, dignissi
 
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec et turpis tortor. Cras elementum, mi vitae posuere tincidunt, mi nulla suscipit mauris, eget fermentum ligula massa vel nisi. Integer at fringilla ante, eget pharetra arcu. Quisque vitae quam vulputate dui placerat cursus. Nam facilisis odio in accumsan iaculis. Nullam consequat arcu ut elementum iaculis. Donec sodales eros a ipsum tempor pharetra. Curabitur sodales vulputate mattis. Vestibulum consectetur erat vel mollis tincidunt. Ut at pulvinar ipsum, in pharetra risus. Donec rutrum ex non neque pulvinar, in cursus libero auctor. Fusce consectetur est a elit malesuada euismod. Nunc euismod orci sed lectus bibendum sagittis.asn't worth it. Introduction In 2023, I joined Google as a software engineer and made a total compensation close to $300,000. It was an amazing experience filled with free food and learning opportunities
 
-![Optional Description](https://patrickprunty.com/images/daydream.webp)
+![Optional Description](https://patrickprunty.com/images/daydream.WEBP)

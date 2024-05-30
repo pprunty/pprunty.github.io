@@ -1,7 +1,7 @@
 ---
 title: "Discovering all things that go around"
 date: "2024-08-05"
-image: "/images/daydream.webp"
+image: "/images/daydream.WEBP"
 description: "How a video game quietly shaped my childhood."
 artwork: "Tony Toscani"
 ---

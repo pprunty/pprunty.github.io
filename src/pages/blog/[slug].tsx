@@ -75,7 +75,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
     const img = new Image();
     img.src = imagePath;
     img.onload = () => {
-      if (img.width > img.height) {
+      if ((img.width - 100) > img.height) {
         setIsLandscape(true);
       }
     };
@@ -213,7 +213,7 @@ const ImageWrapper = styled.div<{ isLandscape: boolean }>`
   max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '800px')};
 
   @media (min-width: 1024px) {
-    max-width: ${({ isLandscape }) => (isLandscape ? '700px' : '500px')};
+    max-width: ${({ isLandscape }) => (isLandscape ? '750px' : '500px')};
   }
 
   @media (max-width: 1024px) {
