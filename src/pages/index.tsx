@@ -23,7 +23,7 @@ const Title = styled.h1`
   text-align: left;
   margin-bottom: 20px; /* Add margin to separate title from case studies */
   opacity: 0;
-  animation: ${fadeIn} 1.4s ease-in-out forwards;
+  animation: ${fadeIn} 1s ease-in-out forwards;
 
   @media (max-width: 768px) {
     font-size: 8vw;
@@ -38,7 +38,7 @@ const Subtitle = styled.p`
   width: 100%;
   text-align: left;
   margin-bottom: 40px;
-  animation: ${fadeIn} 2s ease-in-out forwards;
+  animation: ${fadeIn} 1.2s ease-in-out forwards;
 
   @media (max-width: 768px) {
     font-size: 1.25rem;
