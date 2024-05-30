@@ -148,6 +148,7 @@ const BackArrow = styled.div`
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  padding: 20px;
   &:hover {
     color: #B3B3B3;
     text-decoration: none;
