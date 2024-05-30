@@ -268,12 +268,31 @@ const Content = styled.div`
     }
   }
 
+  img {
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;  // Adds automatic margins on both sides, centering the image
+    display: block;  // Ensures the image is aligned properly without extra space around
+  }
+
   @media (max-width: 768px) {
     font-size: 20px;
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;  // Adds automatic margins on both sides, centering the image
+        display: block;  // Ensures the image is aligned properly without extra space around
+      }
   }
 
   @media (max-width: 480px) {
     font-size: 18px;
+          img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;  // Adds automatic margins on both sides, centering the image
+            display: block;  // Ensures the image is aligned properly without extra space around
+          }
   }
 `;
 
