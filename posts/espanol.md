@@ -1,5 +1,5 @@
 ---
-title: "¿Hablas español?"
+title: "¿Hablas Español?"
 date: "2024-08-05"
 image: "/images/espanol.WEBP"
 description: "The strategy that works for me when learning a new language."
