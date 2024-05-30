@@ -229,7 +229,7 @@ const PostItem = styled.li`
   }
 
   &:active {
-    transform: scale(0.98);
+    transform: scale(0.99);
     opacity: 0.8;
   }
 

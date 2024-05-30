@@ -149,6 +149,7 @@ const BackArrow = styled.div`
   font-weight: bold;
   cursor: pointer;
   padding: 20px;
+  padding-left: 0px;
   &:hover {
     color: #B3B3B3;
     text-decoration: none;
@@ -176,7 +177,7 @@ const Container = styled.div`
 const TopBackArrow = styled(BackArrow)`
   position: absolute;
   top: 20px;
-  left: 20px;
+//   left: 20px;
 
   @media (max-width: 480px) {
     top: 10px;
@@ -208,7 +209,7 @@ const Artwork = styled.p`
 const ImageWrapper = styled.div<{ isLandscape: boolean }>`
   width: 100%;
   margin-bottom: 10px;
-  margin-top: 80px;
+  margin-top: 100px;
   max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '800px')};
 
   @media (min-width: 1024px) {
