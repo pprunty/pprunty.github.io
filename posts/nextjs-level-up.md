@@ -2,7 +2,7 @@
 title: "Levelling up your NextJS Project"
 date: "2024-08-05"
 image: "/images/cpu.jpg"
-description: "A guide to levelling up your NextJS project using caching, PWA, memoization, and more."
+description: "A guide to levelling up your NextJS project using Progressive Web Apps (PWAs), React Query for caching, memoization, and more."
 artwork: "Dan Williams / Pixabay.com"
 ---
 
