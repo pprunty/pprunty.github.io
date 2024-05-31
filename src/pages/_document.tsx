@@ -29,7 +29,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           {/* Add your other head elements here */}
           <link rel="manifest" href="/manifest.json" />

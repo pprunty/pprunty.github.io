@@ -1,20 +1,15 @@
 {
-  "name": "Patrick Prunty",
-  "short_name": "patrickprunty",
-  "description": "Your app description",
+  "name": "My Next.js PWA",
+  "short_name": "NextPWA",
+  "description": "A simple Next.js Progressive Web App",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f0f0f0",
-  "theme_color": "#f0f0f0",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "/icon.png",
       "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
-      "sizes": "512x512",
       "type": "image/png"
     }
   ]
