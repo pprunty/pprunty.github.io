@@ -142,6 +142,8 @@ const CaseStudyComponent: React.FC<CaseStudyProps> = memo(({ title, description,
   />
 ));
 
+CaseStudyComponent.displayName = "CaseStudyComponentInner";
+
 const Home: React.FC = () => {
   const caseStudies: CaseStudyProps[] = [
     {
@@ -208,12 +210,14 @@ const Home: React.FC = () => {
         <AboutMeTextContainer>
           <AboutMeTitle>About Me</AboutMeTitle>
           <AboutMeDescription>
-            When I'm not coding or working on side-projects, you'll find me training triathlon, hiking or enjoying quality time with loved ones. I'm always open to connecting—feel free to reach out to me on my social media platforms below. 🧘🏼
+            When I&lsquo;m not coding or working on side-projects, you&lsquo;ll find me training triathlon, hiking or enjoying quality time with loved ones. I&lsquo;m always open to connecting—feel free to reach out to me on my social media platforms below. 🧘🏼
           </AboutMeDescription>
         </AboutMeTextContainer>
       </AboutMeContainer>
     </>
   );
 };
+
+Home.displayName = "Home";
 
 export default Home;

@@ -26,43 +26,56 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-//   background-color: #F0F0F0;
   padding: 18px;
   width: 100%;
 
-    @media(min-width: 768px) {
-      width: 80%; /* Increase the width to 90% on larger screens */
-      max-width: 1200px; /* Optionally increase the max-width */
-      margin-left: auto;
-      margin-right: auto;
-    }
+  @media(min-width: 768px) {
+    width: 80%; /* Increase the width to 90% on larger screens */
+    max-width: 1200px; /* Optionally increase the max-width */
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     updateMetaThemeColor(lightTheme.colorBackground);
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
   }, []);
 
   return (
-  <>
+    <>
       <Head>
-          <title>Patrick Prunty</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="description" content="Software products, YouTube educational & entertainment series and consultations." />
-            <meta property="og:image" content="/images/favicon.ico" />
-            <meta property="og:image:width" content="1200" />
-            <meta property="og:image:height" content="630" />
-          <link rel="icon" href="/images/favicon.ico" />
+        <title>Patrick Prunty</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Software products, YouTube educational & entertainment series and consultations." />
+        <meta property="og:image" content="/images/favicon.ico" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <link rel="icon" href="/images/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content={lightTheme.colorBackground} />
       </Head>
-    <StyledThemeProvider theme={lightTheme}>
-     <GlobalStyle theme={lightTheme}/>
-      <Layout>
-        <Container>
-        <Component {...pageProps} />
-        </Container>
-      </Layout>
-      <Footer/>
-    </StyledThemeProvider>
+      <StyledThemeProvider theme={lightTheme}>
+        <GlobalStyle theme={lightTheme} />
+        <Layout>
+          <Container>
+            <Component {...pageProps} />
+          </Container>
+        </Layout>
+        <Footer />
+      </StyledThemeProvider>
     </>
   );
 };

@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+import withPWA from 'next-pwa';
+
 const nextConfig = {
   output: "export",
   images: {
@@ -16,8 +17,7 @@ const nextConfig = {
     nextImageExportOptimizer_generateAndUseBlurImages: "true",
     nextImageExportOptimizer_remoteImageCacheTTL: "86400", // Cache for 1 day
   },
-//   trailingSlash: true,
-  assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX,
+  assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -28,4 +28,9 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withPWA({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === "development",
+})(nextConfig);

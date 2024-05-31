@@ -154,4 +154,6 @@ const CaseStudyComponent: React.FC<CaseStudyProps> = memo(({ index, title, descr
   );
 });
 
+CaseStudyComponent.displayName = "CaseStudyComponent";
+
 export default CaseStudyComponent;

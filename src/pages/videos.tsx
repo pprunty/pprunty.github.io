@@ -82,6 +82,9 @@ const MemoizedVideoWrapper = memo(({ videoId, index }: { videoId: string, index:
   </VideoWrapper>
 ));
 
+MemoizedVideoWrapper.displayName = "MemoizedVideoWrapper";
+
+
 const Videos: React.FC = () => {
   useEffect(() => {
     // Load YouTube IFrame API script
@@ -104,7 +107,7 @@ const Videos: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:type" content="video" />
       </Head>
-      <Title>Patrick Prunty's Videos</Title>
+      <Title>Patrick Prunty&apos;s Videos</Title>
       <TextContainer>
         <Subtitle>Explore my personal YouTube channel, where I share a variety of creative videos.</Subtitle>
         <div className="g-ytsubscribe" data-channelid="UCYj_hDCY1XV9_kFwGSjgqxA" data-layout="default" data-count="default"></div>
@@ -117,5 +120,8 @@ const Videos: React.FC = () => {
     </>
   );
 };
+
+Videos.displayName = "Videos";
+
 
 export default Videos;

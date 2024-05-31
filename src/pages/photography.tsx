@@ -94,6 +94,9 @@ const Photography: React.FC = () => {
     );
   });
 
+  MemoizedImageWrapper.displayName = "MemoizedImageWrapper";
+
+
   return (
     <>
       <Head>
@@ -106,7 +109,7 @@ const Photography: React.FC = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${router.asPath}`} />
       </Head>
-      <Title>Patrick Prunty's Photography</Title>
+      <Title>Patrick Prunty&apos;s Photography</Title>
       <Subtitle>Discover the world through my lens. Here are some of my favorite shots capturing moments and stories from around the globe.</Subtitle>
       <Grid>
         {images.map((src, index) => (
@@ -116,5 +119,7 @@ const Photography: React.FC = () => {
     </>
   );
 };
+
+Photography.displayName = "Photography";
 
 export default Photography;

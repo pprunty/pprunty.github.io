@@ -69,4 +69,6 @@ const Consultation: React.FC = () => {
   );
 };
 
+Consultation.displayName = "Consultation";
+
 export default Consultation;

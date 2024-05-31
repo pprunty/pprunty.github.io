@@ -1,17 +1,15 @@
-import React from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+class MyDocument extends Document {
+  static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -31,23 +29,22 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html>
         <Head>
-          <meta name="theme-color" content="#F0F0F0" />
-          <script async src="https://apis.google.com/js/platform.js"></script>
-          {/* Google Tag Manager */}
+          {/* Add your other head elements here */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-SB4DP92HKV');
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-SB4DP92HKV', {
+                  page_path: window.location.pathname,
+                });
               `,
             }}
           />
-          {/* Additional custom scripts can be added here */}
         </Head>
         <body>
           <Main />
@@ -57,3 +54,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default MyDocument;

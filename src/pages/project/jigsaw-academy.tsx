@@ -120,6 +120,8 @@ const MemoizedVideoWrapper = memo(({ playlistId, index }: { playlistId: string, 
   </VideoWrapper>
 ));
 
+MemoizedVideoWrapper.displayName = "MemoizedVideoWrapper";
+
 const JigsawAcademy: React.FC = () => {
   const router = useRouter();
 
@@ -172,5 +174,7 @@ const JigsawAcademy: React.FC = () => {
     </>
   );
 };
+
+JigsawAcademy.displayName = "JigsawAcademy";
 
 export default JigsawAcademy;
