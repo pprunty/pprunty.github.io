@@ -159,6 +159,7 @@ const JigsawPresents: React.FC = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <link rel="icon" href="/images/favicon.ico" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
       </Head>
       <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
       <Title>Jigsaw Presents</Title>

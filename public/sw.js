@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-nextjs-pwa-cache-v1';
+const CACHE_NAME = 'my-nextjs-pwa-cache-v2';
 const urlsToCache = [
   '/',
   '/manifest.json',
@@ -21,7 +21,11 @@ const urlsToCache = [
 // Cache static assets during the install phase
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(urlsToCache);
+    }).catch((error) => {
+      console.error('Caching failed during install:', error);
+    })
   );
 });
 
@@ -37,6 +41,10 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
+    }).then(() => {
+      return self.clients.claim();
+    }).catch((error) => {
+      console.error('Activation failed:', error);
     })
   );
 });
@@ -45,13 +53,23 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
-      return response || fetch(event.request).then((fetchResponse) => {
-        return caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, fetchResponse.clone());
+      if (response) {
+        return response;
+      }
+      return fetch(event.request).then((fetchResponse) => {
+        if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
           return fetchResponse;
+        }
+        const responseToCache = fetchResponse.clone();
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, responseToCache);
+        }).catch((error) => {
+          console.error('Caching failed during fetch:', error);
         });
+        return fetchResponse;
       });
     }).catch(() => {
+      // Fallback for offline use if both cache and network fail
       return caches.match('/');
     })
   );

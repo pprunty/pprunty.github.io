@@ -36,7 +36,6 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content={'#F0F0F0'} />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `

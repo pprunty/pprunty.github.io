@@ -106,6 +106,7 @@ const Videos: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:type" content="video" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
       </Head>
       <Title>Patrick Prunty&apos;s Videos</Title>
       <TextContainer>
