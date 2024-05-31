@@ -286,6 +286,11 @@ const PostImageWrapper = styled.div`
     height: 110px;
   }
 
+  @media (max-width: 520px) {
+    width: 100px;
+    height: 100px;
+  }
+
   img {
     width: 100%;
     height: 100%;

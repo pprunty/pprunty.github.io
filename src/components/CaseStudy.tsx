@@ -83,11 +83,15 @@ const ViewCaseStudyButton = styled.button`
 `;
 
 const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  max-width: 100%;  /* Ensure the ImageWrapper does not extend outside its bounding div */
   overflow: hidden;
   cursor: pointer;
   transition: border-radius 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
-  margin-left: 0;
+  margin: 0 auto;
 
   @media(min-width: 768px) {
     width: 50%;
@@ -100,10 +104,12 @@ const ImageWrapper = styled.div`
 
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-width: 100%;  /* Ensure the image does not extend outside its bounding div */
     object-fit: cover;
   }
 `;
+
 
 interface CaseStudyProps {
   index: number;
