@@ -21,7 +21,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
       {Array.from({ length: totalPages }, (_, i) => (
         <PageNumber
           key={i}
-          active={i + 1 === currentPage}
+          $active={i + 1 === currentPage}
           onClick={(e) => {
             e.preventDefault();
             handlePageChange(i + 1);
@@ -42,17 +42,17 @@ const PaginationWrapper = styled.div`
   margin: 20px 0;
 `;
 
-const PageNumber = styled.button<{ active: boolean }>`
+const PageNumber = styled.button<{ $active: boolean }>`
   padding: 20px 20px;
   margin: 0 5px;
-  background-color: ${({ active }) => (active ? '#000' : 'inherit')};
-  color: ${({ active }) => (active ? '#fff' : '#000')};
+  background-color: ${({ $active }) => ($active ? '#000' : 'inherit')};
+  color: ${({ $active }) => ($active ? '#fff' : '#000')};
   border: 1px solid #000;
   cursor: pointer;
   transition: color 0.12s, background-color 0.12s, transform 0.12s, opacity 0.12s;
 
   &:hover {
-    background-color: ${({ active }) => (active ? '#000' : '#f0f0f0')};
+    background-color: ${({ $active }) => ($active ? '#000' : '#f0f0f0')};
   }
 
   &:active, &.active {
@@ -60,7 +60,6 @@ const PageNumber = styled.button<{ active: boolean }>`
     opacity: 0.8;
     background-color: #000;
     color: #fff;
-      opacity: 0.8;
   }
 
   @media (max-width: 720px) {
