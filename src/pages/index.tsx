@@ -145,9 +145,9 @@ const CaseStudyComponent: React.FC<CaseStudyProps> = memo(({ title, description,
 const Home: React.FC = () => {
   const caseStudies: CaseStudyProps[] = [
     {
-      title: "TrackR",
-      description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
-      imageUrl: "/images/afro.WEBP",
+      title: "pokR",
+      description: "An open-sourced reinforcement and deep-learning model used for applications of Texas Hold'em Poker.",
+      imageUrl: "/images/poker.jpg",
       link: "trackr",
       index: 0,
     },
@@ -160,14 +160,14 @@ const Home: React.FC = () => {
     },
     {
       title: "Jigsaw Presents",
-      description: "Web redesign, app design, packaging design and more for a device used to find your lost stuff.",
+      description: "An analytical YouTube channel, where you will find in-depth analysis and insights into trending movies, series, books, and games. Curated playlists include 'Mastering FastAPI: From Basics to Advanced,' 'Laws of UI/UX Design,' and 'How to Brew Stout Beer.'",
       imageUrl: "/images/jigsaw-presents-logo.png",
       link: "project/jigsaw-presents",
       index: 2,
     },
     {
       title: "Jigsaw Academy",
-      description: "An educational YouTube channel, providing free, high-quality education to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'.",
+      description: "An educational YouTube channel, providing free, high-quality educational tutorials to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'.",
       imageUrl: "/images/jigsaw-academy-logo.png",
       link: "project/jigsaw-academy",
       index: 3,

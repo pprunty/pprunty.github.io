@@ -161,7 +161,7 @@ const JigsawPresents: React.FC = () => {
       <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
       <Title>Jigsaw Presents</Title>
       <TextContainer>
-        <Subtitle>Explore my analytical YouTube channel. Providing analysis and insight into popular movies, series, books, and gaming.</Subtitle>
+        <Subtitle>Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games. Click the YouTube button below to view my channel directly on YouTube.</Subtitle>
         <div className="g-ytsubscribe" data-channelid="UCx8iHEGQMyeInLgPQ81-EJA" data-layout="default" data-theme="dark" data-count="default"></div>
       </TextContainer>
       <Grid>
