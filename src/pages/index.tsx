@@ -147,7 +147,7 @@ const Home: React.FC = () => {
     {
       title: "pokR",
       description: "An open-sourced reinforcement and deep-learning model used for applications of Texas Hold'em Poker.",
-      imageUrl: "/images/poker.jpg",
+      imageUrl: "/images/poker.webp",
       link: "trackr",
       index: 0,
     },
