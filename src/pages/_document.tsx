@@ -33,11 +33,21 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-            <meta name="theme-color" content="#F0F0F0" />
+          <meta name="theme-color" content="#F0F0F0" />
           <script async src="https://apis.google.com/js/platform.js"></script>
-          {/* Here you can add custom scripts, stylesheets, meta tags, etc.
-           <script src="https://accounts.google.com/gsi/client" async defer></script>
-           */}
+          {/* Google Tag Manager */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-SB4DP92HKV');
+              `,
+            }}
+          />
+          {/* Additional custom scripts can be added here */}
         </Head>
         <body>
           <Main />
