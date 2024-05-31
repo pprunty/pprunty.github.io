@@ -355,8 +355,8 @@ const ScrollToTopButton = styled.button`
   }
 
   @media (max-width: 480px) {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     font-size: 28px;
     bottom: 15px;
     right: 15px;
