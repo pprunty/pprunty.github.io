@@ -42,6 +42,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     updateMetaThemeColor(lightTheme.colorBackground);
 
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+          // todo: Update registration of path to be relative to domain: patrick.prunty.com/sw.js
           navigator.serviceWorker
             .register('./sw.js')
             .then((registration) => {

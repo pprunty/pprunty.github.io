@@ -6,7 +6,7 @@ description: "A guide to levelling up your NextJS project using Progressive Web 
 artwork: "Dan Williams / Pixabay.com"
 ---
 
-Caching backend API queries, lazy loading data & imports, memoizing React components to prevent unnecessary re-renders, 
-user authentication state, offline site accessibility and ... . Nearly all the aforementioned are secondary in the developer's mind when it comes
+Caching backend API queries, lazy loading data and imports, memoizing React components to prevent unnecessary re-renders, 
+managing authentication statuses, offline site accessibility and ... . Nearly all the aforementioned are secondary in the developer's mind when it comes
 to developing a user interface. However, these elements are crucial for creating an experience that keeps users returning back to your site. 
 This guide will show you how to level up your NextJS project by integrating these essential features into your project.

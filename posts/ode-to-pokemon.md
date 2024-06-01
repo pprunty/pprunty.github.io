@@ -1,7 +1,7 @@
 ---
 title: "Ode to Pokémon"
 date: "2024-05-21"
-description: "This is my first blog post using remark."
+description: "How a video game subtly shaped my adulthood."
 image: "/images/pokemon.png"
 artwork: "Pokémon Crystal Gameplay"
 ---

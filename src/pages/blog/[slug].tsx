@@ -181,7 +181,7 @@ const TopBackArrow = styled(BackArrow)`
 
   @media (max-width: 480px) {
     top: 10px;
-    left: 10px;
+//     left: 10px;
   }
 `;
 
