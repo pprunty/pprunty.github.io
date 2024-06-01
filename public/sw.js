@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-nextjs-pwa-cache-v4';
+const CACHE_NAME = 'my-nextjs-pwa-cache-v5';
 const urlsToCache = [
   '/',
   '/manifest.json',
@@ -25,61 +25,94 @@ const urlsToCache = [
 ];
 
 // Check if the environment is production
-const isProduction = true;
+const isProduction = process.env.NODE_ENV === 'production';
 
 // Cache static assets during the install phase
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache);
-    }).catch((error) => {
-      console.error('Caching failed during install:', error);
-    })
-  );
+  if (isProduction) {
+    console.log('Service Worker: Installing and caching assets...');
+    event.waitUntil(
+      caches.open(CACHE_NAME).then((cache) => {
+        return Promise.all(
+          urlsToCache.map((url) => {
+            return cache.add(url).catch((error) => {
+              console.error(`Service Worker: Failed to cache ${url}:`, error);
+            });
+          })
+        );
+      }).then(() => {
+        console.log('Service Worker: Caching completed successfully.');
+      }).catch((error) => {
+        console.error('Service Worker: Caching failed during install:', error);
+      })
+    );
+  } else {
+    console.log('Service Worker: Skipping caching since environment is not production.');
+  }
 });
 
 // Clean up old caches during the activate phase
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker: Activating and cleaning up old caches...');
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (!cacheWhitelist.includes(cacheName)) {
+            console.log(`Service Worker: Deleting cache: ${cacheName}`);
             return caches.delete(cacheName);
           }
         })
       );
     }).then(() => {
+      console.log('Service Worker: Activation and cleanup completed.');
       return self.clients.claim();
     }).catch((error) => {
-      console.error('Activation failed:', error);
+      console.error('Service Worker: Activation failed:', error);
     })
   );
 });
 
 // Fetch handler to serve cached content
 self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      if (response) {
-        return response;
-      }
-      return fetch(event.request).then((fetchResponse) => {
-        if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
-          return fetchResponse;
-        }
-        const responseToCache = fetchResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
-        }).catch((error) => {
-          console.error('Caching failed during fetch:', error);
-        });
+    fetch(event.request).then((fetchResponse) => {
+      // Check if we received a valid response
+      if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
         return fetchResponse;
+      }
+
+      // Clone the response
+      const responseToCache = fetchResponse.clone();
+
+      caches.open(CACHE_NAME).then((cache) => {
+        cache.put(event.request, responseToCache).catch((error) => {
+          console.error('Service Worker: Caching failed during fetch:', error);
+        });
       });
+
+      return fetchResponse;
     }).catch(() => {
-      // Fallback for offline use if both cache and network fail
-      return caches.match('/');
+      // If fetch fails, try to get from cache
+      return caches.match(event.request).then((response) => {
+        if (response) {
+          return response;
+        }
+        // Fallback for offline use if both cache and network fail
+        return caches.match('/').then((fallbackResponse) => {
+          if (fallbackResponse) {
+            console.log('Service Worker: Serving fallback content for offline use.');
+          } else {
+            console.error('Service Worker: No fallback content available.');
+          }
+          return fallbackResponse;
+        });
+      });
     })
   );
 });
