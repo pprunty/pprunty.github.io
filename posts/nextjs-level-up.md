@@ -55,39 +55,6 @@ app.add_middleware(
     allow_headers=settings.CORS_ALLOW_HEADERS,
 )
 
-# Assuming `cert.pem` is your self-signed certificate
-cert_path = os.path.abspath("./cert.pem")
-client = httpx.AsyncClient(verify=cert_path)
-
-
-# Connect to MongoDB database instance
-@app.on_event("startup")
-async def startup_db_client():
-    await DataBase.connect(uri=settings.MONGODB_URI, db=settings.MONGODB_DB)
-
-
-@app.on_event("shutdown")
-async def shutdown_db_client():
-    await DataBase.close()
-
-
-# from fastapi import Request
-#
-#
-# @app.get("/test_session_set")
-# async def test_session_set(request: Request):
-#     request.session['test'] = 'Session test successful'
-#     logger.info("Session set with test value")
-#     return {"message": "Session set"}
-#
-#
-# @app.get("/test_session_get")
-# async def test_session_get(request: Request):
-#     session_value = request.session.get('test', 'No session found')
-#     logger.info(f"Retrieved session value: {session_value}")
-#     return {"session_value": session_value}
-
-
 # Include auth_router in application's main router
 app.include_router(auth_router)
 app.include_router(tracker_router)

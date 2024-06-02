@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-nextjs-pwa-cache-v5';
+const CACHE_NAME = 'my-nextjs-pwa-cache-v6';
 const urlsToCache = [
   '/',
   '/manifest.json',
