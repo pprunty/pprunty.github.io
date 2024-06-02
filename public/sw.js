@@ -25,7 +25,7 @@ const urlsToCache = [
 ];
 
 // Check if the environment is production
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = self.location.hostname === 'patrickprunty.com' || self.location.hostname === "https://patrickprunty.com";
 
 // Cache static assets during the install phase
 self.addEventListener('install', (event) => {
