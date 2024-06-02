@@ -1,5 +1,5 @@
 ---
-title: "Levelling up your NextJS/ReactJS Project"
+title: "Elevating your NextJS/ReactJS Project"
 date: "2024-08-05"
 image: "/images/cpu.jpg"
 description: "A guide to levelling up your NextJS/ReactJS project using Progressive Web Apps (PWAs), React Query for caching, memoization, and more."

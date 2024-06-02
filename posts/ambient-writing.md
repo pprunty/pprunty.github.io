@@ -10,7 +10,7 @@ artwork: "Ellsworth Kelly"
 sound, smell, touch and taste. Sunsets, laughter, perfume, hugs and chocolate.
 If your writing does not make me feel, it is as good as a corpse. Rotting.
 Emitting dead odors. As the grass beneath beseech it and the maggots infest the top.
-It should shrill and shriek. Read like beautiful music. A birdsong sung
+It should shrill and shriek. Read like beautiful music. A birdsong; sung
 high in the morning trees, passed down through generation.
 
 Machines may imitate. Their imitations are our imitations; all of our
