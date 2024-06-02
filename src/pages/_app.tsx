@@ -40,17 +40,22 @@ const Container = styled.div`
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
-    updateMetaThemeColor(lightTheme.colorBackground);
-
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/sw.js')
-        .then((registration) => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then((registration) => {
           console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch((error) => {
+        }).catch((error) => {
           console.error('Service Worker registration failed:', error);
         });
+
+        navigator.serviceWorker.addEventListener('message', (event) => {
+          if (event.data && event.data.type === 'NEW_SW_AVAILABLE') {
+            if (confirm('A new version of this site is available. Reload to update?')) {
+              window.location.reload();
+            }
+          }
+        });
+      });
     }
   }, []);
 

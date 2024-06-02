@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-nextjs-pwa-cache-v7';
+const CACHE_NAME = 'my-nextjs-pwa-cache-v8';
 const urlsToCache = [
   '/',
   '/manifest.json',
@@ -11,20 +11,13 @@ const urlsToCache = [
   // Add other static assets and routes to cache
   '/blog/ambient-writing',
   '/blog/daydream',
-  '/blog/discovering',
-  '/blog/mongolia',
-  '/blog/ode-to-pokemon',
-  '/blog/targaryen',
   '/blog/page/1',
-  '/_next/data/development/blog/page/1.json?page=1',
   '/blog/page/2',
-  '/_next/data/development/blog/page/1.json?page=2',
   '/blog/page/3',
-  '/_next/data/development/blog/page/1.json?page=3'
   // Add more blog pages and other dynamic routes as necessary
 ];
 
-// Check if the environment is production
+// Check if the environment is production based on the domain
 const isProduction = self.location.hostname === 'patrickprunty.com' || self.location.hostname === "https://patrickprunty.com";
 
 // Cache static assets during the install phase
@@ -42,6 +35,7 @@ self.addEventListener('install', (event) => {
         );
       }).then(() => {
         console.log('Service Worker: Caching completed successfully.');
+        self.skipWaiting();
       }).catch((error) => {
         console.error('Service Worker: Caching failed during install:', error);
       })
@@ -115,4 +109,11 @@ self.addEventListener('fetch', (event) => {
       });
     })
   );
+});
+
+self.addEventListener('controllerchange', () => {
+  console.log('Service Worker: Controller changed. A new service worker has taken control.');
+  self.clients.matchAll().then(clients => {
+    clients.forEach(client => client.postMessage({ type: 'NEW_SW_AVAILABLE' }));
+  });
 });
