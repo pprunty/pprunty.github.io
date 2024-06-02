@@ -7,6 +7,7 @@ import { lightTheme } from '../styles/theme';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
+import 'highlight.js/styles/atom-one-dark.css'; // Import the Atom One Dark theme
 
 const updateMetaThemeColor = (color: string) => {
   const metaThemeColor = document.querySelector("meta[name=theme-color]");

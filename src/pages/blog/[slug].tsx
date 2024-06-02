@@ -135,7 +135,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data, content } = matter(fileContents);
   const htmlContent = await markdownToHtml(content);
   return { props: { ...data, content: htmlContent, artwork: data.artwork || null } };
-}
+};
 
 // Styled Components
 const BackArrow = styled.div`
@@ -251,7 +251,7 @@ const Content = styled.div`
   width: 100%;
 
   h2, h3, h4 {
-    margin-top: 1.5em;
+    margin-top: 1.2em;
     margin-bottom: 0.5em;
   }
 
@@ -275,24 +275,33 @@ const Content = styled.div`
     display: block;  // Ensures the image is aligned properly without extra space around
   }
 
+  pre {
+    background: inherit;
+    overflow-x: auto;
+    code {
+      font-family: monospace;
+      font-size: 15px;
+    }
+  }
+
   @media (max-width: 768px) {
     font-size: 20px;
-      img {
-        max-width: 100%;
-        height: auto;
-        margin: 0 auto;  // Adds automatic margins on both sides, centering the image
-        display: block;  // Ensures the image is aligned properly without extra space around
-      }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
   }
 
   @media (max-width: 480px) {
     font-size: 18px;
-          img {
-            max-width: 100%;
-            height: auto;
-            margin: 0 auto;  // Adds automatic margins on both sides, centering the image
-            display: block;  // Ensures the image is aligned properly without extra space around
-          }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
   }
 `;
 
