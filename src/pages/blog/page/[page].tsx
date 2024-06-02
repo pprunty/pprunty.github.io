@@ -34,30 +34,34 @@ function formatDate(dateString: string): string {
 }
 
 // Extracted components for reusability
-const BlogPost = ({ post, onClick }: { post: Post, onClick: () => void }) => (
-  <PostItem onClick={onClick}>
-    <PostContent>
-      <PostText>
-        <PostDateAuthor>{formatDate(post.date)} by Patrick Prunty</PostDateAuthor>
-        <PostTitle>{post.title}</PostTitle>
-        <PostExcerpt>
-          {post.excerpt}... <SeeMore onClick={onClick}>Read more</SeeMore>
-        </PostExcerpt>
-      </PostText>
-      <PostImageWrapper>
-        <ExportedImage
-          src={isExport ? `${post.image}` : post.image}
-          alt={post.title}
-          layout="fixed"
-          width={800}
-          height={500}
-          objectFit="cover"
-          placeholder={'blur'}
-        />
-      </PostImageWrapper>
-    </PostContent>
-  </PostItem>
-);
+const BlogPost = ({ post, onClick }: { post: Post, onClick: () => void }) => {
+  const contentToDisplay = (post.excerpt.length < 200 || post.excerpt.length > 15000) ? post.description : post.excerpt;
+
+  return (
+    <PostItem onClick={onClick}>
+      <PostContent>
+        <PostText>
+          <PostDateAuthor>{formatDate(post.date)} by Patrick Prunty</PostDateAuthor>
+          <PostTitle>{post.title}</PostTitle>
+          <PostExcerpt>
+            {contentToDisplay}... <SeeMore onClick={onClick}>Read more</SeeMore>
+          </PostExcerpt>
+        </PostText>
+        <PostImageWrapper>
+          <ExportedImage
+            src={isExport ? `${post.image}` : post.image}
+            alt={post.title}
+            layout="fixed"
+            width={800}
+            height={500}
+            objectFit="cover"
+            placeholder={'blur'}
+          />
+        </PostImageWrapper>
+      </PostContent>
+    </PostItem>
+  );
+};
 
 export default function BlogList({ posts, currentPage, totalPages }: BlogListProps) {
   const router = useRouter();
