@@ -1,72 +1,307 @@
 ---
-title: "Elevating your NextJS/ReactJS Project"
+title: "Elevating Your NextJS/ReactJS Project"
 date: "2024-08-05"
 image: "/images/cpu.jpg"
-description: "A guide to levelling up your NextJS/ReactJS project using Progressive Web Apps (PWAs), React Query for caching, memoization, and more."
+description: "A comprehensive guide to enhancing your NextJS/ReactJS project with Progressive Web Apps (PWAs), React Query for caching, memoization, and more."
 artwork: "Dan Williams / Pixabay.com"
 ---
 
-Caching backend API queries, lazy loading data and imports, memoizing React components to prevent unnecessary re-renders, 
-managing authentication statuses, offline site accessibility and ... . Nearly all the aforementioned are secondary in the developer's mind when it comes
-to developing a user interface. However, these elements are crucial for creating an experience that keeps users returning back to your site. 
-This guide will show you how to level up your NextJS project by integrating these essential features into your project.
+Efficient caching of backend API queries, lazy loading of data and imports, memoizing React components to avoid unnecessary re-renders, managing authentication states, and ensuring offline accessibility are often overlooked in UI development. However, these elements are vital for creating a seamless and engaging user experience that keeps visitors returning to your site. This guide delves into advanced techniques to elevate your NextJS project by integrating these essential features.
 
-```python
-import logging
-import os
+## Caching Backend Queries with React Query
 
-import httpx
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from motormongo import DataBase
-from starlette.middleware.sessions import SessionMiddleware
+React Query simplifies data fetching in React apps, making it easy to manage server state. It provides out-of-the-box caching, synchronization, and background data fetching.
 
-from backend.auth.router import auth_router
-from backend.payments.router import payment_router
-from backend.settings import settings
-from backend.tracker.router import tracker_router
-from backend.user.router import user_router
-from backend.utils.proto_middleware import ForwardedProtoMiddleware
+### Example: Caching API Requests
 
-logger = logging.getLogger(__name__)
+First, install React Query:
 
-app = FastAPI()
-
-# Session Middleware
-app.add_middleware(
-    SessionMiddleware,
-    secret_key=settings.SESSION_SECRET_KEY,
-    session_cookie=settings.SESSION_COOKIE_NAME,
-    max_age=86400,  # Sets a max age for the cookie, in seconds
-    https_only=True,  # JavaScript cannot access the cookie
-    # domain=settings.DOMAIN_NAME,  # Specify the domain to which the cookie applies
-    path='/',  # Specify the path to which the cookie applies,
-    same_site='none'  # Essential for cookies to be sent in third-party contexts
-)
-
-app.add_middleware(ForwardedProtoMiddleware)
-
-# CORS Middleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=settings.CORS_ALLOW_ORIGINS,
-    allow_credentials=settings.CORS_ALLOW_CREDENTIALS,
-    allow_methods=settings.CORS_ALLOW_METHODS,
-    allow_headers=settings.CORS_ALLOW_HEADERS,
-)
-
-# Include auth_router in application's main router
-app.include_router(auth_router)
-app.include_router(tracker_router)
-app.include_router(user_router)
-app.include_router(payment_router)
-
+```bash
+npm install react-query
 ```
 
-## Caching
+Next, set up a query client and use the `useQuery` hook to fetch and cache data.
 
-### hello
+```javascript
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 
-1. **Caching backend queries**: How to use React useQuery for caching backend API requests.
-2. **Progressive Web Apps**: How to set-up a service worker for caching 
+const queryClient = new QueryClient();
 
+function App() {
+return (
+<QueryClientProvider client={queryClient}>
+<Users />
+</QueryClientProvider>
+);
+}
+
+function Users() {
+const { data, error, isLoading } = useQuery('users', fetchUsers);
+
+if (isLoading) return <div>Loading...</div>;
+if (error) return <div>Error loading users</div>;
+
+return (
+<ul>
+{data.map(user => (
+<li key={user.id}>{user.name}</li>
+))}
+</ul>
+);
+}
+
+async function fetchUsers() {
+const response = await fetch('/api/users');
+if (!response.ok) {
+throw new Error('Network response was not ok');
+}
+return response.json();
+}
+
+export default App;
+```
+
+**Pros:**
+- Simplifies data fetching and state management.
+- Provides built-in caching and synchronization.
+- Automatically refetches data in the background.
+
+**Cons:**
+- Adds an additional library to the project.
+- May require adjustments in the existing data fetching logic.
+
+## Progressive Web Apps (PWAs)
+
+PWAs provide offline capabilities and improve performance and user engagement through features like service workers and caching.
+
+### Example: Setting Up a Service Worker
+
+First, create a `public/sw.js` file:
+
+```javascript
+self.addEventListener('install', event => {
+event.waitUntil(
+caches.open('v1').then(cache => {
+return cache.addAll([
+'/',
+'/index.html',
+'/styles.css',
+'/script.js',
+]);
+})
+);
+});
+
+self.addEventListener('fetch', event => {
+event.respondWith(
+caches.match(event.request).then(response => {
+return response || fetch(event.request);
+})
+);
+});
+```
+
+Next, register the service worker in your `_app.js` file:
+
+```javascript
+import { useEffect } from 'react';
+
+function MyApp({ Component, pageProps }) {
+useEffect(() => {
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('/sw.js').then(registration => {
+console.log('Service Worker registered with scope:', registration.scope);
+}).catch(error => {
+console.error('Service Worker registration failed:', error);
+});
+}
+}, []);
+
+return <Component {...pageProps} />;
+}
+
+export default MyApp;
+```
+
+**Pros:**
+- Enhances user experience with offline capabilities.
+- Improves performance by caching resources.
+- Provides a more resilient application.
+
+**Cons:**
+- Requires additional setup and maintenance.
+- Potentially complex debugging.
+
+## Memoization in React
+
+Memoization helps optimize React components by preventing unnecessary re-renders.
+
+### Example: Using `React.memo` and `useCallback`
+
+```javascript
+import React, { useState, useCallback } from 'react';
+
+const ExpensiveComponent = React.memo(({ data }) => {
+// Expensive computation here
+return <div>{data}</div>;
+});
+
+function App() {
+const [count, setCount] = useState(0);
+const data = "Some data";
+
+const increment = useCallback(() => {
+setCount(count + 1);
+}, [count]);
+
+return (
+<div>
+<ExpensiveComponent data={data} />
+<button onClick={increment}>Increment</button>
+<p>{count}</p>
+</div>
+);
+}
+
+export default App;
+```
+
+**Pros:**
+- Improves performance by avoiding unnecessary re-renders.
+- `useCallback` ensures that the function reference remains the same between renders.
+
+**Cons:**
+- Overuse can lead to premature optimization.
+- Requires understanding of React's rendering behavior.
+
+## Authentication Management
+
+Managing authentication states is crucial for maintaining secure and seamless access across sessions.
+
+### Example: Using NextAuth.js
+
+First, install NextAuth.js:
+
+```bash
+npm install next-auth
+```
+
+Next, configure NextAuth in `pages/api/auth/[...nextauth].js`:
+
+```javascript
+import NextAuth from 'next-auth';
+import Providers from 'next-auth/providers';
+
+export default NextAuth({
+providers: [
+Providers.GitHub({
+clientId: process.env.GITHUB_ID,
+clientSecret: process.env.GITHUB_SECRET,
+}),
+],
+database: process.env.DATABASE_URL,
+});
+```
+
+Finally, use the `useSession` hook in your components:
+
+```javascript
+import { signIn, signOut, useSession } from 'next-auth/client';
+
+function AuthButton() {
+const [session, loading] = useSession();
+
+return (
+<div>
+{!session && <button onClick={() => signIn()}>Sign In</button>}
+{session && (
+<div>
+<span>{session.user.name}</span>
+<button onClick={() => signOut()}>Sign Out</button>
+</div>
+)}
+</div>
+);
+}
+
+export default AuthButton;
+```
+
+**Pros:**
+- Simplifies authentication implementation.
+- Provides built-in support for multiple providers.
+- Securely manages sessions.
+
+**Cons:**
+- Adds dependency on external library.
+- Requires additional configuration for database support.
+
+## Offline Accessibility
+
+Ensuring your site remains accessible offline is crucial for providing a consistent user experience.
+
+### Example: Cache API Responses
+
+In your service worker, add logic to cache API responses:
+
+```javascript
+self.addEventListener('fetch', event => {
+if (event.request.url.includes('/api/')) {
+event.respondWith(
+caches.open('api-cache').then(cache => {
+return fetch(event.request).then(response => {
+cache.put(event.request, response.clone());
+return response;
+}).catch(() => {
+return caches.match(event.request);
+});
+})
+);
+} else {
+event.respondWith(
+caches.match(event.request).then(response => {
+return response || fetch(event.request);
+})
+);
+}
+});
+```
+
+**Pros:**
+- Improves user experience by providing offline access.
+- Reduces server load by serving cached content.
+
+**Cons:**
+- Requires additional setup and maintenance.
+- Can complicate debugging.
+
+## Enhancing `next.config.mjs`
+
+### Static Export for Images
+
+Next.js can be configured to optimize images during the build process for static export.
+
+```javascript
+// next.config.mjs
+export default {
+images: {
+loader: 'imgix',
+path: '/',
+},
+exportTrailingSlash: true,
+};
+```
+
+### Enabling Experimental Features
+
+Next.js often introduces new features under an experimental flag.
+
+```javascript
+// next.config.mjs
+export default {
+experimental: {
+scrollRestoration: true,
+esmExternals: true,
+},
+};
+```
