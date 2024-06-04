@@ -89,8 +89,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>projects</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-            <NavItem isActive={isActive('/project/jigsaw-academy')} onClick={() => handleNavigation('/project/jigsaw-academy')}>Lectures</NavItem>
-            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
+{/*            <NavItem isActive={isActive('/project/jigsaw-academy')} onClick={() => handleNavigation('/project/jigsaw-academy')}>Lectures</NavItem>
+*/
+}            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
             <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
         </Nav>
       </Navbar>
@@ -114,8 +115,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>projects</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-            <NavItem isActive={isActive('/project/jigsaw-academy')} onClick={() => handleNavigation('/project/jigsaw-academy')}>Lectures</NavItem>
-            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
+{/*            <NavItem isActive={isActive('/project/jigsaw-academy')} onClick={() => handleNavigation('/project/jigsaw-academy')}>Lectures</NavItem>
+*/
+}            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
             <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
           </Nav>
         </MobileDrawer>
