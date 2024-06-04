@@ -148,7 +148,7 @@ const Home: React.FC = () => {
   const caseStudies: CaseStudyProps[] = [
     {
       title: "pokR",
-      description: "An open-sourced reinforcement and deep-learning model used for applications of Texas Hold'em Poker.",
+      description: "An open-sourced reinforcement and deep-learning model designed for applications of Texas Hold'em Poker.",
       imageUrl: "/images/poker.webp",
       link: "https://github.com/pprunty/pokR",
       index: 0,

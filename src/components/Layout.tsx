@@ -86,11 +86,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           />
         </LogoWrapper>
         <Nav>
-          <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Projects</NavItem>
-          <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
-          <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
-          <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
-          <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
+            <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>patrick prunty</NavItem>
+            <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
+            <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
+            <NavItem isActive={isActive('/projects/jigsaw-academy')} onClick={() => handleNavigation('/projects/jigsaw-academy')}>Lectures</NavItem>
+            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
+            <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
         </Nav>
       </Navbar>
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
@@ -110,9 +111,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </MobileNavbar>
         <MobileDrawer ref={drawerRef} isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
           <Nav>
-            <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>Projects</NavItem>
+            <NavItem isActive={isActive('/')} onClick={() => handleNavigation('/')}>patrick prunty</NavItem>
             <NavItem isActive={isActive('/photography')} onClick={() => handleNavigation('/photography')}>Photography</NavItem>
             <NavItem isActive={isActive('/videos')} onClick={() => handleNavigation('/videos')}>Videography</NavItem>
+            <NavItem isActive={isActive('/projects/jigsaw-academy')} onClick={() => handleNavigation('/projects/jigsaw-academy')}>Lectures</NavItem>
             <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
             <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
           </Nav>
