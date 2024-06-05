@@ -47,7 +47,7 @@ const PageNumber = styled.button<{ $active: boolean }>`
   margin: 0 5px;
   background-color: ${({ $active }) => ($active ? '#000' : 'inherit')};
   color: ${({ $active }) => ($active ? '#fff' : '#000')};
-  border: 1px solid #000;
+  border: 2px solid #000;
   cursor: pointer;
   transition: color 0.12s, background-color 0.12s, transform 0.12s, opacity 0.12s;
 
