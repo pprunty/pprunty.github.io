@@ -170,7 +170,7 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 `;
 
@@ -210,14 +210,14 @@ const ImageWrapper = styled.div<{ isLandscape: boolean }>`
   width: 100%;
   margin-bottom: 10px;
   margin-top: 100px;
-  max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '800px')};
+  max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '700px')};
 
   @media (min-width: 1024px) {
     max-width: ${({ isLandscape }) => (isLandscape ? '750px' : '500px')};
   }
 
   @media (max-width: 1024px) {
-    max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '800px')};
+    max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '700px')};
   }
 `;
 
@@ -227,7 +227,7 @@ const Title = styled.h2`
   color: #333;
   text-align: center;
   line-height: 1.2;
-  max-width: 800px;
+  max-width: 700px;
 
   @media (max-width: 768px) {
     font-size: 2.3rem;
@@ -247,7 +247,7 @@ const Content = styled.div`
   font-size: 20px;
   line-height: 1.6;
   color: #333;
-  max-width: 800px;
+  max-width: 700px;
   width: 100%;
 
   h2, h3, h4 {

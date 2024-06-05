@@ -151,28 +151,28 @@ const Home: React.FC = () => {
         description: "An analytical YouTube channel, where you will find in-depth analysis and insights into trending movies, series, books, and games.",
         imageUrl: "/images/jigsaw-presents-logo.png",
         link: "project/jigsaw-presents",
-        index: 1,
+        index: 0,
       },
     {
       title: "pokR",
       description: "An open-sourced reinforcement and deep-learning model designed for applications of Texas Hold'em Poker.",
       imageUrl: "/images/poker.webp",
       link: "https://github.com/pprunty/pokR",
-      index: 2,
+      index: 1,
     },
     {
       title: "thelastmanstanding.io",
       description: "A platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. With a growing community, future expansion plans aim to incorporate more international Football tournaments, as well as international Rugby and Cricket competitions.",
       imageUrl: "/images/IMG_5948.JPG",
       link: "https://thelastmanstanding.io",
-      index: 3,
+      index: 2,
     },
     {
       title: "Jigsaw Academy",
       description: "An educational YouTube channel, providing free, high-quality educational tutorials to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'.",
       imageUrl: "/images/jigsaw-academy-logo.png",
       link: "project/jigsaw-academy",
-      index: 4,
+      index: 3,
     },
   ];
 
