@@ -47,12 +47,12 @@ const CenteredContent = styled.div`
 `;
 
 const CaseStudyTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #333;
   margin-bottom: 20px;
 
   @media(max-width: 767px) {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 `;
 
