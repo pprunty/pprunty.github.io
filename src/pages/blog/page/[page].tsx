@@ -224,7 +224,7 @@ const PostList = styled.ul`
 const PostItem = styled.li`
   margin-bottom: 20px;
   padding: 1rem;
-  border: 2px solid #ddd;
+  border: 1.5px solid #ddd;
   transition: border-color 0.2s, border 0.2s, transform 0.2s, opacity 0.2s;
   cursor: pointer;
 
@@ -245,7 +245,7 @@ const PostItem = styled.li`
     padding-right: 5px;
     border-right: none;
     border-left: none;
-    border-bottom: 2px solid black;
+    border-bottom: 1.5px solid black;
 
     &:hover {
       border-color: black;
