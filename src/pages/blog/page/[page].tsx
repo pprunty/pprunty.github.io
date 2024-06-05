@@ -245,7 +245,7 @@ const PostItem = styled.li`
     padding-right: 5px;
     border-right: none;
     border-left: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
 
     &:hover {
       border-color: black;
