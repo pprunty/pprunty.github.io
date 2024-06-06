@@ -143,7 +143,7 @@ const Navbar = styled.div`
   width: 100%;
   padding: 0 40px;
   background-color: inherit;
-  border-bottom: 1.5px solid black;
+  border-bottom: 2px solid black;
   color: black;
 
   @media (max-width: 1000px) {
@@ -176,7 +176,7 @@ const Nav = styled.nav`
 const NavItem = styled.div<{ isActive?: boolean }>`
   text-transform: uppercase;
   color: ${({ isActive }) => (isActive ? '#FF70CF' : 'black')};
-  font-weight: 500;
+  font-weight: 450;
   cursor: pointer;
   transition: color 80ms ease-in-out;
   font-size: 14px;
