@@ -153,34 +153,34 @@ const Home: React.FC = () => {
         link: "project/jigsaw-presents",
         index: 0,
       },
-    {
-      title: "pokR",
-      description: "An open-sourced reinforcement and deep-learning model designed for applications of Texas Hold'em Poker.",
-      imageUrl: "/images/poker.webp",
-      link: "https://github.com/pprunty/pokR",
-      index: 1,
-    },
-    {
-      title: "thelastmanstanding.io",
-      description: "A platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. With a growing community, future expansion plans aim to incorporate more international Football tournaments, as well as international Rugby and Cricket competitions.",
-      imageUrl: "/images/IMG_5948.JPG",
-      link: "https://thelastmanstanding.io",
-      index: 2,
-    },
-    {
-      title: "Jigsaw Academy",
-      description: "An educational YouTube channel, providing free, high-quality educational tutorials to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'.",
-      imageUrl: "/images/jigsaw-academy-logo.png",
-      link: "project/jigsaw-academy",
-      index: 3,
-    },
+        {
+          title: "thelastmanstanding.io",
+          description: "A platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. With a growing community, future expansion plans aim to incorporate more international Football tournaments, as well as international Rugby and Cricket competitions.",
+          imageUrl: "/images/IMG_5948.JPG",
+          link: "https://thelastmanstanding.io",
+          index: 1,
+        },
+        {
+          title: "Jigsaw Academy",
+          description: "An educational YouTube channel, providing free, high-quality educational tutorials to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'.",
+          imageUrl: "/images/jigsaw-academy-logo.png",
+          link: "project/jigsaw-academy",
+          index: 2,
+        },
     {
       title: "motormongo",
       description: "motormongo is an open-sourced Object Document Mapper (ODM) for MongoDB built on top of motor; the MongoDB recommended asynchronous Python driver for MongoDB Python applications, designed to work with Tornado or asyncio and enable non-blocking access and CRUD (Create, Read, Update and Destroy) operations to MongoDB databases.",
       imageUrl: "/images/motormongo.png",
       link: "https://github.com/pprunty/motormongo",
-      index: 4,
+      index: 3,
     },
+        {
+          title: "pokR",
+          description: "An open-sourced reinforcement and deep-learning model designed for applications of Texas Hold'em Poker.",
+          imageUrl: "/images/poker.webp",
+          link: "https://github.com/pprunty/pokR",
+          index: 4,
+        },
   ];
 
   return (
