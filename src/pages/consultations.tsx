@@ -37,7 +37,7 @@ const StyledIframe = styled.iframe`
   max-width: 555px;
   height: 150vh;
   max-height: 720px;
-  border: 1px solid black; /* Add the border here */
+  border: 1.5px solid black; /* Add the border here */
 
   @media (max-width: 768px) {
     height: 150vh; /* Adjust height for tablets and smaller screens */

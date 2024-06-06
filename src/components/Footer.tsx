@@ -45,7 +45,7 @@ const FooterContactDiv = styled.div`
   width: 100%;
   padding: 0 10%;
   box-sizing: border-box;
-  border-top: 2px solid #333;
+  border-top: 1.5px solid black;
 `;
 
 const FooterLinkBlock = styled.a`
@@ -54,7 +54,7 @@ const FooterLinkBlock = styled.a`
   padding: 40px;
   flex: 1;
   text-align: center;
-  border-right: 2px solid #333;
+  border-right: 1.5px solid black;
 
   &:last-child {
     border-right: none;
