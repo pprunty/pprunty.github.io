@@ -146,6 +146,12 @@ const JigsawPresents: React.FC = () => {
       }
     };
     document.body.appendChild(tag);
+
+    // Load TikTok Embed script
+    const tikTokScript = document.createElement('script');
+    tikTokScript.src = 'https://www.tiktok.com/embed.js';
+    tikTokScript.async = true;
+    document.body.appendChild(tikTokScript);
   }, []);
 
   return (
@@ -164,7 +170,7 @@ const JigsawPresents: React.FC = () => {
       <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
       <Title>Jigsaw Presents</Title>
       <TextContainer>
-        <Subtitle>Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games. Click the YouTube button below to view my channel directly on YouTube.</Subtitle>
+        <Subtitle>Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games. Check out more of my videos by clicking the YouTube button below.</Subtitle>
         <div className="g-ytsubscribe" data-channelid="UCx8iHEGQMyeInLgPQ81-EJA" data-layout="default" data-theme="dark" data-count="default"></div>
       </TextContainer>
       <Grid>
@@ -172,6 +178,13 @@ const JigsawPresents: React.FC = () => {
           <MemoizedVideoWrapper key={index} videoId={videoId} index={index} />
         ))}
       </Grid>
+              <Subtitle style={{'marginTop': '20px'}}>You can also discover my short-form content on TikTok below...</Subtitle>
+      <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@jigsawpresents" data-unique-id="jigsawpresents" data-embed-type="creator" style={{ maxWidth: '780px', minWidth: '288px' }}>
+              <section>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@jigsawpresents?refer=creator_embed">@jigsawpresents</a>
+              </section>
+            </blockquote>
+
     </>
   );
 };
