@@ -36,6 +36,14 @@ const Container = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
+
+    @media (max-width: 768px) {
+      padding: 14px; /* Smaller padding for devices below iPhone 11 size */
+    }
+
+  @media (max-width: 375px) {
+    padding: 8px; /* Smaller padding for devices below iPhone 11 size */
+  }
 `;
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
