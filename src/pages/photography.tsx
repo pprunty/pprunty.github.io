@@ -69,7 +69,13 @@ const images = [
   '/images/9977ee3f-d4bd-4ce6-a57c-04397898b222.JPG',
   '/images/232afccf-fb3e-443d-af60-c1c67a6189d0.JPG',
   '/images/60a53698-deec-4b91-94a8-5513e534c24a.JPG',
-  '/images/3cf5f5a9-843c-44e2-9482-45c765a84d30.JPG'
+  '/images/3cf5f5a9-843c-44e2-9482-45c765a84d30.JPG',
+  '/images/62b1ca5f-d849-41a7-a83e-42ca04b3b47c.JPG',
+  '/images/IMG_6023.jpg',
+  '/images/c57ad8ca-ee1e-4d3d-a9f6-9b0222e211da.JPG',
+  '/images/IMG_4648.jpg',
+  '/images/IMG_3572.jpg',
+  '/images/2add6d50-7a3e-4142-9707-b3d7d0e8ed7e.JPG'
 ];
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
