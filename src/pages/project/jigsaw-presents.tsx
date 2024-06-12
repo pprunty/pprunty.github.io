@@ -1,3 +1,4 @@
+/* todo: move back under projects if videography takes off*/
 import React, { memo, useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
@@ -81,6 +82,7 @@ const VideoWrapper = styled.div`
 const BackArrow = styled.div`
   align-self: flex-start;
   margin-bottom: 20px;
+  cursor: pointer;
   text-transform: uppercase;
   background: none;
   border: none;

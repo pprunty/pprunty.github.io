@@ -84,6 +84,7 @@ const BackArrow = styled.div`
   text-transform: uppercase;
   background: none;
   border: none;
+  cursor: pointer;
   color: black;
   font-size: 1rem;
   font-weight: bold;

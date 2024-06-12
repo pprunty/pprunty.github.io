@@ -70,7 +70,7 @@ const images = [
   '/images/232afccf-fb3e-443d-af60-c1c67a6189d0.JPG',
   '/images/60a53698-deec-4b91-94a8-5513e534c24a.JPG',
   '/images/3cf5f5a9-843c-44e2-9482-45c765a84d30.JPG',
-  '/images/62b1ca5f-d849-41a7-a83e-42ca04b3b47c.JPG',
+  '/images/62b1ca5f-d849-41a7-a83e-42ca04b3b47c.jpg',
   '/images/IMG_6023.jpg',
   '/images/c57ad8ca-ee1e-4d3d-a9f6-9b0222e211da.JPG',
   '/images/IMG_4648.jpg',
