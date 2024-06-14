@@ -211,18 +211,18 @@ const BottomBackArrow = styled(BackArrow)`
 `;
 
 const Artwork = styled.p`
-  font-style: italic;
-  color: #555;
+//   font-style: italic;
+  color: #777;
   text-align: center;
-  font-size: .95rem;
+  font-size: 1rem;
   font-weight: 300;
 
   @media (min-width: 768px) {
-    font-size: .8rem;
+    font-size: .85rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -263,6 +263,13 @@ const Title = styled.h1`
 const Date = styled.p`
   font-size: 1rem;
   color: #777;
+    @media (min-width: 768px) {
+      font-size: .95rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
 `;
 
 const Content = styled.div`

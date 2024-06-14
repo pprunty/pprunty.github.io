@@ -17,4 +17,4 @@ Machines may imitate. Their imitations are our imitations; all of our
 data collected. Processed and pre-processed to an artificial ideal. A flower
 without a bee. A heart that does not beat. They cannot feel. 
 
-Let the machines hum.
+Let the machines hum in the background to the symphony of our heart's beat.

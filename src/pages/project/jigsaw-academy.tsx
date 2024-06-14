@@ -161,7 +161,7 @@ const JigsawAcademy: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="YouTube educational series." />
         <meta property="og:type" content="video" />
-        <meta property="og:image" content="/images/projects/jigsaw-academy-logo.png" />
+        <meta property="og:image" content="/images/projects/jigsaw-academy.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <link rel="icon" href="/images/favicon.ico" />
