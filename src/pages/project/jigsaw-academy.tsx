@@ -103,6 +103,11 @@ const BackArrow = styled.div`
   }
 `;
 
+const BottomBackArrow = styled(BackArrow)`
+  align-self: flex-start;
+  margin-top: 40px;
+`;
+
 const playlists = [
   'si=wtVfkUH8tj3EYFmc&amp;list=PLn6yDpEottdjri2wzWn8tFTXNLplVGqjU',
   'si=SosBov0FywktTDz3&amp;list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK',
@@ -162,7 +167,6 @@ const JigsawAcademy: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
       </Head>
-      <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
       <Title>Jigsaw Academy</Title>
       <TextContainer>
         <Subtitle>Explore my educational YouTube channel, featuring a diverse range of tutorials. Enhance your knowledge with curated playlists. Use the hamburger (three horizontal bars) icon at the top of the videos below to navigate through the playlists. Alternatively, click the YouTube button below to view my channel directly on YouTube.</Subtitle>
@@ -173,6 +177,7 @@ const JigsawAcademy: React.FC = () => {
           <MemoizedVideoWrapper key={index} playlistId={playlistId} index={index} />
         ))}
       </Grid>
+      <BottomBackArrow onClick={handleBackClick}>&larr; Back</BottomBackArrow>
     </>
   );
 };

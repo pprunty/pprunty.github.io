@@ -104,6 +104,11 @@ const BackArrow = styled.div`
   }
 `;
 
+const BottomBackArrow = styled(BackArrow)`
+  align-self: flex-start;
+  margin-top: 40px;
+`;
+
 const videos = [
   'R0krUthYxF4?si=41F2z4CR7XtljbET',
   'sLMRR9sWo6E?si=n9SVLcdywkaYMNvf',
@@ -169,7 +174,6 @@ const JigsawPresents: React.FC = () => {
         <link rel="icon" href="/images/favicon.ico" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
       </Head>
-      <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
       <Title>Jigsaw Presents</Title>
       <TextContainer>
         <Subtitle>Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games. Check out more of my videos by clicking the YouTube button below.</Subtitle>
@@ -186,7 +190,7 @@ const JigsawPresents: React.FC = () => {
                 <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@jigsawpresents?refer=creator_embed">@jigsawpresents</a>
               </section>
             </blockquote>
-
+      <BottomBackArrow onClick={handleBackClick}>&larr; Back</BottomBackArrow>
     </>
   );
 };

@@ -116,7 +116,7 @@ const Notification = styled.div`
   text-align: center;
   padding: 10px;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 400;
   animation: ${fadeInOut} 2s ease-out forwards;
   z-index: 1000;
 

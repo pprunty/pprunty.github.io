@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const isActive = (path: string) => {
     if (path === '/blog') {
-      return router.pathname.startsWith('/blog/page');
+      return router.pathname.startsWith('/blog');
     }
     return router.pathname === path;
   };

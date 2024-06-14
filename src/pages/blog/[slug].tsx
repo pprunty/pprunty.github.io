@@ -91,7 +91,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
           src={imagePath}
           alt={title}
           layout="responsive"
-          width={830}
+          width={750}
           height={400}
           placeholder={'blur'}
         />
@@ -142,13 +142,14 @@ const BottomBar = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 830px;
+  max-width: 750px;
   margin-top: 40px;
-  padding: 0 10px;
+//   padding: 0 10px;
   margin-bottom: 20px;
 
   @media (max-width: 480px) {
     margin-bottom: 40px;
+    padding: 0 10px;
   }
 `;
 
@@ -189,7 +190,7 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 830px;
+  max-width: 750px;
   margin: 0 auto;
 `;
 
@@ -228,14 +229,14 @@ const Artwork = styled.p`
 const ImageWrapper = styled.div<{ isLandscape: boolean }>`
   width: 100%;
   margin-bottom: 10px;
-  max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '830px')};
+  max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '750px')};
 
   @media (min-width: 1024px) {
-    max-width: ${({ isLandscape }) => (isLandscape ? '830px' : '600px')};
+    max-width: ${({ isLandscape }) => (isLandscape ? '750px' : '600px')};
   }
 
   @media (max-width: 1024px) {
-    max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '830px')};
+    max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '750px')};
   }
 `;
 
@@ -246,7 +247,7 @@ const Title = styled.h1`
   margin-top: 100px;
   color: #333;
   text-align: center;
-  max-width: 830px;
+  max-width: 750px;
   margin-block-start: 0.6em !important;
   margin-block-end: 0.6em !important;
 
@@ -268,7 +269,7 @@ const Content = styled.div`
   font-size: 20px;
   line-height: 1.6;
   color: #333;
-  max-width: 830px;
+  max-width: 750px;
   width: 100%;
 
   h2, h3, h4 {
