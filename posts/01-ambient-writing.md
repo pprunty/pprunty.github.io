@@ -17,4 +17,16 @@ Machines may imitate. Their imitations are our imitations; all of our
 data collected. Processed and pre-processed to an artificial ideal. A flower
 without a bee. A heart that does not beat. They cannot feel. 
 
+* Do not use overly complex language. If your friends would not under-
+stand it, then how would the world?
+* You should be able to tell your story aloud. A good practice is to start
+from this notion and work backwards. Tell your story, then embellish
+it in your writing.
+3
+* If any of your writing, be it a paragraph, sentence or single word, does
+not contribute in some percentage to the telling of the story, remove it.30
+If your writing does not make me feel. Bin it. Burn it. Break it.
+4
+
+
 Let the machines hum in the background to the symphony of our heart's beat.

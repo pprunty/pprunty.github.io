@@ -63,19 +63,60 @@ const BlogPost = ({ post, onClick }: { post: Post, onClick: () => void }) => {
   );
 };
 
+const AdSenseAd = () => {
+  console.log("AdSense ad is being rendered");
+  return (
+    <AdWrapper>
+      <ins className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-format="fluid"
+        data-ad-layout-key="-6m+du+k-3x+d5"
+        data-ad-client="ca-pub-2453030550493085"
+        data-ad-slot="7456704951"></ins>
+      <script>
+        {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+      </script>
+    </AdWrapper>
+  );
+};
+
 export default function BlogList({ posts, currentPage, totalPages }: BlogListProps) {
   const router = useRouter();
 
-  // Group posts by year
-  const postsByYear = posts.reduce<Record<number, Post[]>>((acc, post) => {
-    const year = new Date(post.date).getFullYear();
-    if (!acc[year]) acc[year] = [];
-    acc[year].push(post);
-    return acc;
-  }, {});
+  // Calculate a random position for the ad
+  const randomIndex = Math.floor(Math.random() * (posts.length - 2)) + 1;
+  console.log(`Random ad index: ${randomIndex}`);
+
+  // Insert the ad at the random position
+  const postsWithAd = [
+    ...posts.slice(0, randomIndex),
+    { isAd: true },
+    ...posts.slice(randomIndex)
+  ];
+  console.log('Posts with ad inserted:', postsWithAd);
+
+  // Group posts by year, including ads
+  const postsByYear: Record<number, (Post | { isAd: boolean })[]> = {};
+
+  postsWithAd.forEach((post) => {
+    if ('date' in post && post.date) {
+      const year = new Date(post.date).getFullYear();
+      if (!postsByYear[year]) {
+        postsByYear[year] = [];
+      }
+      postsByYear[year].push(post);
+    } else {
+      const lastYear = Math.max(...Object.keys(postsByYear).map(Number));
+      postsByYear[lastYear].push(post);
+    }
+  });
+  console.log('Grouped posts by year:', postsByYear);
 
   // Get an array of years sorted in descending order
-  const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
+  const years = Object.keys(postsByYear)
+    .map(Number)
+    .sort((a, b) => b - a);
+  console.log('Years array:', years);
 
   return (
     <>
@@ -92,8 +133,10 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
         <YearSection key={year}>
           <YearHeader>{year}</YearHeader>
           <PostList>
-            {postsByYear[year].map((post) => (
-              <BlogPost key={post.slug} post={post} onClick={() => router.push(`/blog/${post.slug}`)} />
+            {(postsByYear[year] || []).map((post, index) => (
+              post.isAd ?
+                <AdSenseAd key={`ad-${index}`} /> :
+                <BlogPost key={(post as Post).slug} post={post as Post} onClick={() => router.push(`/blog/${(post as Post).slug}`)} />
             ))}
           </PostList>
         </YearSection>
@@ -152,6 +195,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
+
 
 // Styled Components
 const Title = styled.h1`
@@ -344,4 +388,8 @@ const PostDateAuthor = styled.p`
   @media(max-width: 768px) {
     font-size: 12px;
   }
+`;
+
+const AdWrapper = styled.div`
+  margin: 20px 0;
 `;

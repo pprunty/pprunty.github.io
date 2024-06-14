@@ -63,6 +63,10 @@ const ImageWrapper = styled.div`
   max-width: 600px;
 `;
 
+const AdWrapper = styled.div`
+  margin: 20px 0;
+`;
+
 const images = [
   '/images/0a94d7f5-834a-4567-86db-93f1ce8dc3ca.JPG',
   '/images/2d8324a2-e783-47d8-aa1c-3891e7a8b541.JPG',
@@ -79,6 +83,22 @@ const images = [
 ];
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
+
+const AdSenseAd = () => {
+  console.log("AdSense ad is being rendered");
+  return (
+    <AdWrapper>
+      <ins className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-2453030550493085"
+        data-ad-slot="4052151724"></ins>
+      <script>
+        {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+      </script>
+    </AdWrapper>
+  );
+};
 
 const Photography: React.FC = () => {
   const router = useRouter();
@@ -102,7 +122,6 @@ const Photography: React.FC = () => {
 
   MemoizedImageWrapper.displayName = "MemoizedImageWrapper";
 
-
   return (
     <>
       <Head>
@@ -122,6 +141,8 @@ const Photography: React.FC = () => {
           <MemoizedImageWrapper key={index} src={src} index={index} />
         ))}
       </Grid>
+      {/* AdSense Ad */}
+      <AdSenseAd />
     </>
   );
 };

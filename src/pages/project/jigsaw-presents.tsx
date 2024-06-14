@@ -166,7 +166,7 @@ const JigsawPresents: React.FC = () => {
       <Head>
         <title>Patrick Prunty - Jigsaw Presents</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="YouTube entertainment series." />
+        <meta name="description" content="An analytical YouTube channel, where you will find in-depth analysis and insights into trending movies, series, books, and games." />
         <meta property="og:type" content="video" />
         <meta property="og:image" content="/images/jigsaw-presents.jpg" />
         <meta property="og:image:width" content="1200" />
