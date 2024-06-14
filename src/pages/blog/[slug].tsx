@@ -143,14 +143,20 @@ const BottomBar = styled.div`
   align-items: center;
   width: 100%;
   max-width: 830px;
-  margin-top: 20px;
-  padding: 0 0px;
+  margin-top: 40px;
+  padding: 0 10px;
   margin-bottom: 20px;
 
-    @media (max-width: 480px) {
-      margin-bottom: 40px;
-        padding: 0 0px;
-    }
+  @media (max-width: 480px) {
+    margin-bottom: 40px;
+  }
+`;
+
+const CenterWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px; // Optional: Add space between the items
 `;
 
 // Styled Components
@@ -158,6 +164,7 @@ const BackArrow = styled.div`
   align-self: flex-start;
   text-transform: uppercase;
   background: none;
+  margin-top: 7px;
   border: none;
   color: black;
   font-size: 1rem;

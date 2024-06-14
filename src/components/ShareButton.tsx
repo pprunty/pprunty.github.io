@@ -55,7 +55,7 @@ const IconButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding-right: 5px;
   margin: 0;
 
   svg {
@@ -108,6 +108,7 @@ const Notification = styled.div`
   left: 50%;
   transform: translateX(-50%);
   width: 45%;
+  height: 40px;
   margin-top: 10px;
   background: black;
   color: white;
