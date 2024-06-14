@@ -85,7 +85,6 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
 
   // Calculate a random position for the ad
   const randomIndex = Math.floor(Math.random() * (posts.length - 2)) + 1;
-  console.log(`Random ad index: ${randomIndex}`);
 
   // Insert the ad at the random position
   const postsWithAd = [
@@ -93,7 +92,6 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
     { isAd: true },
     ...posts.slice(randomIndex)
   ];
-  console.log('Posts with ad inserted:', postsWithAd);
 
   // Group posts by year, including ads
   const postsByYear: Record<number, (Post | { isAd: boolean })[]> = {};
@@ -110,13 +108,11 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
       postsByYear[lastYear].push(post);
     }
   });
-  console.log('Grouped posts by year:', postsByYear);
 
   // Get an array of years sorted in descending order
   const years = Object.keys(postsByYear)
     .map(Number)
     .sort((a, b) => b - a);
-  console.log('Years array:', years);
 
   return (
     <>
