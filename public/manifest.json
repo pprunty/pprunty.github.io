@@ -1,38 +1,27 @@
 {
-    "theme_color": "#f0f0f0",
-    "background_color": "#f0f0f0",
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "/",
-    "name": "Patrick Prunty",
-    "short_name": "patrickprunty",
-    "description": "Patrick Prunty's Website",
-    "icons": [
-        {
-            "src": "/maskable_icon.png",
-            "sizes": "196x196",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "/icon-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/icon-256x256.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        },
-        {
-            "src": "/icon-384x384.png",
-            "sizes": "384x384",
-            "type": "image/png"
-        },
-        {
-            "src": "/icon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
+  "theme_color": "#f0f0f0",
+  "background_color": "#f0f0f0",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "icon512_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "icon512_rounded.png",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "en-GB",
+  "name": "Patrick Prunty",
+  "short_name": "patrickprunty",
+  "start_url": "https://patrickprunty.com",
+  "scope": "https://patrickprunty.com/",
+  "description": "Software, education, consultations & creative media."
 }
