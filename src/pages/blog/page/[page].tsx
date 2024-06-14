@@ -20,20 +20,22 @@ interface Post {
   excerpt: string;
 }
 
+interface Ad {
+  isAd: boolean;
+}
+
 interface BlogListProps {
   posts: Post[];
   currentPage: number;
   totalPages: number;
 }
 
-// Utility function to format the date
 function formatDate(dateString: string): string {
   const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
   const date = new Date(dateString);
   return new Intl.DateTimeFormat('en-US', options).format(date);
 }
 
-// Extracted components for reusability
 const BlogPost = ({ post, onClick }: { post: Post, onClick: () => void }) => {
   const contentToDisplay = (post.excerpt.length < 200 || post.excerpt.length > 15000) ? post.description : post.excerpt;
 
@@ -94,7 +96,7 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
   ];
 
   // Group posts by year, including ads
-  const postsByYear: Record<number, (Post | { isAd: boolean })[]> = {};
+  const postsByYear: Record<number, (Post | Ad)[]> = {};
 
   postsWithAd.forEach((post) => {
     if ('date' in post && post.date) {
@@ -104,7 +106,10 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
       }
       postsByYear[year].push(post);
     } else {
-      const lastYear = Math.max(...Object.keys(postsByYear).map(Number));
+      const lastYear = Math.max(...Object.keys(postsByYear).map(Number), new Date().getFullYear());
+      if (!postsByYear[lastYear]) {
+        postsByYear[lastYear] = [];
+      }
       postsByYear[lastYear].push(post);
     }
   });
@@ -130,7 +135,7 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
           <YearHeader>{year}</YearHeader>
           <PostList>
             {(postsByYear[year] || []).map((post, index) => (
-              post.isAd ?
+              (post as Ad).isAd ?
                 <AdSenseAd key={`ad-${index}`} /> :
                 <BlogPost key={(post as Post).slug} post={post as Post} onClick={() => router.push(`/blog/${(post as Post).slug}`)} />
             ))}
@@ -191,7 +196,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
-
 
 // Styled Components
 const Title = styled.h1`
