@@ -154,8 +154,9 @@ const Home: React.FC = () => {
         index: 0,
       },
         {
-          title: "thelastmanstanding.io",
-          description: "A platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. With a growing community, future expansion plans aim to incorporate more international Football tournaments, as well as international Rugby and Cricket competitions.",
+          title: "thelastmanstanding.io 🔜",
+          description: "Launching this year in Ireland and the UK, thelastmanstanding.io is a digital platform that enables sweepstake and last-man-standing competitions among friend groups and sports fans. Enabling digital payments, automated email notifications, and custom wagers. Covering major football events such as the FIFA World Cup, European Championship, and English Premier League with future expansion plans to incorporate additional international Football tournaments, international Rugby and Cricket competitions.",
+//           description: "A platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. With a growing community, future expansion plans aim to incorporate more international Football tournaments, as well as international Rugby and Cricket competitions.",
           imageUrl: "/images/IMG_5948.JPG",
           link: "https://thelastmanstanding.io",
           index: 1,
@@ -174,13 +175,13 @@ const Home: React.FC = () => {
       link: "https://github.com/pprunty/motormongo",
       index: 3,
     },
-        {
-          title: "pokR",
-          description: "An open-sourced reinforcement and deep-learning model designed for applications of Texas Hold'em Poker.",
-          imageUrl: "/images/poker.webp",
-          link: "https://github.com/pprunty/pokR",
-          index: 4,
-        },
+//         {
+//           title: "pokR",
+//           description: "An open-sourced reinforcement and deep-learning model designed for applications of Texas Hold'em Poker.",
+//           imageUrl: "/images/poker.webp",
+//           link: "https://github.com/pprunty/pokR",
+//           index: 4,
+//         },
   ];
 
   return (

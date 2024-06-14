@@ -108,7 +108,7 @@ const POSTS_PER_PAGE = 5;
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const page = params?.page ? parseInt(params.page as string, 10) : 1;
   const postsDirectory = path.join(process.cwd(), 'posts');
-  const filenames = fs.readdirSync(postsDirectory);
+  const filenames = fs.readdirSync(postsDirectory).filter(filename => /^\d/.test(filename));
 
   const posts = await Promise.all(
     filenames.map(async (filename) => {

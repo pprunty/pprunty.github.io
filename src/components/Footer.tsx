@@ -77,7 +77,7 @@ const SocialLink = styled.h2`
 
   font-weight: 500;
     @media (max-width: 768px) {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
     }
     text-decoration: none;
 `;
