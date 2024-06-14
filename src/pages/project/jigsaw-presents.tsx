@@ -184,7 +184,7 @@ const JigsawPresents: React.FC = () => {
           <MemoizedVideoWrapper key={index} videoId={videoId} index={index} />
         ))}
       </Grid>
-              <Subtitle style={{'marginTop': '60px'}}>You can also discover my short-form content on TikTok below...</Subtitle>
+              <Subtitle style={{'marginTop': '60px'}}>You can also discover my short-form content on TikTok below:</Subtitle>
       <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@jigsawpresents" data-unique-id="jigsawpresents" data-embed-type="creator" style={{ maxWidth: '780px', minWidth: '288px' }}>
               <section>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@jigsawpresents?refer=creator_embed">@jigsawpresents</a>
