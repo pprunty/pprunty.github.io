@@ -55,7 +55,7 @@ const IconButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-right: 5px;
+  padding-left: 10px;
   margin: 0;
 
   svg {
@@ -76,6 +76,7 @@ const IconButton = styled.button`
         fill: black !important; // Ensure the fill is set to black by default
         transition: fill 0.3s;
         padding-right: 5px;
+        padding-bottom: 5px;
 
         &:hover {
             fill: black !important;

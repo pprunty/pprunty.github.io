@@ -149,7 +149,6 @@ const BottomBar = styled.div`
 
   @media (max-width: 480px) {
     margin-bottom: 40px;
-    padding: 0 10px;
   }
 `;
 
@@ -165,7 +164,6 @@ const BackArrow = styled.div`
   align-self: flex-start;
   text-transform: uppercase;
   background: none;
-  margin-top: 7px;
   border: none;
   color: black;
   font-size: 1rem;
