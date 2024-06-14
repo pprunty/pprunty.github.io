@@ -6,9 +6,7 @@ description: "A comprehensive guide to enhancing your NextJS/ReactJS project wit
 artwork: "Dan Williams / Pixabay.com"
 ---
 
-During the initial phases of UI development, essential elements of UI design, such as caching, lazy loading, memoization, authentication states, and offline accessibility are often overlooked. Yet, these elements are essential for crafting an 
-experience that encourages users to return to your site. This guide explores advanced techniques to enhance 
-your NextJS/ReactJS project by incorporating these key features.
+During the initial phases of UI development, essential elements of UI design, such as caching, lazy loading, memoization, authentication states, and offline accessibility are often overlooked. Yet, these elements are essential for crafting an experience that encourages users to return to your site. This guide explores advanced techniques to enhance your NextJS/ReactJS project by incorporating these key features.
 
 ## Caching Backend Queries with React Query
 
@@ -30,34 +28,34 @@ import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 const queryClient = new QueryClient();
 
 function App() {
-return (
-<QueryClientProvider client={queryClient}>
-<Users />
-</QueryClientProvider>
-);
+    return (
+        <QueryClientProvider client={queryClient}>
+            <Users />
+        </QueryClientProvider>
+    );
 }
 
 function Users() {
-const { data, error, isLoading } = useQuery('users', fetchUsers);
+    const { data, error, isLoading } = useQuery('users', fetchUsers);
 
-if (isLoading) return <div>Loading...</div>;
-if (error) return <div>Error loading users</div>;
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error loading users</div>;
 
-return (
-<ul>
-{data.map(user => (
-<li key={user.id}>{user.name}</li>
-))}
-</ul>
-);
+    return (
+        <ul>
+            {data.map(user => (
+                <li key={user.id}>{user.name}</li>
+            ))}
+        </ul>
+    );
 }
 
 async function fetchUsers() {
-const response = await fetch('/api/users');
-if (!response.ok) {
-throw new Error('Network response was not ok');
-}
-return response.json();
+    const response = await fetch('/api/users');
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return response.json();
 }
 
 export default App;
@@ -82,24 +80,24 @@ First, create a `public/sw.js` file:
 
 ```javascript
 self.addEventListener('install', event => {
-event.waitUntil(
-caches.open('v1').then(cache => {
-return cache.addAll([
-'/',
-'/index.html',
-'/styles.css',
-'/script.js',
-]);
-})
-);
+    event.waitUntil(
+        caches.open('v1').then(cache => {
+            return cache.addAll([
+                '/',
+                '/index.html',
+                '/styles.css',
+                '/script.js',
+            ]);
+        })
+    );
 });
 
 self.addEventListener('fetch', event => {
-event.respondWith(
-caches.match(event.request).then(response => {
-return response || fetch(event.request);
-})
-);
+    event.respondWith(
+        caches.match(event.request).then(response => {
+            return response || fetch(event.request);
+        })
+    );
 });
 ```
 
@@ -109,17 +107,17 @@ Next, register the service worker in your `_app.js` file:
 import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
-useEffect(() => {
-if ('serviceWorker' in navigator) {
-navigator.serviceWorker.register('/sw.js').then(registration => {
-console.log('Service Worker registered with scope:', registration.scope);
-}).catch(error => {
-console.error('Service Worker registration failed:', error);
-});
-}
-}, []);
+    useEffect(() => {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(registration => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            }).catch(error => {
+                console.error('Service Worker registration failed:', error);
+            });
+        }
+    }, []);
 
-return <Component {...pageProps} />;
+    return <Component {...pageProps} />;
 }
 
 export default MyApp;
@@ -144,25 +142,25 @@ Memoization helps optimize React components by preventing unnecessary re-renders
 import React, { useState, useCallback } from 'react';
 
 const ExpensiveComponent = React.memo(({ data }) => {
-// Expensive computation here
-return <div>{data}</div>;
+    // Expensive computation here
+    return <div>{data}</div>;
 });
 
 function App() {
-const [count, setCount] = useState(0);
-const data = "Some data";
+    const [count, setCount] = useState(0);
+    const data = "Some data";
 
-const increment = useCallback(() => {
-setCount(count + 1);
-}, [count]);
+    const increment = useCallback(() => {
+        setCount(count + 1);
+    }, [count]);
 
-return (
-<div>
-<ExpensiveComponent data={data} />
-<button onClick={increment}>Increment</button>
-<p>{count}</p>
-</div>
-);
+    return (
+        <div>
+            <ExpensiveComponent data={data} />
+            <button onClick={increment}>Increment</button>
+            <p>{count}</p>
+        </div>
+    );
 }
 
 export default App;
@@ -195,13 +193,13 @@ import NextAuth from 'next-auth';
 import Providers from 'next-auth/providers';
 
 export default NextAuth({
-providers: [
-Providers.GitHub({
-clientId: process.env.GITHUB_ID,
-clientSecret: process.env.GITHUB_SECRET,
-}),
-],
-database: process.env.DATABASE_URL,
+    providers: [
+        Providers.GitHub({
+            clientId: process.env.GITHUB_ID,
+            clientSecret: process.env.GITHUB_SECRET,
+        }),
+    ],
+    database: process.env.DATABASE_URL,
 });
 ```
 
@@ -211,19 +209,19 @@ Finally, use the `useSession` hook in your components:
 import { signIn, signOut, useSession } from 'next-auth/client';
 
 function AuthButton() {
-const [session, loading] = useSession();
+    const [session, loading] = useSession();
 
-return (
-<div>
-{!session && <button onClick={() => signIn()}>Sign In</button>}
-{session && (
-<div>
-<span>{session.user.name}</span>
-<button onClick={() => signOut()}>Sign Out</button>
-</div>
-)}
-</div>
-);
+    return (
+        <div>
+            {!session && <button onClick={() => signIn()}>Sign In</button>}
+            {session && (
+                <div>
+                    <span>{session.user.name}</span>
+                    <button onClick={() => signOut()}>Sign Out</button>
+                </div>
+            )}
+        </div>
+    );
 }
 
 export default AuthButton;
@@ -248,24 +246,24 @@ In your service worker, add logic to cache API responses:
 
 ```javascript
 self.addEventListener('fetch', event => {
-if (event.request.url.includes('/api/')) {
-event.respondWith(
-caches.open('api-cache').then(cache => {
-return fetch(event.request).then(response => {
-cache.put(event.request, response.clone());
-return response;
-}).catch(() => {
-return caches.match(event.request);
-});
-})
-);
-} else {
-event.respondWith(
-caches.match(event.request).then(response => {
-return response || fetch(event.request);
-})
-);
-}
+    if (event.request.url.includes('/api/')) {
+        event.respondWith(
+            caches.open('api-cache').then(cache => {
+                return fetch(event.request).then(response => {
+                    cache.put(event.request, response.clone());
+                    return response;
+                }).catch(() => {
+                    return caches.match(event.request);
+                });
+            })
+        );
+    } else {
+        event.respondWith(
+            caches.match(event.request).then(response => {
+                return response || fetch(event.request);
+            })
+        );
+    }
 });
 ```
 
@@ -286,11 +284,11 @@ Next.js can be configured to optimize images during the build process for static
 ```javascript
 // next.config.mjs
 export default {
-images: {
-loader: 'imgix',
-path: '/',
-},
-exportTrailingSlash: true,
+    images: {
+        loader: 'imgix',
+        path: '/',
+    },
+    exportTrailingSlash: true,
 };
 ```
 
@@ -301,9 +299,9 @@ Next.js often introduces new features under an experimental flag.
 ```javascript
 // next.config.mjs
 export default {
-experimental: {
-scrollRestoration: true,
-esmExternals: true,
-},
+    experimental: {
+        scrollRestoration: true,
+        esmExternals: true,
+    },
 };
 ```
