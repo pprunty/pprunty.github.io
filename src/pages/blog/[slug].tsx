@@ -8,6 +8,7 @@ import Head from 'next/head';
 import markdownToHtml from '../../../lib/markdownToHtml';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState, useEffect } from 'react';
+import ShareButton from '@/components/ShareButton'; // Import the ShareButton component
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
@@ -20,12 +21,10 @@ interface BlogPostProps {
   artwork?: string;
 }
 
-// Extracted components for reusability
 const BlogPostHeader = ({ title, description, imagePath, router }) => (
   <Head>
     <title>{title}</title>
     <meta name="description" content={description} />
-    {/* Open Graph tags */}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={imagePath} />
@@ -34,12 +33,10 @@ const BlogPostHeader = ({ title, description, imagePath, router }) => (
     <meta property="og:type" content="article" />
     <meta property="og:url" content={`${router.asPath}`} />
     <meta property="og:site_name" content="Your Site Name" />
-    {/* Twitter Card tags */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imagePath} />
-    {/* Additional tags for SEO */}
     <link rel="canonical" href={`${router.asPath}`} />
   </Head>
 );
@@ -87,22 +84,24 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
 
   return (
     <Container>
-      <TopBackArrow onClick={handleBackClick}>&larr; Back</TopBackArrow>
+      <Title>{title}</Title>
+      <Date>{date}</Date>
       <ImageWrapper isLandscape={isLandscape}>
         <ExportedImage
           src={imagePath}
           alt={title}
           layout="responsive"
-          width={800}
+          width={830}
           height={400}
           placeholder={'blur'}
         />
         {artwork && <Artwork>Artwork: {artwork}</Artwork>}
       </ImageWrapper>
-      <Title>{title}</Title>
-      <Date>{date}</Date>
       <Content dangerouslySetInnerHTML={{ __html: content }} />
-      <BottomBackArrow onClick={handleBackClick}>&larr; Back</BottomBackArrow>
+      <BottomBar>
+              <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
+              <ShareButton />
+            </BottomBar>
       {showScrollButton && <ScrollToTopButton onClick={scrollToTop}><span>^</span></ScrollToTopButton>}
     </Container>
   );
@@ -137,10 +136,25 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { ...data, content: htmlContent, artwork: data.artwork || null } };
 };
 
+
+const BottomBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 830px;
+  margin-top: 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+
+    @media (max-width: 480px) {
+      margin-bottom: 40px;
+    }
+`;
+
 // Styled Components
 const BackArrow = styled.div`
   align-self: flex-start;
-  margin-bottom: 20px;
   text-transform: uppercase;
   background: none;
   border: none;
@@ -153,9 +167,6 @@ const BackArrow = styled.div`
   &:hover {
     color: #B3B3B3;
     text-decoration: none;
-  }
-  @media (max-width: 480px) {
-    margin-bottom: 40px;
   }
 
   &:hover {
@@ -170,7 +181,7 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: 830px;
   margin: 0 auto;
 `;
 
@@ -209,25 +220,27 @@ const Artwork = styled.p`
 const ImageWrapper = styled.div<{ isLandscape: boolean }>`
   width: 100%;
   margin-bottom: 10px;
-  margin-top: 100px;
-  max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '700px')};
+  max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '830px')};
 
   @media (min-width: 1024px) {
-    max-width: ${({ isLandscape }) => (isLandscape ? '750px' : '500px')};
+    max-width: ${({ isLandscape }) => (isLandscape ? '830px' : '600px')};
   }
 
   @media (max-width: 1024px) {
-    max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '700px')};
+    max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '830px')};
   }
 `;
 
-const Title = styled.h2`
-  font-size: 2.8rem;
-  font-weight: 700;
+const Title = styled.h1`
+  font-size: 3vw;
+  font-weight: 600;
+  line-height: .9em;
+  margin-top: 100px;
   color: #333;
   text-align: center;
-  line-height: 1.2;
-  max-width: 700px;
+  max-width: 830px;
+  margin-block-start: 0.6em !important;
+  margin-block-end: 0.6em !important;
 
   @media (max-width: 768px) {
     font-size: 2.3rem;
@@ -247,7 +260,7 @@ const Content = styled.div`
   font-size: 20px;
   line-height: 1.6;
   color: #333;
-  max-width: 700px;
+  max-width: 830px;
   width: 100%;
 
   h2, h3, h4 {
