@@ -153,10 +153,10 @@ const Navbar = styled.div`
 
 const LogoWrapper = styled.div`
   cursor: pointer;
-  width: 40px;
+  width: 36px;
 
   img {
-    width: 40px;
+    width: 36px;
   }
 `;
 
@@ -225,10 +225,10 @@ const MobileLogoWrapper = styled.div`
 
   @media (max-width: 1000px) {
     margin-top: 0.5rem;
-    width: 45px;
+    width: 42px;
 
     img {
-      width: 45px;
+      width: 42px;
     }
   }
 `;
