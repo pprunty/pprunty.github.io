@@ -144,11 +144,12 @@ const BottomBar = styled.div`
   width: 100%;
   max-width: 830px;
   margin-top: 20px;
-  padding: 0 20px;
+  padding: 0 0px;
   margin-bottom: 20px;
 
     @media (max-width: 480px) {
       margin-bottom: 40px;
+        padding: 0 0px;
     }
 `;
 
@@ -162,7 +163,7 @@ const BackArrow = styled.div`
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  padding: 20px;
+//   padding: 20px;
   padding-left: 0px;
   &:hover {
     color: #B3B3B3;
