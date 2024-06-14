@@ -51,7 +51,7 @@ class MyDocument extends Document {
           />
           <meta name="google-adsense-account" content="ca-pub-2453030550493085"/>
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2453030550493085"
-                         crossorigin="anonymous"></script>
+                         crossOrigin="anonymous"></script>
         </Head>
         <body>
           <Main />
