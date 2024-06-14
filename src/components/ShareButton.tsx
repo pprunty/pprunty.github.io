@@ -106,7 +106,7 @@ const Notification = styled.div`
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 45%;
+  width: 50%;
   height: 40px;
   margin-top: 10px;
   background: black;

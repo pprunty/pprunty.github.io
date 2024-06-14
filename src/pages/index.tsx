@@ -172,7 +172,7 @@ const Home: React.FC = () => {
       title: "motormongo",
       description: "motormongo is an open-sourced Object Document Mapper (ODM) for MongoDB built on top of motor; the MongoDB recommended asynchronous Python driver for MongoDB Python applications, designed to work with Tornado or asyncio and enable non-blocking access and CRUD (Create, Read, Update and Destroy) operations to MongoDB databases.",
       imageUrl: "/images/motormongo.png",
-      link: "https://github.com/pprunty/motormongo",
+      link: "https://motormongo.readthedocs.io/en/latest/index.html",
       index: 3,
     },
 //         {
