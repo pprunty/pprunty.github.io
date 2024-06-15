@@ -20,6 +20,9 @@ First, install React Query:
 npm install react-query
 ```
 
+
+![Optional Description](https://patrickprunty.com/gifs/image-optimization.gif)
+
 Next, set up a query client and use the `useQuery` hook to fetch and cache data.
 
 ```javascript
@@ -317,3 +320,5 @@ export default {
     },
 };
 ```
+
+![Optional Description](https://patrickprunty.com/gifs/scroll-restoration.gif)
