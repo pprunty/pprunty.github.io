@@ -309,7 +309,7 @@ const PostText = styled.div`
   margin-right: 18px;
 
   @media (max-width: 768px) {
-    margin-right: 6px;
+    margin-right: 14px;
   }
 `;
 
@@ -330,8 +330,12 @@ const PostImageWrapper = styled.div`
 
   @media (max-width: 520px) {
     width: 100px;
-    min-width: 100px;
     height: 100px;
+  }
+
+  @media (max-width: 420px) {
+    width: 90px;
+    height: 90px;
   }
 
   img {
@@ -356,6 +360,7 @@ const PostExcerpt = styled.p`
     max-height: 6em; // Increase if needed to fit the text and "Read more" link
     min-height: 4.5em; // Ensure this is enough to show the link
     font-size: 1rem;
+    min-width: 240px;
   }
 `;
 
