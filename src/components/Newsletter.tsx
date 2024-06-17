@@ -1,45 +1,46 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import ClipSpinner from './ClipSpinner'; // Adjust the path if needed
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
-   const handleSubmit = async (event) => {
-        event.preventDefault();
-        if (!email.trim()) {
-          setMessage('Email cannot be empty.');
-          return;
-        }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!email.trim()) {
+      setMessage('Email cannot be empty.');
+      return;
+    }
 
-        setLoading(true);
-        setMessage('');
+    setLoading(true);
+    setMessage('');
 
-        const scriptUrl = "https://script.google.com/macros/s/AKfycbxYXBP_GiOutJgd6hSkO2_PGXOrRNd7yQV066B7Sq3iOCE7nKFgO-mr7gQwy9BhKZNI/exec";
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbxYXBP_GiOutJgd6hSkO2_PGXOrRNd7yQV066B7Sq3iOCE7nKFgO-mr7gQwy9BhKZNI/exec";
 
-        try {
-          const response = await fetch(scriptUrl, {
-            method: "POST",
-            mode: 'no-cors', // Important as Apps Script does not support CORS
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              email: email
-            })
-          });
+    try {
+      const response = await fetch(scriptUrl, {
+        method: "POST",
+        mode: 'no-cors', // Important as Apps Script does not support CORS
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email
+        })
+      });
 
-          // Since 'no-cors' mode is used, the response is opaque and we cannot read its contents.
-          // We'll assume the subscription is successful if no error is thrown.
-          setMessage('Thank you for subscribing!');
-        } catch (error) {
-          console.error('There was an error:', error);
-          setMessage('Something went wrong. Please try again.');
-        } finally {
-          setLoading(false);
-        }
-      };
+      // Since 'no-cors' mode is used, the response is opaque and we cannot read its contents.
+      // We'll assume the subscription is successful if no error is thrown.
+      setMessage('Thank you for subscribing!');
+    } catch (error) {
+      console.error('There was an error:', error);
+      setMessage('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <SubscribeContainer>
@@ -55,7 +56,9 @@ const Newsletter = () => {
             disabled={loading}
           />
           <SubscribeButton type="submit" disabled={loading}>
-            <ButtonText>{loading ? 'Loading...' : 'Subscribe'}</ButtonText>
+            <ButtonContent>
+              {loading ? <ClipSpinner loading={true} size={20} color="#F0F0F0" /> : 'Subscribe'}
+            </ButtonContent>
           </SubscribeButton>
         </SubscribeInputContainer>
       </Form>
@@ -63,6 +66,8 @@ const Newsletter = () => {
     </SubscribeContainer>
   );
 };
+
+export default Newsletter;
 
 // Styled Components
 const SubscribeContainer = styled.div`
@@ -102,7 +107,6 @@ const SubscribeInput = styled.input`
   border: 1px solid #333;
   min-width: 280px;
   height: 50px;
-  border: 1px solid #333;
   border-radius: 0px !important;
   font-size: 16px;
   border-right: none !important;
@@ -114,16 +118,13 @@ const SubscribeInput = styled.input`
   @media (max-width: 768px) {
     min-width: 200px;
   }
-
-//   &:disabled {
-//     background-color: #f0f0f0;
-//   }
 `;
 
 const SubscribeButton = styled.button`
   height: 50px;
+  width: 120px; /* Set a fixed width for the button */
   border-radius: 0px !important;
-  padding: 20px;
+  padding: 0; /* Remove padding to maintain consistent size */
   font-size: 16px;
   cursor: pointer;
   background-color: #333;
@@ -145,9 +146,11 @@ const SubscribeButton = styled.button`
   }
 `;
 
-const ButtonText = styled.div`
-  text-align: center;
-  align-self: center;
+const ButtonContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure the content container takes full width of the button */
 `;
 
 const Message = styled.div`
@@ -162,5 +165,3 @@ const Message = styled.div`
     color: #FF0000;
   }
 `;
-
-export default Newsletter;
