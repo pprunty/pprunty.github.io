@@ -95,6 +95,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
           width={750}
           height={400}
           placeholder={'blur'}
+          priority={true}
         />
         {artwork && <Artwork>Artwork: {artwork}</Artwork>}
       </ImageWrapper>

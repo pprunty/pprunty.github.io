@@ -17,12 +17,14 @@ const Newsletter = () => {
     setMessage('');
 
     try {
-      const response = await fetch("https://corsproxy.io/?https://eu-central-1.aws.data.mongodb-api.com/app/data-dfmdz/endpoint/data/v1/action/insertOne", {
+      const response = await fetch("https://cors-anywhere.herokuapp.com/https://eu-central-1.aws.data.mongodb-api.com/app/data-dfmdz/endpoint/data/v1/action/insertOne", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Request-Headers": "*",
-          "api-key": process.env.NEXT_PUBLIC_API_KEY // Access the API key from the environment variable
+          "api-key": process.env.NEXT_PUBLIC_API_KEY,
+          "x-requested-with": "XMLHttpRequest", // Add x-requested-with header
+          "Origin": "https://patrickprunty.com"
         },
         body: JSON.stringify({
           collection: "emails",
@@ -109,7 +111,7 @@ const SubscribeInputContainer = styled.div`
 const SubscribeInput = styled.input`
   border: 1px solid #333;
   min-width: 280px;
-  height: 44px;
+  height: 50px;
   border: 1px solid #333;
   border-radius: 0px !important;
   font-size: 16px;
@@ -128,7 +130,7 @@ const SubscribeInput = styled.input`
 `;
 
 const SubscribeButton = styled.button`
-  height: 44px;
+  height: 50px;
   border-radius: 0px !important;
   padding: 20px;
   font-size: 16px;
