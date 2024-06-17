@@ -6,50 +6,40 @@ const Newsletter = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (event) => {
-      event.preventDefault();
-      if (!email.trim()) {
-        setMessage('Email cannot be empty.');
-        return;
-      }
-
-      setLoading(true);
-      setMessage('');
-
-      const apiUrl = `https://eu-central-1.aws.data.mongodb-api.com/app/data-dfmdz/endpoint/data/v1/action/insertOne`;
-      const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`;
-
-      try {
-        const response = await fetch(proxyUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "api-key": process.env.NEXT_PUBLIC_API_KEY,
-          },
-          body: JSON.stringify({
-            collection: "emails",
-            database: "newsletter",
-            dataSource: "Cluster0",
-            document: {
-              email: email,
-              timestamp: (new Date()).toISOString()
-            }
-          })
-        });
-
-        const data = await response.json();
-        if (data.insertedId) {
-          setMessage('Thank you for subscribing!');
-        } else {
-          setMessage('Something went wrong. Please try again.');
+   const handleSubmit = async (event) => {
+        event.preventDefault();
+        if (!email.trim()) {
+          setMessage('Email cannot be empty.');
+          return;
         }
-      } catch (error) {
-        console.error('There was an error:', error);
-        setMessage('Something went wrong. Please try again.');
-      } finally {
-        setLoading(false);
-      }
-    };
+
+        setLoading(true);
+        setMessage('');
+
+        const scriptUrl = "https://script.google.com/macros/s/AKfycbxYXBP_GiOutJgd6hSkO2_PGXOrRNd7yQV066B7Sq3iOCE7nKFgO-mr7gQwy9BhKZNI/exec";
+
+        try {
+          const response = await fetch(scriptUrl, {
+            method: "POST",
+            mode: 'no-cors', // Important as Apps Script does not support CORS
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: email
+            })
+          });
+
+          // Since 'no-cors' mode is used, the response is opaque and we cannot read its contents.
+          // We'll assume the subscription is successful if no error is thrown.
+          setMessage('Thank you for subscribing!');
+        } catch (error) {
+          console.error('There was an error:', error);
+          setMessage('Something went wrong. Please try again.');
+        } finally {
+          setLoading(false);
+        }
+      };
 
   return (
     <SubscribeContainer>
