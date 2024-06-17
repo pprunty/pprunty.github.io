@@ -6,7 +6,19 @@ description: "A comprehensive guide to enhancing your NextJS/ReactJS project wit
 artwork: "Dan Williams / Pixabay.com"
 ---
 
-During the initial phases of UI development, essential elements of UI design, such as caching, lazy loading, memoization, authentication states, and offline accessibility are often overlooked. Yet, these elements are essential for crafting an experience that encourages users to return to your site. This guide explores advanced techniques to enhance your NextJS/ReactJS project by incorporating these key features.
+For many, developing a frontend user interface is simply a question of making things look good. Seldomly, developers put focus on areas which are not obvious to the eye. This guide will walk through how integrating the following components can elevate your NextJS/ReactJS project to the next level:
+
+- Progressive Web Apps (PWAs)
+    - https://www.simicart.com/manifest-generator.html/
+- Google Chrome Lighthouse
+- NextJS Image Optimization
+- React memoization (useCallback + useMemo)
+- Open Graph metatags (SEO)
+    - /blog/[slug].tsx + /blog/page/[number].tsx
+- Native share API
+- NextJS experimental features (scrollRestoration + )
+- Caching with service workers
+- Google AdSense
 
 ## Caching Backend Queries with React Query
 
