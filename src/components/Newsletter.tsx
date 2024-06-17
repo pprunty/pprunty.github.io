@@ -7,49 +7,49 @@ const Newsletter = () => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (!email.trim()) {
-      setMessage('Email cannot be empty.');
-      return;
-    }
-
-    setLoading(true);
-    setMessage('');
-
-    try {
-      const response = await fetch("https://crossorigin.me/https://eu-central-1.aws.data.mongodb-api.com/app/data-dfmdz/endpoint/data/v1/action/insertOne", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Request-Headers": "*",
-          "api-key": process.env.NEXT_PUBLIC_API_KEY,
-          "x-requested-with": "XMLHttpRequest", // Add x-requested-with header
-          "Origin": "https://patrickprunty.com"
-        },
-        body: JSON.stringify({
-          collection: "emails",
-          database: "newsletter",
-          dataSource: "Cluster0",
-          document: {
-            email: email,
-            timestamp: (new Date()).toISOString()
-          }
-        })
-      });
-
-      const data = await response.json();
-      if (data.insertedId) {
-        setMessage('Thank you for subscribing!');
-      } else {
-        setMessage('Something went wrong. Please try again.');
+      event.preventDefault();
+      if (!email.trim()) {
+        setMessage('Email cannot be empty.');
+        return;
       }
-    } catch (error) {
-      console.error('There was an error:', error);
-      setMessage('Something went wrong. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
+
+      setLoading(true);
+      setMessage('');
+
+      const apiUrl = `https://eu-central-1.aws.data.mongodb-api.com/app/data-dfmdz/endpoint/data/v1/action/insertOne`;
+      const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`;
+
+      try {
+        const response = await fetch(proxyUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "api-key": process.env.NEXT_PUBLIC_API_KEY,
+          },
+          body: JSON.stringify({
+            collection: "emails",
+            database: "newsletter",
+            dataSource: "Cluster0",
+            document: {
+              email: email,
+              timestamp: (new Date()).toISOString()
+            }
+          })
+        });
+
+        const data = await response.json();
+        if (data.insertedId) {
+          setMessage('Thank you for subscribing!');
+        } else {
+          setMessage('Something went wrong. Please try again.');
+        }
+      } catch (error) {
+        console.error('There was an error:', error);
+        setMessage('Something went wrong. Please try again.');
+      } finally {
+        setLoading(false);
+      }
+    };
 
   return (
     <SubscribeContainer>
