@@ -17,7 +17,7 @@ const Newsletter = () => {
     setMessage('');
 
     try {
-      const response = await fetch("https://cors-anywhere.herokuapp.com/https://eu-central-1.aws.data.mongodb-api.com/app/data-dfmdz/endpoint/data/v1/action/insertOne", {
+      const response = await fetch("https://crossorigin.me/https://eu-central-1.aws.data.mongodb-api.com/app/data-dfmdz/endpoint/data/v1/action/insertOne", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -115,6 +115,7 @@ const SubscribeInput = styled.input`
   border: 1px solid #333;
   border-radius: 0px !important;
   font-size: 16px;
+  border-right: none !important;
   background-color: #f0f0f0;
   padding-left: 10px;
   outline: none;
@@ -124,9 +125,9 @@ const SubscribeInput = styled.input`
     min-width: 200px;
   }
 
-  &:disabled {
-    background-color: #f0f0f0;
-  }
+//   &:disabled {
+//     background-color: #f0f0f0;
+//   }
 `;
 
 const SubscribeButton = styled.button`
@@ -137,7 +138,6 @@ const SubscribeButton = styled.button`
   cursor: pointer;
   background-color: #f0f0f0;
   border: 1px solid #333;
-  border-left: none !important;
   font-weight: 600;
   color: #333;
   display: flex;
