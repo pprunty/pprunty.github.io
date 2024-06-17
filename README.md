@@ -7,3 +7,4 @@ https://developer.chrome.com/docs/lighthouse/pwa/maskable-icon-audit/?utm_source
 Google AdSense - https://www.google.com/adsense/new/u/0/pub-2453030550493085/onboarding/overview
 
 Google Sheets Email API Subscriptions: https://docs.google.com/spreadsheets/d/1vkphErZLYHzc5s2KIad-YHuNo0P-T2VHv4p0sqHaNbM/edit?gid=0#gid=0
+Calendly: https://calendly.com/event_types/user/me

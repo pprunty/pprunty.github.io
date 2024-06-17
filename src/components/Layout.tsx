@@ -13,6 +13,12 @@ interface LayoutProps {
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 const logo2Path = isExport ? `/images/logo2.svg` : "/images/logo2.svg";
 
+const SvgIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 30 30" fill="currentColor">
+    <path d="M 25.980469 2.9902344 A 1.0001 1.0001 0 0 0 25.869141 3 L 20 3 A 1.0001 1.0001 0 1 0 20 5 L 23.585938 5 L 13.292969 15.292969 A 1.0001 1.0001 0 1 0 14.707031 16.707031 L 25 6.4140625 L 25 10 A 1.0001 1.0001 0 1 0 27 10 L 27 4.1269531 A 1.0001 1.0001 0 0 0 25.980469 2.9902344 z M 6 7 C 4.9069372 7 4 7.9069372 4 9 L 4 24 C 4 25.093063 4.9069372 26 6 26 L 21 26 C 22.093063 26 23 25.093063 23 24 L 23 14 L 23 11.421875 L 21 13.421875 L 21 16 L 21 24 L 6 24 L 6 9 L 14 9 L 16 9 L 16.578125 9 L 18.578125 7 L 16 7 L 14 7 L 6 7 z" />
+  </svg>
+);
+
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [drawerHeight, setDrawerHeight] = useState(0);
@@ -26,8 +32,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const handleNavigation = (path: string) => {
     setMenuOpen(false);
-    setLoading(true);
-    router.push(path);
+
+    // Check if the navigation is for the Calendly link
+    if (path.startsWith('https://')) {
+      // Open in a new tab
+      window.open(path, '_blank');
+    } else {
+      // Use the router to navigate within the app
+      setLoading(true);
+      router.push(path);
+    }
   };
 
   const isActive = (path: string) => {
@@ -112,7 +126,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 */
 }            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
             <NavItem isActive={isActive('/newsletter')} onClick={() => handleNavigation('/newsletter')}>newsletter</NavItem>
-            <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
+<NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('https://calendly.com/jigsawpresents')}>
+  Consultations
+    <SvgIcon />
+</NavItem>
         </Nav>
       </Navbar>
       <Content isMenuOpen={isMenuOpen} drawerHeight={drawerHeight}>
@@ -140,7 +157,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 */
 }             <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
             <NavItem isActive={isActive('/newsletter')} onClick={() => handleNavigation('/newsletter')}>newsletter</NavItem>
-            <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
+<NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('https://calendly.com/jigsawpresents')}>
+  Consultations
+    <SvgIcon fill={'white'} />
+</NavItem>
           </Nav>
         </MobileDrawer>
         {children}
@@ -202,6 +222,10 @@ const NavItem = styled.div<{ isActive?: boolean }>`
   cursor: pointer;
   transition: color 80ms ease-in-out;
   font-size: 14px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     color: ${({ isActive }) => (isActive ? '#FF70CF' : '#B3B3B3')};
