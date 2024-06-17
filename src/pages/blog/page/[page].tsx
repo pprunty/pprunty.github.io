@@ -315,7 +315,7 @@ const PostContent = styled.div`
 
 const PostText = styled.div`
   flex: 1;
-  margin-right: 18px;
+  margin-right: 1.5em;
 
   @media (max-width: 768px) {
     margin-right: 14px;
@@ -340,11 +340,6 @@ const PostImageWrapper = styled.div`
   @media (max-width: 520px) {
     width: 100px;
     height: 100px;
-  }
-
-  @media (max-width: 420px) {
-    width: 90px;
-    height: 90px;
   }
 
   img {
