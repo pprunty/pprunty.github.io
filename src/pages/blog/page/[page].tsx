@@ -318,7 +318,7 @@ const PostText = styled.div`
   margin-right: 1.5em;
 
   @media (max-width: 768px) {
-    margin-right: 14px;
+    margin-right: 4x;
   }
 `;
 
