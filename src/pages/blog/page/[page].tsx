@@ -330,6 +330,7 @@ const PostImageWrapper = styled.div`
 
   @media (max-width: 520px) {
     width: 100px;
+    min-width: 100px;
     height: 100px;
   }
 
