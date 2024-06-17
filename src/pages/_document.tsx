@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import Script from 'next/script'
 
 class MyDocument extends Document {
 
@@ -37,7 +38,7 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content={'#F0F0F0'} />
-          <script
+          <Script
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];
@@ -50,8 +51,8 @@ class MyDocument extends Document {
             }}
           />
           <meta name="google-adsense-account" content="ca-pub-2453030550493085"/>
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2453030550493085"
-                         crossOrigin="anonymous"></script>
+          <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2453030550493085"
+                         crossOrigin="anonymous"></Script>
         </Head>
         <body>
           <Main />
