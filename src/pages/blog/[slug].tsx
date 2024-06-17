@@ -8,7 +8,8 @@ import Head from 'next/head';
 import markdownToHtml from '../../../lib/markdownToHtml';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState, useEffect } from 'react';
-import ShareButton from '@/components/ShareButton'; // Import the ShareButton component
+import ShareButton from '@/components/ShareButton';
+import Newsletter from '@/components/Newsletter';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
@@ -102,6 +103,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
               <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
               <ShareButton />
             </BottomBar>
+      <Newsletter />
       {showScrollButton && <ScrollToTopButton onClick={scrollToTop}><span>^</span></ScrollToTopButton>}
     </Container>
   );
