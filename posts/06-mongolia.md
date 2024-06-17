@@ -1,6 +1,6 @@
 ---
 title: "Horsepacking 14 Days in Mongolia"
-date: "2024-08-05"
+date: "2023-08-05"
 image: "/images/mongolia.jpg"
 description: "Reflecting on my experience horsepacking with ___ in Mongolia."
 artwork: "Wang Haiyang"

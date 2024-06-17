@@ -126,18 +126,18 @@ const SubscribeButton = styled.button`
   padding: 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #f0f0f0;
+  background-color: #333;
   border: 1px solid #333;
   font-weight: 600;
-  color: #333;
+  color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   transition: background-color 0.2s ease-in-out;
 
-  &:hover, &:active {
-     background-color: #333;
+  &:hover, &:active, &.active {
+     background-color: #4D4D4D;
      color: #F0F0F0;
   }
   &:disabled {

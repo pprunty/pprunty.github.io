@@ -95,7 +95,7 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
     ...posts.slice(randomIndex)
   ];
 
-  // Group posts by year, including ads
+  // Group posts by year, including ads, just for the displayed posts
   const postsByYear: Record<number, (Post | Ad)[]> = {};
 
   postsWithAd.forEach((post) => {
@@ -105,18 +105,13 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
         postsByYear[year] = [];
       }
       postsByYear[year].push(post);
-    } else {
-      const lastYear = Math.max(...Object.keys(postsByYear).map(Number), new Date().getFullYear());
-      if (!postsByYear[lastYear]) {
-        postsByYear[lastYear] = [];
-      }
-      postsByYear[lastYear].push(post);
     }
   });
 
-  // Get an array of years sorted in descending order
+  // Filter out years that have no posts to display on the current page
   const years = Object.keys(postsByYear)
     .map(Number)
+    .filter(year => postsByYear[year].length > 0) // Ensure there are posts in this year
     .sort((a, b) => b - a);
 
   return (
@@ -125,16 +120,15 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
         <title>Patrick Prunty - Blog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="My personal blog." />
-        <meta property="og:type" content="blog" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <Title>Patrick Prunty's Blog</Title>
       <Subtitle>Welcome to my personal blog where I share insights, stories, and updates on my work and interests. Explore the posts below to read more.</Subtitle>
-      {years.map((year) => (
+      {years.map(year => (
         <YearSection key={year}>
           <YearHeader>{year}</YearHeader>
           <PostList>
-            {(postsByYear[year] || []).map((post, index) => (
+            {postsByYear[year].map((post, index) => (
               (post as Ad).isAd ?
                 <AdSenseAd key={`ad-${index}`} /> :
                 <BlogPost key={(post as Post).slug} post={post as Post} onClick={() => router.push(`/blog/${(post as Post).slug}`)} />
