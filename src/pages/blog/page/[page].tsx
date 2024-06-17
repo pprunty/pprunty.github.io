@@ -364,8 +364,12 @@ const PostExcerpt = styled.p`
     max-height: 6em; // Increase if needed to fit the text and "Read more" link
     min-height: 4.5em; // Ensure this is enough to show the link
     font-size: 1rem;
-    min-width: 200px;
   }
+
+    @media (max-width: 420px) {
+      max-width: 235px;
+      margin-block-start: 0.7em !important;
+    }
 `;
 
 const SeeMore = styled.span`
