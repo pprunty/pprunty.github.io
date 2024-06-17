@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { InlineWidget } from "react-calendly";
 
 const Title = styled.h1`
   font-size: 6vw;
@@ -9,9 +10,9 @@ const Title = styled.h1`
   color: black;
   width: 100%;
   text-align: left;
-  margin-bottom: 20px; /* Add margin to separate title from case studies */
+  margin-bottom: 20px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 8vw;
   }
 `;
@@ -23,32 +24,37 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-  margin-bottom: 40px; /* Add margin to separate subtitle from case studies */
+  margin-bottom: 40px;
   padding-bottom: 40px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 1.25rem;
     padding-bottom: 5px;
   }
 `;
 
-const StyledIframe = styled.iframe`
-  width: 100%;
-  max-width: 555px;
-  height: 150vh;
-  max-height: 720px;
-  border: 1.5px solid black; /* Add the border here */
-
-  @media (max-width: 768px) {
-    height: 150vh; /* Adjust height for tablets and smaller screens */
-  }
+const WidgetContainer = styled.div`
+  width: 100vw;
+  height: 80vh; // You can adjust this as needed
+  overflow: hidden; // Hides the overflow, including scrollbars
+  scrolling: no;
+  padding-left: 10px;
+  padding-right: 10px;
+  resize: both; // Allows resizing to test different sizes
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 
   @media (max-width: 480px) {
-    height: 95vh; /* Adjust height for mobile devices */
+    height: 95vh;
+  }
+
+  @media (max-width: 768px) {
+    width: auto;
+    height: 200vw !important;
   }
 `;
 
-const Consultation: React.FC = () => {
+const Consultation = () => {
   return (
     <>
       <Head>
@@ -60,11 +66,24 @@ const Consultation: React.FC = () => {
       </Head>
       <Title>Consultation Services</Title>
       <Subtitle>Interested in collaborating with me on a project, or looking for personal guidance? Book a one-on-one consultation with me to discuss your projects, ideas, or any questions you have. I look forward to connecting with you and helping you achieve your goals.</Subtitle>
-      <StyledIframe
-        src="https://patrick0dys.setmore.com/patrick?lang=english"
-        scrolling="yes"
-        allowFullScreen
-      />
+      <WidgetContainer>
+        <InlineWidget
+          url="https://calendly.com/jigsawpresents"
+          pageSettings={{
+            backgroundColor: 'fff',
+            hideEventTypeDetails: false,
+            hideLandingPageDetails: false,
+            primaryColor: '333',
+            textColor: '333'
+          }}
+          styles={{
+          marginTop: '0px',
+          marginBottom: '0px',
+          width: '100vw',
+          height: '200vw',
+          }}
+        />
+      </WidgetContainer>
     </>
   );
 };
