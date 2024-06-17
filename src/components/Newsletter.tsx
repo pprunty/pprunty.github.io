@@ -76,6 +76,7 @@ const SubscribeContainer = styled.div`
   margin-bottom: 4em;
   padding-left: 10px;
   padding-right: 10px;
+  max-width: 380px;
 
   @media (min-width: 768px) {
     padding-left: 0;

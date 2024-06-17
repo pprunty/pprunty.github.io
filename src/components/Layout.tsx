@@ -111,6 +111,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 */}{/*            <NavItem isActive={isActive('/project/jigsaw-academy')} onClick={() => handleNavigation('/project/jigsaw-academy')}>Lectures</NavItem>
 */
 }            <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
+            <NavItem isActive={isActive('/newsletter')} onClick={() => handleNavigation('/newsletter')}>newsletter</NavItem>
             <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
         </Nav>
       </Navbar>
@@ -138,6 +139,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 */}{/*            <NavItem isActive={isActive('/project/jigsaw-academy')} onClick={() => handleNavigation('/project/jigsaw-academy')}>Lectures</NavItem>
 */
 }             <NavItem isActive={isActive('/blog')} onClick={() => handleNavigation('/blog/page/1')}>Blog</NavItem>
+            <NavItem isActive={isActive('/newsletter')} onClick={() => handleNavigation('/newsletter')}>newsletter</NavItem>
             <NavItem isActive={isActive('/consultations')} onClick={() => handleNavigation('/consultations')}>Consultations</NavItem>
           </Nav>
         </MobileDrawer>
