@@ -7,7 +7,9 @@ import ExportedImage from "next-image-export-optimizer";
 import markdownToHtml from '../../../../lib/markdownToHtml';
 import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Pagination from '../../../components/Pagination'; // Adjust the path as needed
+import Pagination from '@/components/Pagination'; // Adjust the path as needed
+import React, { useState } from 'react';
+import PageLoader from '@/components/PageLoader'; // Adjust the path if needed
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
@@ -84,6 +86,7 @@ const AdSenseAd = () => {
 
 export default function BlogList({ posts, currentPage, totalPages }: BlogListProps) {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   // Calculate a random position for the ad
   const randomIndex = Math.floor(Math.random() * (posts.length - 2)) + 1;
@@ -114,6 +117,11 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
     .filter(year => postsByYear[year].length > 0) // Ensure there are posts in this year
     .sort((a, b) => b - a);
 
+  const handlePostClick = (slug: string) => {
+    setLoading(true);
+    router.push(`/blog/${slug}`);
+  };
+
   return (
     <>
       <Head>
@@ -122,6 +130,7 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
         <meta name="description" content="My personal blog." />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
+      <PageLoader loading={loading} />
       <Title>Patrick Prunty's Blog</Title>
       <Subtitle>Welcome to my personal blog where I share insights, stories, and updates on my work and interests. Explore the posts below to read more.</Subtitle>
       {years.map(year => (
@@ -131,7 +140,7 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
             {postsByYear[year].map((post, index) => (
               (post as Ad).isAd ?
                 <AdSenseAd key={`ad-${index}`} /> :
-                <BlogPost key={(post as Post).slug} post={post as Post} onClick={() => router.push(`/blog/${(post as Post).slug}`)} />
+                <BlogPost key={(post as Post).slug} post={post as Post} onClick={() => handlePostClick((post as Post).slug)} />
             ))}
           </PostList>
         </YearSection>

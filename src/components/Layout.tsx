@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import ExportedImage from "next-image-export-optimizer";
 import {updateMetaThemeColor,lightTheme} from '../styles/theme';
+import PageLoader from '@/components/PageLoader'; // Adjust the path if needed
 
 interface LayoutProps {
   children: ReactNode;
@@ -17,14 +18,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [drawerHeight, setDrawerHeight] = useState(0);
   const router = useRouter();
   const drawerRef = useRef<HTMLDivElement>(null);
+  const [loading, setLoading] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
   const handleNavigation = (path: string) => {
-    router.push(path);
     setMenuOpen(false);
+    setLoading(true);
+    router.push(path);
   };
 
   const isActive = (path: string) => {
@@ -62,6 +65,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, []);
 
   useEffect(() => {
+      const handleRouteChangeComplete = () => {
+        setLoading(false);
+      };
+
+      router.events.on('routeChangeComplete', handleRouteChangeComplete);
+      router.events.on('routeChangeError', handleRouteChangeComplete);
+
+      return () => {
+        router.events.off('routeChangeComplete', handleRouteChangeComplete);
+        router.events.off('routeChangeError', handleRouteChangeComplete);
+      };
+    }, [router.events]);
+
+  useEffect(() => {
     // Update the meta theme color based on the menu state
     if (isMenuOpen) {
       memoizedUpdateMetaThemeColor('black'); // Set to black when menu is open
@@ -73,6 +90,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <Container>
+      <PageLoader loading={loading} />
       <Navbar>
         <LogoWrapper onClick={() => handleNavigation('/')}>
           <ExportedImage
