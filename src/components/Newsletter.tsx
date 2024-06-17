@@ -44,7 +44,7 @@ const Newsletter = () => {
   return (
     <SubscribeContainer>
       <SubscribeTitle>Patrick Prunty's Newsletter</SubscribeTitle>
-      <SubscribeSubtitle>Stay updated with my latest articles!</SubscribeSubtitle>
+      <SubscribeSubtitle>Stay up to date with my latest blog posts!</SubscribeSubtitle>
       <Form id="subscribe-form" onSubmit={handleSubmit}>
         <SubscribeInputContainer>
           <SubscribeInput
@@ -151,17 +151,15 @@ const ButtonText = styled.div`
 `;
 
 const Message = styled.div`
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 14px;
 
   &.success-message {
     color: #333;
-    margin-top: 10px;
   }
 
   &.error-message {
     color: #FF0000;
-    margin-top: 10px;
   }
 `;
 
