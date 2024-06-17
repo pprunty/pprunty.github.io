@@ -108,7 +108,7 @@ const SubscribeInputContainer = styled.div`
 
 const SubscribeInput = styled.input`
   border: 1px solid #333;
-  max-width: 270px;
+  min-width: 280px;
   height: 44px;
   border: 1px solid #333;
   border-radius: 0px !important;
@@ -117,6 +117,11 @@ const SubscribeInput = styled.input`
   padding-left: 10px;
   outline: none;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    min-width: 200px;
+  }
+
   &:disabled {
     background-color: #f0f0f0;
   }
