@@ -364,7 +364,7 @@ const PostExcerpt = styled.p`
     max-height: 6em; // Increase if needed to fit the text and "Read more" link
     min-height: 4.5em; // Ensure this is enough to show the link
     font-size: 1rem;
-    min-width: 240px;
+    min-width: 200px;
   }
 `;
 
