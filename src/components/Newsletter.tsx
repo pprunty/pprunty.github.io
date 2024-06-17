@@ -45,7 +45,7 @@ const Newsletter = () => {
   return (
     <SubscribeContainer>
       <SubscribeTitle>Patrick Prunty's Newsletter</SubscribeTitle>
-      <SubscribeSubtitle>Stay up to date with my latest blog posts!</SubscribeSubtitle>
+      <SubscribeSubtitle>Join over 52 subscribers and stay up to date with my latest blog posts!</SubscribeSubtitle>
       <Form id="subscribe-form" onSubmit={handleSubmit}>
         <SubscribeInputContainer>
           <SubscribeInput
@@ -72,8 +72,8 @@ export default Newsletter;
 // Styled Components
 const SubscribeContainer = styled.div`
   text-align: center;
-  margin-top: 3.5em;
-  margin-bottom: 3.5em;
+  margin-top: 4em;
+  margin-bottom: 4em;
   padding-left: 10px;
   padding-right: 10px;
 

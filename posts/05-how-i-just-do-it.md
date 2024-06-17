@@ -6,7 +6,7 @@ description: "Work sucks. So how do I make it better?"
 artwork: "Wang Haiyang"
 ---
 
-Work sucks. I have 40 more years of my life to spent shackled by invisible chains to my desk and forced to stare at a 
+Work sucks. 40 years. I have 40 more years of my life to spent shackled by invisible capitalist chains to my desk and forced to stare at a 
 computer screen. 
 
 
