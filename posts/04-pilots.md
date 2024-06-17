@@ -1,5 +1,5 @@
 ---
-title: "Drivers"
+title: "Pilots"
 date: "2024-08-05"
 image: "/images/IMG_5944.JPG"
 description: "How a video game quietly shaped my childhood."
