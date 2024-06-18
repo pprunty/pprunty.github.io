@@ -174,7 +174,7 @@ export default React.memo(Layout);
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 80vw;
+  min-height: 50vw;
   background-color: #F0F0F0;
 `;
 
