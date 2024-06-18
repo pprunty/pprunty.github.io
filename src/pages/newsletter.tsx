@@ -72,8 +72,9 @@ const NewsletterPage: React.FC = () => {
         <title>Patrick Prunty - Newsletter</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.ico" />
-        <meta property="og:type" content="video" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
+        <meta property="og:title" content="Patrick Prunty's Newsletter" />
+        <meta property="og:description" content="Subscribe and stay up to date with Patrick Prunty's latest blog posts!" />
+        <meta property="og:type" content="article" />
       </Head>
         <Title>Patrick Prunty&apos;s Newsletter</Title>
         <TextContainer>

@@ -132,6 +132,8 @@ const Photography: React.FC = () => {
         <meta property="og:image" content="/images/collage.WEBP" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:title" content="Patrick Prunty's Photography" />
+        <meta property="og:description" content="Discover the world through my lens." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${router.asPath}`} />
       </Head>

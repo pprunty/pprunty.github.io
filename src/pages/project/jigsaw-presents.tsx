@@ -166,11 +166,14 @@ const JigsawPresents: React.FC = () => {
       <Head>
         <title>Patrick Prunty - Jigsaw Presents</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="An analytical YouTube channel, where you will find in-depth analysis and insights into trending movies, series, books, and games." />
+        <meta name="description" content="Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games." />
         <meta property="og:type" content="video" />
         <meta property="og:image" content="/images/jigsaw-presents.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:title" content="Jigsaw Presents YouTube Channel" />
+        <meta property="og:description" content="Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games." />
+        <meta property="og:type" content="video" />
         <link rel="icon" href="/images/favicon.ico" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
       </Head>

@@ -159,12 +159,15 @@ const JigsawAcademy: React.FC = () => {
       <Head>
         <title>Patrick Prunty - Jigsaw Academy</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="YouTube educational series." />
+        <meta name="description" content="Explore my educational YouTube channel, featuring a diverse range of tutorials." />
         <meta property="og:type" content="video" />
         <meta property="og:image" content="/images/projects/jigsaw-academy.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <link rel="icon" href="/images/favicon.ico" />
+        <meta property="og:title" content="Jigsaw Academy YouTube Channel" />
+        <meta property="og:description" content="Explore my educational YouTube channel, featuring a diverse range of tutorials." />
+        <meta property="og:type" content="video" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
       </Head>
       <Title>Jigsaw Academy</Title>
