@@ -171,7 +171,7 @@ const JigsawAcademy: React.FC = () => {
       </Head>
       <Title>Jigsaw Academy</Title>
       <TextContainer>
-        <Subtitle>(Coming soon) Explore my educational YouTube channel, featuring a diverse range of tutorials. Enhance your knowledge with curated playlists. Use the hamburger (three horizontal bars) icon at the top of the videos below to navigate through the playlists. Alternatively, click the YouTube button below to view my channel directly on YouTube.</Subtitle>
+        <Subtitle>Explore my educational YouTube channel, featuring a diverse range of tutorials. Enhance your knowledge with curated playlists. Use the hamburger (three horizontal bars) icon at the top of the videos below to navigate through the playlists. Alternatively, click the YouTube button below to view my channel directly on YouTube.</Subtitle>
                 <div className="g-ytsubscribe" data-channelid="UCiskkvzn7UMmqkwOhKCBkqw" data-layout="default" data-count="default"></div>
       </TextContainer>
       <Grid>

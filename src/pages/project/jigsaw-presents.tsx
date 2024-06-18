@@ -178,7 +178,7 @@ const JigsawPresents: React.FC = () => {
       </Head>
       <Title>Jigsaw Presents</Title>
       <TextContainer>
-        <Subtitle>(Coming soon) Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games. Check out more of my videos by clicking the YouTube button below.</Subtitle>
+        <Subtitle>Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games. Check out more of my videos by clicking the YouTube button below.</Subtitle>
         <div className="g-ytsubscribe" data-channelid="UCx8iHEGQMyeInLgPQ81-EJA" data-layout="default" data-theme="dark" data-count="default"></div>
       </TextContainer>
       <Grid>
