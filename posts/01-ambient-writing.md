@@ -1,6 +1,6 @@
 ---
 title: "Ambient Writing"
-date: "2024-08-05"
+date: "2024-05-10"
 image: "/images/IMG_5947.jpg"
 description: "A manifesto for creative writing by Patrick Prunty."
 artwork: "Ellsworth Kelly"

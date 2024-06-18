@@ -1,6 +1,6 @@
 ---
 title: "How I Just Do It"
-date: "2024-08-05"
+date: "2024-04-20"
 image: "/images/just-do-it.jpeg"
 description: "Work sucks. So how do I make it better?"
 artwork: "Wang Haiyang"

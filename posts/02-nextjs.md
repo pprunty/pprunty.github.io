@@ -1,6 +1,6 @@
 ---
 title: "Elevating Your NextJS/ReactJS Project"
-date: "2024-08-05"
+date: "2024-05-01"
 image: "/images/cpu.jpg"
 description: "A comprehensive guide to enhancing your NextJS/ReactJS project with Progressive Web Apps (PWAs), React Query for caching, memoization, and more."
 artwork: "Dan Williams / Pixabay.com"
