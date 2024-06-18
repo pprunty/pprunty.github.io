@@ -76,7 +76,10 @@ const SubscribeContainer = styled.div`
   margin-bottom: 2em;
   padding-left: 10px;
   padding-right: 10px;
-  max-width: 380px;
+  max-width: 420px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: 768px) {
     padding-left: 0;
@@ -85,14 +88,16 @@ const SubscribeContainer = styled.div`
 `;
 
 const SubscribeTitle = styled.div`
-  font-weight: 550;
+  font-weight: 600;
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 2rem;
+  color: #000;
 `;
 
 const SubscribeSubtitle = styled.div`
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 30px;
+  color: #4D4D4D;
 `;
 
 const Form = styled.form`
@@ -105,7 +110,7 @@ const SubscribeInputContainer = styled.div`
 `;
 
 const SubscribeInput = styled.input`
-  border: 1px solid #333;
+  border: 1px solid #000;
   min-width: 280px;
   height: 50px;
   border-radius: 0px !important;

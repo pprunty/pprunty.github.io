@@ -240,12 +240,12 @@ const ImageWrapper = styled.div<{ isLandscape: boolean }>`
   }
 `;
 
-const Title = styled.h1`
-  font-size: 4vw;
+const Title = styled.div`
+  font-size: 2.5rem;
   font-weight: 600;
-  line-height: .9em;
+  line-height: 1.05em;
   margin-top: 100px;
-  color: #333;
+  color: #000;
   text-align: center;
   max-width: 750px;
   margin-block-start: 0.6em !important;
@@ -254,9 +254,8 @@ const Title = styled.h1`
   @media (max-width: 768px) {
     font-size: 2.3rem;
   }
-
-  @media (max-width: 480px) {
-    font-size: 1.8rem;
+  @media (max-width: 768px) {
+    font-size: 2.1rem;
   }
 `;
 
@@ -275,7 +274,7 @@ const Date = styled.p`
 const Content = styled.div`
   font-size: 20px;
   line-height: 1.6;
-  color: #333;
+  color: #000;
   max-width: 750px;
   width: 100%;
 
