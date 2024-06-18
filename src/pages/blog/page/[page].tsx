@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -10,6 +10,7 @@ import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Pagination from '@/components/Pagination'; // Adjust the path as needed
 import PageLoader from '@/components/PageLoader'; // Adjust the path if needed
+import formatDate from '@/utils/formatDate';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
@@ -32,20 +33,15 @@ interface BlogListProps {
   totalPages: number;
 }
 
-function formatDate(dateString: string): string {
-  const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
-  const date = new Date(dateString);
-  return new Intl.DateTimeFormat('en-US', options).format(date);
-}
 
-const BlogPost = ({ post, onClick }: { post: Post, onClick: () => void }) => {
+const BlogPost = ({ post, formattedDate, onClick }: { post: Post, formattedDate: string, onClick: () => void }) => {
   const contentToDisplay = (post.excerpt.length < 200 || post.excerpt.length > 15000) ? post.description : post.excerpt;
 
   return (
     <PostItem onClick={onClick}>
       <PostContent>
         <PostText>
-          <PostDateAuthor>{formatDate(post.date)} by Patrick Prunty</PostDateAuthor>
+          <PostDateAuthor>{formattedDate} by Patrick Prunty</PostDateAuthor>
           <PostTitle>{post.title}</PostTitle>
           <PostExcerpt>
             {contentToDisplay}... <SeeMore onClick={onClick}>Read more</SeeMore>
@@ -67,23 +63,6 @@ const BlogPost = ({ post, onClick }: { post: Post, onClick: () => void }) => {
   );
 };
 
-/* const AdSenseAd = () => {
-  console.log("AdSense ad is being rendered");
-  return (
-    <AdWrapper>
-      <ins className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-format="fluid"
-        data-ad-layout-key="-6m+du+k-3x+d5"
-        data-ad-client="ca-pub-2453030550493085"
-        data-ad-slot="7456704951"></ins>
-      <script>
-        {`(adsbygoogle = window.adsbygoogle || []).push({});`}
-      </script>
-    </AdWrapper>
-  );
-}; */
-
 export default function BlogList({ posts, currentPage, totalPages }: BlogListProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -103,6 +82,13 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
       router.events.off('routeChangeError', handleRouteChangeError);
     };
   }, [router]);
+
+
+
+  const handlePostClick = (slug: string) => {
+    setLoading(true);
+    router.push(`/blog/${slug}`);
+  };
 
   // Calculate a random position for the ad
   const randomIndex = Math.floor(Math.random() * (posts.length - 2)) + 1;
@@ -133,11 +119,6 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
     .filter(year => postsByYear[year].length > 0) // Ensure there are posts in this year
     .sort((a, b) => b - a);
 
-  const handlePostClick = (slug: string) => {
-    setLoading(true);
-    router.push(`/blog/${slug}`);
-  };
-
   return (
     <>
       <Head>
@@ -155,9 +136,12 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
           <YearHeader>{year}</YearHeader>
           <PostList>
             {postsByYear[year].map((post, index) => (
-              /* (post as Ad).isAd ?
-                <AdSenseAd key={`ad-${index}`} /> : */
-                <BlogPost key={(post as Post).slug} post={post as Post} onClick={() => handlePostClick((post as Post).slug)} />
+              <BlogPost
+                key={(post as Post).slug}
+                post={post as Post}
+                formattedDate={formatDate((post as Post).date)}
+                onClick={() => handlePostClick((post as Post).slug)}
+              />
             ))}
           </PostList>
         </YearSection>

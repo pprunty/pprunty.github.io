@@ -10,6 +10,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState, useEffect, useMemo } from 'react';
 import ShareButton from '@/components/ShareButton';
 import Newsletter from '@/components/Newsletter';
+import formatDate from '@/utils/formatDate';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
@@ -97,7 +98,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
           <AuthorImage src="/images/logo3.svg" alt="Author" />
           <MetaInfo>
             <AuthorName>Patrick Prunty</AuthorName>
-            <ReadingTime>{date} &#8226; {readingTime} min read</ReadingTime>
+            <ReadingTime>{formatDate(date)} &#8226; {readingTime} min read</ReadingTime>
           </MetaInfo>
         </MetaSection>
       </HeaderWrapper>
@@ -351,10 +352,11 @@ const Content = styled.div`
   }
 
   img {
-    max-width: 100%;
+    max-width: 60%;
+    max-height: 600px;
     height: auto;
-    margin: 0 auto;
-    display: block;
+    margin: 0 auto;  // Adds automatic margins on both sides, centering the image
+    display: block;  // Ensures the image is aligned properly without extra space around
   }
 
   pre {
