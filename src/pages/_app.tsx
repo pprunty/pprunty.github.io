@@ -72,7 +72,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>Patrick Prunty</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Explore my software products, blog, YouTube creative content, and consultations." />
+        <meta name="description" content="Software, education, blog, YouTube creative media & consultations." />
         <meta property="og:image" content="/images/favicon.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
