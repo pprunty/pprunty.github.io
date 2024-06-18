@@ -67,7 +67,7 @@ const BlogPost = ({ post, onClick }: { post: Post, onClick: () => void }) => {
   );
 };
 
-const AdSenseAd = () => {
+/* const AdSenseAd = () => {
   console.log("AdSense ad is being rendered");
   return (
     <AdWrapper>
@@ -82,7 +82,7 @@ const AdSenseAd = () => {
       </script>
     </AdWrapper>
   );
-};
+}; */
 
 export default function BlogList({ posts, currentPage, totalPages }: BlogListProps) {
   const router = useRouter();
@@ -155,8 +155,8 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
           <YearHeader>{year}</YearHeader>
           <PostList>
             {postsByYear[year].map((post, index) => (
-              (post as Ad).isAd ?
-                <AdSenseAd key={`ad-${index}`} /> :
+              /* (post as Ad).isAd ?
+                <AdSenseAd key={`ad-${index}`} /> : */
                 <BlogPost key={(post as Post).slug} post={post as Post} onClick={() => handlePostClick((post as Post).slug)} />
             ))}
           </PostList>

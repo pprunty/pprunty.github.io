@@ -50,9 +50,9 @@ class MyDocument extends Document {
               `,
             }}
           />
-          <meta name="google-adsense-account" content="ca-pub-2453030550493085"/>
+          {/*<meta name="google-adsense-account" content="ca-pub-2453030550493085"/>
           <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2453030550493085"
-                         crossOrigin="anonymous"></Script>
+                         crossOrigin="anonymous"></Script>*/}
         </Head>
         <body>
           <Main />

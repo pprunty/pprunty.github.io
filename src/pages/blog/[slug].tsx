@@ -241,7 +241,7 @@ const ImageWrapper = styled.div<{ isLandscape: boolean }>`
 `;
 
 const Title = styled.h1`
-  font-size: 3vw;
+  font-size: 4vw;
   font-weight: 600;
   line-height: .9em;
   margin-top: 100px;

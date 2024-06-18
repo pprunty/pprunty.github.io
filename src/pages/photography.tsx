@@ -144,7 +144,7 @@ const Photography: React.FC = () => {
         ))}
       </Grid>
       {/* AdSense Ad */}
-      <AdSenseAd />
+{/*      <AdSenseAd /> */}
     </>
   );
 };
