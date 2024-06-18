@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import PageLoader from '@/components/PageLoader';
 
 interface PaginationProps {
   currentPage: number;
@@ -8,29 +10,36 @@ interface PaginationProps {
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   const handlePageChange = (page: number) => {
     // Avoid navigation if already on the requested page
     if (page === currentPage) return;
 
-    router.push(`/blog/page/${page}`);
+    setLoading(true);
+    router.push(`/blog/page/${page}`).then(() => {
+      setLoading(false);
+    });
   };
 
   return (
-    <PaginationWrapper>
-      {Array.from({ length: totalPages }, (_, i) => (
-        <PageNumber
-          key={i}
-          $active={i + 1 === currentPage}
-          onClick={(e) => {
-            e.preventDefault();
-            handlePageChange(i + 1);
-          }}
-        >
-          {i + 1}
-        </PageNumber>
-      ))}
-    </PaginationWrapper>
+    <>
+      <PaginationWrapper>
+        {Array.from({ length: totalPages }, (_, i) => (
+          <PageNumber
+            key={i}
+            $active={i + 1 === currentPage}
+            onClick={(e) => {
+              e.preventDefault();
+              handlePageChange(i + 1);
+            }}
+          >
+            {i + 1}
+          </PageNumber>
+        ))}
+      </PaginationWrapper>
+      <PageLoader loading={loading} />
+    </>
   );
 };
 
