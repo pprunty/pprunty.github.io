@@ -164,7 +164,6 @@ const JigsawAcademy: React.FC = () => {
         <meta property="og:image" content="/images/projects/jigsaw-academy.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:title" content="Jigsaw Academy YouTube Channel" />
         <meta property="og:description" content="Explore my educational YouTube channel, featuring a diverse range of tutorials." />
         <meta property="og:type" content="video" />

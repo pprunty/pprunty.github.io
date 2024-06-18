@@ -45,7 +45,7 @@ const Newsletter = () => {
   return (
     <SubscribeContainer>
       <SubscribeTitle>Patrick Prunty's Newsletter</SubscribeTitle>
-      <SubscribeSubtitle>Join over 52 subscribers and stay up to date with my latest blog posts!</SubscribeSubtitle>
+      <SubscribeSubtitle>Join over {process.env.NEXT_PUBLIC_SUBSCRIBERS} subscribers and stay up to date with my latest blog posts!</SubscribeSubtitle>
       <Form id="subscribe-form" onSubmit={handleSubmit}>
         <SubscribeInputContainer>
           <SubscribeInput
