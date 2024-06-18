@@ -3,6 +3,14 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import Newsletter from '@/components/Newsletter';
 
+const Container = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0px; // Optional padding for better appearance
+  box-sizing: border-box;
+`;
+
 const Title = styled.h1`
   font-size: 6vw;
   font-weight: 600;
@@ -24,8 +32,6 @@ const Subtitle = styled.p`
   color: #666;
   width: 100%;
   text-align: left;
-//   margin-bottom: 20px;
-//   padding-bottom: 40px;
 
   @media(max-width: 768px) {
     font-size: 1.25rem;
@@ -77,16 +83,17 @@ const NewsletterPage: React.FC = () => {
         <meta property="og:type" content="video" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
       </Head>
-      <Title>Patrick Prunty&apos;s Newsletter</Title>
-      <TextContainer>
-        <Subtitle>Subscribe to my newsletter below to get automatically notified the next time I release a blog post:</Subtitle>
-      </TextContainer>
-      <Newsletter/>
+      <Container>
+        <Title>Patrick Prunty&apos;s Newsletter</Title>
+        <TextContainer>
+          <Subtitle>Subscribe to my newsletter below to get automatically notified the next time I release a blog post:</Subtitle>
+        </TextContainer>
+        <Newsletter/>
+      </Container>
     </>
   );
 };
 
 NewsletterPage.displayName = "NewsletterPage";
-
 
 export default NewsletterPage;

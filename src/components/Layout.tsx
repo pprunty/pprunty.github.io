@@ -11,7 +11,7 @@ interface LayoutProps {
 }
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
-const logo2Path = isExport ? `/images/logo2.svg` : "/images/logo2.svg";
+const logo3Path = isExport ? `/images/logo3.svg` : "/images/logo3.svg";
 
 const SvgIcon = () => (
   <svg width="18" height="18" viewBox="0 0 30 30" fill="currentColor">
@@ -108,10 +108,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Navbar>
         <LogoWrapper onClick={() => handleNavigation('/')}>
           <ExportedImage
-            src={'/images/logo2.svg'}
+            src={'/images/logo3.svg'}
             alt="logo"
             layout="responsive"
-            width={200}
+            width={250}
             height={100}
             placeholder={'blur'}
             unoptimized={true}
@@ -136,7 +136,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <MobileNavbar>
           <MobileLogoWrapper onClick={() => handleNavigation('/')}>
             <ExportedImage
-              src={'/images/logo2.svg'}
+              src={'/images/logo3.svg'}
               alt="logo"
               layout="responsive"
               width={250}
@@ -174,7 +174,7 @@ export default React.memo(Layout);
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 80vw;
   background-color: #F0F0F0;
 `;
 
@@ -185,7 +185,7 @@ const Navbar = styled.div`
   width: 100%;
   padding: 10px 40px;
   background-color: inherit;
-  border-bottom: 2px solid black;
+//   border-bottom: 2px solid black;
   color: black;
 
   @media (max-width: 1000px) {
@@ -198,7 +198,7 @@ const LogoWrapper = styled.div`
   width: 36px;
 
   img {
-    width: 36px;
+    width: 44px;
   }
 `;
 
