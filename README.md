@@ -1,4 +1,4 @@
-Google Analytics - https://analytics.google.com/analytics/web/?pli=1#/p443765304/reports/intelligenthome
+Google Analytics (Jigsaw Presents Account) - https://analytics.google.com/analytics/web/provision/?authuser=0#/p446627560/reports/intelligenthome
 Revert commit - https://github.com/pprunty/pprunty.github.io/commit/22db2ca2e423c3245f2b0b6047f6c099608f116d
 PWA Manifest Generator - https://www.simicart.com/manifest-generator.html/
 https://maskable.app/editor

@@ -115,7 +115,6 @@ const Photography: React.FC = () => {
           height={500}
           objectFit="cover"
           placeholder={'blur'}
-          priority={index === 0 || index === 1 || index === 2} // Optionally prioritize the first image
         />
       </ImageWrapper>
     );
