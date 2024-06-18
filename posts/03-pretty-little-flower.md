@@ -1,9 +1,9 @@
 ---
 title: "Pretty Little Flower"
-date: "2023-09-23"
-image: "/images/daisy.WEBP"
+date: "2024-06-18"
+image: "/images/flower.WEBP"
 description: "Japanese Haiku (three-line poem) by Patrick Prunty."
-artwork: "Marc Simonetti"
+artwork: "DALLE-2"
 ---
 
 Pretty little flower
