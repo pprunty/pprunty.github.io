@@ -59,7 +59,7 @@ const PageNumber = styled.button<{ $active: boolean }>`
   border: 1.5px solid #000;
   cursor: pointer;
   transition: color 0.12s, background-color 0.12s, transform 0.12s, opacity 0.12s;
-  font-size: 16px;
+  font-size: 14px;
 
   &:hover {
     background-color: ${({ $active }) => ($active ? '#000' : '#f0f0f0')};
