@@ -109,9 +109,9 @@ const BottomBackArrow = styled(BackArrow)`
 `;
 
 const playlists = [
-  'si=wtVfkUH8tj3EYFmc&amp;list=PLn6yDpEottdjri2wzWn8tFTXNLplVGqjU',
-  'si=SosBov0FywktTDz3&amp;list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK',
-  'si=zq6SjUQ3OONc-lCb&amp;list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_',
+  'dQw4w9WgXcQ?si=WIoEGTEKY1Rr-stR',
+//   'si=SosBov0FywktTDz3&amp;list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK',
+//   'si=zq6SjUQ3OONc-lCb&amp;list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_',
 ];
 
 const MemoizedVideoWrapper = memo(({ playlistId, index }: { playlistId: string, index: number }) => (
@@ -171,7 +171,7 @@ const JigsawAcademy: React.FC = () => {
       </Head>
       <Title>Jigsaw Academy</Title>
       <TextContainer>
-        <Subtitle>Explore my educational YouTube channel, featuring a diverse range of tutorials. Enhance your knowledge with curated playlists. Use the hamburger (three horizontal bars) icon at the top of the videos below to navigate through the playlists. Alternatively, click the YouTube button below to view my channel directly on YouTube.</Subtitle>
+        <Subtitle>(Coming soon) Explore my educational YouTube channel, featuring a diverse range of tutorials. Enhance your knowledge with curated playlists. Use the hamburger (three horizontal bars) icon at the top of the videos below to navigate through the playlists. Alternatively, click the YouTube button below to view my channel directly on YouTube.</Subtitle>
                 <div className="g-ytsubscribe" data-channelid="UCiskkvzn7UMmqkwOhKCBkqw" data-layout="default" data-count="default"></div>
       </TextContainer>
       <Grid>

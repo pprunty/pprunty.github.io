@@ -110,9 +110,9 @@ const BottomBackArrow = styled(BackArrow)`
 `;
 
 const videos = [
-  'R0krUthYxF4?si=41F2z4CR7XtljbET',
-  'sLMRR9sWo6E?si=n9SVLcdywkaYMNvf',
-  'wJmg0uc3CjY?si=e1kjW7ktp2ir67CW',
+  'dQw4w9WgXcQ?si=WIoEGTEKY1Rr-stR',
+//   'sLMRR9sWo6E?si=n9SVLcdywkaYMNvf',
+//   'wJmg0uc3CjY?si=e1kjW7ktp2ir67CW',
 ];
 
 const MemoizedVideoWrapper = memo(({ videoId, index }: { videoId: string, index: number }) => (
@@ -178,7 +178,7 @@ const JigsawPresents: React.FC = () => {
       </Head>
       <Title>Jigsaw Presents</Title>
       <TextContainer>
-        <Subtitle>Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games. Check out more of my videos by clicking the YouTube button below.</Subtitle>
+        <Subtitle>(Coming soon) Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games. Check out more of my videos by clicking the YouTube button below.</Subtitle>
         <div className="g-ytsubscribe" data-channelid="UCx8iHEGQMyeInLgPQ81-EJA" data-layout="default" data-theme="dark" data-count="default"></div>
       </TextContainer>
       <Grid>

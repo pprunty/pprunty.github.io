@@ -148,7 +148,7 @@ const Home: React.FC = () => {
   const caseStudies: CaseStudyProps[] = [
       {
         title: "Jigsaw Presents",
-        description: "An analytical YouTube channel, where you will find in-depth analysis and insights into trending movies, series, books, and games.",
+        description: "Launching this year, Jigsaw Presents is an analytical YouTube channel, where you will find in-depth analysis and insights into trending movies, series, books, and games.",
         imageUrl: "/images/jigsaw-presents-logo.png",
         link: "project/jigsaw-presents",
         index: 0,
@@ -163,7 +163,7 @@ const Home: React.FC = () => {
         },
         {
           title: "Jigsaw Academy",
-          description: "An educational YouTube channel, providing free, high-quality educational tutorials to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'.",
+          description: "Launching this year, Jigsaw Academy is an educational YouTube channel, providing free, high-quality educational tutorials to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'.",
           imageUrl: "/images/jigsaw-academy-logo.png",
           link: "project/jigsaw-academy",
           index: 2,
