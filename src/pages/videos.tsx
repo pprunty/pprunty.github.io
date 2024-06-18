@@ -108,7 +108,7 @@ const Videos: React.FC = () => {
         <meta property="og:type" content="video" />
         <meta property="og:title" content="Patrick Prunty's Videos" />
         <meta property="og:description" content="Explore my personal YouTube channel, where I share a variety of creative videos." />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSBKKYLNC4"></script>
       </Head>
       <Title>Patrick Prunty&apos;s Videos</Title>
       <TextContainer>

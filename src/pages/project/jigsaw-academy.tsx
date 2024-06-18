@@ -167,7 +167,7 @@ const JigsawAcademy: React.FC = () => {
         <meta property="og:title" content="Jigsaw Academy YouTube Channel" />
         <meta property="og:description" content="Explore my educational YouTube channel, featuring a diverse range of tutorials." />
         <meta property="og:type" content="video" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB4DP92HKV"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSBKKYLNC4"></script>
       </Head>
       <Title>Jigsaw Academy</Title>
       <TextContainer>
