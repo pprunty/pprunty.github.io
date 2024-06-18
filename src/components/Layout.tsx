@@ -183,7 +183,7 @@ const Navbar = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 40px;
+  padding: 10px 100px;
   background-color: inherit;
 //   border-bottom: 2px solid black;
   color: black;
