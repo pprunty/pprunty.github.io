@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -8,7 +9,6 @@ import markdownToHtml from '../../../../lib/markdownToHtml';
 import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Pagination from '@/components/Pagination'; // Adjust the path as needed
-import React, { useState } from 'react';
 import PageLoader from '@/components/PageLoader'; // Adjust the path if needed
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
@@ -87,6 +87,22 @@ const AdSenseAd = () => {
 export default function BlogList({ posts, currentPage, totalPages }: BlogListProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const handleRouteChangeStart = () => setLoading(true);
+    const handleRouteChangeComplete = () => setLoading(false);
+    const handleRouteChangeError = () => setLoading(false);
+
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
+    router.events.on('routeChangeError', handleRouteChangeError);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('routeChangeComplete', handleRouteChangeComplete);
+      router.events.off('routeChangeError', handleRouteChangeError);
+    };
+  }, [router]);
 
   // Calculate a random position for the ad
   const randomIndex = Math.floor(Math.random() * (posts.length - 2)) + 1;
