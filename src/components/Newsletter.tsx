@@ -95,7 +95,7 @@ const SubscribeTitle = styled.div`
 `;
 
 const SubscribeSubtitle = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 30px;
   color: #4D4D4D;
 `;

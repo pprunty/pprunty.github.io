@@ -6,8 +6,6 @@ description: "Japanese Haiku (three-line poem) by Patrick Prunty."
 artwork: "DALLE-2"
 ---
 
-Pretty little flower
-
-Its petals blow in the wind
-
-To the beat of your heart
+Pretty little flower \
+Its petals blow in the wind \
+To the beat of your heart 

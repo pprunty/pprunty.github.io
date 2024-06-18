@@ -7,7 +7,7 @@ import ExportedImage from 'next-image-export-optimizer';
 import Head from 'next/head';
 import markdownToHtml from '../../../lib/markdownToHtml';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import ShareButton from '@/components/ShareButton';
 import Newsletter from '@/components/Newsletter';
 
@@ -83,10 +83,24 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const readingTime = useMemo(() => {
+    const words = content.split(/\s+/).length;
+    const minutes = Math.ceil(words / 200); // Assuming an average reading speed of 200 words per minute
+    return minutes;
+  }, [content]);
+
   return (
     <Container>
-      <Title>{title}</Title>
-      <Date>{date}</Date>
+      <HeaderWrapper>
+        <Title>{title}</Title>
+        <MetaSection>
+          <AuthorImage src="/images/logo3.svg" alt="Author" />
+          <MetaInfo>
+            <AuthorName>Patrick Prunty</AuthorName>
+            <ReadingTime>{date} &#8226; {readingTime} min read</ReadingTime>
+          </MetaInfo>
+        </MetaSection>
+      </HeaderWrapper>
       <ImageWrapper isLandscape={isLandscape}>
         <ExportedImage
           src={imagePath}
@@ -98,11 +112,16 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
         />
         {artwork && <Artwork>Artwork: {artwork}</Artwork>}
       </ImageWrapper>
+        <p style={{ textAlign: 'center' }}>
+          <span style={{ margin: '0 10px' }}>&bull;</span>
+          <span style={{ margin: '0 10px' }}>&bull;</span>
+          <span style={{ margin: '0 10px' }}>&bull;</span>
+        </p>
       <Content dangerouslySetInnerHTML={{ __html: content }} />
       <BottomBar>
-              <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
-              <ShareButton />
-            </BottomBar>
+        <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
+        <ShareButton />
+      </BottomBar>
       <Newsletter />
       {showScrollButton && <ScrollToTopButton onClick={scrollToTop}><span>^</span></ScrollToTopButton>}
     </Container>
@@ -138,15 +157,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { ...data, content: htmlContent, artwork: data.artwork || null } };
 };
 
-
 const BottomBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 750px;
+  max-width: 680px;
   margin-top: 40px;
-//   padding: 0 10px;
   margin-bottom: 20px;
 
   @media (max-width: 480px) {
@@ -158,10 +175,9 @@ const CenterWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  gap: 20px; // Optional: Add space between the items
+  gap: 20px;
 `;
 
-// Styled Components
 const BackArrow = styled.div`
   align-self: flex-start;
   text-transform: uppercase;
@@ -171,7 +187,6 @@ const BackArrow = styled.div`
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-//   padding: 20px;
   padding-left: 0px;
   &:hover {
     color: #B3B3B3;
@@ -190,18 +205,23 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 750px;
+  max-width: 680px;
   margin: 0 auto;
+`;
+
+const HeaderWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 `;
 
 const TopBackArrow = styled(BackArrow)`
   position: absolute;
   top: 20px;
-//   left: 20px;
 
   @media (max-width: 480px) {
     top: 10px;
-//     left: 10px;
   }
 `;
 
@@ -211,11 +231,11 @@ const BottomBackArrow = styled(BackArrow)`
 `;
 
 const Artwork = styled.p`
-//   font-style: italic;
   color: #777;
   text-align: center;
   font-size: 1rem;
   font-weight: 300;
+  font-style: italic;
 
   @media (min-width: 768px) {
     font-size: .85rem;
@@ -229,14 +249,14 @@ const Artwork = styled.p`
 const ImageWrapper = styled.div<{ isLandscape: boolean }>`
   width: 100%;
   margin-bottom: 10px;
-  max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '750px')};
+  max-width: 100%;
 
   @media (min-width: 1024px) {
-    max-width: ${({ isLandscape }) => (isLandscape ? '750px' : '600px')};
+    max-width: 100%;
   }
 
   @media (max-width: 1024px) {
-    max-width: ${({ isLandscape }) => (isLandscape ? '1000px' : '750px')};
+    max-width: 100%;
   }
 `;
 
@@ -246,8 +266,8 @@ const Title = styled.div`
   line-height: 1.05em;
   margin-top: 100px;
   color: #000;
-  text-align: center;
-  max-width: 750px;
+  text-align: left;
+  max-width: 680px;
   margin-block-start: 0.6em !important;
   margin-block-end: 0.6em !important;
 
@@ -259,23 +279,57 @@ const Title = styled.div`
   }
 `;
 
+const MetaSection = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 680px;
+  gap: 5px;
+`;
+
+const AuthorImage = styled.img`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+`;
+
+const MetaInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`;
+
+const AuthorName = styled.div`
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+`;
+
+const ReadingTime = styled.div`
+  font-size: 0.9rem;
+  color: #777;
+`;
+
 const Date = styled.p`
   font-size: 1rem;
   color: #777;
-    @media (min-width: 768px) {
-      font-size: .95rem;
-    }
+  @media (min-width: 768px) {
+    font-size: .95rem;
+  }
 
-    @media (max-width: 480px) {
-      font-size: 0.9rem;
-    }
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const Content = styled.div`
   font-size: 20px;
   line-height: 1.6;
   color: #000;
-  max-width: 750px;
+  max-width: 680px;
   width: 100%;
 
   h2, h3, h4 {
@@ -297,11 +351,10 @@ const Content = styled.div`
   }
 
   img {
-    max-width: 60%;
-    max-height: 600px;
+    max-width: 100%;
     height: auto;
-    margin: 0 auto;  // Adds automatic margins on both sides, centering the image
-    display: block;  // Ensures the image is aligned properly without extra space around
+    margin: 0 auto;
+    display: block;
   }
 
   pre {
@@ -356,7 +409,7 @@ const ScrollToTopButton = styled.button`
   right: 30px;
   width: 80px;
   height: 80px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #F0F0F0;
   border: none;
   border-radius: 50%;
@@ -369,10 +422,10 @@ const ScrollToTopButton = styled.button`
   font-weight: 200;
   opacity: 0.7;
   transition: opacity 0.3s, transform 0.3s;
-  z-index: 1000; /* Ensure the button is above other content */
+  z-index: 1000;
 
   span {
-    margin-top: 5px; /* Add margin-top to the span */
+    margin-top: 5px;
   }
 
   &:hover {
@@ -388,7 +441,7 @@ const ScrollToTopButton = styled.button`
     right: 20px;
 
     span {
-      margin-top: 4px; /* Adjust margin-top to the span */
+      margin-top: 4px;
     }
   }
 
@@ -400,8 +453,7 @@ const ScrollToTopButton = styled.button`
     right: 15px;
 
     span {
-      margin-top: 4px; /* Adjust margin-top to the span */
+      margin-top: 4px;
     }
   }
 `;
-
