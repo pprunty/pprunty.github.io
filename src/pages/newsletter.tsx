@@ -76,10 +76,6 @@ const NewsletterPage: React.FC = () => {
         <meta property="og:description" content={`Join over ${process.env.NEXT_PUBLIC_SUBSCRIBERS} subscribers and stay up to date with my latest blog posts!`} />
         <meta property="og:type" content="article" />
       </Head>
-        <Title>Patrick Prunty&apos;s Newsletter</Title>
-        <TextContainer>
-          <Subtitle>Subscribe to my newsletter below to get automatically notified the next time I release a blog post:</Subtitle>
-        </TextContainer>
         <Newsletter/>
     </>
   );
