@@ -218,7 +218,7 @@ const Home: React.FC = () => {
         <AboutMeTextContainer>
           <AboutMeTitle>About Me</AboutMeTitle>
           <AboutMeDescription>
-            When I&lsquo;m not coding or working on side-projects, you&lsquo;ll find me training triathlon, hiking or enjoying quality time with loved ones. I&lsquo;m always open to connecting—feel free to reach out to me via email or on my social media platforms below. 🧘🏼
+            When I&lsquo;m not coding or working on personal projects, you&lsquo;ll find me training triathlon, hiking or enjoying quality time with loved ones. I&lsquo;m always open to connecting—feel free to reach out to me via email or on my social media platforms below. 🧘🏼
           </AboutMeDescription>
         </AboutMeTextContainer>
       </AboutMeContainer>
