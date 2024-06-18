@@ -31,17 +31,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   const handleNavigation = (path: string) => {
-    setMenuOpen(false);
+      // Prevent routing if already on the page
+      if (router.pathname === path) {
+        setMenuOpen(false);
+        return;
+      }
 
-    // Check if the navigation is for the Calendly link
-    if (path.startsWith('https://')) {
-      // Open in a new tab
-      window.open(path, '_blank');
-    } else {
-      // Use the router to navigate within the app
-      setLoading(true);
-      router.push(path);
-    }
+      setMenuOpen(false);
+
+      // Check if the navigation is for the Calendly link
+      if (path.startsWith('https://')) {
+        // Open in a new tab
+        window.open(path, '_blank');
+      } else {
+        // Use the router to navigate within the app
+        setLoading(true);
+        router.push(path);
+      }
   };
 
   const isActive = (path: string) => {
@@ -174,7 +180,7 @@ export default React.memo(Layout);
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 50vw;
+  min-height: 30vw;
   background-color: #F0F0F0;
 `;
 
