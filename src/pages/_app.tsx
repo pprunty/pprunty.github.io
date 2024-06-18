@@ -73,10 +73,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <title>Patrick Prunty</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Explore my software products, blog, YouTube creative content, and consultations." />
-        <meta property="og:image" content="/images/favicon.WEBP" />
+        <meta property="og:image" content="/images/favicon.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <link rel="icon" href="/images/favicon.WEBP" />
+        <link rel="icon" href="/images/favicon.png" />
         <meta name="theme-color" content={lightTheme.colorBackground} />
       </Head>
       <StyledThemeProvider theme={lightTheme}>
