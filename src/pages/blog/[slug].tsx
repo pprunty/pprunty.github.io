@@ -329,9 +329,10 @@ const Date = styled.p`
 const Content = styled.div`
   font-size: 20px;
   line-height: 1.6;
-  color: #000;
   max-width: 680px;
   width: 100%;
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+  color: #333;
 
   h2, h3, h4 {
     margin-top: 1.2em;
