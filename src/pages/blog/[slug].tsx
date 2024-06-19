@@ -331,7 +331,7 @@ const Content = styled.div`
   line-height: 1.6;
   max-width: 680px;
   width: 100%;
-  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+//   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
   color: #333;
 
   h2, h3, h4 {
