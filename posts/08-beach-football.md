@@ -1,8 +1,8 @@
 ---
-title: "Football: Bringing People Together"
+title: "Beach Football"
 date: "2024-06-18"
 image: "/images/beach-football1.jpg"
-description: "Exploring my journey starting out as a content creator on YouTube and TikTok."
+description: "Discussing how football can bring strangers together."
 artwork: "Patrick Prunty"
 ---
 
