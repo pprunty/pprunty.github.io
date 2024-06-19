@@ -310,11 +310,18 @@ const AuthorName = styled.div`
 `;
 
 const ReadingTime = styled.div`
-  font-size: 0.9rem;
-  color: #777;
+    font-size: 1rem;
+    color: #777;
+    @media (min-width: 768px) {
+      font-size: .95rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
 `;
 
-const Date = styled.p`
+const Date = styled.div`
   font-size: 1rem;
   color: #777;
   @media (min-width: 768px) {
