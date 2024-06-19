@@ -94,7 +94,7 @@ const FooterLinkBlock = styled.a`
 
 const SocialLink = styled.h2`
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
 
   @media (max-width: 768px) {
     font-size: 1.4rem;
