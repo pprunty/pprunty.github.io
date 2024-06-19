@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     color: ${({ theme }) => theme.colorTextPrimary};
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue",Arial,sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

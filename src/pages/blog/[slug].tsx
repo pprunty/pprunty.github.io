@@ -331,12 +331,13 @@ const Content = styled.div`
   line-height: 1.6;
   max-width: 680px;
   width: 100%;
-//   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
   color: #333;
 
   h2, h3, h4 {
     margin-top: 1.2em;
     margin-bottom: 0.5em;
+    font-family: "Helvetica Neue", Arial, sans-serif;
   }
 
   p {
@@ -369,6 +370,11 @@ const Content = styled.div`
     }
   }
 
+  b, strong {
+    font-family: "Helvetica Neue", Arial, sans-serif; // Change this to your desired font-family
+    font-weight: bold;
+  }
+
   @media (max-width: 768px) {
     font-size: 20px;
     img {
@@ -388,7 +394,15 @@ const Content = styled.div`
       display: block;
     }
   }
+
+    code {
+//       font-family: "Courier New", Courier, monospace; // Change this to your desired font-family for inline code
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: 15px;
+    }
 `;
+
 
 const Description = styled.p`
   font-size: 0.9rem;
