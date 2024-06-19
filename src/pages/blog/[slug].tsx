@@ -395,12 +395,11 @@ const Content = styled.div`
     }
   }
 
-    code {
-//       font-family: "Courier New", Courier, monospace; // Change this to your desired font-family for inline code
-      padding: 0.2em 0.4em;
-      border-radius: 3px;
-      font-size: 15px;
-    }
+  code {
+//  font-family: "Courier New", Courier, monospace; // Change this to your desired font-family for inline code
+    border-radius: 3px;
+    font-size: 15px;
+  }
 `;
 
 
