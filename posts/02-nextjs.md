@@ -1,24 +1,42 @@
 ---
-title: "Elevating Your NextJS/ReactJS Project"
+title: "Enhancing Your NextJS/ReactJS Project"
 date: "2024-05-01"
 image: "/images/cpu.jpg"
-description: "A comprehensive guide to enhancing your NextJS/ReactJS project with Progressive Web Apps (PWAs), React Query for caching, memoization, and more."
+description: "A comprehensive guide to improving your NextJS/ReactJS project with PWAs, React Query for caching, memoization, and more."
 artwork: "Dan Williams / Pixabay.com"
 ---
 
-For many, developing a frontend user interface is simply a question of making things look good. Seldomly, developers put focus on areas which are not obvious to the eye. This guide will walk through how integrating the following components can elevate your NextJS/ReactJS project to the next level:
+Developing a frontend user interface is often simply a question of making things look good. Seldomly, developers
+focus on areas which are not obvious to the eye. This guide will walk through how integrating the following 
+components can elevate your NextJS/ReactJS project to the next level:
 
-- Progressive Web Apps (PWAs)
-    - https://www.simicart.com/manifest-generator.html/
-- Google Chrome Lighthouse
-- NextJS Image Optimization
-- React memoization (useCallback + useMemo)
-- Open Graph metatags (SEO)
-    - /blog/[slug].tsx + /blog/page/[number].tsx
-- Native share API
-- NextJS experimental features (scrollRestoration + )
-- Caching with service workers
-- Google AdSense
+1. **Google Chrome Lighthouse**: Provides automated auditing, performance metrics, and best practice recommendations to improve the quality and performance of web applications, ensuring they meet high standards.
+2. **Caching with Service Workers**: Uses service workers to cache assets and API responses, significantly reducing load times and enabling offline functionality, which enhances the overall user experience.
+3. **React Memoization**: Enhances performance by preventing unnecessary re-renders and recalculations, comparing previous and current props to avoid redundant updates, which results in smoother and faster UI updates.
+4. **NextJS Image Optimization**: Automatically optimizes images by providing a blur effect while they load, which improves load times and enhances the user experience by reducing perceived latency.
+5. **NextJS Scroll Restoration**: Automatically restores the scroll position to its previous state when navigating back to a page, providing a seamless user experience and preserving the context for users.
+6. **Dynamic Route Matching (slugs)**: Uses URL-friendly identifiers to create dynamic routes, making it easier to handle content-based navigation and improve SEO by using meaningful paths.
+7. **Open Graph Metatags (SEO)**: Adds metadata to web pages to control how they are displayed when shared on social media, improving visibility and click-through rates by enhancing the presentation of shared content.
+8. **Progressive Web Apps (PWAs)**: Enable offline functionality and the ability to download the website as an app, improving user accessibility and engagement even without an internet connection.
+9. **Native Share API**: Allows content sharing directly through mobile device interfaces, such as sharing a blog post via messaging apps or social media platforms, enhancing user interaction.
+10. **Google AdSense**: Integrates advertising into your application, allowing you to monetize content by displaying relevant ads and generating revenue based on user interactions.
+
+
+## 1. Google Chrome Lighthouse
+
+If you do not already use Google Chrome Lighthouse, you should start right now. To use Lighthouse, open 
+your website in the Chrome Browser and enter inspect. Once in inspect mode, toggle the `>>` arrows in the top bar and 
+select "Lighthouse".
+
+![Optional Description](https://patrickprunty.com/images/lighthouse_location.png)
+
+Once in the Lighthouse menu, you can toggle the button to "Analyze Page Load" with selection. This will generate a 
+Lighthouse report for your webpage. It is specific to the route on your webpage that you are on and details things such 
+as ...
+
+_Note:_ 
+
+
 
 ## Caching Backend Queries with React Query
 
@@ -88,12 +106,12 @@ data-ad-slot="4949482188"></ins>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-**Pros:**
+#### **Pros:**
 - Simplifies data fetching and state management.
 - Provides built-in caching and synchronization.
 - Automatically refetches data in the background.
 
-**Cons:**
+#### Cons
 - Adds an additional library to the project.
 - May require adjustments in the existing data fetching logic.
 

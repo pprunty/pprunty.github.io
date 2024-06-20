@@ -341,7 +341,7 @@ const Content = styled.div`
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
   color: #333;
 
-  h2, h3, h4 {
+  h2, h3, h4, h5 {
     margin-top: 1.2em;
     margin-bottom: 0.5em;
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -378,9 +378,9 @@ const Content = styled.div`
   }
 
   b, strong {
-    font-family: "Helvetica Neue", Arial, sans-serif; // Change this to your desired font-family
-    font-weight: bold;
-  }
+//       font-family: "Museo Sans", sans-serif; // Updated font-family for bold/strong text
+      font-weight: bold;
+    }
 
   @media (max-width: 768px) {
     font-size: 20px;
