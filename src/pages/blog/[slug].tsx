@@ -333,6 +333,33 @@ const Date = styled.div`
   }
 `;
 
+const StyledTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f4f4f4;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+`;
+
+const TableWrapper = styled.div`
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+`;
+
 const Content = styled.div`
   font-size: 20px;
   line-height: 1.6;
@@ -378,9 +405,29 @@ const Content = styled.div`
   }
 
   b, strong {
-//       font-family: "Museo Sans", sans-serif; // Updated font-family for bold/strong text
       font-weight: bold;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
     }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  }
 
   @media (max-width: 768px) {
     font-size: 20px;
@@ -403,11 +450,11 @@ const Content = styled.div`
   }
 
   code {
-//  font-family: "Courier New", Courier, monospace; // Change this to your desired font-family for inline code
     border-radius: 3px;
     font-size: 15px;
   }
 `;
+
 
 
 const Description = styled.p`
