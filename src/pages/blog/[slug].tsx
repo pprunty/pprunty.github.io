@@ -351,6 +351,28 @@ const Content = styled.div`
     margin-bottom: 1em;
   }
 
+    blockquote {
+      font-style: italic;
+      background-color: inherit;
+      border-left: 4px solid #333;
+      margin: 1.5em 10px;
+      padding: 0.5em 20px;
+      quotes: "\\201C""\\201D""\\2018""\\2019";
+
+      &:before {
+        color: ##b3b3b3;
+        content: open-quote;
+        font-size: 3em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+      }
+
+      p {
+        display: inline;
+      }
+    }
+
   a {
     color: #D04CFA;
     text-decoration: none;

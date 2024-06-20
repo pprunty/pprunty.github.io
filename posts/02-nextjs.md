@@ -6,8 +6,9 @@ description: "A comprehensive guide to improving your NextJS/ReactJS project wit
 artwork: "Dan Williams / Pixabay.com"
 ---
 
-Developing a frontend user interface is often simply a question of making things look good. Seldomly, developers
-focus on areas which are not obvious to the eye. This guide will walk through how integrating the following 
+
+Developing a front-end user interface is often simply a question of making things look good. Seldomly, developers
+focus on areas which are not plain to the eye. This guide will walk through how integrating the following
 components can elevate your NextJS/ReactJS project to the next level:
 
 1. **React Memoization**: Enhances performance by preventing unnecessary re-renders and recalculations, comparing previous and current props to avoid redundant updates, which results in smoother and faster UI updates.
@@ -29,12 +30,16 @@ smoothly and efficiently.
 
 ## 2. NextJS Image Optimization
 
-NextJS offers built-in image optimization out-of-the-box that automatically optimizes images as they load. This feature 
+NextJS offers image optimization out-of-the-box that automatically optimizes images as they load. This feature 
 includes a blur effect placeholder, reducing perceived latency and significantly improving the loading time, which 
 enhances the overall user experience. To use ...
 
 ![Optional Description](https://patrickprunty.com/gifs/image-optimization.gif)
 
+<figure>
+  <img src="https://patrickprunty.com/gifs/image-optimization.gif" alt="Alternate Text">
+  <figcaption>Caption describing the above image.</figcaption>
+</figure>
 
 ## 3. NextJS Scroll Restoration
 

@@ -6,7 +6,7 @@ description: "A comprehensive guide to making your NextJS/ReactJS frontend a pro
 artwork: "Apple Sonoma"
 ---
 
-Recently, I transformed my personal website, [patrickprunty.com](https://patrickprunty.com), into a Progressive Web App (PWA). This allows users to access my site on any device — iPhone, MacBook, Android, or Windows — as if it were a native app downloaded from their device's app store.
+Recently, I transformed my personal website, [patrickprunty.com](https://patrickprunty.com), into a Progressive Web App (PWA). This allows users to access my site on any device &mdash; iPhone, MacBook, Android, or Windows &mdash; as if it were a native app downloaded from their device's app store.
 If you want to enable similar functionality for your NextJS/ReactJS application, allowing users to download it on their mobile devices like so:
 
 ![Optional Description](https://patrickprunty.com/gifs/pwa_mobile.gif)

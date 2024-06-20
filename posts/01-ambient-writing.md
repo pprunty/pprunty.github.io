@@ -3,10 +3,16 @@ title: "Ambient Writing"
 date: "2024-06-30"
 image: "/images/IMG_5947.jpg"
 description: "A manifesto for creative writing by Patrick Prunty."
-artwork: "Ellsworth Kelly"
+artwork: "Wang Haiyang"
 ---
 
-[//]: # (> ```ambient --- "encompassing on all sides," from Latin ambientem &#40;nominative ambiens&#41;, which is the present participle of ambire "to go around, encircle, surround," from amb- "around" &#40;from PIE root *ambhi- "around"&#41; + ire "to go" &#40;from PIE root *ei- "to go"&#41;. This origin from the concept of "going around" contributes to the sense of "surrounding, encompassing, or encircling." The term often relates to conditions or influences surrounding or pervading an environment.```)
+[//]: # (> `ambient` &mdash; "encompassing on all sides," from Latin ambientem, present participle of ambire "to go around, )
+
+[//]: # (> encircle, surround," from amb- "around" &#40;from PIE root *ambhi- "around"&#41; + ire "to go" &#40;from PIE root *ei- )
+
+[//]: # (> "to go"&#41;. This origin from the concept of "going around" contributes to the sense of "surrounding, encompassing, )
+
+[//]: # (> or encircling." The term often relates to conditions or influences surrounding or pervading an environment.)
 
 **MAKE ME FEEL ...** How does one feel? Through the senses. Sight,
 sound, smell, touch and taste. Sunsets, laughter, perfume, hugs and chocolate.
