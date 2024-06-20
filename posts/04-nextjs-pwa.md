@@ -1,5 +1,5 @@
 ---
-title: "How to Make Your NextJS/ReactJS Project a PWA (Progressive Web App)"
+title: "How to Make Your NextJS/ReactJS Project a Progressive Web App (PWA)"
 date: "2024-06-20"
 image: "/images/sonoma.jpeg"
 description: "A comprehensive guide to making your NextJS/ReactJS frontend a progressive web application (PWA)."
