@@ -504,4 +504,4 @@ By implementing these responsive design techniques, you can ensure that your PWA
 
 By following these steps, you have transformed your NextJS/ReactJS application into a Progressive Web App. Your users can now enjoy a seamless, app-like experience across various devices, even offline. If you have any questions or need further support, feel free to reach out. I'm here to help you make the most of your PWA.
 
-If you have any questions or need further assistance, please feel free to contact me. I'm here to support you in making the most out of your PWA implementation.
+If you have any questions or need further assistance, please feel free to contact me, or set up some time with me via the [consultations tab on my website](https://calendly.com/jigsawpresents).

@@ -1,10 +1,12 @@
-const CACHE_NAME = 'my-nextjs-pwa-cache-v8';
+const CACHE_NAME = 'my-nextjs-pwa-cache-v9';
 const urlsToCache = [
   '/',
   '/photography',
   '/newsletter',
   '/project/jigsaw-presents',
   '/project/jigsaw-academy',
+  '/blog/page/1',
+  '/blog/page/2',
   '/manifest.json',
   '/images/favicon.ico',
   // Add more routes as necessary
