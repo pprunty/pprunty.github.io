@@ -223,7 +223,7 @@ const Nav = styled.nav`
 
 const NavItem = styled.div<{ isActive?: boolean }>`
   text-transform: uppercase;
-  color: ${({ isActive }) => (isActive ? '#FF70CF' : '#333')};
+  color: ${({ isActive }) => (isActive ? '#DC70FF' : '#333')};
   font-weight: 600;
   cursor: pointer;
   transition: color 80ms ease-in-out;
@@ -234,7 +234,7 @@ const NavItem = styled.div<{ isActive?: boolean }>`
   align-items: center;
 
   &:hover {
-    color: ${({ isActive }) => (isActive ? '#FF70CF' : '#B3B3B3')};
+    color: ${({ isActive }) => (isActive ? '#DC70FF' : '#B3B3B3')};
     text-decoration: none;
   }
 

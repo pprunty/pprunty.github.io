@@ -509,8 +509,7 @@ By implementing these responsive design techniques, you can ensure that your PWA
 
 ## Conclusion
 
-_Note: If your app stilld does not meet valid requirements to be PWA, you may still be missing something not covered in this article. Re-run the Google Chrome Lighthouse 
-to analyze the page for PWA compatibility to debug what you may be missing._
+_Note: If your app does not yet meet the necessary requirements to be a PWA, it's possible that there are additional factors not covered in this article. We recommend running Google Chrome Lighthouse again to analyze your page for PWA compatibility and identify any remaining issues._
 
 By following these steps, you have transformed your NextJS/ReactJS application into a Progressive Web App. Your users can now enjoy a seamless, app-like experience across various devices, even offline. 
 
