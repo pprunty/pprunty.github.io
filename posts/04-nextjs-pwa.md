@@ -396,7 +396,7 @@ Styled-components allow you to write plain CSS in your JavaScript files. Here's 
 ```jsx
 import styled from 'styled-components';
 
-const Container = styled.div\`
+const Container = styled.div`
   width: 100%;
   padding: 15px;
   margin: auto;
@@ -416,9 +416,9 @@ const Container = styled.div\`
   @media (min-width: 1200px) {
     max-width: 1140px;
   }
-\`;
+`;
 
-const Grid = styled.div\`
+const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -430,7 +430,7 @@ const Grid = styled.div\`
   @media (min-width: 992px) {
     grid-template-columns: repeat(3, 1fr);
   }
-\`;
+`;
 ```
 
 ### Using Device Width in Next.js/React.js Head
@@ -447,9 +447,7 @@ const App = () => (
       <title>Responsive PWA</title>
     </Head>
     <Container>
-      <Grid>
-        {/* Your content here */}
-      </Grid>
+      {/* Your content here */}
     </Container>
   </>
 );
@@ -457,7 +455,26 @@ const App = () => (
 export default App;
 ```
 
-You can do the same in your App.tsx file in your ReactJS project.
+You can do the same in your App.tsx file in your ReactJS project:
+
+```javascript
+import React from 'react';
+import { Helmet } from 'react-helmet';
+
+const App = () => (
+  <>
+    <Helmet>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Responsive PWA</title>
+    </Helmet>
+    <div className="container">
+      {/* Your content here */}
+    </div>
+  </>
+);
+
+export default App;
+```
 
 ### Test Responsiveness
 
