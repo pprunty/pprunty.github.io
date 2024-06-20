@@ -1,6 +1,6 @@
 ---
 title: "How to Make Your NextJS/ReactJS Project a PWA (Progressive Web App)"
-date: "2024-05-01"
+date: "2024-06-20"
 image: "/images/sonoma.jpeg"
 description: "A comprehensive guide to making your NextJS/ReactJS frontend a progressive web application (PWA)."
 artwork: "Apple Sonoma"
@@ -130,6 +130,8 @@ After generating your images and manifest, your `manifest.json` should like this
   "description": "Software, education, consultations & creative media." // This will be the description for your PWA
 }
 ```
+
+**Please delete the comments in this JSON or it will prevent the json from working correctly. The comments are to emphasize importance of certain fields.**
 
 Additionally, you must have the following tag: `<meta name="theme-color" content="#317EFB"/>` defined in the `<head>` of
 your application for all routes/pages. This can be done in NextJS by adding this tag in the `<head>` section of the `_app.tsx` file, or
@@ -455,6 +457,8 @@ const App = () => (
 export default App;
 ```
 
+You can do the same in your App.tsx file in your ReactJS project.
+
 ### Test Responsiveness
 
 To ensure your site is responsive, you can use browser developer tools to test your site on different screen sizes and devices. Here are step-by-step instructions for testing responsiveness using developer tools in Chrome:
@@ -483,20 +487,6 @@ To ensure your site is responsive, you can use browser developer tools to test y
 6. Test Responsiveness:
 
     Navigate through your site to see how it adapts to different screen sizes. Make adjustments to your styles as needed.
-
-| Device Category    | Resolution (Width x Height) | Example Devices                              |
-|--------------------|-----------------------------|----------------------------------------------|
-| Smartphone (Small) | 360px x 640px               | Google Pixel 2, Samsung Galaxy S8            |
-| Smartphone (Medium)| 375px x 667px               | iPhone 6/7/8                                 |
-| Smartphone (Large) | 414px x 896px               | iPhone XR, iPhone models                     |
-| Tablet (Small)     | 600px x 1024px              | Nexus 7, Samsung Galaxy Tab 2, iPhone models |
-| Tablet (Medium)    | 768px x 1024px              | iPad Mini, iPad 1/2/Air                      |
-| Tablet (Large)     | 800px x 1280px              | Samsung Galaxy Tab 10, Nexus 10              |
-| Laptop/Desktop     | 1366px x 768px              | Most common laptop resolution                |
-| Laptop/Desktop     | 1440px x 900px              | MacBook Air, MacBook Pro 13"                 |
-| Laptop/Desktop     | 1920px x 1080px             | Full HD monitors, many laptops               |
-| Laptop/Desktop     | 2560px x 1440px             | 2K monitors, high-end laptops                |
-| Laptop/Desktop     | 3840px x 2160px             | 4K monitors, high-end desktops               |
 
 By implementing these responsive design techniques, you can ensure that your PWA provides an optimal user experience on any device, enhancing usability and engagement.
 
