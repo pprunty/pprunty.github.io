@@ -151,7 +151,7 @@ const urlsToCache = [
   '/images/favicon.ico',
   '/photography',
   '/newsletter',
-  // Add more routes as necessary
+  // Add more routes or static assets (images) as necessary
 ];
 
 // Check if the environment is production based on the domain
