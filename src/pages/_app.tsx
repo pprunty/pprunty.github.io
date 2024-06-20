@@ -37,9 +37,9 @@ const Container = styled.div`
     margin-right: auto;
   }
 
-    @media (max-width: 768px) {
-      padding: 14px; /* Smaller padding for devices below iPhone 11 size */
-    }
+  @media (max-width: 768px) {
+    padding: 14px; /* Smaller padding for devices below iPhone 11 size */
+  }
 
   @media (max-width: 375px) {
     padding: 8px; /* Smaller padding for devices below iPhone 11 size */
@@ -49,7 +49,7 @@ const Container = styled.div`
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
+      const handleLoad = () => {
         navigator.serviceWorker.register('/sw.js').then((registration) => {
           console.log('Service Worker registered with scope:', registration.scope);
         }).catch((error) => {
@@ -63,7 +63,19 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             }
           }
         });
-      });
+      };
+
+      const handleVisibilityChange = () => {
+        if (document.visibilityState === 'visible') {
+          handleLoad();
+        }
+      };
+
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+
+      return () => {
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+      };
     }
   }, []);
 

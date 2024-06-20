@@ -24,9 +24,7 @@ components can elevate your NextJS/ReactJS project to the next level:
 
 ## 1. Google Chrome Lighthouse
 
-If you do not already use Google Chrome Lighthouse, you should start right now. To use Lighthouse, open 
-your website in the Chrome Browser and enter inspect. Once in inspect mode, toggle the `>>` arrows in the top bar and 
-select "Lighthouse".
+If you do not already use Google Chrome Lighthouse, you should start now. To use Lighthouse, open your website in the Chrome Browser and enter inspect mode. Once in inspect mode, toggle the >> arrows in the top bar and select "Lighthouse".
 
 ![Optional Description](https://patrickprunty.com/images/lighthouse_location.png)
 
@@ -34,8 +32,314 @@ Once in the Lighthouse menu, you can toggle the button to "Analyze Page Load" wi
 Lighthouse report for your webpage. It is specific to the route on your webpage that you are on and details things such 
 as ...
 
-_Note:_ 
+In the Lighthouse menu, you can toggle the button to "Analyze Page Load" with your desired settings. This will generate a Lighthouse report for your webpage, specific to the route you are on, detailing performance metrics, accessibility scores, SEO recommendations, and more.
 
+![Optional Description](https://patrickprunty.com/images/lighthouse_report.png)
+
+Ensure you run analysis of your page in an incognito tab since Chrome extensions can interfere with the generatd report.
+
+_Note: Ensure your webpage is open in only one tab when using Lighthouse. Close other tabs and reload if you encounter any issues._
+
+
+## 2. Progressive Web Apps (PWAs) 
+
+In the Lighthouse tab, you will see a check if your webpage is optimized for PWA (Progressive Web App). A progressive web 
+app (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a 
+platform-specific app. In other words, users can use your website on an iPhone like it is a native application 
+downloaded from the Apple App Store. So if you want to enable ability to do this with your frontend application on mobile:
+
+![Optional Description](https://patrickprunty.com/gifs/pwa_mobile.gif)
+
+Or this on desktop devices:
+
+![Optional Description](https://patrickprunty.com/gifs/pwa_desktop.gif)
+
+You must optimize your application for PWA by doing the following:
+
+1. Ensure your site is served over HTTPS.
+2. Provide a web app manifest with icons, a theme color, and a start URL.
+3. Enable service workers to cache assets for offline use.
+4. Implement a responsive design for various screen sizes.
+
+### 1. Ensure your site is served over HTTPS
+
+To serve your site over HTTPs, you need to obtain an SSL/TLS certificate and configure your server to use it if it is
+running on the server side. If you are serving your site statically over AWS or Azure, you will need to configure your
+CDN (Content Delivery Network) to serve static assets over HTTPs and not HTTP. 
+
+_Note: If you use [GitHub Pages](https://pages.github.com/) to host your static site, it will automatically host your site over HTTPs._
+
+### 3. Provide a web app manifest with icons, a theme color, and a start URL
+
+To create a PWA manifest, you can use an online provider, such as [PWA Manifest Generator](https://www.simicart.com/manifest-generator.html/).
+This will generate a `manifest.json` and images of different sizes for your app icon.
+
+Place the manifest and images in your `public` directory of your NextJS or ReactJS project like so:
+
+```shell
+public/
+├── favicon.ico
+├── icon-192x192.png
+├── icon-196-maskable.png
+├── icon-256x256.png
+├── icon-384x384.png
+├── icon-512-maskable.png
+├── icon-512x512.png
+├── images
+│   ├── ...
+├── manifest.json
+└── sw.js
+```
+
+_Note: There is additional icons with `-maskable` suffix. To generate these maskable (rounded) icons, you can use this 
+provider [maskable.app](https://maskable.app/editor), where you can choose whether the icon should be a circle, rounded 
+rectangle, or something else._
+
+After generating your images and manifest, your `manifest.json` should like this:
+
+```json
+{
+  "theme_color": "#f0f0f0", // This is the overflow color for your PWA
+  "background_color": "#f0f0f0", // This is the background color for the body of your PWA
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "196x196",
+      "src": "icon-196-maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "icon-512-maskable.png",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "purpose": "any", // It is important at least one icon has "purpose": "any" in order to be a valid PWA
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "en-GB",
+  "name": "Patrick Prunty",
+  "short_name": "patrickprunty", // This will display as the short title for your PWA
+  "start_url": "https://patrickprunty.com",
+  "scope": "https://patrickprunty.com/",
+  "description": "Software, education, consultations & creative media." // This will be the description for your PWA
+}
+```
+
+Additionally, you must have the following tag: `<meta name="theme-color" content="#317EFB"/>` defined in the `<head>` of 
+your application for all routes/pages. This can be done in NextJS by adding this tag in the `<head>` section of the `_app.tsx` file, or 
+in the `App.tsx` file of your ReactJS application.
+
+_Note: If you are working on localhost and using Lighthouse to test PWA validity, you must change the `scope` and `start_url` fields in the `manifest.json` to `/`. Make sure to update this to your actual site URL in before deploying to production._
+
+### 3. Enable service workers to cache assets for offline use
+
+To enable a service worker for caching assets, you must additionally create a `sw.js` file in the `public` directory of 
+your app. This file will look something like this:
+
+```javascript
+const CACHE_NAME = 'my-nextjs-pwa-cache-v8';
+const urlsToCache = [
+  // Add route specific urls for your service worker to cache
+  '/',
+  '/manifest.json',
+  '/images/favicon.ico',
+  '/photography',
+  '/newsletter',
+  // Add more routes as necessary
+];
+
+// Check if the environment is production based on the domain
+const isProduction = self.location.hostname === 'patrickprunty.com' || self.location.hostname === "https://patrickprunty.com";
+
+// Cache static assets during the install phase
+self.addEventListener('install', (event) => {
+  if (isProduction) {
+    console.log('Service Worker: Installing and caching assets...');
+    event.waitUntil(
+      caches.open(CACHE_NAME).then((cache) => {
+        return Promise.all(
+          urlsToCache.map((url) => {
+            return cache.add(url).catch((error) => {
+              console.error(`Service Worker: Failed to cache ${url}:`, error);
+            });
+          })
+        );
+      }).then(() => {
+        console.log('Service Worker: Caching completed successfully.');
+        self.skipWaiting();
+      }).catch((error) => {
+        console.error('Service Worker: Caching failed during install:', error);
+      })
+    );
+  } else {
+    console.log('Service Worker: Skipping caching since environment is not production.');
+  }
+});
+
+// Clean up old caches during the activate phase
+self.addEventListener('activate', (event) => {
+  console.log('Service Worker: Activating and cleaning up old caches...');
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (!cacheWhitelist.includes(cacheName)) {
+            console.log(`Service Worker: Deleting cache: ${cacheName}`);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => {
+      console.log('Service Worker: Activation and cleanup completed.');
+      return self.clients.claim();
+    }).catch((error) => {
+      console.error('Service Worker: Activation failed:', error);
+    })
+  );
+});
+
+// Fetch handler to serve cached content
+self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
+  event.respondWith(
+    fetch(event.request).then((fetchResponse) => {
+      // Check if we received a valid response
+      if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
+        return fetchResponse;
+      }
+
+      // Clone the response
+      const responseToCache = fetchResponse.clone();
+
+      caches.open(CACHE_NAME).then((cache) => {
+        cache.put(event.request, responseToCache).catch((error) => {
+          console.error('Service Worker: Caching failed during fetch:', error);
+        });
+      });
+
+      return fetchResponse;
+    }).catch(() => {
+      // If fetch fails, try to get from cache
+      return caches.match(event.request).then((response) => {
+        if (response) {
+          return response;
+        }
+        // Fallback for offline use if both cache and network fail
+        return caches.match('/').then((fallbackResponse) => {
+          if (fallbackResponse) {
+            console.log('Service Worker: Serving fallback content for offline use.');
+          } else {
+            console.error('Service Worker: No fallback content available.');
+          }
+          return fallbackResponse;
+        });
+      });
+    })
+  );
+});
+
+self.addEventListener('controllerchange', () => {
+  console.log('Service Worker: Controller changed. A new service worker has taken control.');
+  self.clients.matchAll().then(clients => {
+    clients.forEach(client => client.postMessage({ type: 'NEW_SW_AVAILABLE' }));
+  });
+});
+```
+
+_Note: There is a check in this `sw.js` to only run if isProduction is `true`. This check is made against the URL of my
+site in production `patrickprunty.com`. Make sure to update this to match your site's URL._
+
+Once the `sw.js` code is added, you must register the service worker for use in your app. To do so, add this `useEffect`
+hook in your `_app.tsx` or `App.tsx` file:
+
+```javascript
+import React, { useEffect } from 'react';
+import { AppProps } from 'next/app';
+
+const App = ({ Component, pageProps }: AppProps) => {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      const handleLoad = () => {
+        navigator.serviceWorker.register('/sw.js').then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        }).catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
+
+        navigator.serviceWorker.addEventListener('message', (event) => {
+          if (event.data && event.data.type === 'NEW_SW_AVAILABLE') {
+            if (confirm('A new version of this site is available. Reload to update?')) {
+              window.location.reload();
+            }
+          }
+        });
+      };
+
+      const handleVisibilityChange = () => {
+        if (document.visibilityState === 'visible') {
+          handleLoad();
+        }
+      };
+
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+
+      return () => {
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+      };
+    }
+  }, []);
+
+  return (
+    <>
+      <Head>
+        <title>Patrick Prunty</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Software, education, blog, YouTube creative media & consultations." />
+        <meta property="og:image" content="/images/favicon.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <link rel="icon" href="/images/favicon.png" />
+        <meta name="theme-color" content="#F0F0F0" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
+};
+
+export default App;
+```
+
+We have this `useEffect` hook because ...
+
+
+## 4. Implement a responsive design for various screen sizes
 
 
 ## Caching Backend Queries with React Query
@@ -151,7 +455,7 @@ Next, register the service worker in your `_app.js` file:
 ```javascript
 import { useEffect } from 'react';
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
     useEffect(() => {
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js').then(registration => {
@@ -165,7 +469,7 @@ function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />;
 }
 
-export default MyApp;
+export default App;
 ```
 
 **Pros:**

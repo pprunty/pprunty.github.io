@@ -1,20 +1,13 @@
 const CACHE_NAME = 'my-nextjs-pwa-cache-v8';
 const urlsToCache = [
   '/',
+  '/photography',
+  '/newsletter',
+  '/project/jigsaw-presents',
+  '/project/jigsaw-academy',
   '/manifest.json',
   '/images/favicon.ico',
-  '/consultations',
-  '/photography',
-  '/videos',
-  '/project/jigsaw-academy',
-  '/project/jigsaw-presents',
-  // Add other static assets and routes to cache
-  '/blog/ambient-writing',
-  '/blog/daydream',
-  '/blog/page/1',
-  '/blog/page/2',
-  '/blog/page/3',
-  // Add more blog pages and other dynamic routes as necessary
+  // Add more routes as necessary
 ];
 
 // Check if the environment is production based on the domain

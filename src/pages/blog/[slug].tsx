@@ -352,7 +352,7 @@ const Content = styled.div`
   }
 
   a {
-    color: #0070f3;
+    color: #D04CFA;
     text-decoration: none;
 
     &:hover {
