@@ -7,7 +7,7 @@ artwork: "Apple Sonoma"
 ---
 
 Recently, I transformed my personal website, [patrickprunty.com](https://patrickprunty.com), into a Progressive Web App (PWA). This allows users to access my site on any device — iPhone, MacBook, Android, or Windows — as if it were a native app downloaded from their device's app store.
-If you want to enable similar functionality for your NextJS/ReactJS application, allowing users to download it on their devices:
+If you want to enable similar functionality for your NextJS/ReactJS application, allowing users to download it on their mobile devices like so:
 
 ![Optional Description](https://patrickprunty.com/gifs/pwa_mobile.gif)
 
@@ -15,7 +15,7 @@ Or on Desktop devices, like so:
 
 ![Optional Description](https://patrickprunty.com/gifs/pwa_desktop.gif)
 
-This guide will cover the essential steps to transform your NextJS/ReactJS application into a PWA. We will start with using Google Chrome Lighthouse for performance auditing to ensure PWA compliance, and then implement service workers for offline caching to enhance functionality and user experience.
+Follow the instructions in this guide which will cover the essential steps to transform your NextJS/ReactJS application into a PWA. We will start with using Google Chrome Lighthouse for performance auditing to ensure PWA compliance, and then implement service workers for offline caching to enhance functionality and user experience.
 
 ## Google Chrome Lighthouse
 
