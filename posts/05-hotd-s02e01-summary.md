@@ -42,7 +42,7 @@ should keep in mind as the season unfolds. This young Lord of Winterfell may yet
 of Dragons.
 
 <figure>
-  <img src="https://patrickprunty.com/images/cregan-stark.webp" alt="Image description here">
+  <img src="https://patrickprunty.com/images/cregan-stark.png" alt="Image description here">
   <figcaption>Luke Targaryen and Cregan Stark at The Wall.</figcaption>
 </figure>
 
