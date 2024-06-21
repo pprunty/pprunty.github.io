@@ -64,7 +64,7 @@ as a voice of reason amidst the chaos. Daemon, driven by vengeance, instead insi
 
 <figure>
   <img src="https://patrickprunty.com/images/daemon-son-for-a-son.png" alt="Image description here">
-  <figcaption>King Viserys on his deathbed, S01E10.</figcaption>
+  <figcaption>Daemon and Rhaenys Targaryen.</figcaption>
 </figure>
 
 This sentiment echoes Alicent's demands in the first season when she called for Lucerys to be punished for taking
@@ -120,7 +120,7 @@ conflict.
 
 <figure>
   <img src="https://patrickprunty.com/images/aemond-eye.jpeg" alt="Image description here">
-  <figcaption>Rhaenyra at her small council on Dragonstone.</figcaption>
+  <figcaption>Rhaenyra at her small council meeting on Dragonstone.</figcaption>
 </figure>
 
 ...
