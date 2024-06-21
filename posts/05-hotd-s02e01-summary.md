@@ -6,7 +6,8 @@ description: "A brief and detailed summary of House of the Dragon Season 2, Epis
 artwork: "HBO"
 ---
 
-House of the Dragon returns with its season 2 premiere, plunging viewers back into the divided Targaryen dynasty. The
+House of the Dragon returns with its season 2 premiere, plunging viewers back into the divided Targaryen dynasty and
+_the Dance of the Dragons_. The
 episode focuses on the two Targaryen factions: the Blacks, led by Rhaenyra and Daemon Targaryen, and the Greens, headed
 by Alicent and Otto Hightower, who support King Aegon II.
 
@@ -112,7 +113,8 @@ Later in the episode, a drunken Aemond with his posse of shithead knights, is ov
 
 > "My brother is like a dog. He will..."
 
-This statement hints at the possibility of a power shift, with either Aemond or Larys replacing Otto Hightower as Hand of the King, offering more pragmatic than
+This statement hints at the possibility of a power shift, with either Aemond or Larys replacing Otto Hightower as Hand
+of the King, offering more pragmatic than
 dogmatic counsel in their war efforts. Aemond's one-eyed appearance, a result of his childhood fight with Lucerys,
 serves as a constant reminder of the bad blood between the Green and Black factions, and the personal stakes in this
 conflict.
