@@ -333,6 +333,7 @@ const Date = styled.div`
   }
 `;
 
+
 const Content = styled.div`
   font-size: 20px;
   line-height: 1.6;
@@ -379,6 +380,23 @@ const Content = styled.div`
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  figure {
+    text-align: center;
+    margin: 20px 0;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 8px;
+      text-align: center;
     }
   }
 

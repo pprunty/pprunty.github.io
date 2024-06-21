@@ -9,11 +9,17 @@ artwork: "Apple Sonoma"
 Recently, I transformed my personal website, [patrickprunty.com](https://patrickprunty.com), into a Progressive Web App (PWA). This allows users to access my site on any device &mdash; iPhone, MacBook, Android, or Windows &mdash; as if it were a native app downloaded from their device's app store.
 If you want to enable similar functionality for your NextJS/ReactJS application, allowing users to download it on their mobile devices like so:
 
-![Optional Description](https://patrickprunty.com/gifs/pwa_mobile.gif)
+<figure>
+  <img src="https://patrickprunty.com/gifs/pwa_mobile.gif" alt="Image description here">
+  <figcaption>PWA on Mobile Devices</figcaption>
+</figure>
 
 Or on Desktop devices, like so:
 
-![Optional Description](https://patrickprunty.com/gifs/pwa_desktop.gif)
+<figure>
+  <img src="https://patrickprunty.com/gifs/pwa_desktop.gif" alt="Image description here">
+  <figcaption>PWA on Desktop Devices</figcaption>
+</figure>
 
 Follow the instructions in this guide which will cover the essential steps to transform your NextJS/ReactJS application into a PWA. We will start with using Google Chrome Lighthouse for performance auditing to ensure PWA compliance, and then implement service workers for offline caching to enhance functionality and user experience.
 
@@ -23,11 +29,17 @@ Start using Google Chrome Lighthouse to audit your website's performance, access
 
 1. **Open Lighthouse**: In Google Chrome, navigate to your website and enter inspect mode (right-click on the page and select "Inspect" or press `Ctrl+Shift+I`). Click the `>>` arrows in the top bar and select "Lighthouse".
 
-   ![Lighthouse Location](https://patrickprunty.com/images/lighthouse_location.png)
+   <figure>
+     <img src="https://patrickprunty.com/images/lighthouse_location.png" alt="Image description here">
+     <figcaption>Google Chrome Lighthouse Tab Location</figcaption>
+   </figure>
 
 2. **Run an Audit**: In the Lighthouse tab, click "Generate report" to analyze your page. Lighthouse will evaluate the specific route you are on and provide detailed insights on performance metrics, accessibility scores, SEO recommendations, and more.
 
-   ![Lighthouse Report](https://patrickprunty.com/images/lighthouse_report.png)
+   <figure>
+     <img src="https://patrickprunty.com/images/lighthouse_report.png" alt="Image description here">
+     <figcaption>Google Chrome Lighthouse Report Audit</figcaption>
+   </figure>
 
 3. **Tips for Accurate Results**: Run the analysis in an incognito tab to avoid interference from Chrome extensions.
 
