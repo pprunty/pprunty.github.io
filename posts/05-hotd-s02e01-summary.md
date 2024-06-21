@@ -118,6 +118,10 @@ dogmatic counsel in their war efforts. Aemond's one-eyed appearance, a result of
 serves as a constant reminder of the bad blood between the Green and Black factions, and the personal stakes in this
 conflict.
 
+<figure>
+  <img src="https://patrickprunty.com/images/aemond-eye.jpeg" alt="Image description here">
+  <figcaption>Rhaenyra at her small council on Dragonstone.</figcaption>
+</figure>
 
 ...
 
