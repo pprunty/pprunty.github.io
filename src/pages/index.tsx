@@ -155,7 +155,7 @@ const Home: React.FC = () => {
       },
         {
           title: "thelastmanstanding.io 🔜",
-          description: "Launching this year in Ireland and the UK, thelastmanstanding.io is a digital platform that enables sweepstake and last-man-standing competitions among friend groups and sports fans. Enabling digital payments, automated email notifications, and custom wagers. Covering major football events such as the FIFA World Cup, European Championship, and English Premier League with future expansion plans to incorporate additional international Football tournaments, international Rugby and Cricket competitions.",
+          description: "Launching this year in Ireland and the UK, thelastmanstanding.io is a digital platform that enables sweepstake and last-man-standing competitions among friend groups and sports fans. Enabling digital payments, automated email notifications and custom wagers. Covering major football events such as the FIFA World Cup, European Championship, and English Premier League with future expansion plans to incorporate additional international Football tournaments, international Rugby and Cricket competitions.",
 //           description: "A platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. With a growing community, future expansion plans aim to incorporate more international Football tournaments, as well as international Rugby and Cricket competitions.",
           imageUrl: "/images/thelastmanstanding.png",
           link: "https://thelastmanstanding.io",
