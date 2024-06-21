@@ -342,6 +342,7 @@ const Content = styled.div`
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
   color: #333;
 
+  /* Additional styles for specific elements */
   h2, h3, h4, h5 {
     margin-top: 1.2em;
     margin-bottom: 0.5em;
@@ -352,7 +353,7 @@ const Content = styled.div`
     margin-bottom: 1em;
   }
 
-    blockquote {
+  blockquote {
       font-style: italic;
       background-color: inherit;
       border-left: 4px solid #333;
@@ -360,19 +361,19 @@ const Content = styled.div`
       padding: 0.5em 20px;
       quotes: "\\201C""\\201D""\\2018""\\2019";
 
-      &:before {
-        color: ##b3b3b3;
-        content: open-quote;
-        font-size: 3em;
-        line-height: 0.1em;
-        margin-right: 0.25em;
-        vertical-align: -0.4em;
-      }
-
-      p {
-        display: inline;
-      }
+    &:before {
+      color: ##b3b3b3;
+      content: open-quote;
+      font-size: 3em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
     }
+
+    p {
+      display: inline;
+    }
+  }
 
   a {
     color: #D04CFA;
@@ -418,10 +419,20 @@ const Content = styled.div`
   }
 
   b, strong {
-//       font-family: "Museo Sans", sans-serif; // Updated font-family for bold/strong text
-      font-weight: bold;
-    }
+    font-weight: bold;
+  }
 
+  /* Styles for TikTok embed container */
+  .tiktok-embed {
+    max-width: 605px;
+    background-color: inherit;
+    min-width: 325px;
+    margin: 20px auto; /* Adjust margin as needed */
+    /* Add any additional TikTok embed specific styles here */
+    quotes: none;
+  }
+
+  /* Responsive adjustments */
   @media (max-width: 768px) {
     font-size: 20px;
     img {
@@ -443,7 +454,6 @@ const Content = styled.div`
   }
 
   code {
-//  font-family: "Courier New", Courier, monospace; // Change this to your desired font-family for inline code
     border-radius: 3px;
     font-size: 15px;
   }
