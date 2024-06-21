@@ -6,7 +6,7 @@ description: "A manifesto for creative writing by Patrick Prunty."
 artwork: "Wang Haiyang"
 ---
 
-(THIS IS A DRAFT)
+(DRAFT)
 
 [//]: # (> `ambient` &mdash; "encompassing on all sides," from Latin ambientem, present participle of ambire "to go around, )
 
