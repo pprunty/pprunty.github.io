@@ -11,7 +11,7 @@ episode focuses on the two Targaryen factions: the Blacks, led by Rhaenyra and D
 by Alicent and Otto Hightower, who support King Aegon II.
 
 The narrative resumes mere days after the season 1 finale. King Viserys Targaryen has passed away, and Otto Hightower,
-the Hand of the King, has successfully maneuvered with the small council to place his grandson, Aegon II, on the Iron
+the Hand of the King, has successfully schemed with the small council to place his grandson, Aegon II, on the Iron
 Throne. This action directly opposes Viserys' wish for his daughter, Rhaenyra Targaryen, to succeed him.
 
 Alicent Hightower, once Rhaenyra's close confidante, misinterprets her husband's dying words as a desire for their son,
@@ -33,7 +33,7 @@ However, Cregan Stark emphasizes the importance of defending the realm against t
 Luke Targaryen only 2,000 seasoned veterans, or "greybeards", to support Rhaenyra's claim against the Greens. Their
 discussion is cut short when a letter arrives at The Wall, bearing grim news: Luke's brother, Lucerys, and his dragon
 Arrax have been slain by his uncle Aemond Targaryen and the formidable dragon Vhagar, the largest and deadliest of the
-Targaryen dragons.\
+Targaryen dragons.
 
 Despite his youth, Cregan Stark demonstrates a political acumen that hints at a pivotal role to come. His measured
 response to Luke Targaryen, balancing Northern interests with realm-wide concerns, suggests a complexity that viewers
@@ -56,7 +56,7 @@ unparalleled naval power, proves crucial to Rhaenyra's cause in this endeavor.
 </figure>
 
 At Dragonstone, Rhaenyra desperately searches the surrounding areas for signs of her son, Lucerys. Daemon demands
-immediate revenge on King's Landing, but Rhaenys restrains him, reminding him that he is not the king, and they must
+immediate revenge on King's Landing, but Rhaenys restrains him, reminding him that _he_ is not the king, and they must
 support Rhaenyra in her grief. Rhaenys, having lost her own children and once passed over for the throne herself, acts
 as a voice of reason amidst the chaos. Daemon, driven by vengeance, instead insists he have:
 
@@ -108,19 +108,18 @@ while seemingly in Aegon's interest, also positions Larys as a potential alterna
 mysterious circumstances surrounding the fire at Harrenhal that killed Larys's family cast a long shadow over his
 machinations, hinting at the lengths he might go to secure power.
 
-Later in the episode, a drunken Aemond comments on his brother:
+Later in the episode, a drunken Aemond with his posse of shithead knights, is overheard saying,
 
 > "My brother is like a dog. He will..."
 
-This cryptic statement suggests that Aegon may be easily led, potentially by Larys or even by Aemond himself. It hints
-at the possibility of a power shift, with Aemond or Larys replacing Otto Hightower as Hand, offering more pragmatic than
+This statement hints at the possibility of a power shift, with either Aemond or Larys replacing Otto Hightower as Hand of the King, offering more pragmatic than
 dogmatic counsel in their war efforts. Aemond's one-eyed appearance, a result of his childhood fight with Lucerys,
 serves as a constant reminder of the bad blood between the Green and Black factions, and the personal stakes in this
 conflict.
 
 <figure>
   <img src="https://patrickprunty.com/images/aemond-eye.jpeg" alt="Image description here">
-  <figcaption>Rhaenyra at her small council meeting on Dragonstone.</figcaption>
+  <figcaption>Aemond's eye, cut out by Lucerys Targaryen in the first season when they were children.</figcaption>
 </figure>
 
 ...
