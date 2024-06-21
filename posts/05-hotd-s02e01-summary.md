@@ -11,39 +11,39 @@ _the Dance of the Dragons_. The
 episode focuses on the two Targaryen factions: the Blacks, led by Rhaenyra and Daemon Targaryen, and the Greens, headed
 by Alicent and Otto Hightower, who support King Aegon II.
 
-The narrative resumes mere days after the season 1 finale. King Viserys Targaryen has passed away, and Otto Hightower,
+The narrative resumes mere days after the season 1 finale. the former king, Viserys Targaryen has passed away, and Otto Hightower,
 the Hand of the King, has successfully schemed with the small council to place his grandson, Aegon II, on the Iron
 Throne. This action directly opposes Viserys' wish for his daughter, Rhaenyra Targaryen, to succeed him.
 
-Alicent Hightower, once Rhaenyra's close confidante, misinterprets her husband's dying words as a desire for their son,
+Alicent Hightower, once Rhaenyra's closest friend, misinterprets her husband's dying words as a desire for their son,
 Aegon II, to rule. In reality, the delirious Viserys was speaking of Aegon I, Westeros' first ruler, believing he was
 addressing Rhaenyra, not Alicent.
 
 <figure>
   <img src="https://patrickprunty.com/images/viserys-death.jpeg" alt="Image description here">
-  <figcaption>Alicent with King Viserys on his deathbed in the season 1 finale.</figcaption>
+  <figcaption>Alicent with her husband King Viserys on his deathbed in the season 1 finale.</figcaption>
 </figure>
 
-The episode begins with an introduction to the Stark household, setting a scene at the Wall where Luke Targaryen meets
-with Lord Cregan Stark of Winterfell. Luke reminds Lord Stark of the oath his father swore to support Rhaenyra's claim
-to the Iron Throne. Lord Stark, upholding the Stark family's reputation for loyalty and honor, reminds Luke:
+The episode begins with an introduction to the Stark household, setting a scene at The Wall where Prince Jacaerys Targaryen meets
+with Lord Cregan Stark of Winterfell. Jacaerys reminds Lord Stark of the oath his father swore to support Rhaenyra's claim
+to the Iron Throne. Lord Stark, upholding the Stark family's reputation for loyalty and honor, reminds Jacaerys:
 
-> The Starks do not forget their oaths easily."
+> The Starks do not forget their oaths, my prince."
 
 However, Cregan Stark emphasizes the importance of defending the realm against threats from beyond The Wall, offering
-Luke Targaryen only 2,000 seasoned veterans, or "greybeards", to support Rhaenyra's claim against the Greens. Their
-discussion is cut short when a letter arrives at The Wall, bearing grim news: Luke's brother, Lucerys, and his dragon
-Arrax have been slain by his uncle Aemond Targaryen and the formidable dragon Vhagar, the largest and deadliest of the
+Jacaerys Targaryen only 2,000 seasoned veterans, or "greybeards", to support Rhaenyra's claim against the Greens. Their
+discussion is cut short when a letter arrives at The Wall, bearing grim news: Jacaerys's brother, Lucerys, and his dragon
+Arrax have been slain by his uncle Aemond Targaryen and his formidable dragon Vhagar, the largest and deadliest of the
 Targaryen dragons.
 
 Despite his youth, Cregan Stark demonstrates a political acumen that hints at a pivotal role to come. His measured
-response to Luke Targaryen, balancing Northern interests with realm-wide concerns, suggests a complexity that viewers
+response to Jacaerys Targaryen, balancing Northern interests with realm-wide concerns, suggests a complexity that viewers
 should keep in mind as the season unfolds. This young Lord of Winterfell may yet prove to be a key player in the Dance
 of Dragons.
 
 <figure>
   <img src="https://patrickprunty.com/images/cregan-stark.png" alt="Image description here">
-  <figcaption>Luke Targaryen and Cregan Stark at The Wall.</figcaption>
+  <figcaption>Jacaerys Targaryen and Cregan Stark at The Wall.</figcaption>
 </figure>
 
 The episode then shifts between King's Landing, where the Greens hold power, and Dragonstone, the Blacks' stronghold.
