@@ -336,7 +336,7 @@ export default App;
 
 The `useEffect` hook ensures the service worker is registered when the page loads and re-registers it whenever the page becomes visible. This approach improves the reliability of the service worker registration, especially when users navigate away from and back to the page.
 
-## 4. Implement a responsive design for various screen sizes
+### 4. Implement a responsive design for various screen sizes
 
 _Note: If your site is already responsive for various screen sizes, you can skip this section..._
 

@@ -379,8 +379,9 @@ const Content = styled.div`
   /* Additional styles for specific elements */
   h2, h3, h4, h5 {
     margin-top: 1.2em;
-    margin-bottom: 0.5em;
+//     margin-bottom: 0.5em;
     font-family: "Helvetica Neue", Arial, sans-serif;
+    margin-block-end: -0.5em;
   }
 
   p {
@@ -437,7 +438,7 @@ const Content = styled.div`
 
   img {
     max-width: 60%;
-    max-height: 600px;
+    max-height: 400px;
     height: auto;
     margin: 0 auto;  // Adds automatic margins on both sides, centering the image
     display: block;  // Ensures the image is aligned properly without extra space around
@@ -476,6 +477,14 @@ const Content = styled.div`
       display: block;
     }
   }
+
+  ol li p {
+    margin-block-start: 0em;
+  }
+
+  ol li p:first-child {
+      margin-block-end: 0em;
+    }
 
   @media (max-width: 480px) {
     font-size: 18px;
