@@ -28,12 +28,14 @@ funding, Anthropic's diverse investments signal strong confidence in its potenti
 
 So what sets Claude apart from other Large Language Model "clones"?
 
-The first thing I noticed was the distinct branding and color scheme that sets Claude apart from ChatGPT. While both
+The first thing I noticed was the distinct branding, color scheme and use of whimsical yet elegant stenciled figures
+that sets Claude apart from ChatGPT. While both
 offer a dark mode, Claude embraces a more sophisticated palette of neutral tones. The interface features subtle shades
 of black, white, and brown, creating a refined aesthetic. Claude's choice of a serif font, reminiscent of Times New
 Roman, adds a touch of classical elegance, contrasting with ChatGPT's more modern sans-serif typeface. This thoughtful
 design not only appeals to the eye but also conveys a sense of professionalism and timelessness that aligns well with
-Anthropic's approach to AI development.
+Anthropic's approach to AI development. In summary, Claude feels playful, but professional, whilst ChatGPT feels
+practical and original.
 
 <figure>
   <img src="https://patrickprunty.com/gifs/claude-prompt.gif" alt="Image description here">
@@ -59,3 +61,9 @@ This PWA capability sets Claude apart from OpenAI's ChatGPT, which currently lac
 The ability to use Claude as a desktop app enhances accessibility and integrates seamlessly into users' workflows. For
 those interested in the technical aspects of PWAs, I have written a detailed guide
 on [How to Make Your NextJS/ReactJS Application a Progressive Web App (PWA)](https://patrickprunty.com/blog/04-nextjs-pwa).
+
+
+<figure>
+  <img src="https://patrickprunty.com/images/articles/claude/gpt_claude.webp" alt="Image description here">
+  <figcaption>Branding differences between ChatGPT and Claude.</figcaption>
+</figure>
