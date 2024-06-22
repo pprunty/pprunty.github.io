@@ -45,15 +45,17 @@ privacy and focus &mdash; no more worrying about whether your colleagues seen yo
 'Ideas for new sex positions' when you last shared your screen, _hooray!_. It's a small but significant improvement in
 user experience that showcases Anthropic's attention to practical details.
 
-Claude is also a Progressive Web App (PWA), meaning, you can download and use Claude on Desktop as though it is a native
-app downloaded from your device's App Store. To do so, you can toggle the download button in the search bar using Google
-Chrome:
+One of Claude's standout features is its availability as a Progressive Web App (PWA). This functionality allows users to
+install Claude on their desktop, providing a native app-like experience without the need for traditional app store
+downloads. To take advantage of this feature in Google Chrome, simply click the download button in the browser's address
+bar:
 
 <figure>
   <img src="https://patrickprunty.com/images/articles/claude/pwa_claude.png" alt="Image description here">
   <figcaption>Download button for Progressive Web Apps (PWAs) on Google Chrome.</figcaption>
 </figure>
 
-This is a feature that OpenAI have yet to capitalize on for their ChatGPT models. For more details on Progressive Web
-Apps, I previously wrote an article
-detailing [How to Make Your NextJS/ReactJS Application a Progressive Web App (PWA)](https://patrickprunty.com/blog/04-nextjs-pwa).
+This PWA capability sets Claude apart from OpenAI's ChatGPT, which currently lacks this convenient installation option.
+The ability to use Claude as a desktop app enhances accessibility and integrates seamlessly into users' workflows. For
+those interested in the technical aspects of PWAs, I've written a detailed guide
+on [How to Make Your NextJS/ReactJS Application a Progressive Web App (PWA)](https://patrickprunty.com/blog/04-nextjs-pwa).
