@@ -11,7 +11,7 @@ _the Dance of the Dragons_. The
 episode focuses on the two Targaryen factions: the Blacks, led by Rhaenyra and Daemon Targaryen, and the Greens, headed
 by Alicent and Otto Hightower, who support King Aegon II.
 
-The narrative resumes mere days after the season 1 finale. the former king, Viserys Targaryen has passed away, and Otto Hightower,
+The narrative resumes just days after the season 1 finale. the former king, Viserys Targaryen has passed away, and Otto Hightower,
 the Hand of the King, has successfully schemed with the small council to place his grandson, Aegon II, on the Iron
 Throne. This action directly opposes Viserys' wish for his daughter, Rhaenyra Targaryen, to succeed him.
 
@@ -80,7 +80,7 @@ eyes, she addresses her small council, speaking her only line in the entire epis
 
 <figure>
   <img src="https://patrickprunty.com/images/tears.png" alt="Image description here">
-  <figcaption>Rhaenyra at her small council on Dragonstone.</figcaption>
+  <figcaption>Rhaenyra at her small council meeting on Dragonstone.</figcaption>
 </figure>
 
 In King's Landing, King Aegon II seeks to bring his young son, Jaehaerys, to a small council meeting. While searching
@@ -135,6 +135,14 @@ emotions – vengeance achieved, but at a terrible cost.
 
 We are treated to wrenching sounds as King Aaegon II's heir to the Iron Throne and child, Lucerys's head is cut from his
 body by the rat snatchers.
+
+
+The next episode sets up a spotlight for King Aaegon II to make a play, until now he has displayed his disinterest in the 
+_Game of Thrones_, however, the murder of his son, __, at the hands of the assassins Blood and Cheese, at the command of 
+Daemon Targaryen, 
+
+Will the two factions continue in their one-for-one approach, an eye for an eye, a son for a son, a dragon for a dragon?
+Or will there be an unexpected alliance between the characters on each side of the Targaryen faction who prefer to prevade war.
 
 As the credits roll, viewers are left with a stark reminder of George R.R. Martin's words: "There are no heroes... in
 life, the monsters win." The Dance of the Dragons has truly begun, and no one – not even innocent children – is safe
