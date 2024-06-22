@@ -423,8 +423,10 @@ const Content = styled.div`
     margin: 20px 0;
 
     img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
+      max-height: 500px;
+      object-fit: cover;
     }
 
     figcaption {
@@ -435,13 +437,13 @@ const Content = styled.div`
     }
   }
 
-  img {
-    max-width: 60%;
-    max-height: 600px;
-    height: auto;
-    margin: 0 auto;  // Adds automatic margins on both sides, centering the image
-    display: block;  // Ensures the image is aligned properly without extra space around
-  }
+//   img {
+//     max-width: 60%;
+//     max-height: 600px;
+//     height: auto;
+//     margin: 0 auto;  // Adds automatic margins on both sides, centering the image
+//     display: block;  // Ensures the image is aligned properly without extra space around
+//   }
 
   pre {
     background: inherit;
