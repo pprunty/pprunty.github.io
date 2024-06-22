@@ -26,7 +26,7 @@ customers. Google has also committed $2 billion in investment. This $6.58 billio
 company. In comparison, OpenAI has received about $11 billion, mostly from Microsoft. While OpenAI leads in total
 funding, Anthropic's diverse investments signal strong confidence in its potential to disrupt the AI landscape.
 
-So what sets Claude apart from other Large Language Model "clones"?
+So what sets Claude apart from other Large Language Models?
 
 Claude's distinct branding immediately sets it apart from ChatGPT. Its interface features a sophisticated palette of
 neutral tones and whimsical stenciled figures, creating a refined yet playful aesthetic. Claude's serif font adds
@@ -44,7 +44,9 @@ privacy and focus &mdash; no more worrying about whether your colleagues seen yo
 'Ideas for new sex positions' when you last shared your screen, _hooray!_ It is a small but significant improvement in
 user experience that showcases Anthropic's attention to practical details.
 
-Another thing you will notice is how Claude expands on the reasoning for its response ...
+Another thing you will notice is how Claude expands on the reasoning for its response. If you ask Claude to make an email 
+sound more professional, it will re-write the email for you and add listed points reasoning why the email is more professional.
+This
 
 One of Claude's standout features is its availability as a Progressive Web App (PWA). This functionality allows users to
 install Claude on their desktop, providing a native app-like experience without the need for traditional app store
@@ -60,7 +62,6 @@ This PWA capability sets Claude apart from OpenAI's ChatGPT, which currently lac
 The ability to use Claude as a desktop app enhances accessibility and integrates seamlessly into users' workflows. For
 those interested in the technical aspects of PWAs, I have written a detailed guide
 on [How to Make Your NextJS/ReactJS Application a Progressive Web App (PWA)](https://patrickprunty.com/blog/04-nextjs-pwa).
-
 
 <figure>
   <img src="https://patrickprunty.com/images/articles/claude/gpt_claude.webp" alt="Image description here">
