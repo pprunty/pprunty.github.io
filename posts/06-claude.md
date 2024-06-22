@@ -67,3 +67,9 @@ on [How to Make Your NextJS/ReactJS Application a Progressive Web App (PWA)](htt
   <img src="https://patrickprunty.com/images/articles/claude/gpt_claude.webp" alt="Image description here">
   <figcaption>Branding differences between ChatGPT and Claude.</figcaption>
 </figure>
+
+
+___ cost vs ChatGPT 
+
+__performance difference (file upload/paste not scrolling like crazy)
+like an old fashioned windown blind that you have to jerk to make go up
