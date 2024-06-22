@@ -7,7 +7,8 @@ artwork: "Anthropic"
 ---
 
 It is sometimes easier to show rather than tell, so here is [claude.ai](https://claude.ai), Anthropic A.I's latest Large
-Language Model (LLM), similar to ChatGPT but offering differences in user experience and performance.
+Language Model (LLM). Claude is similar to ChatGPT but offers subtle differences in user experience and performance that 
+leave a lasting impression.
 
 You might assume Anthropic and their Claude 3.5 Sonnet model have French origins given the name. However, that is not
 the case. _Claude_ is actually named after [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon), widely
