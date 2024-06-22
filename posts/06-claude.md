@@ -42,7 +42,7 @@ Anthropic's approach to AI development.
 
 By default, the Claude prompt is positioned centrally, with previous conversations hidden. This design choice enhances
 privacy and focus &mdash; no more worrying about whether your colleagues seen your last conversation titled,
-'Ideas for new sex positions' when you last shared your screen, _hooray!_. It's a small but significant improvement in
+'Ideas for new sex positions' when you last shared your screen, _hooray!_ It is a small but significant improvement in
 user experience that showcases Anthropic's attention to practical details.
 
 One of Claude's standout features is its availability as a Progressive Web App (PWA). This functionality allows users to
@@ -57,5 +57,5 @@ bar:
 
 This PWA capability sets Claude apart from OpenAI's ChatGPT, which currently lacks this convenient installation option.
 The ability to use Claude as a desktop app enhances accessibility and integrates seamlessly into users' workflows. For
-those interested in the technical aspects of PWAs, I've written a detailed guide
+those interested in the technical aspects of PWAs, I have written a detailed guide
 on [How to Make Your NextJS/ReactJS Application a Progressive Web App (PWA)](https://patrickprunty.com/blog/04-nextjs-pwa).

@@ -390,13 +390,13 @@ const Content = styled.div`
   blockquote {
       font-style: italic;
       background-color: inherit;
-      border-left: 4px solid #333;
+      border-left: 4px solid #666;
       margin: 1.5em 10px;
       padding: 0.5em 20px;
       quotes: "\\201C""\\201D""\\2018""\\2019";
-
+    color: #666;
     &:before {
-      color: ##b3b3b3;
+      color: ##666;
       content: open-quote;
       font-size: 3em;
       line-height: 0.1em;
