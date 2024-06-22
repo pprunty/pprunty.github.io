@@ -28,14 +28,11 @@ funding, Anthropic's diverse investments signal strong confidence in its potenti
 
 So what sets Claude apart from other Large Language Model "clones"?
 
-The first thing I noticed was the distinct branding, color scheme and use of whimsical yet elegant stenciled figures
-that sets Claude apart from ChatGPT. While both
-offer a dark mode, Claude embraces a more sophisticated palette of neutral tones. The interface features subtle shades
-of black, white, and brown, creating a refined aesthetic. Claude's choice of a serif font, reminiscent of Times New
-Roman, adds a touch of classical elegance, contrasting with ChatGPT's more modern sans-serif typeface. This thoughtful
-design not only appeals to the eye but also conveys a sense of professionalism and timelessness that aligns well with
-Anthropic's approach to AI development. In summary, Claude feels playful, but professional, whilst ChatGPT feels
-practical and original.
+Claude's distinct branding immediately sets it apart from ChatGPT. Its interface features a sophisticated palette of
+neutral tones and whimsical stenciled figures, creating a refined yet playful aesthetic. Claude's serif font adds
+classical elegance, contrasting with ChatGPT's modern sans-serif style. This thoughtful design conveys professionalism
+while maintaining approachability, aligning with Anthropic's AI philosophy. Claude feels playful yet
+professional, whilst ChatGPT feels practical and original.
 
 <figure>
   <img src="https://patrickprunty.com/gifs/claude-prompt.gif" alt="Image description here">
@@ -46,6 +43,8 @@ By default, the Claude prompt is positioned centrally, with previous conversatio
 privacy and focus &mdash; no more worrying about whether your colleagues seen your last conversation titled,
 'Ideas for new sex positions' when you last shared your screen, _hooray!_ It is a small but significant improvement in
 user experience that showcases Anthropic's attention to practical details.
+
+Another thing you will notice is how Claude expands on the reasoning for its response ...
 
 One of Claude's standout features is its availability as a Progressive Web App (PWA). This functionality allows users to
 install Claude on their desktop, providing a native app-like experience without the need for traditional app store
