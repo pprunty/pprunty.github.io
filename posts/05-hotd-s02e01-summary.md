@@ -24,6 +24,8 @@ addressing Rhaenyra, not Alicent.
   <figcaption>Alicent with her husband King Viserys on his deathbed in the season 1 finale.</figcaption>
 </figure>
 
+## The North Remembers
+
 The episode begins with an introduction to the Stark household, setting a scene at The Wall where Prince Jacaerys Targaryen meets
 with Lord Cregan Stark of Winterfell. Jacaerys reminds Lord Stark of the oath his father swore to support Rhaenyra's claim
 to the Iron Throne. Lord Stark, upholding the Stark family's reputation for loyalty and honor, reminds Jacaerys:
@@ -46,6 +48,8 @@ of Dragons.
   <figcaption>Jacaerys Targaryen and Cregan Stark at The Wall.</figcaption>
 </figure>
 
+## The Stage is Set
+
 The episode then shifts between King's Landing, where the Greens hold power, and Dragonstone, the Blacks' stronghold.
 The Blacks strategize their rebellion, reinforcing their blockade and cutting off food supplies to King's Landing
 through Blackwater Bay, while the Greens rally support from the surrounding houses. House Velaryon, with their
@@ -55,6 +59,8 @@ unparalleled naval power, proves crucial to Rhaenyra's cause in this endeavor.
   <img src="https://patrickprunty.com/images/articles/hotd-s02e01/king-landing-dragonstone.png" alt="Map showing King's Landing and Dragonstone">
   <figcaption>The Greens control King's Landing, while the Blacks hold Dragonstone and Driftmark.</figcaption>
 </figure>
+
+## Grief and Vengeance at Dragonstone
 
 At Dragonstone, Rhaenyra desperately searches the surrounding areas for signs of her son, Lucerys. Daemon demands
 immediate revenge on King's Landing, but Rhaenys restrains him, reminding him that _he_ is not the king, and they must
@@ -83,6 +89,8 @@ eyes, she addresses her small council, speaking her only line in the entire epis
   <figcaption>Rhaenyra at her small council meeting on Dragonstone.</figcaption>
 </figure>
 
+## Turmoil in King's Landing
+
 In King's Landing, King Aegon II seeks to bring his young son, Jaehaerys, to a small council meeting. While searching
 for Jaehaerys in his chambers, he encounters his sister-wife Helaena, who cryptically warns Aegon:
 
@@ -102,6 +110,8 @@ defer to the counsel of his mother Alicent and grandfather Otto only underscores
 the fierce competition that placed him on the throne. This combination of reluctance and duty often creates complex,
 compelling rulers in Westerosi history. Only time will tell how this internal conflict shapes Aegon's reign and the
 realm's future.
+
+## Political Machinations
 
 Larys Strong, Alicent's enigmatic spymaster, makes a subtle yet calculated move in this political chess game. He
 suggests to Aegon that to avoid his father's fate, he must refuse to be a puppet king for Otto Hightower. This advice,
@@ -125,6 +135,9 @@ conflict.
 </figure>
 
 ...
+
+## A Son for a Son
+
 
 In a heart-wrenching scene that echoes the "son for a son" sentiment, Helaena chooses her younger son Maelor, hoping to
 spare her heir Jaehaerys. However, the assassins subvert her choice, killing Jaehaerys instead. This act of cruelty sets

@@ -381,7 +381,7 @@ const Content = styled.div`
     margin-top: 1.2em;
 //     margin-bottom: 0.5em;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    margin-block-end: -0.5em;
+    margin-block-end: -0.7em !important;
   }
 
   p {
