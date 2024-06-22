@@ -45,7 +45,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         window.open(path, '_blank');
       } else {
         // Use the router to navigate within the app
-//         setLoading(true);
+        setLoading(true);
         router.push(path);
       }
   };
