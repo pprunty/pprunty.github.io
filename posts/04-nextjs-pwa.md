@@ -494,27 +494,27 @@ export default App;
 To ensure your site is responsive, you can use browser developer tools to test your site on different screen sizes and devices. Here are step-by-step instructions for testing responsiveness using developer tools in Chrome:
 
 
-1. Open Developer Tools:
+1. **Open Developer Tools:**
 
     Press `F12` or `Ctrl + Shift + I` (Windows/Linux) or `Cmd + Option + I` (Mac) to open Developer Tools.
 
-2. Toggle Device Toolbar:
+2. **Toggle Device Toolbar:**
 
     Click the "Toggle device toolbar" button, which looks like a smartphone and tablet icon, or press` Ctrl + Shift + M` (Windows/Linux) or `Cmd + Shift + M`(Mac).
 
-3. Select a Device:
+3. **Select a Device:**
 
     In the device toolbar, you can select a device from the dropdown menu to see how your site looks on different devices like iPhones, iPads, or Android phones.
 
-4. Adjust Viewport Size:
+4. **Adjust Viewport Size:**
 
     You can also manually adjust the viewport size by dragging the edges or entering specific dimensions.
 
-5. Rotate the Screen:
+5. **Rotate the Screen:**
 
     Click the rotate button (next to the device dropdown) to switch between portrait and landscape modes.
 
-6. Test Responsiveness:
+6. **Test Responsiveness:**
 
     Navigate through your site to see how it adapts to different screen sizes. Make adjustments to your styles as needed.
 
