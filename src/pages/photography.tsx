@@ -127,8 +127,7 @@ const Photography: React.FC = () => {
       <Head>
         <title>Patrick Prunty - Photography</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/images/photography/favicon.ico" />
-        <meta property="og:image" content="/images/photography/collage.WEBP" />
+        <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:title" content="Patrick Prunty's Photography" />

@@ -35,6 +35,7 @@ class MyDocument extends Document {
           {/* Add your other head elements here */}
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+          <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
           <meta name="theme-color" content="#F0F0F0" />
           {/* Google Tag Manager */}
           <Script

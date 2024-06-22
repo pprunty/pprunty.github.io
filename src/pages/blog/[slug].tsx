@@ -29,7 +29,7 @@ const BlogPostHeader = ({ title, description, imagePath, router, date, author })
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={imagePath} />
+    <meta property="og:image" content={"https://patrickprunty.com" + imagePath} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="article" />
@@ -158,7 +158,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
 
 export default function BlogPost({ title, date, content, image, description, artwork }: BlogPostProps) {
   const router = useRouter();
-  const imagePath = isExport ? `${image}` : image;
+  const imagePath = image;
 
   return (
     <>

@@ -190,7 +190,7 @@ const Home: React.FC = () => {
         <title>Patrick Prunty</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Software, education, consultations & creative media." />
-        <meta property="og:image" content="/images/logo.png" />
+        <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <link rel="icon" href="/images/favicon.ico" />
