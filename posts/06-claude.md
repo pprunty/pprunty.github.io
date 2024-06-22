@@ -41,12 +41,12 @@ professional, whilst ChatGPT feels practical and original.
 
 By default, the Claude prompt is positioned centrally, with previous conversations hidden. This design choice enhances
 privacy and focus &mdash; no more worrying about whether your colleagues seen your last conversation titled,
-'Ideas for new sex positions' when you last shared your screen, _hooray!_ It is a small but significant improvement in
-user experience that showcases Anthropic's attention to practical details.
+'Ideas for new sex positions' when you last shared your screen &mdash; _hooray!_ This small but significant improvement 
+in user experience highlights Anthropic's attention to practical details and user experience.
 
-Another thing you will notice is how Claude expands on the reasoning for its response. If you ask Claude to make an email 
-sound more professional, it will re-write the email for you and add listed points reasoning why the email is more professional.
-This
+Additionally, you'll notice that Claude provides expanded reasoning for its responses. For instance, if you ask Claude
+to make an email sound more professional, it will not only rewrite the email but also list the reasons why the changes
+make it more professional.
 
 One of Claude's standout features is its availability as a Progressive Web App (PWA). This functionality allows users to
 install Claude on their desktop, providing a native app-like experience without the need for traditional app store
