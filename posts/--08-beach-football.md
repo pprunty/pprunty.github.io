@@ -1,7 +1,7 @@
 ---
 title: "Beach Football"
 date: "2024-06-18"
-image: "/images/beach-football1.jpg"
+image: "/images/beach-football/beach-football.jpg"
 description: "Discussing how football can bring strangers together."
 artwork: "Patrick Prunty"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "How to Make Your NextJS/ReactJS Project a Progressive Web App (PWA)"
 date: "2024-06-20"
-image: "/images/sonoma.jpeg"
+image: "/images/next-js-pwa/sonoma.jpeg"
 description: "A comprehensive guide to making your NextJS/ReactJS frontend a progressive web application (PWA)."
 artwork: "Apple Sonoma"
 ---
@@ -30,14 +30,14 @@ Start using Google Chrome Lighthouse to audit your website's performance, access
 1. **Open Lighthouse**: In Google Chrome, navigate to your website and enter inspect mode (right-click on the page and select "Inspect" or press `Ctrl+Shift+I`). Click the `>>` arrows in the top bar and select "Lighthouse".
 
    <figure>
-     <img src="https://patrickprunty.com/images/lighthouse_location.png" alt="Image description here">
+     <img src="https://patrickprunty.com/images/next-js-pwa/lighthouse_location.png" alt="Image description here">
      <figcaption>Google Chrome Lighthouse Tab Location</figcaption>
    </figure>
 
 2. **Run an Audit**: In the Lighthouse tab, click "Generate report" to analyze your page. Lighthouse will evaluate the specific route you are on and provide detailed insights on performance metrics, accessibility scores, SEO recommendations, and more.
 
    <figure>
-     <img src="https://patrickprunty.com/images/lighthouse_report.png" alt="Image description here">
+     <img src="https://patrickprunty.com/images/next-js-pwa/lighthouse_report.png" alt="Image description here">
      <figcaption>Google Chrome Lighthouse Report Audit</figcaption>
    </figure>
 
@@ -162,7 +162,7 @@ const urlsToCache = [
   // Add route specific urls for your service worker to cache
   '/',
   '/manifest.json',
-  '/images/favicon.ico',
+  '/images/next-js-pwa/favicon.ico',
   '/photography',
   '/newsletter',
   // Add more routes or static assets (images) as necessary
@@ -319,10 +319,10 @@ const App = ({ Component, pageProps }: AppProps) => {
         <title>Patrick Prunty</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Software, education, blog, YouTube creative media & consultations." />
-        <meta property="og:image" content="/images/favicon.png" />
+        <meta property="og:image" content="/images/next-js-pwa/favicon.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <link rel="icon" href="/images/favicon.png" />
+        <link rel="icon" href="/images/next-js-pwa/favicon.png" />
         <meta name="theme-color" content="#F0F0F0" />
       </Head>
       <Component {...pageProps} />

@@ -1,7 +1,7 @@
 ---
 title: "The Rise of Claude 3.5 Sonnet: Anthropic's Latest AI Model is Here to Stay"
 date: "2024-06-30"
-image: "/images/claude.png"
+image: "/images/claude/claude.png"
 description: "Explore the capabilities and impact of Claude 3.5 Sonnet, Anthropic's newest AI language model. Learn how this advanced LLM is changing the landscape of artificial intelligence and its potential applications across various industries."
 artwork: "Anthropic"
 ---
