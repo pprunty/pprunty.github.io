@@ -1,7 +1,7 @@
 ---
 title: "Horsepacking 14 Days in Mongolia"
 date: "2023-08-05"
-image: "/images/mongolia.jpg"
+image: "/images/articles/mongolia.jpg"
 description: "Reflecting on my experience horsepacking with ___ in Mongolia."
 artwork: "Wang Haiyang"
 ---
@@ -9,7 +9,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in posuere enim, s
 
 Duis sodales velit nec ipsum posuere consectetur. Morbi id est ut turpis consequat pulvinar. Fusce condimentum sem id porta pellentesque. Proin accumsan ligula lorem, iaculis egestas dui accumsan porta. Etiam eget lorem rhoncus neque egestas consequat. Vestibulum non porttitor turpis. In in sem in purus congue fringilla. Aliquam vel diam et urna elementum ultricies ac quis augue. Quisque eu purus at turpis faucibus laoreet. Nam gravida pharetra faucibus. Morbi id bibendum eros, vitae rhoncus turpis. Duis augue nisl, pulvinar at imperdiet sed, lobortis id quam. Pellentesque non orci turpis. Pellentesque metus ante, luctus ac interdum ut, rhoncus sit amet libero. Fusce ultricies eget erat ut ornare. Sed dapibus ex vitae mollis dapibus.
 
-![Optional Description](https://patrickprunty.com/images/daydream.WEBP)
+![Optional Description](https://patrickprunty.com/images/articles/daydream.WEBP)
 
 
 Sed ut felis id urna lobortis pretium. Sed neque enim, imperdiet vel quam ut, rhoncus porttitor ligula. Nullam posuere orci at nisl ultricies, dignissim suscipit leo ultrices. Aliquam ac ante bibendum, dictum neque eu, finibus nulla. Suspendisse malesuada vel lacus vel mollis. Cras mattis enim a porta euismod. Ut accumsan libero a neque viverra gravida. Sed quis augue congue elit sodales porttitor. Praesent facilisis placerat diam sit amet consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed fermentum sem in pretium suscipit. Suspendisse feugiat dapibus elit, ut semper tellus ultricies nec.

@@ -1,7 +1,7 @@
 ---
 title: "Ambient Writing"
 date: "2024-06-30"
-image: "/images/ambient-writing/IMG_5947.jpg"
+image: "/images/articles/ambient-writing/IMG_5947.jpg"
 description: "A manifesto for creative writing by Patrick Prunty."
 artwork: "Wang Haiyang"
 ---

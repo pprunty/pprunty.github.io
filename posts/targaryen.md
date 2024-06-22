@@ -1,7 +1,7 @@
 ---
 title: "House of the Dragon: Team Green or Team Black?"
 date: "2024-08-05"
-image: "/images/targaryen.jpeg"
+image: "/images/articles/targaryen.jpeg"
 description: "Determining which division of the Targaryen household to support ahead of house of the Dragon Season 2."
 artwork: "Marc Simonetti"
 ---

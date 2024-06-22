@@ -1,7 +1,7 @@
 ---
 title: "Readers' Strike"
 date: "2023-08-05"
-image: "/images/protestors.WEBP"
+image: "/images/articles/protestors.WEBP"
 description: "Exploring how Large Language Models (LLMs) such as ChatGPT can create fan-fictions such as George R.R Martin's highly anticipated, The Winds of Winter."
 artwork: "DALL-E 2"
 ---

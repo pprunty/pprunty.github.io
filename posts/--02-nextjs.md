@@ -1,7 +1,7 @@
 ---
 title: "Elevating Your NextJS/ReactJS Project"
 date: "2024-06-22"
-image: "/images/elevate-nextjs/cpu.jpg"
+image: "/images/articles/elevate-nextjs/cpu.jpg"
 description: "A comprehensive guide to improving your NextJS/ReactJS project with PWAs, memoization, and more."
 artwork: "Dan Williams / Pixabay.com"
 ---

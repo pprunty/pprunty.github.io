@@ -1,7 +1,7 @@
 ---
 title: "House of the Dragon S02E01 Summary"
 date: "2024-06-23"
-image: "/images/hotd-s02e01/hotd-s02e01.webp"
+image: "/images/articles/hotd-s02e01/hotd-s02e01.webp"
 description: "A brief and detailed summary of House of the Dragon Season 2, Episode 1."
 artwork: "HBO"
 ---
@@ -20,7 +20,7 @@ Aegon II, to rule. In reality, the delirious Viserys was speaking of Aegon I, We
 addressing Rhaenyra, not Alicent.
 
 <figure>
-  <img src="https://patrickprunty.com/images/hotd-s02e01/viserys-death.jpeg" alt="Image description here">
+  <img src="https://patrickprunty.com/images/articles/hotd-s02e01/viserys-death.jpeg" alt="Image description here">
   <figcaption>Alicent with her husband King Viserys on his deathbed in the season 1 finale.</figcaption>
 </figure>
 
@@ -42,7 +42,7 @@ should keep in mind as the season unfolds. This young Lord of Winterfell may yet
 of Dragons.
 
 <figure>
-  <img src="https://patrickprunty.com/images/hotd-s02e01/cregan-stark.png" alt="Image description here">
+  <img src="https://patrickprunty.com/images/articles/hotd-s02e01/cregan-stark.png" alt="Image description here">
   <figcaption>Jacaerys Targaryen and Cregan Stark at The Wall.</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ through Blackwater Bay, while the Greens rally support from the surrounding hous
 unparalleled naval power, proves crucial to Rhaenyra's cause in this endeavor.
 
 <figure>
-  <img src="https://patrickprunty.com/images/hotd-s02e01/king-landing-dragonstone.png" alt="Map showing King's Landing and Dragonstone">
+  <img src="https://patrickprunty.com/images/articles/hotd-s02e01/king-landing-dragonstone.png" alt="Map showing King's Landing and Dragonstone">
   <figcaption>The Greens control King's Landing, while the Blacks hold Dragonstone and Driftmark.</figcaption>
 </figure>
 
@@ -64,7 +64,7 @@ as a voice of reason amidst the chaos. Daemon, driven by vengeance, instead insi
 > A son for a son."
 
 <figure>
-  <img src="https://patrickprunty.com/images/hotd-s02e01/daemon-son-for-a-son.png" alt="Image description here">
+  <img src="https://patrickprunty.com/images/articles/hotd-s02e01/daemon-son-for-a-son.png" alt="Image description here">
   <figcaption>Daemon and Rhaenys Targaryen.</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ eyes, she addresses her small council, speaking her only line in the entire epis
 > I want Aaemond Targaryen."
 
 <figure>
-  <img src="https://patrickprunty.com/images/hotd-s02e01/tears.png" alt="Image description here">
+  <img src="https://patrickprunty.com/images/articles/hotd-s02e01/tears.png" alt="Image description here">
   <figcaption>Rhaenyra at her small council meeting on Dragonstone.</figcaption>
 </figure>
 
@@ -93,7 +93,7 @@ foreshadows the events to come at the end of the episode. Helaena's gift of prop
 the Targaryen bloodline, reminiscent of their ancestors' dragon dreams.
 
 <figure>
-  <img src="https://patrickprunty.com/images/hotd-s02e01/aaegon-small-council.png" alt="Image description here">
+  <img src="https://patrickprunty.com/images/articles/hotd-s02e01/aaegon-small-council.png" alt="Image description here">
   <figcaption>King Aaegon II at his small council meeting.</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ serves as a constant reminder of the bad blood between the Green and Black facti
 conflict.
 
 <figure>
-  <img src="https://patrickprunty.com/images/hotd-s02e01/aemond-eye.jpeg" alt="Image description here">
+  <img src="https://patrickprunty.com/images/articles/hotd-s02e01/aemond-eye.jpeg" alt="Image description here">
   <figcaption>Aemond's eye, cut out by Lucerys Targaryen in the first season when they were children.</figcaption>
 </figure>
 

@@ -2,7 +2,7 @@
 title: "Ode to Pokémon"
 date: "2024-05-21"
 description: "How a video game subtly shaped my adulthood."
-image: "/images/pokemon.png"
+image: "/images/articles/pokemon.png"
 artwork: "Pokémon Crystal Gameplay"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Pilots"
 date: "2023-01-01"
-image: "/images/IMG_5944.JPG"
+image: "/images/articles/IMG_5944.JPG"
 description: "How a video game quietly shaped my childhood."
 artwork: "Wang Haiyang"
 ---

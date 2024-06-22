@@ -1,7 +1,7 @@
 ---
 title: "Discovering all things that go around"
 date: "2024-08-05"
-image: "/images/IMG_5947.jpg"
+image: "/images/articles/IMG_5947.jpg"
 description: "How a video game quietly shaped my childhood."
 artwork: "Wang Haiyang"
 ---

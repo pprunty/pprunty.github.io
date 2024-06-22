@@ -1,7 +1,7 @@
 ---
 title: "A Dance of Dragons: Jon Snow Character Recap"
 date: "2024-08-05"
-image: "/images/jon-snow.jpeg"
+image: "/images/articles/jon-snow.jpeg"
 description: "Recapping Jon Snow's POV chapters from the fifth book in ASOIAF series, A Dance of Dragons."
 artwork: "Marc Simonetti"
 ---

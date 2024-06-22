@@ -1,7 +1,7 @@
 ---
 title: "Launching My YouTube and TikTok Content Creator Journey"
 date: "2024-07-10"
-image: "/images/creator-journey/jigsaw-presents-logo-opt.WEBP"
+image: "/images/articles/creator-journey/jigsaw-presents-logo-opt.WEBP"
 description: "Exploring my journey starting out as a content creator on YouTube and TikTok."
 artwork: "Patrick Prunty"
 ---
