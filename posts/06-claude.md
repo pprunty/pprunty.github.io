@@ -6,27 +6,54 @@ description: "Explore the capabilities and impact of Claude 3.5 Sonnet, Anthropi
 artwork: "Anthropic"
 ---
 
-It is sometimes easier to show rather than tell, so here is [claude.ai](https://claude.ai/), Anthropic A.I's Large
-Language Model (LLM) similar to ChatGPT but offering a different experience.
+It is sometimes easier to show rather than tell, so here is [claude.ai](https://claude.ai), Anthropic A.I's latest Large
+Language Model (LLM), similar to ChatGPT but offering differences in user experience and performance.
 
-You might have guessed Anthopic and their Claude Sonnet 3.5 model was founded by a French company. If you did, you are
-unfortunately wrong.
-Their AI model is called _Claude_ in honour of [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon), who is
-widely regarded as the father of information theory.
-In actuality, Anthropic was founded by seven former members of OpenAI, including Daniela Amodei and Dario Amodei at the
-forefront &mdash; two Italian-American brothers.
-Huh, maybe the names _Leonardo_ or _Michaelangelo_ were taken?
+You might assume Anthropic and their Claude 3.5 Sonnet model have French origins given the name. However, that is not
+the case. _Claude_ is actually named after [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon), widely
+regarded as the father of information theory. In fact, Anthropic was founded in 2021 by seven former OpenAI members,
+with
+siblings
+Daniela and Dario Amodei at the helm &mdash; both Italian-Americans. _Huh_, perhaps names like _Leonardo_ or
+_Michelangelo_
+were taken?
 
-In 2022, Anthropic announced it had received $580 million in funding, with $500 million of this funding coming from FTX
-under the leadership of Sam Bankman-Fried.
-Hey, _remember that guy?_ Amazon recently completed their $4 billion investment in Antropic in a deal whereby Anthropic
-would use Amazon Web Services (AWS) as its primary cloud provider and make its AI models available to AWS customers.
-Google, likewise have committed to a total of $2 billion in investment.
+Anthropic have since attracted significant financial backing from major players in the tech industry. In 2022, they
+announced $580 million in funding, with $500 million coming from FTX under Sam Bankman-Fried's
+leadership. _Remember him_? More recently, Amazon completed a $4 billion investment in Anthropic, in a deal whereby
+Anthropic agreed to use Amazon Web Services (AWS) as its primary cloud provider and make its AI models available to AWS
+customers. Google has also committed $2 billion in investment. This $6.58 billion in funding is impressive for a young
+company. In comparison, OpenAI has received about $11 billion, mostly from Microsoft. While OpenAI leads in total
+funding, Anthropic's diverse investments signal strong confidence in its potential to disrupt the AI landscape.
 
-I use LLMs for two purposes: coding and personal writing. So what makes Claude different to any of the other Large
-Language Model _clones_?
+So what sets Claude apart from other Large Language Model "clones"?
 
-At a high-level, claude has all the same bells and whistles ChatGPT has.
+The first thing I noticed was the distinct branding and color scheme that sets Claude apart from ChatGPT. While both
+offer a dark mode, Claude embraces a more sophisticated palette of neutral tones. The interface features subtle shades
+of black, white, and brown, creating a refined aesthetic. Claude's choice of a serif font, reminiscent of Times New
+Roman, adds a touch of classical elegance, contrasting with ChatGPT's more modern sans-serif typeface. This thoughtful
+design not only appeals to the eye but also conveys a sense of professionalism and timelessness that aligns well with
+Anthropic's approach to AI development.
 
+<figure>
+  <img src="https://patrickprunty.com/gifs/claude-prompt.gif" alt="Image description here">
+  <figcaption>A simple demonstration asking Claude a prompt for C++ code.</figcaption>
+</figure>
 
+By default, the Claude prompt is positioned centrally, with previous conversations hidden. This design choice enhances
+privacy and focus &mdash; no more worrying about whether your colleagues seen your last conversation titled,
+'Ideas for new sex positions' when you last shared your screen, _hooray!_. It's a small but significant improvement in
+user experience that showcases Anthropic's attention to practical details.
 
+Claude is also a Progressive Web App (PWA), meaning, you can download and use Claude on Desktop as though it is a native
+app downloaded from your device's App Store. To do so, you can toggle the download button in the search bar using Google
+Chrome:
+
+<figure>
+  <img src="https://patrickprunty.com/gifs/pwa_claude.png" alt="Image description here">
+  <figcaption>Download button for Progressive Web Apps (PWAs) on Google Chrome.</figcaption>
+</figure>
+
+This is a feature that OpenAI have yet to capitalize on for their ChatGPT models. For more details on Progressive Web
+Apps, I previously wrote an article
+detailing [How to Make Your NextJS/ReactJS Application a Progressive Web App (PWA)](https://patrickprunty.com/blog/04-nextjs-pwa).
