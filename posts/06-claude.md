@@ -50,7 +50,7 @@ app downloaded from your device's App Store. To do so, you can toggle the downlo
 Chrome:
 
 <figure>
-  <img src="https://patrickprunty.com/gifs/pwa_claude.png" alt="Image description here">
+  <img src="https://patrickprunty.com/images/articles/claude/pwa_claude.png" alt="Image description here">
   <figcaption>Download button for Progressive Web Apps (PWAs) on Google Chrome.</figcaption>
 </figure>
 
