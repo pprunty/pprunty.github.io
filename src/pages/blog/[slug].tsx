@@ -23,7 +23,7 @@ interface BlogPostProps {
   artwork?: string;
 }
 
-const BlogPostHeader = ({ title, description, imagePath, router }) => (
+const BlogPostHeader = ({ title, description, imagePath, router, date, author }) => (
   <Head>
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -40,6 +40,33 @@ const BlogPostHeader = ({ title, description, imagePath, router }) => (
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imagePath} />
     <link rel="canonical" href={`${router.asPath}`} />
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": title,
+        "description": description,
+        "image": imagePath,
+        "datePublished": date,
+        "dateModified": date,
+        "author": {
+          "@type": "Person",
+          "name": author || "Patrick Prunty"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Patrick Prunty",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://patrickprunty.com/icon-512-maskable.png"  // Replace with your actual logo URL
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://patrickprunty.com${router.asPath}`
+        }
+      })}
+    </script>
   </Head>
 );
 
@@ -135,7 +162,14 @@ export default function BlogPost({ title, date, content, image, description, art
 
   return (
     <>
-      <BlogPostHeader title={title} description={description} imagePath={imagePath} router={router} />
+      <BlogPostHeader
+        title={title}
+        description={description}
+        imagePath={imagePath}
+        router={router}
+        date={date}
+        author="Patrick Prunty"  // Or use a dynamic author if you have multiple authors
+      />
       <BlogPostContent title={title} date={date} content={content} imagePath={imagePath} artwork={artwork} />
     </>
   );
