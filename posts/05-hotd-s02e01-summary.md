@@ -24,7 +24,7 @@ addressing Rhaenyra, not Alicent.
   <figcaption>Alicent with her husband King Viserys on his deathbed in the season 1 finale.</figcaption>
 </figure>
 
-## The North Remembers
+## Winter is Coming
 
 The episode begins with an introduction to the Stark household, setting a scene at The Wall where Prince Jacaerys Targaryen meets
 with Lord Cregan Stark of Winterfell. Jacaerys reminds Lord Stark of the oath his father swore to support Rhaenyra's claim
