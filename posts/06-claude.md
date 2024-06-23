@@ -55,13 +55,18 @@ privacy and focus &mdash; no more worrying about whether your colleagues seen yo
 'Ideas for new sex positions' when you last shared your screen &mdash; _hooray!_ This small but significant improvement
 in user experience highlights Anthropic's attention to practical details and user experience.
 
-Additionally, you'll notice that Claude provides expanded reasoning for its responses. For instance, if you ask Claude
+Additionally, you will notice that Claude provides expanded reasoning for its responses. For instance, if you ask Claude
 to make an email sound more professional, it will not only rewrite the email but also list the reasons why the changes
 make it more professional.
 
 As well as this, Claude's handling of file uploads and pasted content is noteworthy. Unlike ChatGPT, which can sometimes
-struggle with long inputs, causing the interface to scroll erratically (reminiscent of an old-fashioned window blind
-that you have to jerk to make go up), Claude maintains a smooth and stable interface even with large amounts of text.
+struggle with long pasted inputs, causing the interface to scroll erratically (reminiscent of an old-fashioned window blind
+that you have to jerk to make go up), Claude maintains a smooth and stable interface even with large amounts of pasted text.
+
+<figure>
+  <img src="https://patrickprunty.com/images/articles/claude/gpt_claude.webp" alt="Image description here">
+  <figcaption>Branding differences between ChatGPT and Claude.</figcaption>
+</figure>
 
 Another, lesser known feature of Claude is its availability as a Progressive Web App (PWA). This functionality allows
 users to
@@ -74,15 +79,12 @@ bar:
   <figcaption>Download button for Progressive Web Apps (PWAs) on Google Chrome.</figcaption>
 </figure>
 
-This PWA capability sets Claude apart from OpenAI's ChatGPT, which currently lacks this convenient installation option.
+This PWA capability sets Claude apart from OpenAI's ChatGPT, which currently lacks this convenient installation option,
+_or_ official Desktop App.
 The ability to use Claude as a desktop app enhances accessibility and integrates seamlessly into users' workflows. For
 those interested in the technical aspects of PWAs, I have written a detailed guide
 on [How to Make Your NextJS/ReactJS Application a Progressive Web App (PWA)](https://patrickprunty.com/blog/04-nextjs-pwa).
 
-<figure>
-  <img src="https://patrickprunty.com/images/articles/claude/gpt_claude.webp" alt="Image description here">
-  <figcaption>Branding differences between ChatGPT and Claude.</figcaption>
-</figure>
 
 ### 2. Performance
 
@@ -114,9 +116,10 @@ text.
 ### 4. Limitations
 
 
+## Conclusion 
+
 Claude 3.5 Sonnet represents a significant step forward in the AI landscape. Its thoughtful design, enhanced
 performance, and competitive pricing make it a strong contender in the LLM market. As Anthropic continues to innovate
 and refine its models, Claude is poised to play an increasingly important role in shaping the future of AI interactions.
-While it may not yet have the brand recognition of ChatGPT, Claude's unique features and growing capabilities suggest
-that it is here to stay. As more users discover its benefits, we may see a shift in the AI landscape, with Claude carving
-out a substantial niche for itself among professionals, developers, and everyday users alike.
+Having recently made the transition from OpenAI's ChatGPT to Claude myself, I can attest to its value. Will you too make the 
+move away from ChatGPT and to Claude? 
