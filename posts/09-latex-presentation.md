@@ -1,6 +1,6 @@
 ---
 title: "How to Make Your Presentation Slides Look Like Your Math Professors Using LaTeX"
-date: "2024-06-30"
+date: "2024-06-23"
 image: "/images/articles/latex-presentation/latex-presentation3.png"
 description: "Learn how to create elegant and professional presentation slides using LaTeX."
 artwork: "Patrick Prunty's LaTex Presentation Template"
