@@ -6,36 +6,52 @@ description: "A comprehensive guide to making your NextJS/ReactJS frontend a pro
 artwork: "Apple Sonoma"
 ---
 
-Recently, I transformed my personal website, [patrickprunty.com](https://patrickprunty.com), into a Progressive Web App (PWA). This allows users to access my site on any device
-&mdash; iPhone, MacBook, Android, or Windows &mdash; as if it were a native app downloaded from their device's app store.
-If you want to enable similar functionality for your NextJS/ReactJS application, allowing users to download it on their mobile devices like so:
+Recently, I transformed my personal website, [patrickprunty.com](https://patrickprunty.com), into a Progressive Web
+App (PWA). This allows users to access my site on any device
+&mdash; iPhone, MacBook, Android, or Windows &mdash; as if it were a native app downloaded from their device's app
+store.
+
+The benefits of PWAs have the potential to be substantial. According to a report
+from [OuterBox](https://www.outerboxdesign.com),
+"when [Pinterest](https://pinterest.com) adopted a PWA, it saw a 40% increase in time spent on the site and a 50%
+increase in ad click-throughs, which
+significantly boosted their revenue." You can read that
+article [here](https://www.outerboxdesign.com/digital-marketing/progressive-web-apps-pwas).
+
+If you are interested in enabling similar functionality for your NextJS/ReactJS application, allowing users to download your web application on their mobile devices like this:
 
 <figure>
-  <img src="https://patrickprunty.com/gifs/pwa_mobile.gif" alt="Image description here">
+  <img src="https://patrickprunty.com/gifs/pwa_mobile.gif" alt="PWA on Mobile Devices">
   <figcaption>PWA on Mobile Devices</figcaption>
 </figure>
 
-Or on Desktop devices, like so:
+Or on desktop devices, like this:
 
 <figure>
-  <img src="https://patrickprunty.com/gifs/pwa_desktop.gif" alt="Image description here">
+  <img src="https://patrickprunty.com/gifs/pwa_desktop.gif" alt="PWA on Desktop Devices">
   <figcaption>PWA on Desktop Devices</figcaption>
 </figure>
 
-Follow the instructions in this guide which will cover the essential steps to transform your NextJS/ReactJS application into a PWA. We will start with using Google Chrome Lighthouse for performance auditing to ensure PWA compliance, and then implement service workers for offline caching to enhance functionality and user experience.
+This guide will walk you through the process. We will cover the essential steps to transform your application into a PWA,
+starting with using Google Chrome Lighthouse for performance auditing to ensure PWA compliance, and then implementing service workers for offline
+caching to enhance functionality and user experience.
 
 ## Google Chrome Lighthouse
 
-Start using Google Chrome Lighthouse to audit your website's performance, accessibility, and SEO. Here’s how to get started:
+Start using Google Chrome Lighthouse to audit your website's performance, accessibility, and SEO. Here’s how to get
+started:
 
-1. **Open Lighthouse**: In Google Chrome, navigate to your website and enter inspect mode (right-click on the page and select "Inspect" or press `Ctrl+Shift+I`). Click the `>>` arrows in the top bar and select "Lighthouse".
+1. **Open Lighthouse**: In Google Chrome, navigate to your website and enter inspect mode (right-click on the page and
+   select "Inspect" or press `Ctrl+Shift+I`). Click the `>>` arrows in the top bar and select "Lighthouse".
 
    <figure>
      <img src="https://patrickprunty.com/images/articles/next-js-pwa/lighthouse_location.png" alt="Image description here">
      <figcaption>Google Chrome Lighthouse Tab Location</figcaption>
    </figure>
 
-2. **Run an Audit**: In the Lighthouse tab, click "Generate report" to analyze your page. Lighthouse will evaluate the specific route you are on and provide detailed insights on performance metrics, accessibility scores, SEO recommendations, and more.
+2. **Run an Audit**: In the Lighthouse tab, click "Generate report" to analyze your page. Lighthouse will evaluate the
+   specific route you are on and provide detailed insights on performance metrics, accessibility scores, SEO
+   recommendations, and more.
 
    <figure>
      <img src="https://patrickprunty.com/images/articles/next-js-pwa/lighthouse_report.png" alt="Image description here">
@@ -44,7 +60,8 @@ Start using Google Chrome Lighthouse to audit your website's performance, access
 
 3. **Tips for Accurate Results**: Run the analysis in an incognito tab to avoid interference from Chrome extensions.
 
-_Note: Ensure your webpage is open in only one tab when using Lighthouse. Close other tabs and reload if you encounter any issues._
+_Note: Ensure your webpage is open in only one tab when using Lighthouse. Close other tabs and reload if you encounter
+any issues._
 
 ## Progressive Web Apps (PWAs)
 
@@ -63,11 +80,13 @@ To serve your site over HTTPs, you need to obtain an SSL/TLS certificate and con
 running on the server side. If you are serving your site statically over AWS or Azure, you will need to configure your
 CDN (Content Delivery Network) to serve static assets over HTTPs and not HTTP.
 
-_Note: If you use [GitHub Pages](https://pages.github.com/) to host your static site, it will automatically host your site over HTTPs._
+_Note: If you use [GitHub Pages](https://pages.github.com/) to host your static site, it will automatically host your
+site over HTTPs._
 
 ### 3. Provide a web app manifest with icons, a theme color, and a start URL
 
-To create a PWA manifest, you can use an online provider, such as [PWA Manifest Generator](https://www.simicart.com/manifest-generator.html/).
+To create a PWA manifest, you can use an online provider, such
+as [PWA Manifest Generator](https://www.simicart.com/manifest-generator.html/).
 This will generate a `manifest.json` and images of different sizes for your app icon.
 
 Place the manifest and images in your `public` directory of your NextJS or ReactJS project like so:
@@ -95,8 +114,10 @@ After generating your images and manifest, your `manifest.json` should like this
 
 ```json
 {
-  "theme_color": "#f0f0f0", // This is the overflow color for your PWA
-  "background_color": "#f0f0f0", // This is the background color for the body of your PWA
+  "theme_color": "#f0f0f0",
+  // This is the overflow color for your PWA
+  "background_color": "#f0f0f0",
+  // This is the background color for the body of your PWA
   "icons": [
     {
       "purpose": "maskable",
@@ -127,7 +148,8 @@ After generating your images and manifest, your `manifest.json` should like this
     },
     {
       "src": "/icon-512x512.png",
-      "purpose": "any", // It is important at least one icon has "purpose": "any" in order to be a valid PWA
+      "purpose": "any",
+      // It is important at least one icon has "purpose": "any" in order to be a valid PWA
       "sizes": "512x512",
       "type": "image/png"
     }
@@ -137,20 +159,26 @@ After generating your images and manifest, your `manifest.json` should like this
   "dir": "auto",
   "lang": "en-GB",
   "name": "Patrick Prunty",
-  "short_name": "patrickprunty", // This will display as the short title for your PWA
+  "short_name": "patrickprunty",
+  // This will display as the short title for your PWA
   "start_url": "https://patrickprunty.com",
   "scope": "https://patrickprunty.com/",
-  "description": "Software, education, consultations & creative media." // This will be the description for your PWA
+  "description": "Software, education, consultations & creative media."
+  // This will be the description for your PWA
 }
 ```
 
-**Please delete the comments in this JSON or it will prevent the json from working correctly. The comments are to emphasize importance of certain fields.**
+**Please delete the comments in this JSON or it will prevent the json from working correctly. The comments are to
+emphasize importance of certain fields.**
 
 Additionally, you must have the following tag: `<meta name="theme-color" content="#317EFB"/>` defined in the `<head>` of
-your application for all routes/pages. This can be done in NextJS by adding this tag in the `<head>` section of the `_app.tsx` file, or
+your application for all routes/pages. This can be done in NextJS by adding this tag in the `<head>` section of
+the `_app.tsx` file, or
 in the `App.tsx` file of your ReactJS application.
 
-_Note: If you are working on localhost and using Lighthouse to test PWA validity, you must change the `scope` and `start_url` fields in the `manifest.json` to `/`. Make sure to update this to your actual site URL in before deploying to production._
+_Note: If you are working on localhost and using Lighthouse to test PWA validity, you must change the `scope`
+and `start_url` fields in the `manifest.json` to `/`. Make sure to update this to your actual site URL in before
+deploying to production._
 
 ### 3. Enable service workers to cache assets for offline use
 
@@ -334,13 +362,17 @@ const App = ({ Component, pageProps }: AppProps) => {
 export default App;
 ```
 
-The `useEffect` hook ensures the service worker is registered when the page loads and re-registers it whenever the page becomes visible. This approach improves the reliability of the service worker registration, especially when users navigate away from and back to the page.
+The `useEffect` hook ensures the service worker is registered when the page loads and re-registers it whenever the page
+becomes visible. This approach improves the reliability of the service worker registration, especially when users
+navigate away from and back to the page.
 
 ### 4. Implement a responsive design for various screen sizes
 
 _Note: If your site is already responsive for various screen sizes, you can skip this section..._
 
-To ensure your PWA looks great on all devices, implement a responsive design. This involves using CSS media queries to adjust the layout based on the screen size. We will also cover how to achieve this using `styled-components` and device-width usage in Next.js/React.js.
+To ensure your PWA looks great on all devices, implement a responsive design. This involves using CSS media queries to
+adjust the layout based on the screen size. We will also cover how to achieve this using `styled-components` and
+device-width usage in Next.js/React.js.
 
 ### Using CSS Media Queries
 
@@ -380,7 +412,8 @@ Add media queries to your CSS to handle different screen sizes.
 
 ### Using Flexible Layouts
 
-Utilize flexible grid layouts and relative units like percentages (`%`), viewport width (`vw`), and viewport height (`vh`).
+Utilize flexible grid layouts and relative units like percentages (`%`), viewport width (`vw`), and viewport
+height (`vh`).
 
 ```css
 .grid {
@@ -404,7 +437,8 @@ Utilize flexible grid layouts and relative units like percentages (`%`), viewpor
 
 ### Using Styled-Components
 
-Styled-components allow you to write plain CSS in your JavaScript files. Here's how to achieve responsive design with styled-components in a React component.
+Styled-components allow you to write plain CSS in your JavaScript files. Here's how to achieve responsive design with
+styled-components in a React component.
 
 ```jsx
 import styled from 'styled-components';
@@ -448,7 +482,8 @@ const Grid = styled.div`
 
 ### Using Device Width in Next.js/React.js Head
 
-To handle device width and set responsive meta tags in the head section of your Next.js application, use the `Head` component from `next/head`.
+To handle device width and set responsive meta tags in the head section of your Next.js application, use the `Head`
+component from `next/head`.
 
 ```jsx
 import Head from 'next/head';
@@ -491,39 +526,46 @@ export default App;
 
 ### Test Responsiveness
 
-To ensure your site is responsive, you can use browser developer tools to test your site on different screen sizes and devices. Here are step-by-step instructions for testing responsiveness using developer tools in Chrome:
-
+To ensure your site is responsive, you can use browser developer tools to test your site on different screen sizes and
+devices. Here are step-by-step instructions for testing responsiveness using developer tools in Chrome:
 
 1. **Open Developer Tools:**
 
-    Press `F12` or `Ctrl + Shift + I` (Windows/Linux) or `Cmd + Option + I` (Mac) to open Developer Tools.
+   Press `F12` or `Ctrl + Shift + I` (Windows/Linux) or `Cmd + Option + I` (Mac) to open Developer Tools.
 
 2. **Toggle Device Toolbar:**
 
-    Click the "Toggle device toolbar" button, which looks like a smartphone and tablet icon, or press` Ctrl + Shift + M` (Windows/Linux) or `Cmd + Shift + M`(Mac).
+   Click the "Toggle device toolbar" button, which looks like a smartphone and tablet icon, or
+   press` Ctrl + Shift + M` (Windows/Linux) or `Cmd + Shift + M`(Mac).
 
 3. **Select a Device:**
 
-    In the device toolbar, you can select a device from the dropdown menu to see how your site looks on different devices like iPhones, iPads, or Android phones.
+   In the device toolbar, you can select a device from the dropdown menu to see how your site looks on different devices
+   like iPhones, iPads, or Android phones.
 
 4. **Adjust Viewport Size:**
 
-    You can also manually adjust the viewport size by dragging the edges or entering specific dimensions.
+   You can also manually adjust the viewport size by dragging the edges or entering specific dimensions.
 
 5. **Rotate the Screen:**
 
-    Click the rotate button (next to the device dropdown) to switch between portrait and landscape modes.
+   Click the rotate button (next to the device dropdown) to switch between portrait and landscape modes.
 
 6. **Test Responsiveness:**
 
-    Navigate through your site to see how it adapts to different screen sizes. Make adjustments to your styles as needed.
+   Navigate through your site to see how it adapts to different screen sizes. Make adjustments to your styles as needed.
 
-By implementing these responsive design techniques, you can ensure that your PWA provides an optimal user experience on any device, enhancing usability and engagement.
+By implementing these responsive design techniques, you can ensure that your PWA provides an optimal user experience on
+any device, enhancing usability and engagement.
 
 ## Conclusion
 
-_Note: If your app does not yet meet the necessary requirements to be a PWA, it's possible that there are additional factors not covered in this article. We recommend running Google Chrome Lighthouse again to analyze your page for PWA compatibility and identify any remaining issues._
+_Note: If your app does not yet meet the necessary requirements to be a PWA, it's possible that there are additional
+factors not covered in this article. We recommend running Google Chrome Lighthouse again to analyze your page for PWA
+compatibility and identify any remaining issues._
 
-By following these steps, you have transformed your NextJS/ReactJS application into a Progressive Web App. Your users can now enjoy a seamless, app-like experience across various devices, even offline. 
+By following these steps, you have transformed your NextJS/ReactJS application into a Progressive Web App. Your users
+can now enjoy a seamless, app-like experience across various devices, even offline.
 
-If you have any questions or need further assistance, please feel free to contact me, or set up some time with me via the [consultations tab on my website](https://calendly.com/jigsawpresents).
+If you have any questions or need further assistance, please feel free to contact me, or set up some time with me via
+the [consultations tab on my website](https://calendly.com/jigsawpresents).
