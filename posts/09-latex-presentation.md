@@ -1,5 +1,5 @@
 ---
-title: "How to Make Your Presentation Slides Look Like Your Math Professors Using LaTeX"
+title: "Creating Professional Academic Slides with LaTeX: A Guide for Math and CS Presentations"
 date: "2024-06-23"
 image: "/images/articles/latex-presentation/latex-presentation3.png"
 description: "Learn how to create elegant and professional presentation slides using LaTeX."
