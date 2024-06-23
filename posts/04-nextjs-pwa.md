@@ -24,7 +24,7 @@ dedicated desktop or
 mobile applications for their SaaS products, providing a cost-effective way to deliver a native app-like experience to
 their users.
 
-So, if you are interested in enabling similar functionality for your NextJS/ReactJS application, allowing users to
+If you are interested in enabling similar functionality for your NextJS/ReactJS application, allowing users to
 download your web application on their mobile devices like this:
 
 <figure>
