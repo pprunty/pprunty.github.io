@@ -11,14 +11,16 @@ App (PWA). This allows users to access my site on any device
 &mdash; iPhone, MacBook, Android, or Windows &mdash; as if it were a native app downloaded from their device's app
 store.
 
-The benefits of PWAs have the potential to be substantial. According to a report
+The benefits of PWAs can be substantial. According to a report
 from [OuterBox](https://www.outerboxdesign.com),
-"when [Pinterest](https://pinterest.com) adopted a PWA, it saw a 40% increase in time spent on the site and a 50%
-increase in ad click-throughs, which
-significantly boosted their revenue." You can read that
-article [here](https://www.outerboxdesign.com/digital-marketing/progressive-web-apps-pwas).
 
-If you are interested in enabling similar functionality for your NextJS/ReactJS application, allowing users to download your web application on their mobile devices like this:
+> When [Pinterest](https://pinterest.com) adopted a PWA, it saw a 40% increase in time spent on the site and a 50%
+increase in ad click-throughs, which
+significantly boosted their revenue.
+
+You can read that article [here](https://www.outerboxdesign.com/digital-marketing/progressive-web-apps-pwas).
+
+So, if you are interested in enabling similar functionality for your NextJS/ReactJS application, allowing users to download your web application on their mobile devices like this:
 
 <figure>
   <img src="https://patrickprunty.com/gifs/pwa_mobile.gif" alt="PWA on Mobile Devices">
@@ -33,7 +35,7 @@ Or on desktop devices, like this:
 </figure>
 
 This guide will walk you through the process. We will cover the essential steps to transform your application into a PWA,
-starting with using Google Chrome Lighthouse for performance auditing to ensure PWA compliance, and then implementing service workers for offline
+starting with using Google Chrome Lighthouse for performance auditing and to ensure PWA compliance, and then implementing service workers for offline
 caching to enhance functionality and user experience.
 
 ## Google Chrome Lighthouse
