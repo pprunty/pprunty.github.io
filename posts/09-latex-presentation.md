@@ -73,7 +73,7 @@ project/
 └── presentation
     ├── imgs
     │   ├── moon.jpeg
-    │   └── tcd.png
+    │   └── organization_logo.png
     ├── main.tex
     ├── output-presentation-example.pdf
     └── slides
