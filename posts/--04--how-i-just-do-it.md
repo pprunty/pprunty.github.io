@@ -11,6 +11,11 @@ computer screen.
 
 ## 1. How do I make friends?
 
+* Brasillian Jiu Jitsu
+* Hiking
+* Running / Triathlon
+* Programming
+* Education
 
 ... just do it.
 

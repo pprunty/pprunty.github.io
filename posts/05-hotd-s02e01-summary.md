@@ -1,5 +1,5 @@
 ---
-title: "House of the Dragon S02E01 Summary"
+title: "House of the Dragon S02E01 Recap"
 date: "2024-06-25"
 image: "/images/articles/hotd-s02e01/hotd-s02e01.webp"
 description: "A brief and detailed summary of House of the Dragon Season 2, Episode 1."
