@@ -1,8 +1,8 @@
 ---
-title: "Elevating Your NextJS/ReactJS Project"
+title: "8 Simple Strategies for Leveling Up Your NextJS/ReactJS Project"
 date: "2024-07-05"
 image: "/images/articles/elevate-nextjs/cpu.jpg"
-description: "A comprehensive guide to improving your NextJS/ReactJS project with PWAs, memoization, and more."
+description: "Discover 8 simple strategies to level up your NextJS/ReactJS project and enhance its performance and functionality."
 artwork: "Dan Williams / Pixabay.com"
 ---
 
@@ -12,13 +12,13 @@ focus on areas which are not plain to the eye. This guide will walk through how 
 components can elevate your NextJS/ReactJS project to the next level:
 
 1. **React Memoization**: Enhances performance by preventing unnecessary re-renders and recalculations, comparing previous and current props to avoid redundant updates, which results in smoother and faster UI updates.
-3. **NextJS Image Optimization (static and server optimization)**: Automatically optimizes images by providing a blur effect while they load, which improves load times and enhances the user experience by reducing perceived latency.
+2. **NextJS Image Optimization (static and server optimization)**: Automatically optimizes images by providing a blur effect while they load, which improves load times and enhances the user experience by reducing perceived latency.
 3. **NextJS Scroll Restoration**: Automatically restores the scroll position to its previous state when navigating back to a page, providing a seamless user experience and preserving the context for users.
 4. **Markdown**: 
 5. **Dynamic Route Matching (slugs)**: Uses URL-friendly identifiers to create dynamic routes, making it easier to handle content-based navigation and improve SEO by using meaningful paths.
-5. **Open Graph Metatags (SEO)**: Adds metadata to web pages to control how they are displayed when shared on social media, improving visibility and click-through rates by enhancing the presentation of shared content.
-6. **Native Share API**: Allows content sharing directly through mobile device interfaces, such as sharing a blog post via messaging apps or social media platforms, enhancing user interaction.
-7. **Progressive Web Apps (PWAs)**: Enable offline functionality and the ability to download the website as an app, improving user accessibility and engagement even without an internet connection.
+6. **Open Graph Metatags (SEO)**: Adds metadata to web pages to control how they are displayed when shared on social media, improving visibility and click-through rates by enhancing the presentation of shared content.
+7. **Native Share API**: Allows content sharing directly through mobile device interfaces, such as sharing a blog post via messaging apps or social media platforms, enhancing user interaction.
+8. **Progressive Web Apps (PWAs)**: Enable offline functionality and the ability to download the website as an app, improving user accessibility and engagement even without an internet connection.
 
 ## 1. React Memoization
 

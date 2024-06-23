@@ -1,5 +1,5 @@
 ---
-title: "How to Make Your NextJS/ReactJS Project a Progressive Web App (PWA)"
+title: "How to Transform Your NextJS/ReactJS Project into a Progressive Web App (PWA)"
 date: "2024-06-20"
 image: "/images/articles/next-js-pwa/sonoma.jpeg"
 description: "A comprehensive guide to making your NextJS/ReactJS frontend a progressive web application (PWA)."
@@ -11,16 +11,21 @@ App (PWA). This allows users to access my site on any device
 &mdash; iPhone, MacBook, Android, or Windows &mdash; as if it were a native app downloaded from their device's app
 store.
 
-The benefits of PWAs can be substantial. According to a report
+The benefits of PWAs can be substantial. According to
+a [report](https://www.outerboxdesign.com/digital-marketing/progressive-web-apps-pwas)
 from [OuterBox](https://www.outerboxdesign.com),
 
 > When [Pinterest](https://pinterest.com) adopted a PWA, it saw a 40% increase in time spent on the site and a 50%
-increase in ad click-throughs, which
-significantly boosted their revenue.
+> increase in ad click-throughs, which
+> significantly boosted their revenue.
 
-You can read that article [here](https://www.outerboxdesign.com/digital-marketing/progressive-web-apps-pwas).
+Moreover, Progressive Web Apps offer a strategic advantage for startups and other companies whom are yet to develop
+dedicated desktop or
+mobile applications for their SaaS products, providing a cost-effective way to deliver a native app-like experience to
+their users.
 
-So, if you are interested in enabling similar functionality for your NextJS/ReactJS application, allowing users to download your web application on their mobile devices like this:
+So, if you are interested in enabling similar functionality for your NextJS/ReactJS application, allowing users to
+download your web application on their mobile devices like this:
 
 <figure>
   <img src="https://patrickprunty.com/gifs/pwa_mobile.gif" alt="PWA on Mobile Devices">
@@ -34,8 +39,10 @@ Or on desktop devices, like this:
   <figcaption>PWA on Desktop Devices</figcaption>
 </figure>
 
-This guide will walk you through the process. We will cover the essential steps to transform your application into a PWA,
-starting with using Google Chrome Lighthouse for performance auditing and to ensure PWA compliance, and then implementing service workers for offline
+This guide will walk you through the process. We will cover the essential steps to transform your application into a
+PWA,
+starting with using Google Chrome Lighthouse for performance auditing and to ensure PWA compliance, and then
+implementing service workers for offline
 caching to enhance functionality and user experience.
 
 ## Google Chrome Lighthouse
