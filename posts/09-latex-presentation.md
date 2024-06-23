@@ -6,7 +6,7 @@ description: "Learn how to create elegant and professional presentation slides u
 artwork: "Patrick Prunty's LaTex Presentation Template"
 ---
 
-During my undergraduate studies, I observed that many Mathematics and Computer Science lecturers utilized remarkably
+During my undergraduate studies, I observed that many of my Mathematics and Computer Science professors utilized remarkably
 similar presentation slides characterized by their simplicity, elegance, and clarity. This consistency piqued my
 curiosity, leading me to investigate the underlying cause. It was not until my postgraduate studies that I discovered
 the
