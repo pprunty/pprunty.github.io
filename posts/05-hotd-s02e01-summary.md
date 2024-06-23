@@ -32,7 +32,8 @@ to the Iron Throne. Lord Stark, upholding the Stark family's reputation for loya
 
 > The Starks do not forget their oaths, my prince."
 
-However, Cregan Stark emphasizes the importance of defending the realm against threats from beyond The Wall, offering
+However, Cregan Stark emphasizes the importance of defending the realm against threats from beyond The Wall, winter _is_
+coming after all, offering
 Jacaerys Targaryen only 2,000 seasoned veterans, or "greybeards", to support Rhaenyra's claim against the Greens. Their
 discussion is cut short when a letter arrives at The Wall, bearing grim news: Jacaerys's brother, Lucerys, and his dragon
 Arrax have been slain by his uncle Aemond Targaryen and his formidable dragon Vhagar, the largest and deadliest of the
@@ -91,7 +92,7 @@ eyes, she addresses her small council, speaking her only line in the entire epis
 
 ## Turmoil in King's Landing
 
-In King's Landing, King Aegon II seeks to bring his young son, Jaehaerys, to a small council meeting. While searching
+In King's Landing, King Aegon II "The Magnanimous" seeks to bring his young son, Jaehaerys, to a small council meeting. While searching
 for Jaehaerys in his chambers, he encounters his sister-wife Helaena, who cryptically warns Aegon:
 
 > [I'm afraid] of the rats."
@@ -113,7 +114,7 @@ realm's future.
 
 ## Political Machinations
 
-Larys Strong, Alicent's enigmatic spymaster, makes a subtle yet calculated move in this political chess game. He
+Larys Clubfoot Strong, Alicent's creepy spymaster, makes a subtle yet calculated move in this political chess game. He
 suggests to Aegon that to avoid his father's fate, he must refuse to be a puppet king for Otto Hightower. This advice,
 while seemingly in Aegon's interest, also positions Larys as a potential alternative for the role of Hand. The
 mysterious circumstances surrounding the fire at Harrenhal that killed Larys's family cast a long shadow over his
@@ -121,7 +122,7 @@ machinations, hinting at the lengths he might go to secure power.
 
 Later in the episode, a drunken Aemond with his posse of shithead knights, is overheard saying,
 
-> "My brother is like a dog. He will..."
+> "He [Aemond] is as loyal as a hound. I can set him and his dragon on my foes at will."
 
 This statement hints at the possibility of a power shift, with either Aemond or Larys replacing Otto Hightower as Hand
 of the King, offering more pragmatic than
@@ -146,7 +147,7 @@ The episode ends with a devastated Helaena cradling her dead son, her earlier fe
 prescient. Meanwhile, in Dragonstone, Rhaenyra receives news of the successful mission, her face a mask of conflicted
 emotions – vengeance achieved, but at a terrible cost.
 
-We are treated to wrenching sounds as King Aaegon II's heir to the Iron Throne and child, Lucerys's head is cut from his
+We are treated to wrenching sounds as King Aaegon II's heir to the Iron Throne and child, Jaehaerys' head is cut from his
 body by the rat snatchers.
 
 
