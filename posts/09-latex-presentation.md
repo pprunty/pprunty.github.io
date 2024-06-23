@@ -6,7 +6,8 @@ description: "Learn how to create elegant and professional presentation slides u
 artwork: "Patrick Prunty's LaTex Presentation Template"
 ---
 
-During my undergraduate studies, I observed that many of my Mathematics and Computer Science professors utilized remarkably
+During my undergraduate studies, I observed that many of my Mathematics and Computer Science professors utilized
+remarkably
 similar presentation slides characterized by their simplicity, elegance, and clarity. This consistency piqued my
 curiosity, leading me to investigate the underlying cause. It was not until my postgraduate studies that I discovered
 the
@@ -38,6 +39,14 @@ common thread: a typesetting system called _LaTeX_.
 <div class="pdf-link">
   <a href="/pdfs/presentation2.pdf" target="_blank">View an example presentation PDF using LaTex.</a>
 </div>
+
+[//]: # (Whether we like it or not, in both industry and academia, some people will only sit up straight and pay attention when)
+
+[//]: # (presented with visually)
+
+[//]: # (appealing slides. This guide will walk you through how to create professional-quality slides using LaTeX, enabling you to)
+
+[//]: # (captivate your audience and effectively communicate your message.)
 
 ## What is LaTeX?
 
@@ -95,7 +104,8 @@ To start working on your presentation:
 1. Import this project structure into Overleaf or your preferred LaTeX editor.
 2. Edit the main.tex file to set up your presentation's overall structure and theme.
 3. Create or modify individual slide files in the slides/ directory.
-4. Add any necessary images to the imgs/ directory, Add any necessary images to the imgs/ directory, including an `organization_logo.png` which will be displayed on the first slide.
+4. Add any necessary images to the imgs/ directory, Add any necessary images to the imgs/ directory, including
+   an `organization_logo.png` which will be displayed on the first slide.
 5. Compile your project (in Overleaf, press the green "Recompile" button) to preview your presentation.
 
 By utilizing LaTeX for your presentations, you can achieve a level of professionalism and consistency often associated
