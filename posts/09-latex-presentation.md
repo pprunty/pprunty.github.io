@@ -1,5 +1,5 @@
 ---
-title: "Creating Professional Academic Slides with LaTeX: A Guide for Math and CS Presentations"
+title: "Creating Professional Presentations with LaTeX: A Guide for STEM Professionals"
 date: "2024-06-23"
 image: "/images/articles/latex-presentation/latex-presentation3.png"
 description: "Learn how to create elegant and professional presentation slides using LaTeX."
