@@ -164,7 +164,7 @@ This defines a custom blue color and sets it as the main structural color for th
 and test your changes to achieve the desired look that aligns with your organization's branding guidelines.
 
 <figure>
-  <img src="https://patrickprunty.com/images/articles/latex-presentation/overleaf-editor.png" alt="Image description here">
+  <img src="https://patrickprunty.com/images/articles/latex-presentation/latex-custom-blue.png" alt="Image description here">
   <figcaption>Example of Custom Blue matching Organizational Theme Color.</figcaption>
 </figure>
 
