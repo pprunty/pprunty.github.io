@@ -73,7 +73,7 @@ immediate revenge on King's Landing, but Rhaenys restrains him, reminding him th
 support Rhaenyra in her grief. Rhaenys, having lost her own children and once passed over for the throne herself, acts
 as a voice of reason amidst the chaos. Daemon, driven by vengeance, instead insists he have:
 
-> A son for a son."
+> A son for a son.
 
 <figure>
   <img src="https://patrickprunty.com/images/articles/hotd-s02e01/daemon-son-for-a-son.png" alt="Image description here">
@@ -88,7 +88,7 @@ intervened then, but Aemond later exacted his revenge by killing Lucerys and his
 Rhaenyra, after finding Lucerys's clothes and a torn dragon wing on the beach, returns to Dragonstone. With tears in her
 eyes, she addresses her small council, speaking her only line in the entire episode:
 
-> I want Aaemond Targaryen."
+> I want Aaemond Targaryen.
 
 <figure>
   <img src="https://patrickprunty.com/images/articles/hotd-s02e01/tears.png" alt="Image description here">
@@ -107,7 +107,7 @@ In King's Landing, King Aegon II "The Magnanimous" seeks to bring his young son,
 While searching
 for Jaehaerys in his chambers, he encounters his sister-wife Helaena, who cryptically warns Aegon:
 
-> [I'm afraid] of the rats."
+> [I'm afraid] of the rats.
 
 This cryptic warning, reflecting Helaena's established prophetic abilities from the previous season, ominously
 foreshadows the events to come at the end of the episode. Helaena's gift of prophecy adds another layer of mystique to
@@ -143,7 +143,7 @@ pragmatism and willingness to sacrifice others for his own advancement.
 
 Later in the episode, a drunken Aemond with his posse of shithead knights, is overheard in the throne room saying,
 
-> "He [Aemond] is as loyal as a hound. I can set him and his dragon on my foes at will."
+> "He [Aemond] is as loyal as a hound. I can set him and his dragon on my foes at will.
 
 This statement hints at the possibility of a power shift, with the suggestion Aegon may choose Aemond and _not_ Larys to replace Otto as Hand
 of the King, offering more pragmatic than

@@ -394,16 +394,22 @@ const Content = styled.div`
       border-left: 4px solid #666;
       margin: 1.5em 10px;
       padding: 0.5em 20px;
-      quotes: "\\201C""\\201D""\\2018""\\2019";
     color: #666;
     &:before {
       color: ##666;
-      content: open-quote;
+      content: open-quote !important;
       font-size: 3em;
       line-height: 0.1em;
       margin-right: 0.25em;
       vertical-align: -0.4em;
     }
+    &:after {
+          content: close-quote;
+          font-size: 3em;
+          line-height: 0.1em;
+          margin-left: 0.25em;
+          vertical-align: -0.4em;
+        }
 
     p {
       display: inline;
