@@ -148,7 +148,7 @@ const Home: React.FC = () => {
   const caseStudies: CaseStudyProps[] = [
       {
         title: "Jigsaw Presents",
-        description: "Jigsaw Presents is an analytical YouTube channel, where you will find in-depth analysis and insights into trending movies, series, books, and games.",
+        description: "Jigsaw Presents is an analytical YouTube channel, where you will find in-depth analysis and insights into trending movies, TV series and books.",
         imageUrl: "/images/projects/jigsaw-presents-logo.png",
         link: "project/jigsaw-presents",
         index: 0,
