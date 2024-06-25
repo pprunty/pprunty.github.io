@@ -108,20 +108,20 @@ const BottomBackArrow = styled(BackArrow)`
   margin-top: 40px;
 `;
 
-const playlists = [
+const videos = [
   'dQw4w9WgXcQ?si=WIoEGTEKY1Rr-stR',
-//   'si=SosBov0FywktTDz3&amp;list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK',
-//   'si=zq6SjUQ3OONc-lCb&amp;list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_',
+//   'sLMRR9sWo6E?si=n9SVLcdywkaYMNvf',
+//   'wJmg0uc3CjY?si=e1kjW7ktp2ir67CW',
 ];
 
-const MemoizedVideoWrapper = memo(({ playlistId, index }: { playlistId: string, index: number }) => (
+const MemoizedVideoWrapper = memo(({ videoId, index }: { videoId: string, index: number }) => (
   <VideoWrapper key={index}>
     <iframe
-      src={`https://www.youtube.com/embed/videoseries?${playlistId}`}
+      src={`https://www.youtube.com/embed/${videoId}`}
       frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
-      title={`YouTube playlist player ${index + 1}`}
+      title={`YouTube video player ${index + 1}`}
     ></iframe>
   </VideoWrapper>
 ));
@@ -171,12 +171,12 @@ const JigsawAcademy: React.FC = () => {
       </Head>
       <Title>Jigsaw Academy</Title>
       <TextContainer>
-        <Subtitle>Explore my educational YouTube channel, featuring a diverse range of tutorials. Enhance your knowledge with curated playlists. Use the hamburger (three horizontal bars) icon at the top of the videos below to navigate through the playlists. Alternatively, click the YouTube button below to view my channel directly on YouTube.</Subtitle>
+        <Subtitle>Discover my educational YouTube channel, offering a wide array of tutorials on software and programming. Expand your skills with lessons in Full-stack Programming, Python FastAPI, ReactJS/NextJS, Cloud Computing, Apple's Final Cut Pro and more.</Subtitle>
                 <div className="g-ytsubscribe" data-channelid="UCiskkvzn7UMmqkwOhKCBkqw" data-layout="default" data-count="default"></div>
       </TextContainer>
       <Grid>
-        {playlists.map((playlistId, index) => (
-          <MemoizedVideoWrapper key={index} playlistId={playlistId} index={index} />
+        {videos.map((videoId, index) => (
+          <MemoizedVideoWrapper key={index} videoId={videoId} index={index} />
         ))}
       </Grid>
       <BottomBackArrow onClick={handleBackClick}>&larr; Back</BottomBackArrow>

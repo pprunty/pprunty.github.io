@@ -7,7 +7,8 @@ artwork: "Anthropic"
 ---
 
 It is sometimes easier to show rather than tell, so here is [claude.ai](https://claude.ai), Anthropic A.I's latest Large
-Language Model (LLM). Claude Sonnet 3.5 is similar to ChatGPT, however, offers subtle differences in user experience and performance that
+Language Model (LLM). Claude Sonnet 3.5 is similar to ChatGPT, however, offers subtle differences in user experience and
+performance that
 leave a lasting impression.
 
 ## Anthropic's Origins
@@ -31,19 +32,25 @@ customers. Google has also committed $2 billion in investment. This $6.58 billio
 company. In comparison, OpenAI has received about $11 billion, mostly from Microsoft. While OpenAI leads in total
 funding, Anthropic's diverse investments signal strong confidence in its potential to disrupt the AI landscape.
 
-
 ## What sets Claude Apart?
 
-To understand Claude's unique position in the AI landscape, let us compare it against ChatGPT, the industry leading 
+To understand Claude's unique position in the AI landscape, let us compare it against ChatGPT, the industry leading
 model, across four key metrics:
+
+1. User Experience
+2. Performance
+3. Features
+4. Pricing
 
 ### 1. User Experience
 
-Claude's distinct branding immediately sets it apart from ChatGPT. Its interface features a sophisticated palette of
-neutral tones and whimsical stenciled figures, creating a refined yet playful aesthetic. Claude's serif font adds
-classical elegance, contrasting with ChatGPT's modern sans-serif style. This thoughtful design conveys professionalism
-while maintaining approachability, aligning with Anthropic's AI philosophy. Claude feels playful yet
+Claude's distinctive branding immediately distinguishes it from ChatGPT. While both platforms feature a dark mode theme,
+Claude's interface boasts a sophisticated palette of neutral tones complemented by whimsical stenciled figures and
+designs. This combination creates a refined yet playful aesthetic. Claude's use of a serif font adds a touch of
+classical elegance, contrasting with ChatGPT's modern sans-serif style. This thoughtful design approach conveys
+professionalism while maintaining approachability, reflecting Anthropic's AI philosophy. Claude feels playful yet
 professional, whilst ChatGPT feels practical and original.
+
 
 <figure>
   <img src="https://patrickprunty.com/gifs/claude-prompt.gif" alt="Image description here">
@@ -60,8 +67,10 @@ to make an email sound more professional, it will not only rewrite the email but
 make it more professional.
 
 As well as this, Claude's handling of file uploads and pasted content is noteworthy. Unlike ChatGPT, which can sometimes
-struggle with long pasted inputs, causing the interface to scroll erratically (reminiscent of an old-fashioned window blind
-that you have to jerk to make go up), Claude maintains a smooth and stable interface even with large amounts of pasted text.
+struggle with long pasted inputs, causing the interface to scroll erratically (reminiscent of an old-fashioned window
+blind
+that you have to jerk to make go up), Claude maintains a smooth and stable interface even with large amounts of pasted
+text.
 
 <figure>
   <img src="https://patrickprunty.com/images/articles/claude/gpt_claude.webp" alt="Image description here">
@@ -84,7 +93,6 @@ _or_ official Desktop App.
 The ability to use Claude as a desktop app enhances accessibility and integrates seamlessly into users' workflows. For
 those interested in the technical aspects of PWAs, I have written a detailed guide
 on [How to Make Your NextJS/ReactJS Application a Progressive Web App (PWA)](https://patrickprunty.com/blog/04-nextjs-pwa).
-
 
 ### 2. Performance
 
@@ -111,15 +119,27 @@ sometimes struggle with long inputs, causing the interface to scroll erratically
 blind that you have to jerk to make go up), Claude maintains a smooth and stable interface even with large amounts of
 text.
 
-### 3. Cost
+### 3. Limitations
 
-### 4. Limitations
+### 4. Pricing
+
+Both ChatGPT and Claude offer free versions with limited usage, and premium versions at $20 (US), £18 (UK), €18 (EU)
+per month plus taxes. ChatGPT Plus
+provides access to GPT-4 and additional features like faster responses and priority access, while Claude Pro offers
+increased usage limits and priority features.
+
+For general use and versatility, especially if you need capabilities like image generation or broader language support,
+ChatGPT is the better option. However, for specific tasks like detailed text summarization, optimized coding, and
+handling large context windows, Claude is superior. Each model has its strengths, and the choice depends on your
+specific requirements and use cases.
 
 
-## Conclusion 
+## Conclusion
+
+make Claude is a better partner for creativity
 
 Claude 3.5 Sonnet represents a significant step forward in the AI landscape. Its thoughtful design, enhanced
 performance, and competitive pricing make it a strong contender in the LLM market. As Anthropic continues to innovate
 and refine its models, Claude is poised to play an increasingly important role in shaping the future of AI interactions.
-Having recently made the transition from OpenAI's ChatGPT to Claude myself, I can attest to its value. Will you too make the 
-move away from ChatGPT and to Claude? 
+Having recently made the transition from OpenAI's ChatGPT to Claude myself, I can attest to its value. Will you too make
+the move away from ChatGPT and to Claude? 

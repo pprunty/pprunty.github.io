@@ -154,16 +154,8 @@ const Home: React.FC = () => {
         index: 0,
       },
         {
-          title: "thelastmanstanding.io 🔜",
-          description: "Launching this year in Ireland and the UK, thelastmanstanding.io is a digital platform that enables sweepstake and last-man-standing competitions among friend groups and sports fans. Enabling digital payments, automated email notifications and custom wagers. Covering major football events such as the FIFA World Cup, European Championship, and English Premier League with future expansion plans to incorporate additional international Football tournaments, international Rugby and Cricket competitions.",
-//           description: "A platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. With a growing community, future expansion plans aim to incorporate more international Football tournaments, as well as international Rugby and Cricket competitions.",
-          imageUrl: "/images/projects/thelastmanstanding.png",
-          link: "https://thelastmanstanding.io",
-          index: 1,
-        },
-        {
           title: "Jigsaw Academy",
-          description: "Launching this year, Jigsaw Academy is an educational YouTube channel, providing free, high-quality educational tutorials to those who need it most. Curated playlists include 'Mastering FastAPI: From Basics to Advanced', 'Laws of UI/UX Design' and 'How to Brew Stout Beer'.",
+          description: "Jigsaw Academy is an educational YouTube channel, providing free, high-quality educational tutorials to those who need it most. Curated lessons cover topics in Full-stack Programming; Python FastAPI and ReactJS/NextJS, Cloud Computing, Apple's Final Cut Pro and more.",
           imageUrl: "/images/projects/jigsaw-academy-logo.png",
           link: "project/jigsaw-academy",
           index: 2,
@@ -175,6 +167,14 @@ const Home: React.FC = () => {
       link: "https://motormongo.readthedocs.io/en/latest/index.html",
       index: 3,
     },
+            {
+              title: "thelastmanstanding.io 🔜",
+              description: "Launching this year in Ireland and the UK, thelastmanstanding.io is a digital platform that enables sweepstake and last-man-standing competitions among friend groups and sports fans. Enabling digital payments, automated email notifications and custom wagers. Covering major football events such as the FIFA World Cup, European Championship, and English Premier League with future expansion plans to incorporate additional international Football tournaments, international Rugby and Cricket competitions.",
+    //           description: "A platform to facilitate sweepstake and last-man-standing competitions among friend groups and sports fans, enabling digital payments, automated email notifications, and custom wagers. The product currently covers major football events such as the FIFA World Cup, European Championship, and English Premier League. With a growing community, future expansion plans aim to incorporate more international Football tournaments, as well as international Rugby and Cricket competitions.",
+              imageUrl: "/images/projects/thelastmanstanding.png",
+              link: "https://thelastmanstanding.io",
+              index: 1,
+            },
 //         {
 //           title: "pokR",
 //           description: "An open-sourced reinforcement and deep-learning model designed for applications of Texas Hold'em Poker.",
