@@ -109,7 +109,7 @@ const BottomBackArrow = styled(BackArrow)`
 `;
 
 const videos = [
-  'dQw4w9WgXcQ?si=WIoEGTEKY1Rr-stR',
+  'aMew9xz6A_w?si=MCUg9kqAaVQpd1uX',
 //   'sLMRR9sWo6E?si=n9SVLcdywkaYMNvf',
 //   'wJmg0uc3CjY?si=e1kjW7ktp2ir67CW',
 ];
@@ -174,11 +174,11 @@ const JigsawAcademy: React.FC = () => {
         <Subtitle>Discover my educational YouTube channel, offering a wide array of tutorials on software and programming. Expand your skills with lessons in Full-stack Programming, Python FastAPI, ReactJS/NextJS, Cloud Computing, Apple's Final Cut Pro and more.</Subtitle>
                 <div className="g-ytsubscribe" data-channelid="UCiskkvzn7UMmqkwOhKCBkqw" data-layout="default" data-count="default"></div>
       </TextContainer>
-      <Grid>
-        {videos.map((videoId, index) => (
-          <MemoizedVideoWrapper key={index} videoId={videoId} index={index} />
-        ))}
-      </Grid>
+       <Grid>
+              {videos.map((videoId, index) => (
+                <MemoizedVideoWrapper key={index} videoId={videoId} index={index} />
+              ))}
+            </Grid>
       <BottomBackArrow onClick={handleBackClick}>&larr; Back</BottomBackArrow>
     </>
   );
