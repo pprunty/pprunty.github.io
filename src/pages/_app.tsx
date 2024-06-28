@@ -7,7 +7,9 @@ import { lightTheme } from '../styles/theme';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
+import * as gtag from '../../lib/gtag';
 import 'highlight.js/styles/atom-one-dark.css'; // Import the Atom One Dark theme
+import { useRouter } from 'next/router';
 
 const updateMetaThemeColor = (color: string) => {
   const metaThemeColor = document.querySelector("meta[name=theme-color]");
@@ -46,37 +48,62 @@ const Container = styled.div`
   }
 `;
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      const handleLoad = () => {
-        navigator.serviceWorker.register('/sw.js').then((registration) => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        }).catch((error) => {
-          console.error('Service Worker registration failed:', error);
-        });
+const registerServiceWorker = () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').then((registration) => {
+      console.log('Service Worker registered with scope:', registration.scope);
+    }).catch((error) => {
+      console.error('Service Worker registration failed:', error);
+    });
 
-        navigator.serviceWorker.addEventListener('message', (event) => {
-          if (event.data && event.data.type === 'NEW_SW_AVAILABLE') {
-            if (confirm('A new version of this site is available. Reload to update?')) {
-              window.location.reload();
-            }
-          }
-        });
-      };
-
-      const handleVisibilityChange = () => {
-        if (document.visibilityState === 'visible') {
-          handleLoad();
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      if (event.data && event.data.type === 'NEW_SW_AVAILABLE') {
+        if (confirm('A new version of this site is available. Reload to update?')) {
+          window.location.reload();
         }
-      };
+      }
+    });
+  }
+};
 
-      document.addEventListener('visibilitychange', handleVisibilityChange);
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
 
-      return () => {
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      gtag.pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
+  useEffect(() => {
+    import('web-vitals').then(({ getCLS, getFID, getLCP }) => {
+      const sendToAnalytics = ({ name, delta, id }) => {
+        gtag.sendToGoogleAnalytics({ name, delta, id });
       };
-    }
+      getCLS(sendToAnalytics);
+      getFID(sendToAnalytics);
+      getLCP(sendToAnalytics);
+    }).catch(err => {
+      console.error('Failed to load web-vitals', err);
+    });
+  }, []);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        registerServiceWorker();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, []);
 
   return (
