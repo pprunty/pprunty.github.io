@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import Script from 'next/script';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -31,6 +32,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
+        <GoogleAnalytics />
         <Head>
           {/* Add your other head elements here */}
           <link rel="manifest" href="/manifest.json" />
