@@ -27,7 +27,7 @@ function generateSitemap() {
       console.log('in if statement')
       sitemapContent += `
   <url>
-    <loc>https://patrickprunty.com/blog/page/1/${filename.replace(/\.md$/, '')}</loc>
+    <loc>https://patrickprunty.com/blog/${filename.replace(/\.md$/, '')}</loc>
     <news:news>
       <news:publication>
         <news:name>Patrick Prunty Blog</news:name>
