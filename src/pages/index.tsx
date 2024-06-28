@@ -195,6 +195,7 @@ const Home: React.FC = () => {
         <meta property="og:image:height" content="630" />
         <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:type" content="profile" />
+        <meta name="keywords" content="patrick prunty, jigsaw presents, blog, software developer, artificial intelligence" />
       </Head>
       <Title>The Product & Design Work of Patrick Prunty</Title>
       <Subtitle>

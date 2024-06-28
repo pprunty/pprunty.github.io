@@ -127,6 +127,7 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
         <meta property="og:title" content="Patrick Prunty's Blog" />
         <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
         <meta property="og:description" content="Welcome to my personal blog where I share insights, stories, and updates on my work and interests." />
+        <meta name="keywords" content="patrick prunty, jigsaw, programming, python, youtube, education, blog" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <PageLoader loading={loading} />

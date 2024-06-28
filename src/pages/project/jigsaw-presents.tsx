@@ -174,6 +174,7 @@ const JigsawPresents: React.FC = () => {
         <meta property="og:title" content="Jigsaw Presents YouTube Channel" />
         <meta property="og:description" content="Discover my analytical YouTube channel, offering in-depth analysis and insights into trending movies, series, books, and games." />
         <meta property="og:type" content="video" />
+        <meta name="keywords" content="patrick prunty, jigsaw presents, videos, youtube" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSBKKYLNC4"></script>
       </Head>
       <Title>Jigsaw Presents</Title>

@@ -133,6 +133,7 @@ const Photography: React.FC = () => {
         <meta property="og:title" content="Patrick Prunty's Photography" />
         <meta property="og:description" content="Discover the world through my lens." />
         <meta property="og:type" content="article" />
+        <meta name="keywords" content="patrick prunty, jigsaw presents, blog, photography, photos" />
         <meta property="og:url" content={`${router.asPath}`} />
       </Head>
       <Title>Patrick Prunty&apos;s Photography</Title>
