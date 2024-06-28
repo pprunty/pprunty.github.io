@@ -1,9 +1,9 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import Script from 'next/script';
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+  static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -37,7 +37,7 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
           <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
           <meta name="theme-color" content="#F0F0F0" />
-          {/* Google Analytics */}
+          {/* Google Tag Manager */}
           <Script
             strategy="afterInteractive"
             src={`https://www.googletagmanager.com/gtag/js?id=G-LSBKKYLNC4`}
@@ -56,7 +56,7 @@ class MyDocument extends Document {
               `,
             }}
           />
-          {/* End Google Analytics */}
+          {/* End Google Tag Manager */}
         </Head>
         <body>
           <Main />

@@ -29,8 +29,7 @@
     "remark-rehype": "^11.1.0",
     "sitemap": "^8.0.0",
     "styled-components": "^6.1.11",
-    "unified": "^11.0.4",
-    "web-vitals": "^4.2.0"
+    "unified": "^11.0.4"
   },
   "devDependencies": {
     "@types/node": "^20",
