@@ -9,7 +9,7 @@ artwork: "Patrick Prunty's LaTex Presentation Template"
 During my undergraduate studies, I observed that many of my Mathematics and Computer Science professors utilized
 remarkably
 similar presentation slides characterized by their simplicity, elegance, and clarity. This consistency piqued my
-curiosity, leading me to investigate the underlying cause. It was not until my postgraduate studies that I discovered
+curiosity, leading me to investigate the underlying cause. It wasn't until my postgraduate studies that I discovered
 the
 common thread: a typesetting system called _LaTeX_.
 
@@ -58,7 +58,7 @@ making it ideal for creating professional-looking presentations, articles, and t
 
 For those interested in exploring LaTeX, [overleaf.com](https://www.overleaf.com/) provides a user-friendly online
 integrated development environment (IDE) for editing LaTeX documents. While LaTeX is technically a markup language and
-may present a learning curve for those unfamiliar with coding concepts, it is entirely possible to produce high-quality
+may present a learning curve for those unfamiliar with coding concepts, it's entirely possible to produce high-quality
 documents without extensive programming knowledge.
 
 <figure>

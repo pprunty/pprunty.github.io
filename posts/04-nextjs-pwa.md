@@ -85,7 +85,7 @@ You must optimize your application for PWA by doing the following:
 
 ### 1. Ensure your site is served over HTTPS
 
-To serve your site over HTTPs, you need to obtain an SSL/TLS certificate and configure your server to use it if it is
+To serve your site over HTTPs, you need to obtain an SSL/TLS certificate and configure your server to use it if it's
 running on the server side. If you are serving your site statically over AWS or Azure, you will need to configure your
 CDN (Content Delivery Network) to serve static assets over HTTPs and not HTTP.
 
@@ -158,7 +158,7 @@ After generating your images and manifest, your `manifest.json` should like this
     {
       "src": "/icon-512x512.png",
       "purpose": "any",
-      // It is important at least one icon has "purpose": "any" in order to be a valid PWA
+      // it's important at least one icon has "purpose": "any" in order to be a valid PWA
       "sizes": "512x512",
       "type": "image/png"
     }
