@@ -116,7 +116,7 @@ const SubscribeInput = styled.input`
   border-radius: 0px !important;
   font-size: 16px;
   border-right: none !important;
-  background-color: #f0f0f0;
+  background-color: #F0F0F0;
   padding-left: 10px;
   outline: none;
   box-sizing: border-box;
@@ -136,7 +136,7 @@ const SubscribeButton = styled.button`
   background-color: #333;
   border: 1px solid #333;
   font-weight: 600;
-  color: #f0f0f0;
+  color: #F0F0F0;
   display: flex;
   justify-content: center;
   align-items: center;

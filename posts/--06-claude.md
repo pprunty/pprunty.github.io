@@ -6,7 +6,7 @@ description: "Exploring the capabilities and impact of Anthropic's newest Large 
 artwork: "Anthropic"
 ---
 
-It is sometimes easier to show rather than tell, so here is [claude.ai](https://claude.ai), Anthropic A.I's latest Large
+It's sometimes easier to show rather than tell, so here is [claude.ai](https://claude.ai), Anthropic A.I's latest Large
 Language Model (LLM). Claude Sonnet 3.5 is similar to ChatGPT, however, offers subtle differences in user experience and
 performance that
 leave a lasting impression.
@@ -112,7 +112,7 @@ Sarah Johnson, a content creator, points out, "While I love using Claude for mos
 real-time information that it can't provide. It would be great to see this feature added in future updates."
 
 Dr. Emily Chen, an AI researcher at MIT, notes, "Claude's ability to maintain coherence in long, complex conversations
-is truly impressive. It is like talking to a knowledgeable colleague who never loses track of the discussion."
+is truly impressive. It's like talking to a knowledgeable colleague who never loses track of the discussion."
 
 One of Claude's standout features is its superior handling of file uploads and pasted content. Unlike ChatGPT, which can
 sometimes struggle with long inputs, causing the interface to scroll erratically (reminiscent of an old-fashioned window
