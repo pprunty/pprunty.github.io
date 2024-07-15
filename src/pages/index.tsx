@@ -155,9 +155,9 @@ const Home: React.FC = () => {
       },
                     {
                       title: "🔜 NOMAD Media Productions",
-                      description: "Launching this year, NOMAD is a cutting-edge media production and digital platform that leverages artificial intelligence to deliver concise, short-form news articles in a sleek, vertical scroll format, similar to TikTok and Instagram Reels. Nomad distills breaking news into four sentences, accompanied by three key bullet-point consequences and a comments section. At NOMAD, we prioritize the value of essential information and your time—no waffle, only the facts you need.",
+                      description: "Launching this year, NOMAD is a cutting-edge media production and digital platform that leverages artificial intelligence to deliver concise, short-form news articles in a sleek, vertical scroll format, similar to TikTok and Instagram Reels. Nomad breaks news articles down into four sentences, accompanied by three key bullet-point consequences and a comments section. At NOMAD, we prioritize the value of essential information and your time—no waffle, only the facts you need.",
                       imageUrl: "/images/projects/nomad.png",
-                      link: "https://thelastmanstanding.io",
+                      link: "https://nomad.pe",
                       index: 1,
                     },
     {
