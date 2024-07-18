@@ -162,7 +162,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const filenames = fs.readdirSync(postsDirectory);
 
   const filteredFilenames = process.env.NODE_ENV === 'production'
-    ? filenames.filter((filename) => /^\d+.*\.md$/.test(filename))
+    ? filenames
     : filenames;
 
   const posts = await Promise.all(

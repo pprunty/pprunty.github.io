@@ -1,14 +1,14 @@
 ---
 title: "The Rise of Claude: Anthropic's Latest Large Language Model is Here to Stay"
-date: "2024-06-30"
+date: "2024-07-26"
 image: "/images/articles/claude/claude.WEBP"
 description: "Exploring the capabilities and impact of Anthropic's newest Large Language Model."
 artwork: "Anthropic"
 ---
 
 It's sometimes easier to show rather than tell, so here is [claude.ai](https://claude.ai), Anthropic A.I's latest Large
-Language Model (LLM). Claude Sonnet 3.5 is similar to ChatGPT, however, offers subtle differences in user experience and
-performance that
+Language Model (LLM). Claude Sonnet 3.5 offers subtle differences in user experience and
+performance compared to OpenAI's ChatGPT that
 leave a lasting impression.
 
 ## Anthropic's Origins
@@ -26,7 +26,7 @@ were taken?
 
 Anthropic have since attracted significant financial backing from major players in the tech industry. In 2022, they
 announced $580 million in funding, with $500 million coming from FTX under Sam Bankman-Fried's
-leadership. _Remember him_? More recently, Amazon completed a $4 billion investment in Anthropic, in a deal whereby
+leadership. _Huh, remember him_? More recently, Amazon completed a $4 billion investment in Anthropic, in a deal whereby
 Anthropic agreed to use Amazon Web Services (AWS) as its primary cloud provider and make its AI models available to AWS
 customers. Google has also committed $2 billion in investment. This $6.58 billion in funding is impressive for a young
 company. In comparison, OpenAI has received about $11 billion, mostly from Microsoft. While OpenAI leads in total

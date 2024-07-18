@@ -2,7 +2,7 @@
 title: "Untitled 01"
 date: "2024-07-18"
 image: "/images/articles/mad.jpg"
-description: "An experimental poem by Patrick Prunty."
+description: "An experimental poem by Patrick Prunty from the Untitled Collection."
 artwork: "Jak Ruiz"
 type: "poem"
 ---

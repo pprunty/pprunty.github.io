@@ -1,6 +1,6 @@
 ---
 title: "Put AI in Your SaaS or Fall Behind: Here's Why"
-date: "2024-07-18"
+date: "2024-07-24"
 description: "My experience integrating LLMs into mobile devices for a startup, and why AI is becoming essential for SaaS competitiveness."
 image: "/images/articles/magikarp.png"
 #image: "/images/articles/ai-saas.png"
@@ -15,22 +15,26 @@ on call, I was given a major problem the company are actively seeking to solve:
 > experiences and notifications for Dan via an intelligent agent named Magikarp. This agent resides on Dan's device and
 > has contextual knowledge of his data stored locally on the device.
 
-The problem was admittedly much more open-ended than how I managed to capture it above, so I set a goal to leverage the intelligent use of LLMs
-and achieve the following:
+The problem was admittedly much more open-ended than how I managed to capture it above, so I set a goal to leverage the
+intelligent use of LLMs
+and to achieve the following:
 
-1. **General LLM Prompting:** Allow Dan to interact with Magikarp in a conversation (like we do today with any other LLM),
+1. **General LLM Prompting:** Allow Dan to interact with Magikarp in a conversation (like we do today with any other
+   LLM),
    except Magikarp can use Dan's contextual data to
    curate its response.
 2. **Smart Push-Notifications:** Simulate smart and non-invasive push-notifications on Dan's device for a given day.
 3. **Rule-based User Configuration:** Allow for Dan to create rules for the Magikarp agent, enabling Dan to suggest to
-   the the agent _how_ and _when_ it should interact with
+   the agent _how_ and _when_ it should interact with
    him.
 
 With the announcement of Apple AI in iOS 18.
 
-I do not want to go into the low level details of how I solved this project, instead you can watch this demo video I 
-created. The result was a highly sophisticated, albeit slow Magikarp agent which used a free open-sourced LLM called Llama 3.
-The solution I created surprised even myself, especially considering it took me only ~ 11 hours (2-3 days) of development 
+I do not want to go into the low level details of how I solved this project, instead you can watch this demo video I
+created. The result was a highly sophisticated, albeit slow Magikarp agent which used a free open-sourced LLM called
+Llama 3.
+The solution I created surprised even myself, especially considering it took me only ~ 11 hours (2-3 days) of
+development
 time to complete.
 
 And so, we enter a world where three good engineers can do the work of three data science teams.

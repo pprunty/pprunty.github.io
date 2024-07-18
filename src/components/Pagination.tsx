@@ -8,33 +8,49 @@ interface PaginationProps {
   totalPages: number;
 }
 
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+}
+
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const handlePageChange = (page: number) => {
-    // Avoid navigation if already on the requested page
     if (page === currentPage) return;
-
     setLoading(true);
     router.push(`/blog/page/${page}`).then(() => {
       setLoading(false);
     });
   };
 
+  const getPageNumbers = () => {
+    const pageNumbers = [];
+    let start = Math.max(1, currentPage - 1);
+    let end = Math.min(start + 4, totalPages);
+
+    if (end - start < 4 && start > 1) {
+      start = Math.max(1, end - 4);
+    }
+
+    for (let i = start; i <= end; i++) {
+      pageNumbers.push(i);
+    }
+
+    return pageNumbers;
+  };
+
   return (
     <>
       <PaginationWrapper>
-        {Array.from({ length: totalPages }, (_, i) => (
+        {getPageNumbers().map((page) => (
           <PageNumber
-            key={i}
-            $active={i + 1 === currentPage}
-            onClick={(e) => {
-              e.preventDefault();
-              handlePageChange(i + 1);
-            }}
+            key={page}
+            $active={page === currentPage}
+            onClick={() => handlePageChange(page)}
           >
-            {i + 1}
+            {page}
           </PageNumber>
         ))}
       </PaginationWrapper>

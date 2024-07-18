@@ -1,6 +1,6 @@
 ---
 title: "Is There a Moore's Law for the Human Brain?"
-date: "2024-05-21"
+date: "2024-07-30"
 description: "Exploring the interplay between technological advancements in Artificial Intelligence and the evolution of the human brain."
 image: "/images/articles/brain.png"
 artwork: "Pokémon Crystal Gameplay"
