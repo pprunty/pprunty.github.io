@@ -1,8 +1,8 @@
 ---
-title: "Ode to Retro Pokémon"
+title: "Simplicity In Motion: A Guide for UI/UX Designers"
 date: "2024-05-21"
-description: "Exploring how a video game franchise subtly shaped my adulthood."
-image: "/images/articles/pokemon.png"
+description: "A UI/UX design guide to follow, or not... it's whatever you want it to be really."
+image: "/images/articles/nomad.png"
 artwork: "Pokémon Crystal Gameplay"
 ---
 

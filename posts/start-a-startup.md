@@ -1,8 +1,8 @@
 ---
-title: "Ode to Retro Pokémon"
+title: "How to Start a Startup: An Amateur's Guide"
 date: "2024-05-21"
-description: "Exploring how a video game franchise subtly shaped my adulthood."
-image: "/images/articles/pokemon.png"
+description: "An amateurs guide on how-to start a SaaS startup."
+image: "/images/articles/bezos2.jpeg"
 artwork: "Pokémon Crystal Gameplay"
 ---
 

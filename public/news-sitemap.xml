@@ -23,17 +23,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://patrickprunty.com/blog/09-latex-presentation</loc>
-    <news:news xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-      <news:publication>
-        <news:name>Patrick Prunty Blog</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-06-23T00:00:00.000Z</news:publication_date>
-      <news:title>Creating Professional Presentations with LaTeX: A Guide for STEM Professionals</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://patrickprunty.com/</loc>
   </url>
   <url>

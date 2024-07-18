@@ -154,9 +154,9 @@ const Home: React.FC = () => {
         index: 0,
       },
                     {
-                      title: "🔜 NOMAD Media Productions",
-                      description: "Launching this year, NOMAD is a cutting-edge media production and digital platform that leverages artificial intelligence to deliver concise, short-form news articles in a sleek, vertical scroll format, similar to TikTok and Instagram Reels. Nomad breaks news articles down into four sentences, accompanied by three key bullet-point consequences and a comments section. At NOMAD, we prioritize the value of essential information and your time—no waffle, only the facts you need.",
-                      imageUrl: "/images/projects/nomad.png",
+                      title: "NOMAD Media Productions",
+                      description: "🔜 Launching this year, NOMAD is a cutting-edge media production and digital platform that leverages artificial intelligence to deliver concise, short-form news articles in a sleek, vertical scroll format, similar to TikTok and Instagram Reels. Nomad breaks news articles down into four sentences, accompanied by three key bullet-point consequences and a comments section. At NOMAD, we prioritize the value of essential information and your time—no waffle, only the facts you need.",
+                      imageUrl: "/images/articles/nomad.png",
                       link: "https://nomad.pe",
                       index: 1,
                     },
@@ -167,13 +167,13 @@ const Home: React.FC = () => {
       link: "https://motormongo.readthedocs.io/en/latest/index.html",
       index: 3,
     },
-            {
-              title: "Jigsaw Academy",
-              description: "Jigsaw Academy is an educational YouTube channel, providing free, high-quality educational tutorials to those who need it most. Curated lessons cover topics in Full-stack Programming; Python FastAPI and ReactJS/NextJS, Cloud Computing, Apple's Final Cut Pro and more.",
-              imageUrl: "/images/projects/jigsaw-academy-logo.png",
-              link: "project/jigsaw-academy",
-              index: 2,
-            },
+//             {
+//               title: "Jigsaw Academy",
+//               description: "Jigsaw Academy is an educational YouTube channel, providing free, high-quality educational tutorials to those who need it most. Curated lessons cover topics in Full-stack Programming; Python FastAPI and ReactJS/NextJS, Cloud Computing, Apple's Final Cut Pro and more.",
+//               imageUrl: "/images/projects/jigsaw-academy-logo.png",
+//               link: "project/jigsaw-academy",
+//               index: 2,
+//             },
 //             {
 //               title: "thelastmanstanding.io 🔜",
 //               description: "Launching this year in Ireland and the UK, thelastmanstanding.io is a digital platform that enables sweepstake and last-man-standing competitions among friend groups and sports fans. Enabling digital payments, automated email notifications and custom wagers. Covering major football events such as the FIFA World Cup, European Championship, and English Premier League with future expansion plans to incorporate additional international Football tournaments, international Rugby and Cricket competitions.",

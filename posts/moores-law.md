@@ -1,8 +1,8 @@
 ---
-title: "Ode to Retro Pokémon"
+title: "Is There a Moore's Law for the Human Brain?"
 date: "2024-05-21"
-description: "Exploring how a video game franchise subtly shaped my adulthood."
-image: "/images/articles/pokemon.png"
+description: "Exploring the interplay between technological advancements in Artificial Intelligence and the evolution of the human brain."
+image: "/images/articles/brain.png"
 artwork: "Pokémon Crystal Gameplay"
 ---
 

@@ -21,6 +21,7 @@ interface Post {
   image: string;
   description: string;
   excerpt: string;
+  type: string;
 }
 
 interface Ad {
@@ -35,7 +36,7 @@ interface BlogListProps {
 
 
 const BlogPost = ({ post, formattedDate, onClick }: { post: Post, formattedDate: string, onClick: () => void }) => {
-  const contentToDisplay = (post.excerpt.length < 200 || post.excerpt.length > 15000) ? post.description : post.excerpt;
+  const contentToDisplay = (post.excerpt.length < 200 || post.excerpt.length > 15000 || post.type === "poem") ? post.description : post.excerpt;
 
   return (
     <PostItem onClick={onClick}>
@@ -44,7 +45,7 @@ const BlogPost = ({ post, formattedDate, onClick }: { post: Post, formattedDate:
           <PostDateAuthor>{formattedDate} by Patrick Prunty</PostDateAuthor>
           <PostTitle>{post.title}</PostTitle>
           <PostExcerpt>
-            {contentToDisplay}... <SeeMore onClick={onClick}>Read more</SeeMore>
+            {contentToDisplay} {post.type !== "poem" ? <> ... <SeeMore onClick={onClick}>Read more</SeeMore> </> : null}
           </PostExcerpt>
         </PostText>
         <PostImageWrapper>

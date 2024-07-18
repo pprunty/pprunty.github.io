@@ -1,8 +1,8 @@
 ---
-title: "Ode to Retro Pokémon"
+title: "I Think I Made a Movie"
 date: "2024-05-21"
-description: "Exploring how a video game franchise subtly shaped my adulthood."
-image: "/images/articles/pokemon.png"
+description: "From blog to vlog, I think I made my first YouTube movie and it was lots of fun."
+image: "/images/articles/nlomad.png"
 artwork: "Pokémon Crystal Gameplay"
 ---
 

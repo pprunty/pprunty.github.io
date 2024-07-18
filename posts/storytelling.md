@@ -1,8 +1,8 @@
 ---
-title: "Ode to Retro Pokémon"
+title: "Make Storytelling Your Superpower"
 date: "2024-05-21"
-description: "Exploring how a video game franchise subtly shaped my adulthood."
-image: "/images/articles/pokemon.png"
+description: "Learn how to harness the art of narrative to captivate audiences, influence decisions, and elevate your personal and professional impact."
+image: "/images/articles/woody.jpg"
 artwork: "Pokémon Crystal Gameplay"
 ---
 

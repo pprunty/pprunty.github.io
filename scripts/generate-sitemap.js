@@ -17,7 +17,7 @@ function generateSitemap() {
     const { data } = matter(fileContents);
 
     const postDate = new Date(data.date);
-    const currentDateMinus2Days = new Date(Date.now() - 40 * 24 * 60 * 60 * 1000);
+    const currentDateMinus2Days = new Date(Date.now() - 300 * 24 * 60 * 60 * 1000);
 
     console.log(`Checking file: ${filename}`);
     console.log(`Post date: ${postDate}`);

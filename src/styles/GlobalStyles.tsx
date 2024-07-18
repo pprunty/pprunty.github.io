@@ -17,6 +17,27 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   *, *::before, *::after {
     box-sizing: border-box;
   }
+    /* Customize scrollbar for WebKit browsers (Chrome, Safari) */
+    ::-webkit-scrollbar {
+      width: 8px; /* Make scrollbar narrower */
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: ${props => props?.theme?.colorBackground || lightTheme.colorBackground};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: ${props => props?.theme?.colorTextPrimary || lightTheme.colorTextPrimary};
+      border-radius: ${props => props?.theme?.borderRadius || '4px'};
+      border: 2px solid ${props => props?.theme?.colorBackground || lightTheme.colorBackground};
+    }
+
+    /* Customize scrollbar for Firefox */
+    * {
+      scrollbar-width: thin; /* Make scrollbar narrower */
+      scrollbar-color: ${props => props?.theme?.colorTextPrimary || lightTheme.colorTextPrimary} ${props => props?.theme?.colorBackground || lightTheme.colorBackground};
+    }
 `;
 
 export default GlobalStyle;
