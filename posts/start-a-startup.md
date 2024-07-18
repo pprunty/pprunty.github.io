@@ -1,5 +1,5 @@
 ---
-title: "How to Start a Startup: An Amateur's Guide"
+title: "How to Start a Startup: An Amateur's Guide for SaaS"
 date: "2024-05-21"
 description: "An amateurs guide on how-to start a SaaS startup."
 image: "/images/articles/bezos2.jpeg"

@@ -1,7 +1,7 @@
 ---
-title: "I Think I Made a Movie"
+title: "I Think I Made a Movie: From Blog to Vlog"
 date: "2024-05-21"
-description: "From blog to vlog, I think I made my first YouTube movie and it was lots of fun."
+description: "From blog to vlog, I think I made my first YouTube movie and it was a lot of fun."
 image: "/images/articles/nlomad.png"
 artwork: "Pokémon Crystal Gameplay"
 ---
