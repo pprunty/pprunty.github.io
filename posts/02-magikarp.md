@@ -7,14 +7,15 @@ artwork: "Pokémon Crystal Gameplay"
 ---
 
 I used to think integrating Artificial Intelligence into my SaaS entrepreneurial projects was cheating. Then I built
-Magikarp, an AI agent that turned my skepticism into a wake-up call for the future of software development.
+Magikarp, an Artificially Intelligent (AI) agent that turned my skepticism into a wake-up call for the future of software development.
 In just 11 hours, I created an AI agent that could do the work of an entire data science team.
 
 So, what is Magikarp?
 
 ## An Unconventional Interview Experience
 
-It began with an unconventional interview for a software developer position at a mobile device startup. Instead of being asked to invert a
+It began with an unconventional interview for a software developer position at a mobile device startup. Instead of being
+asked to invert a
 binary search tree, I was given a take-home project to address a commercially strategic problem the
 company is tackling:
 
@@ -94,7 +95,8 @@ might provide inaccurate information" to "they're too expensive." Moreover, usin
 _cheating_. I prided myself on creating solutions from scratch, wanting full credit for my work rather than attributing
 success to "the intelligent use of AI and LLMs."
 
-However, completing the Magikarp project transformed my perspective. I now see a wide range of potential LLM applications for SaaS projects, such as:
+However, completing the Magikarp project transformed my perspective. I now see a wide range of potential LLM
+applications for SaaS projects, such as:
 
 - A Google Chrome extension for simplifying academic papers and mathematical equations
 - An online text editor and writing assistant to provide suggestions based on your writing style and history
@@ -116,48 +118,39 @@ You can get started by watching [3Blue1Brown's YouTube videos on LLMs](https://w
 and then create a pilot project using the [ollama](https://github.com/ollama/ollama) library
 and its [Python SDK]().
 
+Other useful resources:
+
+- [Hugging Face Transformers](https://huggingface.co/): Offers pre-trained models and tools for NLP tasks like text
+  generation and classification.
+- [OpenAI API](https://openai.com/index/openai-api/): Provides paid access to GPT-3 and GPT-4 models APIs for various
+  applications; available
+  on [Microsoft Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview).
+- [Anthropic's Claude API](https://www.anthropic.com/api): Provides paid access to Claude Sonnet 3.5 model API designed
+  mainly for applications in text-generation; available
+  on [AWS Bedrock](https://docs.anthropic.com/en/api/claude-on-amazon-bedrock).
+
 ## The Future of AI-Powered SaaS
 
-[Discuss how AI is becoming essential for staying competitive in the SaaS market]
+AI is becoming essential for staying competitive in the SaaS market. However, simply connecting your SaaS product to
+some LLM (Large Language Model) APIs does not make it an AI company.
 
-It is important to remember, just because you connect your SaaS product to some AI APIs doesn’t make your product an AI company.
+Marcus Brownlee recently [posted an interesting video]() discussing whether AI is a product in itself or merely a
+feature.
+This discussion comes in the wake of Apple's WWDC announcement about releasing a new Apple AI, powered by OpenAI's GPT
+models, on iOS 18 devices this year.
 
-(Sorry but) most business folks are still in the dark about the inner workings of LLMs. AI, especially LLMs, is the
-glittery new toy in the tech playground. For the suits in tech companies, it's all about the pitch and sell — to
-stakeholders, to intimidate competition, to motivate engineers. And sure, is it easier to peddle something that
-sparkles. That's _probably_ why your Product Manager or Owner is so pushy about including AI in your dev team's product.
+AI, especially LLMs, is the glittery new toy in the tech playground. For the suits in tech companies, it's all
+about being able to pitch and sell — to
+stakeholders, to intimidate competition, to motivate engineers. And sure, it's easier to sell something that
+sparkles. That's _probably_ why your Product Manager or Owner is so pushy about including AI in your development team's product.
 
-The recent announcement by Apple at WWDC about releasing a new Apple AI on iOS 18 devices further underscores the
-growing importance of AI in the tech ecosystem. As major players invest heavily in AI, it's clear that this technology
-will play a crucial role in shaping the future of SaaS.
-
-leverage it as a major feature in your service, but don't make it in itself your service. leveraging llm apis allows you to focus less on 
-building out and maintaining intelligent ai/ml systems and more on creating an experience around the feature you 
-
-the next wave of innovation will create an influx of new products, the winners will be those who leverage their AI features the best.
-
-## Navigating AI Integration and its Limitations
-
-LLMs do occasionally have what is known in the AI jargon as _hallucinations_. This means,
-if you are planning on using LLMs in a production environment, your product will on occasion provide false or inaccurate
-information. For some, this is a small price to pay for a high degree of automation, for others, and more sensitive
-production
-systems, such as in the financial industry, hallucinations are unacceptable.
-
-A simple engineering strategy to solve this is to simply define the type of response you expect to receive from the LLM,
-make sufficient calls to the LLM API until its response meets your criteria and accept the response.
+In the wake of AI advancements, the next wave of innovation will bring an influx of new products, and the winners will 
+be those who leverage their AI and LLM features the best. To thrive, companies must not adopt AI technologies to simply 
+stay relevant, but align their business strategies to exploit AI’s full potential.
 
 ## Embracing AI in Your SaaS Journey
 
-The takeaway lesson is don't get left behind. If you harbour a reluctance to leverage LLMs in your SaaS products,
-then realize this reluctance more than likely stems from your own personal ego. If the technology is evolving at a rapid rate,
-ensure you
-evolve with it.
+The takeaway lesson: don't get left behind. If you harbour a reluctance to leverage LLMs in your SaaS products,
+then realize this reluctance more than likely stems from your own personal ego. As the technology evolves at a rapid
+rate, it is crucial you ensure that you evolve with it.
 
-[//]: # (Remember, integrating AI into your SaaS isn't about replacing your skills or diminishing your achievements. It's about enhancing your capabilities and opening new avenues for innovation. By embracing AI, you're not just keeping up with the competition—you're positioning yourself at the forefront of the next wave of software development.)
-
-Resources:
-
-- [Hugging Face Transformers](https://huggingface.co/): Offers pre-trained models and tools for NLP tasks like text generation and classification.
-- [OpenAI API](https://openai.com/index/openai-api/): Provides paid access to GPT-3 and GPT-4 models APIs for various applications; available on [Microsoft Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview).
-- [Anthropic's Claude API](https://www.anthropic.com/api): Provides paid access to Claude Sonnet 3.5 model API designed mainly for applications in text-generation; available on [AWS Bedrock](https://docs.anthropic.com/en/api/claude-on-amazon-bedrock).
