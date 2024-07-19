@@ -1,5 +1,5 @@
 ---
-title: "Magikarp's Million-Dollar Lesson: Why Your SaaS Needs AI Now"
+title: "Magikarp's Million-Dollar Lesson: Why AI is Essential for Your SaaS Success"
 date: "2024-07-24"
 description: "In just 11 hours, I created an AI agent that could do the work of an entire data science team; providing me with wake-up call for the future of software development."
 image: "/images/articles/magikarp.png"
@@ -14,10 +14,9 @@ So, what is Magikarp?
 
 ## An Unconventional Interview Experience
 
-It started with an unconventional interview experience with a mobile device startup for a software developer position.
-Instead of being asked to invert a
-binary search tree, I was given a take-home project — an actual real-life problem the company are actively seeking to
-solve:
+It began with an unconventional interview for a software developer position at a mobile device startup. Instead of being asked to invert a
+binary search tree, I was given a take-home project to address a commercially strategic problem the
+company is tackling:
 
 > Given user-provided data about a person (let's call him Dan), create personalized
 > experiences and notifications for Dan via an intelligent agent named Magikarp. This agent resides on Dan's device and
@@ -28,8 +27,8 @@ calendar,
 music playlists, social media posts, fitness data, phonebook interactions and more.
 
 Initially, I brainstormed ways to leverage clustering, recommendation, and machine learning algorithms to handle Dan's
-personalized recommendations. I even created UML diagrams for data ingestion of different file types. As I stared at my
-increasingly complicated plans, a sinking feeling set in. "_Hell_," I thought, "this is going to take me weeks."
+personalized recommendations. I even created UML diagrams for data ingestion of different file types. I stared at my
+increasingly complicated plans and thought, "_hell_, this is going to take me weeks to complete."
 
 Then I remembered...
 
@@ -39,31 +38,24 @@ This led me to pivot my approach entirely.
 
 ## Large Language Models in Motion
 
-I set a goal to leverage the intelligent use of the best and free open-sourced LLM on the interweb to
-achieve the following:
+I aimed to leverage the best free open-source LLM to achieve the following:
 
-1. **Use of Meta's Llama 3**: Instead of paying and using OpenAI's GPT models APIs, I chose Llama 3, the best
-   open-source LLM
-   I could find. This decision was driven by cost considerations and the ability to run the model locally on a separate
-   server via the [ollama](https://github.com/ollama/ollama) library. Additionally, the ollama library allows for model
-   configuration, similar to OpenAI's "Create your own GPT" feature.
+1. **Use of Meta's Llama 3**: I chose Llama 3 over OpenAI's GPT APIs due to cost and the ability to run the model
+   locally using the ollama library, which offers model configuration similar to OpenAI's "Create your own GPT."
 
-2. **General LLM Prompting:** Allow Dan to interact with Magikarp in a conversation, with Magikarp using Dan's
-   contextual data to curate its responses.
+2. **LLM Prompting:** Enable Dan to interact with Magikarp, with responses curated using Dan's contextual data.
 
-3. **Smart Push-Notifications:** Simulate smart, non-invasive push-notifications on Dan's device for a given day.
+3. **Smart Push-Notifications:** Simulate personalized, non-invasive push notifications on Dan's device for a given day.
 
-4. **Rule-based User Configuration:** Allow Dan to create rules for the Magikarp agent, enabling him to suggest how and
-   when it should interact with him.
+4. **Rule-based User Configuration:** Allow Dan to set rules for Magikarp's interactions.
 
-You can watch the demo video
+Watch the demo video
 I [created here](https://drive.google.com/file/d/1AjILMCiRm8YwZPQLncvkX8y0AuZF2MpE/view?usp=sharing) to see Magikarp in
 action.
 
 <iframe src="https://drive.google.com/file/d/1AjILMCiRm8YwZPQLncvkX8y0AuZF2MpE/preview" width="100%" height="400px" allow="autoplay"></iframe>
 
-Alternatively, if you're too busy to watch the demo, here's an example conversation between Dan and Magikarp to get you
-primed:
+If you're short on time, here's an example conversation between Dan and Magikarp:
 
 ```text
 >>> Hello there.
@@ -86,9 +78,11 @@ Hey there! I'm Magikarp, here to help. Got it - short and snappy, got it!
 According to your calendar, you have a busy day ahead of you. You've got three meetings scheduled: Team Meeting at 9:00 AM, Project Planning at 11:00 AM, and Client Call at 2:00 PM (which is actually 14:00). Make sure to review the project plan before the meeting at 11:00 AM!
 ```
 
-As you can see, the result is a highly sophisticated, albeit slow, Magikarp agent. Admittedly, the solution surprised
+The result is a highly sophisticated, albeit slow, Magikarp agent. Admittedly, the solution surprised
 even
-myself, especially considering it took only about 11 hours (2-3 days) of development time to complete. It was, in
+myself. Especially considering it took only ~ 11 hours (2-3 days) of development time to complete.
+
+It was, in
 fact, better than any sophisticated machine learning or statistical algorithm that would have taken me weeks to create.
 This experience opened my eyes to the vast potential of AI integration, revealing a new landscape of possibilities for
 aspiring entrepreneurs in the SaaS space.
@@ -100,15 +94,15 @@ might provide inaccurate information" to "they're too expensive." Moreover, usin
 _cheating_. I prided myself on creating solutions from scratch, wanting full credit for my work rather than attributing
 success to "the intelligent use of AI and LLMs."
 
-After completing the Magikarp exercise, my perspective shifted dramatically. My mind raced with an endless range of
-possible use-cases for LLM usage in SaaS projects:
+However, completing the Magikarp exercise transformed my perspective. My mind now races with a wide array of potential
+LLM applications for SaaS:
 
 - A Google Chrome extension for simplifying academic papers and mathematical equations
 - An online text editor and writing assistant to provide suggestions based on your writing style and history
 - A personalized learning platform that adapts to individual student needs and abilities
 
-All of these ideas suddenly seemed achievable within a reasonable timeframe, without the need for a large team of
-engineers.
+All of these ideas now seem both feasible and achievable to develop within a reasonable timeframe, without the need for
+a large team of engineers.
 
 ## The Power of AI in SaaS
 
@@ -119,9 +113,15 @@ For an already saturated job market, this might ring alarm bells for engineers a
 crucial to recognize that the AI revolution isn't about replacing human talent — it's about augmenting it. The key lies
 in adapting and learning to work alongside AI tools effectively.
 
-To do so, get started by watching [3Blue1Brown's YouTube videos on LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M),
+You can get started by watching [3Blue1Brown's YouTube videos on LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M),
 and then create a pilot project using the [ollama](https://github.com/ollama/ollama) library
-and its [python SDK]().
+and its [Python SDK]().
+
+Other useful resources include:
+
+- [Hugging Face Transformers](https://huggingface.co/transformers/): Offers pre-trained models and tools for NLP tasks like text generation and classification.
+- [OpenAI API](https://beta.openai.com/): Provides paid access to GPT-3 and GPT-4 models for various applications; also accessible via [Microsoft Azure Cloud](https://azure.microsoft.com/en-us/services/cognitive-services/).
+- [Anthropic's Claude API](https://www.anthropic.com/): Provides paid access to Claude Sonnet 3.5 model designed for safe and useful AI applications; available on [AWS Marketplace](https://aws.amazon.com/marketplace/).
 
 ## Limitations
 
