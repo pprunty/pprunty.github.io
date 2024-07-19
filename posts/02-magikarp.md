@@ -151,6 +151,6 @@ stay relevant, but align their business strategies to exploit AI’s full potent
 ## Embracing AI in Your SaaS Journey
 
 The takeaway lesson: don't get left behind. If you harbour a reluctance to leverage LLMs in your SaaS products,
-then realize this reluctance more than likely stems from your own personal ego. As the technology evolves at a rapid
+then realize that your reluctance more than likely stems from personal ego. As the technology evolves at a rapid
 rate, it is crucial you ensure that you evolve with it.
 
