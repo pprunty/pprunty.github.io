@@ -518,7 +518,7 @@ const Content = styled.div`
       }
 
       @media (max-width: 480px) {
-        height: 35vh; /* Adjust height for mobile devices */
+        height: 33vh; /* Adjust height for mobile devices */
       }
     }
 `;

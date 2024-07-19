@@ -9,6 +9,8 @@ artwork: "Pokémon Crystal Gameplay"
 ## Introduction
 [Brief overview of storytelling's importance in communication and influence]
 
+shifted in her seat to look straight at me and yelped "Patrick!" - Thanks babe. Now everybody knows it was me \***face palm**\*.
+
 ## The Science of Stories: Why Our Brains Love Narratives
 [This section serves as the hook, exploring the neurological and psychological impact of storytelling]
 
