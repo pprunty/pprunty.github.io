@@ -7,7 +7,7 @@ artwork: "Pokémon Anime Series"
 ---
 
 I used to think integrating Artificial Intelligence (AI) into my Software as a Service (SaaS) entrepreneurial projects was cheating. Then I built
-Magikarp, an Artificially Intelligent agent that turned my skepticism into a wake-up call for the future of software development.
+Magikarp, an AI agent that turned my skepticism into a wake-up call for the future of software development.
 In just 11 hours, I created an AI agent that could do the work of an entire data science team.
 
 So, what is Magikarp?
@@ -33,7 +33,7 @@ increasingly complicated plans and thought, "hell, this is going to take me _wee
 
 Then I remembered...
 
-The recruiter hinted in the initial screening how the company are exploring LLMs (Large Language Models, e.g. ChatGPT) for AI usage on their devices.
+The recruiter hinted in the initial screening how the company are exploring the integration of LLMs (Large Language Models, e.g. ChatGPT) on their mobile devices.
 
 This led me to pivot my approach entirely.
 
@@ -132,9 +132,9 @@ Other useful resources:
 ## The Future of AI-Powered SaaS
 
 AI is becoming essential for staying competitive in the SaaS market. However, simply connecting your SaaS product to
-some LLM (Large Language Model) APIs does not make it an AI company.
+some LLM's APIs does not make it an AI company.
 
-Marcus Brownlee recently [posted an interesting video]() discussing whether AI is a product in itself or merely a
+Marcus Brownlee recently [posted an interesting video on YouTube](https://www.youtube.com/watch?v=sDIi95CqTiM&pp=ygUbYnJvd25sZWUgcHJvZHVjdCB2cyBmZWF0dXJl) discussing whether AI is a product in itself or merely a
 feature.
 This discussion comes in the wake of Apple's WWDC announcement about releasing a new Apple AI, powered by OpenAI's GPT
 models, on iOS 18 devices this year.
@@ -150,7 +150,7 @@ stay relevant, but align their business strategies to exploit AI’s full potent
 
 ## Embracing AI in Your SaaS Journey
 
-The takeaway lesson: don't get left behind. If you harbour a reluctance to leverage LLMs in your SaaS products,
+The takeaway lesson: don't get left behind. If you still hold a reluctance to leverage LLMs in your SaaS products,
 then realize that your reluctance more than likely stems from personal ego. As the technology evolves at a rapid
-rate, it is crucial you ensure that you evolve with it.
+rate, it is crucial that you ensure you evolve with it.
 

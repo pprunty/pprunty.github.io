@@ -6,13 +6,13 @@ image: "/images/articles/brain.png"
 artwork: "Surgeon examining a human brain"
 ---
 
-As Artificially Intelligent systems improve at an exponential rate, are we enhancing our cognitive abilities, or
+As Artificially Intelligent (AI) systems improve at an exponential rate, are we enhancing our cognitive abilities, or
 conversely, is our reliance on technology leading to a cognitive decline?
 
 ## Moore's Law
 
 In 1965, Gordon Moore, co-founder of Intel, observed what would become known as Moore's Law: the number of transistors
-that be packed onto a piece of silicon doubles approximately every two years. Its limit being the size of a single atom.
+that can be packed onto a piece of silicon doubles approximately every two years. Its limit being the size of a single atom.
 _Huh,_ it would probably be a bad idea to go any smaller than that right?
 
 <figure>
