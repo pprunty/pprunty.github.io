@@ -6,7 +6,7 @@ image: "/images/articles/magikarp.png"
 artwork: "Pokémon Anime Series"
 ---
 
-I used to think integrating Artificial Intelligence (AI) into my SaaS entrepreneurial projects was cheating. Then I built
+I used to think integrating Artificial Intelligence (AI) into my Software as a Service (SaaS) entrepreneurial projects was cheating. Then I built
 Magikarp, an Artificially Intelligent agent that turned my skepticism into a wake-up call for the future of software development.
 In just 11 hours, I created an AI agent that could do the work of an entire data science team.
 
@@ -33,7 +33,7 @@ increasingly complicated plans and thought, "hell, this is going to take me _wee
 
 Then I remembered...
 
-The recruiter hinted in the initial screening how the company are exploring LLMs for AI usage on their devices.
+The recruiter hinted in the initial screening how the company are exploring LLMs (Large Language Models, e.g. ChatGPT) for AI usage on their devices.
 
 This led me to pivot my approach entirely.
 
