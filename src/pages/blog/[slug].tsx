@@ -506,6 +506,21 @@ const Content = styled.div`
     border-radius: 3px;
     font-size: 15px;
   }
+
+    /* Styles for the iframe */
+    iframe {
+      width: 100%;
+      height: 400px; /* Default height for desktop */
+      border: none;
+
+      @media (max-width: 768px) {
+        height: 50vh; /* Adjust height for tablets and smaller devices */
+      }
+
+      @media (max-width: 480px) {
+        height: 35vh; /* Adjust height for mobile devices */
+      }
+    }
 `;
 
 
