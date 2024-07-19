@@ -444,9 +444,10 @@ const Content = styled.div`
 
   img {
     max-width: 60%;
-    max-height: 400px;
+    max-height: auto;
+    object-fit: cover;
     height: auto;
-    margin: 0 auto;  // Adds automatic margins on both sides, centering the image
+    margin: 5px auto;  // Adds automatic margins on both sides, centering the image
     display: block;  // Ensures the image is aligned properly without extra space around
   }
 

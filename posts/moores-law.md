@@ -11,16 +11,14 @@ conversely, is our reliance on technology leading to a cognitive decline?
 
 ## Moore's Law
 
-
-<figure>
-  <img src="https://patrickprunty.com/images/articles/moores-law.pn" alt="Moore's Law">
-  <figcaption>Moore's Law from 1970-2020.</figcaption>
-</figure>
-
-
 In 1965, Gordon Moore, co-founder of Intel, observed what would become known as Moore's Law: the number of transistors
 that be packed onto a piece of silicon doubles approximately every two years. Its limit being the size of a single atom.
 _Huh,_ it would probably be a bad idea to go any smaller than that right?
+
+<figure>
+  <img src="https://patrickprunty.com/images/articles/moores-law.jpg" alt="Moore's Law">
+  <figcaption>Moore's Law from 1970-2020.</figcaption>
+</figure>
 
 [//]: # (The pressing question remains: Is there a Moore's Law for the human brain? As AI systems grow more sophisticated, do we risk becoming 'dumber', or does technology have the potential to enhance our cognitive functions in ways we've yet to fully understand?)
 
