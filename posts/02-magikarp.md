@@ -3,11 +3,11 @@ title: "Magikarp's Million-Dollar Lesson: Why AI is Essential for Your SaaS Succ
 date: "2024-07-24"
 description: "In just 11 hours, I created an AI agent that could do the work of an entire data science team; providing me with wake-up call for the future of software development."
 image: "/images/articles/magikarp.png"
-artwork: "Pokémon Crystal Gameplay"
+artwork: "Pokémon Anime Series"
 ---
 
-I used to think integrating Artificial Intelligence into my SaaS entrepreneurial projects was cheating. Then I built
-Magikarp, an Artificially Intelligent (AI) agent that turned my skepticism into a wake-up call for the future of software development.
+I used to think integrating Artificial Intelligence (AI) into my SaaS entrepreneurial projects was cheating. Then I built
+Magikarp, an Artificially Intelligent agent that turned my skepticism into a wake-up call for the future of software development.
 In just 11 hours, I created an AI agent that could do the work of an entire data science team.
 
 So, what is Magikarp?
@@ -29,7 +29,7 @@ music playlists, social media posts, fitness data, phonebook interactions and mo
 
 Initially, I brainstormed ways to leverage clustering, recommendation, and machine learning algorithms to handle Dan's
 personalized recommendations. I even created UML diagrams for data ingestion of different file types. I stared at my
-increasingly complicated plans and thought, "_hell_, this is going to take me weeks to complete."
+increasingly complicated plans and thought, "hell, this is going to take me _weeks_ to complete."
 
 Then I remembered...
 
