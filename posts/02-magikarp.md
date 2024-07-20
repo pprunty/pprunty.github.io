@@ -2,10 +2,10 @@
 title: "From AI Skeptic to SaaS Success: The 11-Hour Magikarp Experiment That Changed Everything"
 date: "2024-07-24"
 description: "In just 11 hours, I created an AI agent that could do the work of an entire data science team; providing me with wake-up call for the future of software development."
-image: "/images/articles/magikarp.png"
+image: "/images/articles/magikarp.jpeg"
 artwork: "Pokémon Anime Series"
 ---
-
+xf
 I used to think integrating Artificial Intelligence (AI) into my Software as a Service (SaaS) entrepreneurial projects was cheating. Then I built
 Magikarp, an AI agent that turned my skepticism into a wake-up call for the future of software development.
 In just 11 hours, I created an AI agent that could do the work of an entire data science team.
@@ -15,9 +15,8 @@ So, what is Magikarp?
 ## An Unconventional Interview Experience
 
 It began with an unconventional interview for a software developer position at a mobile device startup. Instead of being
-asked to invert a
-binary search tree, I was given a take-home project to address a commercially strategic problem the
-company is tackling:
+asked in typical nonsensical fashion to invert a
+binary search tree while standing on my head, the company tasked me with a take-home project that addressed one of their core strategic problems:
 
 > Given user-provided data about a person (let's call him Dan), create personalized
 > experiences and notifications for Dan via an intelligent agent named Magikarp. This agent resides on Dan's device and
