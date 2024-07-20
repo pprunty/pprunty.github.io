@@ -1,5 +1,5 @@
 ---
-title: "Magikarp's Million-Dollar Lesson: Why AI is Essential for Your SaaS Success"
+title: "From AI Skeptic to SaaS Success: The 11-Hour Magikarp Experiment That Changed Everything"
 date: "2024-07-24"
 description: "In just 11 hours, I created an AI agent that could do the work of an entire data science team; providing me with wake-up call for the future of software development."
 image: "/images/articles/magikarp.png"
@@ -116,13 +116,15 @@ in adapting and learning to work alongside AI tools effectively.
 
 You can get started by watching [3Blue1Brown's YouTube videos on LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M),
 and then create a pilot project using the [ollama](https://github.com/ollama/ollama) library
-and its [Python SDK]().
+and its [Python SDK](https://github.com/ollama/ollama-python).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wjZofJX0v4M?si=c3OFChEYttvj65Wt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Other useful resources:
 
 - [Hugging Face Transformers](https://huggingface.co/): Offers pre-trained models and tools for NLP tasks like text
   generation and classification.
-- [OpenAI API](https://openai.com/index/openai-api/): Provides paid access to GPT-3 and GPT-4 models APIs for various
+- [OpenAI API](https://openai.com/index/openai-api/): Provides paid access to GPT-3 and GPT-4 models' APIs for various
   applications; available
   on [Microsoft Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview).
 - [Anthropic's Claude API](https://www.anthropic.com/api): Provides paid access to Claude Sonnet 3.5 model API designed
@@ -132,12 +134,14 @@ Other useful resources:
 ## The Future of AI-Powered SaaS
 
 AI is becoming essential for staying competitive in the SaaS market. However, simply connecting your SaaS product to
-some LLM's APIs does not make it an AI company.
+some LLM's APIs does not make you an AI company.
 
 Marcus Brownlee recently [posted an interesting video on YouTube](https://www.youtube.com/watch?v=sDIi95CqTiM&pp=ygUbYnJvd25sZWUgcHJvZHVjdCB2cyBmZWF0dXJl) discussing whether AI is a product in itself or merely a
 feature.
 This discussion comes in the wake of Apple's WWDC announcement about releasing a new Apple AI, powered by OpenAI's GPT
 models, on iOS 18 devices this year.
+
+<iframe src="https://www.youtube.com/embed/sDIi95CqTiM?si=dUospjSmpiJCFZVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 AI, especially LLMs, is the glittery new toy in the tech playground. For the suits in tech companies, it's all
 about being able to pitch and sell — to
@@ -151,6 +155,6 @@ stay relevant, but align their business strategies to exploit AI’s full potent
 ## Embracing AI in Your SaaS Journey
 
 The takeaway lesson: don't get left behind. If you still hold a reluctance to leverage LLMs in your SaaS products,
-then realize that your reluctance more than likely stems from personal ego. As the technology evolves at a rapid
-rate, it is crucial that you ensure you evolve with it.
+then realize that your reluctance more than likely stems from your personal ego. As the technology evolves at a rapid
+rate, ensure that you evolve with it.
 

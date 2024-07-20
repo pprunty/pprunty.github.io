@@ -11,7 +11,7 @@ conversely, is our reliance on technology leading to a cognitive decline?
 
 ## Moore's Law
 
-In 1965, Gordon Moore, co-founder of Intel, observed what would become known as Moore's Law: the number of transistors
+In 1965, Gordon Moore, co-founder of Intel, observed what would become known today as Moore's Law. Moore's Law states that the number of transistors
 that can be packed onto a piece of silicon doubles approximately every two years. Its limit being the size of a single atom.
 _Huh,_ it would probably be a bad idea to go any smaller than that right?
 
