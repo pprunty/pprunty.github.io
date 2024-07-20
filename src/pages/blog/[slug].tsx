@@ -391,12 +391,12 @@ const Content = styled.div`
   blockquote {
       font-style: italic;
       background-color: inherit;
-      border-left: 4px solid #666;
-      margin: 1.5em 10px;
+      border-left: 4px solid #333;
+      margin: 1.5em -22px;
       padding: 0.5em 20px;
-    color: #666;
+    color: #444;
     &:before {
-      color: ##666;
+      color: #444;
       content: open-quote !important;
       font-size: 3em;
       line-height: 0.1em;
@@ -414,6 +414,9 @@ const Content = styled.div`
     p {
       display: inline;
     }
+     @media (max-width: 768px) {
+         margin: 1.5em 10px;
+         }
   }
 
   a {

@@ -5,8 +5,9 @@ description: "In just 11 hours, I created an AI agent that could do the work of 
 image: "/images/articles/magikarp.jpeg"
 artwork: "Pokémon Anime Series"
 ---
-xf
-I used to think integrating Artificial Intelligence (AI) into my Software as a Service (SaaS) entrepreneurial projects was cheating. Then I built
+
+I used to think integrating Artificial Intelligence (AI) into my Software as a Service (SaaS) entrepreneurial projects was cheating.
+Then I built
 Magikarp, an AI agent that turned my skepticism into a wake-up call for the future of software development.
 In just 11 hours, I created an AI agent that could do the work of an entire data science team.
 
@@ -16,7 +17,8 @@ So, what is Magikarp?
 
 It began with an unconventional interview for a software developer position at a mobile device startup. Instead of being
 asked in typical nonsensical fashion to invert a
-binary search tree while standing on my head, the company tasked me with a take-home project that addressed one of their core strategic problems:
+binary search tree while standing on my head, the company tasked me with a take-home project that addressed one of their
+core strategic problems:
 
 > Given user-provided data about a person (let's call him Dan), create personalized
 > experiences and notifications for Dan via an intelligent agent named Magikarp. This agent resides on Dan's device and
@@ -32,13 +34,17 @@ increasingly complicated plans and thought, "hell, this is going to take me _wee
 
 Then I remembered...
 
-The recruiter hinted in the initial screening how the company are exploring the integration of LLMs (Large Language Models, e.g. ChatGPT) on their mobile devices.
+The recruiter hinted in the initial screening how the company are exploring the integration of LLMs (Large Language
+Models, e.g. ChatGPT) on their mobile devices.
 
 This led me to pivot my approach entirely.
 
 ## Large Language Models in Motion
 
-I aimed to leverage the best free open-source LLM to achieve the following:
+In simpler terms, LLMs are AI models that can understand and generate human-like text, making them powerful tools for
+tasks like conversation, analysis, and personalized recommendation.
+
+For the Magikarp project, I aimed to leverage the best free open-source LLM to achieve the following:
 
 1. **Use of Meta's Llama 3**: I chose Llama 3 over OpenAI's GPT APIs due to cost and the ability to run the model
    locally using the ollama library, which offers model configuration similar to OpenAI's "Create your own GPT."
@@ -51,7 +57,8 @@ I aimed to leverage the best free open-source LLM to achieve the following:
 
 Watch the demo video
 I [created here](https://drive.google.com/file/d/1AjILMCiRm8YwZPQLncvkX8y0AuZF2MpE/view?usp=sharing) to see Magikarp in
-action.
+action. This demo showcases Magikarp's ability to understand context, provide personalized recommendations, and engage
+in natural conversation with the user.
 
 <iframe src="https://drive.google.com/file/d/1AjILMCiRm8YwZPQLncvkX8y0AuZF2MpE/preview" width="100%" height="400px" allow="autoplay"></iframe>
 
@@ -63,19 +70,29 @@ Hey! It's me, Magikarp! I've been keeping an eye on your recent activities and n
 
 What's on your mind today?
 
+[Magikarp's response demonstrates contextual awareness and personalization]
+
 >>> How many steps do I have left to do today in order to hit my steps goal?
 According to your fitness data, you've already taken 8500 steps today. Your average daily step goal is 9000 steps. To calculate how many steps you need to take to reach your goal, let's subtract the steps you've already taken from your goal:
 
 9000 (average daily step goal) - 8500 (steps taken so far) = 500
 
+[Magikarp shows ability to perform simple calculations based on user data]
+
 >>> Can you recommend me a couple of new songs I should listen to that I might like and haven't listened to already?
 Hey there! As Magikarp, I've got my fins on your music taste. Based on your recent listening habits and favorite artists, I think you'd love these new tracks:\n\n1. **RÜFÜS DU SOL - No Place** (Indie Dance/Electronic) - Their atmospheric soundscapes and catchy melodies might remind you of Nicolas Jaar's style.\n2. **Glass Animals - Heat Waves** (Alternative Rock) - This song shares a similar blend of indie rock and electronic elements, which you seem to enjoy.\n\nGive them a spin and let me know what you think!
+
+[Magikarp shows ability to perform entertainment recommendations based on user data]
 
 >>> Can you be short and snappy in your responses when talking with me? 
 Hey there! I'm Magikarp, here to help. Got it - short and snappy, got it!
 
+[Magikarp response demonstrates ability to add rule-based configuration to future responses]
+
 >>> So, what's my calendar looking like for today? 
 According to your calendar, you have a busy day ahead of you. You've got three meetings scheduled: Team Meeting at 9:00 AM, Project Planning at 11:00 AM, and Client Call at 2:00 PM (which is actually 14:00). Make sure to review the project plan before the meeting at 11:00 AM!
+
+[Magikarp shows ability to contextualize calendar for a given time and day]
 ```
 
 The result is a highly sophisticated, albeit slow, Magikarp agent. Admittedly, the solution surprised
@@ -97,9 +114,12 @@ success to "the intelligent use of AI and LLMs."
 However, completing the Magikarp project transformed my perspective. I now see a wide range of potential LLM
 applications for SaaS projects, such as:
 
-- A Google Chrome extension for simplifying academic papers and mathematical equations
-- An online text editor and writing assistant to provide suggestions based on your writing style and history
-- A personalized learning platform that adapts to individual student needs and abilities
+- A Google Chrome extension for simplifying academic papers and mathematical equations (using LLMs to translate complex
+  language into simpler terms)
+- An online text editor and writing assistant to provide suggestions based on your writing style and history (leveraging LLMs'
+  understanding of context and style)
+- A personalized learning platform that adapts to individual student needs and abilities (using LLMs to generate
+  tailored content and explanations)
 
 All of these ideas now seem both feasible and achievable to develop within a reasonable timeframe, without the need for
 a large team of engineers.
@@ -135,25 +155,27 @@ Other useful resources:
 AI is becoming essential for staying competitive in the SaaS market. However, simply connecting your SaaS product to
 some LLM's APIs does not make you an AI company.
 
-Marcus Brownlee recently [posted an interesting video on YouTube](https://www.youtube.com/watch?v=sDIi95CqTiM&pp=ygUbYnJvd25sZWUgcHJvZHVjdCB2cyBmZWF0dXJl) discussing whether AI is a product in itself or merely a
+Marcus Brownlee
+recently [posted an interesting video on YouTube](https://www.youtube.com/watch?v=sDIi95CqTiM&pp=ygUbYnJvd25sZWUgcHJvZHVjdCB2cyBmZWF0dXJl)
+discussing whether AI is a product in itself or merely a
 feature.
 This discussion comes in the wake of Apple's WWDC announcement about releasing a new Apple AI, powered by OpenAI's GPT
-models, on iOS 18 devices this year.
+models, on iOS 18 devices later this year (2024).
 
 <iframe src="https://www.youtube.com/embed/sDIi95CqTiM?si=dUospjSmpiJCFZVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 AI, especially LLMs, is the glittery new toy in the tech playground. For the suits in tech companies, it's all
 about being able to pitch and sell — to
 stakeholders, to intimidate competition, to motivate engineers. And sure, it's easier to sell something that
-sparkles. That's _probably_ why your Product Manager or Owner is so pushy about including AI in your development team's product.
+sparkles. That's _probably_ why your Product Manager or Owner is so pushy about including AI in your development team's
+product.
 
-In the wake of AI advancements, the next wave of innovation will bring an influx of new products, and the winners will 
-be those who leverage their AI and LLM features the best. To thrive, companies must not adopt AI technologies to simply 
+In the wake of AI advancements, the next wave of innovation will bring an influx of new products, and the winners will
+be those who leverage their AI and LLM flagship features the best. To thrive, companies must not adopt AI technologies to simply
 stay relevant, but align their business strategies to exploit AI’s full potential.
 
 ## Embracing AI in Your SaaS Journey
 
 The takeaway lesson: don't get left behind. If you still hold a reluctance to leverage LLMs in your SaaS products,
-then realize that your reluctance more than likely stems from your personal ego. As the technology evolves at a rapid
-rate, ensure that you evolve with it.
-
+then realize that your reluctance more than likely stems from your personal ego. As the technology continues to evolve at a rapid
+pace, ensure that you evolve with it. The next game-changing SaaS product could be just 11 hours of coding away.
