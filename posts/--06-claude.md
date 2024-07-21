@@ -1,5 +1,5 @@
 ---
-title: "The Rise of Claude: Anthropic's Latest Large Language Model is Here to Stay"
+title: "The Rise of Claude: Anthropic's Latest LLM is Here to Stay"
 date: "2024-07-26"
 image: "/images/articles/claude/claude.WEBP"
 description: "Exploring the capabilities and impact of Anthropic's newest Large Language Model."

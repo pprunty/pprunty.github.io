@@ -1,7 +1,7 @@
 ---
 title: "Untitled 02"
 date: "2024-08-18"
-image: "/images/articles/mad2.jpg"
+image: "/images/articles/monkey.png"
 description: "An experimental poem by Patrick Prunty from the Untitled Collection."
 artwork: "Tyler Casey"
 type: "poem"
