@@ -1,5 +1,6 @@
 ---
-title: "From AI Skeptic to SaaS Success: The 11-Hour Magikarp Experiment That Changed Everything"
+title: "The 11-Hour AI Revelation: How Magikarp Transformed My SaaS Strategy"
+#title: "From AI Skeptic to SaaS Success: The 11-Hour Magikarp Experiment That Changed Everything"
 #title: "The Magikarp Lesson: Integrate AI in Your SaaS Product or Get Left Behind"
 date: "2024-07-24"
 description: "In just 11 hours, I created an AI agent that could do the work of an entire data science team; providing me with wake-up call for the future of software development."
@@ -15,19 +16,29 @@ In just 11 hours, I created an AI agent that could do the work of an entire data
 
 So, what is Magikarp?
 
-Magikarp, named after the Pokémon that evolves from a weak fish into the powerful dragon called Gyarados, embodies the transformative
-potential of AI. Like its namesake, this AI agent starts simple but can evolve into a robust, multi-functional
-assistant — a metaphor for the rapid growth and untapped possibilities in AI technology.
+[//]: # (Magikarp is named after the Pokémon that evolves from a weak fish into the powerful dragon called Gyarados, embodying)
 
-<figure>
-  <img src="https://patrickprunty.com/articles/gyarados.png" alt="Gyarados: The evolved form of Magikarp, symbolizing the potential of our AI agent">
-  <figcaption>Gyarados: The evolved form of Magikarp, symbolizing the potential of the Magikarp AI agent</figcaption>
-</figure>
+[//]: # (the transformative)
+
+[//]: # (potential of AI. Like its namesake, this AI agent starts simple but can evolve into a robust, multi-functional)
+
+[//]: # (assistant — a metaphor for the rapid growth and untapped possibilities in AI technology.)
+
+[//]: # ()
+
+[//]: # (<figure>)
+
+[//]: # (  <img src="https://patrickprunty.com/images/articles/gyarados.png" alt="Gyarados: The evolved form of Magikarp, symbolizing the potential of our AI agent" style="max-width: 320px;">)
+
+[//]: # (  <figcaption>Gyarados: The evolved form of Magikarp, symbolizing the potential of the Magikarp AI agent</figcaption>)
+
+[//]: # (</figure>)
 
 ## An Unconventional Interview Experience
 
-It began with an unconventional interview for a software developer position at a mobile device startup. Instead of facing a typical nonsensical coding challenge — like inverting a binary search tree while balancing on one foot —
- the company tasked me with a take-home project that addressed one of their
+It started with an unconventional interview for a software developer position at a mobile device startup. Instead of
+the trivial coding test, which usually has little relevance to actual on-the-job tasks,
+the company assigned me a take-home project aimed at solving one of their
 core strategic problems:
 
 > Given user-provided data about a person (let's call him Dan), create personalized
@@ -39,7 +50,8 @@ calendar,
 music playlists, social media posts, fitness data, phonebook interactions and more.
 
 Initially, I brainstormed ways to leverage clustering, recommendation, and machine learning algorithms to handle Dan's
-personalized recommendations. I even created UML diagrams for data ingestion of different file types. I stared at my
+personalized recommendations. I even created
+Unified Modeling Language (UML) diagrams for data ingestion of different file types. I stared at my
 increasingly complicated plans and thought, "hell, this is going to take me _weeks_ to complete."
 
 Then I remembered...
@@ -51,28 +63,27 @@ This led me to pivot my approach entirely.
 
 ## Large Language Models in Motion
 
-[todo: More specific details about the technology stack used to create Magikarp, such as the programming language, frameworks, or libraries employed.]
+After some research, I discovered [Meta's Llama 3](https://llama.meta.com/llama3/), a sophisticated and
+open-sourced LLM. Together with the [ollama](https://github.com/ollama/ollama) library, I configured the Llama 3 model
+for my specific
+use-case; in a similar fashion to how one uses OpenAI's "Create your own GPT" feature. This allowed me to create the
+Magikarp agent on top of Llama 3 and achieve the following:
 
-In simpler terms, LLMs are AI models that can understand and generate human-like text, making them powerful tools for
-tasks like conversation, analysis, and personalized recommendation.
+1. **LLM Prompting:** Enabled Dan to interact with Magikarp, with responses curated using Dan's contextual data.
 
-For the Magikarp project, I aimed to leverage the best free open-source LLM to achieve the following:
+2. **Smart Push-Notifications:** Developed a system to send personalized, non-invasive notifications based on Dan's
+   daily schedule and preferences.
 
-1. **Use of [Meta's Llama 3](https://llama.meta.com/llama3/)**: I chose Llama 3 over OpenAI's GPT APIs due to cost and
-   the ability to run the model
-   locally using the [ollama](https://github.com/ollama/ollama) library, which offers model configuration similar to
-   OpenAI's "Create your own GPT."
+3. **Rule-based User Configuration:** Allowed customization of Magikarp’s interactions, giving users control over
+   response styles and notifications.
 
-2. **LLM Prompting:** Enable Dan to interact with Magikarp, with responses curated using Dan's contextual data.
-
-3. **Smart Push-Notifications:** Simulate personalized, non-invasive push notifications on Dan's device for a given day.
-
-4. **Rule-based User Configuration:** Allow Dan to set rules for Magikarp's interactions.
+To manage interactions between the user and Magikarp, I used [Python FastAPI](https://fastapi.tiangolo.com/) to create
+three backend APIs to demonstrate the above capabilities and a simple interface. This allowed users to communicate with
+the Magikarp agent on the backend and view its responses directly in their browser.
 
 Watch the demo video
 I [created here](https://drive.google.com/file/d/1AjILMCiRm8YwZPQLncvkX8y0AuZF2MpE/view?usp=sharing) to see Magikarp in
-action. This demo showcases Magikarp's ability to understand context, provide personalized recommendations, and engage
-in natural conversation with the user.
+action. This demo showcases Magikarp's contextual understanding and ability to provide personalized recommendations.
 
 <iframe src="https://drive.google.com/file/d/1AjILMCiRm8YwZPQLncvkX8y0AuZF2MpE/preview" width="100%" height="400px" allow="autoplay"></iframe>
 
@@ -84,29 +95,19 @@ Hey! It's me, Magikarp! I've been keeping an eye on your recent activities and n
 
 What's on your mind today?
 
-[Magikarp's response demonstrates contextual awareness and personalization]
-
 >>> How many steps do I have left to do today in order to hit my steps goal?
 According to your fitness data, you've already taken 8500 steps today. Your average daily step goal is 9000 steps. To calculate how many steps you need to take to reach your goal, let's subtract the steps you've already taken from your goal:
 
 9000 (average daily step goal) - 8500 (steps taken so far) = 500
 
-[Magikarp shows ability to perform simple calculations based on user data]
-
 >>> Can you recommend me a couple of new songs I should listen to that I might like and haven't listened to already?
 Hey there! As Magikarp, I've got my fins on your music taste. Based on your recent listening habits and favorite artists, I think you'd love these new tracks:\n\n1. **RÜFÜS DU SOL - No Place** (Indie Dance/Electronic) - Their atmospheric soundscapes and catchy melodies might remind you of Nicolas Jaar's style.\n2. **Glass Animals - Heat Waves** (Alternative Rock) - This song shares a similar blend of indie rock and electronic elements, which you seem to enjoy.\n\nGive them a spin and let me know what you think!
-
-[Magikarp shows ability to perform entertainment recommendations based on user data]
 
 >>> Can you be short and snappy in your responses when talking with me? 
 Hey there! I'm Magikarp, here to help. Got it - short and snappy, got it!
 
-[Magikarp response demonstrates ability to add rule-based configuration to future responses]
-
 >>> So, what's my calendar looking like for today? 
 According to your calendar, you have a busy day ahead of you. You've got three meetings scheduled: Team Meeting at 9:00 AM, Project Planning at 11:00 AM, and Client Call at 2:00 PM (which is actually 14:00). Make sure to review the project plan before the meeting at 11:00 AM!
-
-[Magikarp shows ability to contextualize calendar for a given time and day]
 ```
 
 The result is a highly sophisticated, albeit slow, Magikarp agent. Admittedly, the solution surprised
@@ -128,13 +129,9 @@ success to "the intelligent use of AI and LLMs."
 However, completing the Magikarp project transformed my perspective. I now see a wide range of potential LLM
 applications for SaaS projects, such as:
 
-- A Google Chrome extension for simplifying academic papers and mathematical equations (using LLMs to translate complex
-  language into simpler terms)
-- An online text editor and writing assistant to provide suggestions based on your writing style and history (leveraging
-  LLMs'
-  understanding of context and style)
-- A personalized learning platform that adapts to individual student needs and abilities (using LLMs to generate
-  tailored content and explanations)
+- A Google Chrome extension for simplifying academic papers and mathematical equations
+- An online text editor and writing assistant to provide suggestions based on your writing style and history
+- A personalized learning platform that adapts to individual student needs and abilities
 
 All of these ideas now seem both feasible and achievable to develop within a reasonable timeframe, without the need for
 a large team of engineers.
@@ -154,59 +151,71 @@ and its [Python SDK](https://github.com/ollama/ollama-python).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wjZofJX0v4M?si=c3OFChEYttvj65Wt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Other useful resources:
+[//]: # (Other useful resources:)
 
-- [Hugging Face Transformers](https://huggingface.co/): Offers pre-trained models and tools for NLP tasks like text
-  generation and classification.
-- [OpenAI API](https://openai.com/index/openai-api/): Provides paid access to GPT-3 and GPT-4 models' APIs for various
-  applications; available
-  on [Microsoft Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview).
-- [Anthropic's Claude API](https://www.anthropic.com/api): Provides paid access to Claude Sonnet 3.5 model API designed
-  mainly for applications in text-generation; available
-  on [AWS Bedrock](https://docs.anthropic.com/en/api/claude-on-amazon-bedrock).
+[//]: # ()
+
+[//]: # (- [Hugging Face Transformers]&#40;https://huggingface.co/&#41;: Offers pre-trained models and tools for NLP tasks like text)
+
+[//]: # (  generation and classification.)
+
+[//]: # (- [OpenAI API]&#40;https://openai.com/index/openai-api/&#41;: Provides paid access to GPT-3 and GPT-4 models' APIs for various)
+
+[//]: # (  applications; available)
+
+[//]: # (  on [Microsoft Azure OpenAI Service]&#40;https://learn.microsoft.com/en-us/azure/ai-services/openai/overview&#41;.)
+
+[//]: # (- [Anthropic's Claude API]&#40;https://www.anthropic.com/api&#41;: Provides paid access to Claude Sonnet 3.5 model API designed)
+
+[//]: # (  mainly for applications in text-generation; available)
+
+[//]: # (  on [AWS Bedrock]&#40;https://docs.anthropic.com/en/api/claude-on-amazon-bedrock&#41;.)
 
 ## The Future of AI-Powered SaaS
 
-AI is becoming essential for staying competitive in the SaaS market. However, simply connecting your SaaS product to
-some LLM's APIs does not make you an AI company.
+The integration of AI, particularly LLMs, has become a pivotal trend in the tech industry. For executives in tech companies, it's
+all about having the ability to pitch and sell — to stakeholders, to intimidate competition, to motivate engineers. This is likely why your Product Manager or Owner is so eager
+to incorporate AI into your development projects, often without full consideration of its implications. Simply
+connecting your SaaS product to a LLM's API does not make you an AI company. Once 'AI' becomes associated with your product, 
+you are at immediate risk of over-promising and under-delivering.
 
-Marcus Brownlee
-recently [posted an interesting video on YouTube](https://www.youtube.com/watch?v=sDIi95CqTiM&pp=ygUbYnJvd25sZWUgcHJvZHVjdCB2cyBmZWF0dXJl)
-discussing whether AI is a product in itself or merely a
-feature.
-This discussion comes in the wake of Apple's WWDC announcement about releasing a new Apple AI, powered by OpenAI's GPT
-models, on iOS 18 devices later this year (2024).
+In the wake of Apple's WWDC announcement about releasing a new Apple AI, powered by OpenAI's GPT
+models, on iOS 18 devices later this year (2024), Marcus Brownlee [posted an interesting video on YouTube](https://www.youtube.com/watch?v=sDIi95CqTiM&pp=ygUbYnJvd25sZWUgcHJvZHVjdCB2cyBmZWF0dXJl)
+discussing whether AI should be considered a product in itself or merely a
+feature. This move by Apple exemplifies how major tech companies are
+positioning AI as a core product feature, blurring the lines between product and feature.
 
 <iframe src="https://www.youtube.com/embed/sDIi95CqTiM?si=dUospjSmpiJCFZVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-AI, especially LLMs, is the glittery new toy in the tech playground. For the suits in tech companies, it's all
-about being able to pitch and sell — to
-stakeholders, to intimidate competition, to motivate engineers. And sure, it's easier to sell something that
-sparkles. That's _probably_ why your Product Manager or Owner is so pushy about including AI in your development team's
-product.
+As AI advancements continue and more companies jump on the bandwagon, we're poised to see an influx of new AI-powered
+products. However, not all of these will succeed. The winners in this new landscape will be those who can leverage AI
+and LLM features most effectively, going beyond surface-level integration to create truly innovative solutions that complement their core offerings.
 
-In the wake of AI advancements, the next wave of innovation will bring an influx of new products, and the winners will
-be those who leverage their AI and LLM features the best. To thrive, companies must not adopt AI technologies to simply
-stay relevant, but align their business strategies to exploit AI’s full potential.
 
 [//]: # (## Challenges in AI Integration)
 
 [//]: # ()
+
 [//]: # (While our Magikarp experiment showcases the incredible potential of AI in SaaS, it also highlights several important challenges we must address.)
 
 [//]: # ()
+
 [//]: # (First, there's the issue of privacy. Magikarp's effectiveness relies on access to personal data, which raises significant ethical questions. How do we ensure that AI assistants don't misuse or inappropriately share sensitive information? Balancing personalization and privacy is a delicate act that requires careful management.)
 
 [//]: # ()
+
 [//]: # (Next, we must acknowledge the current limitations of the technology. Despite its impressive capabilities, Magikarp isn't perfect. Its responses can sometimes be inconsistent or lack the nuance a human would provide. Future iterations will need to focus on improving context understanding, enhancing the accuracy of recommendations, and reducing the computational resources required to run the model locally.)
 
 [//]: # ()
+
 [//]: # (Finally, we face regulatory challenges. As AI agents like Magikarp become more prevalent, we're likely to see increased regulatory scrutiny. Questions about data ownership, AI decision-making transparency, and accountability for AI-generated actions will need to be addressed. Companies integrating such technologies must stay ahead of evolving regulations and ensure compliance with data protection laws like GDPR and CCPA.)
 
 [//]: # ()
+
 [//]: # (Addressing these challenges is crucial for the successful and responsible integration of AI in SaaS products. As we push the boundaries of what's possible with AI, we must remain mindful of the ethical, practical, and legal implications of our innovations.)
 
 [//]: # ()
+
 [//]: # (With careful consideration and ongoing improvements, we can develop AI assistants that respect privacy, provide genuine value, and comply with regulations. The potential is immense, but realizing it requires navigating these complex issues effectively.)
 
 ## Embracing AI in Your SaaS Journey
