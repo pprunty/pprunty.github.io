@@ -12,6 +12,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://patrickprunty.com/blog/02-magikarp</loc>
+    <news:news xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+      <news:publication>
+        <news:name>Patrick Prunty Blog</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-07-24T00:00:00.000Z</news:publication_date>
+      <news:title>From AI Skeptic to SaaS Success: The 11-Hour Magikarp Experiment That Changed Everything</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://patrickprunty.com/blog/03-pretty-little-flower</loc>
     <news:news xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
       <news:publication>

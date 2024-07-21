@@ -1,9 +1,9 @@
 ---
 title: "From AI Skeptic to SaaS Success: The 11-Hour Magikarp Experiment That Changed Everything"
-title: "Integrate AI in Your SaaS Product or Get Left Behind"
+#title: "Integrate AI in Your SaaS Product or Get Left Behind"
 date: "2024-07-24"
 description: "In just 11 hours, I created an AI agent that could do the work of an entire data science team; providing me with wake-up call for the future of software development."
-image: "/images/articles/magikarp.jpeg"
+image: "/images/articles/magikarp.WEBP"
 artwork: "Pokémon Anime Series"
 ---
 
@@ -172,7 +172,7 @@ sparkles. That's _probably_ why your Product Manager or Owner is so pushy about 
 product.
 
 In the wake of AI advancements, the next wave of innovation will bring an influx of new products, and the winners will
-be those who leverage their AI and LLM flagship features the best. To thrive, companies must not adopt AI technologies to simply
+be those who leverage their AI and LLM features the best. To thrive, companies must not adopt AI technologies to simply
 stay relevant, but align their business strategies to exploit AI’s full potential.
 
 ## Embracing AI in Your SaaS Journey
