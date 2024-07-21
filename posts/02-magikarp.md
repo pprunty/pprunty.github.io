@@ -20,7 +20,7 @@ potential of AI. Like its namesake, this AI agent starts simple but can evolve i
 assistant — a metaphor for the rapid growth and untapped possibilities in AI technology.
 
 <figure>
-  <img src="https://patrickprunty.com/articles/gyarados.webp" alt="Gyarados: The evolved form of Magikarp, symbolizing the potential of our AI agent">
+  <img src="https://patrickprunty.com/articles/gyarados.png" alt="Gyarados: The evolved form of Magikarp, symbolizing the potential of our AI agent">
   <figcaption>Gyarados: The evolved form of Magikarp, symbolizing the potential of the Magikarp AI agent</figcaption>
 </figure>
 
