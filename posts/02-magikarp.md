@@ -56,8 +56,8 @@ increasingly complicated plans and thought, "hell, this is going to take me _wee
 
 Then I remembered...
 
-The recruiter hinted in the initial screening how the company are exploring the integration of LLMs (Large Language
-Models, e.g. ChatGPT) on their mobile devices.
+The recruiter hinted in the initial screening how the company are exploring the integration of Large Language
+Models (LLMs, e.g. ChatGPT) on their mobile devices.
 
 This led me to pivot my approach entirely.
 

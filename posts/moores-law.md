@@ -9,9 +9,11 @@ artwork: "Surgeon examining a human brain"
 As Artificially Intelligent (AI) systems improve at an exponential rate, are we enhancing our cognitive abilities, or
 conversely, is our reliance on technology leading to a cognitive decline?
 
-In 1965, Gordon Moore, co-founder of Intel, observed what would become known today as Moore's Law. Moore's Law states that the number of transistors
-that can be packed onto a piece of silicon doubles approximately every two years. Its limit being the size of a single atom.
-_Huh,_ it would probably be a bad idea for them to go any smaller than that right?
+In 1965, Gordon Moore, co-founder of Intel, observed what would become known today as Moore's Law. Moore's Law states
+that the number of transistors
+that can be packed onto a piece of silicon doubles approximately every two years. Its limit being the size of a single
+atom.
+_Huh,_ it would probably be a bad idea for them to go any smaller than that right? You wouldn't want things to start blowing up...
 
 <figure>
   <img src="https://patrickprunty.com/images/articles/moores-law.jpg" alt="Moore's Law">
@@ -24,10 +26,14 @@ _Huh,_ it would probably be a bad idea for them to go any smaller than that righ
 
 [This section serves as the hook, presenting the central question and setting up the tension between AI advancement and human cognitive capabilities]
 
-This principle has propelled the advancement of AI, as more transistors mean more powerful hardware systems to run AI programs on. Some fear that these AI systems might eventually surpass human capabilities and 'take over'. However, while the complexity of AI systems continues to increase — like OpenAI's latest GPT models, which utilize up to 175 billion parameters — they still fall short of the human brain's estimated 100 trillion synaptic connections. This vast difference highlights the unique complexity and evolutionary refinement of the human brain, which spans 3 billion years of natural evolution.
+This principle has propelled the advancement of AI, as more transistors mean more powerful hardware systems to run AI
+programs on. Some fear that these AI systems might eventually surpass human capabilities and 'take over'. However,
+OpenAI's latest GPT 4o model utilizes up to 175 billion
+parameters and still falls way short of the human brain's estimated 100 trillion synaptic connections. This vast
+difference highlights the unique complexity and evolutionary refinement of the human brain, which spans 3 billion years
+of natural evolution.
 
 So, is there a Moore's Law equivalent for the evolution of the human brain?
-
 
 ## The Plasticity of the Human Brain
 
