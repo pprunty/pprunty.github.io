@@ -69,5 +69,3 @@ you don't like doing it anymore. Conversely, if you find yourself doing somethin
 in it.
 
 And that brings me to another saying which I will finish on, _**variety is the spice of life.**_
-
-put it down to, TikTok destroyed my attention span ahhhhh.
