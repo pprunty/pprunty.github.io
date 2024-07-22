@@ -3,7 +3,7 @@ title: "Just Do It All: Do Everything, Manage Nothing"
 #title: "Just Do It All: Do All Your Interests, Manage None of Them"
 date: "2024-08-01"
 image: "/images/articles/just-do-it.WEBP"
-description: "Variety is the spice of life. Do what you love when you love it."
+description: "Variety is the spice of life: Do whatever you want, when you want to do it."
 artwork: "You know what it is"
 ---
 
