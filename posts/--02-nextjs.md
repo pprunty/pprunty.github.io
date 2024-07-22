@@ -1,6 +1,6 @@
 ---
 title: "4 Simple Strategies for Leveling Up Your NextJS/ReactJS Project"
-date: "2024-07-20"
+date: "2023-07-20"
 image: "/images/articles/elevate-nextjs/cpu.jpg"
 description: "Discover 8 simple strategies to level up your NextJS/ReactJS project and enhance its performance and functionality."
 artwork: "Dan Williams / Pixabay.com"

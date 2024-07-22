@@ -4,7 +4,7 @@ title: "How Magikarp Transformed My SaaS Strategy In Just 11 Hours"
 #title: "The Magikarp Lesson: Integrate AI in Your SaaS Product or Get Left Behind"
 date: "2024-07-24"
 description: "In just 11 hours, I created an AI agent that could do the work of an entire data science team; providing me with wake-up call for the future of software development."
-image: "/images/articles/magikarp.jpg"
+image: "/images/articles/magikarp.jpeg"
 artwork: "Magikarp Anime Poster"
 ---
 
@@ -16,23 +16,6 @@ In just 11 hours, I created an AI agent that could do the work of an entire data
 
 So, what is Magikarp?
 
-[//]: # (Magikarp is named after the Pokémon that evolves from a weak fish into the powerful dragon called Gyarados, embodying)
-
-[//]: # (the transformative)
-
-[//]: # (potential of AI. Like its namesake, this AI agent starts simple but can evolve into a robust, multi-functional)
-
-[//]: # (assistant — a metaphor for the rapid growth and untapped possibilities in AI technology.)
-
-[//]: # ()
-
-[//]: # (<figure>)
-
-[//]: # (  <img src="https://patrickprunty.com/images/articles/gyarados.png" alt="Gyarados: The evolved form of Magikarp, symbolizing the potential of our AI agent" style="max-width: 320px;">)
-
-[//]: # (  <figcaption>Gyarados: The evolved form of Magikarp, symbolizing the potential of the Magikarp AI agent</figcaption>)
-
-[//]: # (</figure>)
 
 ## An Unconventional Interview Experience
 
