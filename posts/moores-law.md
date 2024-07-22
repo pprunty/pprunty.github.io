@@ -35,9 +35,20 @@ of natural evolution.
 
 So, is there a Moore's Law equivalent for the evolution of the human brain?
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aQ5PeJjZqBY?si=UIpTD8eXlovMaIoX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## High-Performance Computing 
+
+NVIDIA valued at 3 trillion in next decade, joke about next Ocean's movie breaking into GPU 
+
+Nvidia could reach $50tn market cap in a decade, says top tech investor
+https://www.ft.com/content/4c9b009f-7d33-4975-b4be-a36c714bf1a8
+
 ## The Plasticity of the Human Brain
 
 [Rising action begins here, discussing neuroplasticity and the brain's ability to adapt]
+
+
 
 ## Cognitive Enhancement: A New Frontier
 
@@ -48,19 +59,41 @@ graphic sketch
 
 Elon Musk's neuralink & animal trials
 
+Clip of neuralink patient on joe rogan
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/887IX4RqaIU?si=69Jt9KlCY9raDx8Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## The Ethics of Brain Augmentation
 
 [Rising action intensifies, discussing ethical implications and societal impacts]
 
 human rights violations
 
+it might seem far-fetched to think human's will be made inferior to machines due to advances in artificial intelligence. however, 
+cognitive enhancement might make some humans inferior to other cognitively enhanced humans. For example, take a human 
+with noticeably advanced mathematical skills. this human could pay, perhaps for high price initially, to have a human chip, speciifically 
+designed for cognitive enhancement of mathematical studies. whilst this student does research, they would have contextual 
+knowledge of important mathematical resources readily available on the chip for them to tap into. 
+
+Likewise, in a more sinister situation, a human could have a chip which enhances their cognitive ability of persuasion, 
+improving their ability to converse in strategic negotiations, ....
+
+this would undeniably create inequality for the different classes of society. how can a working class person compete with 
+an upper class individual who is cognitively enhanced? what would happen to a cognitively enhanced individual if after some time, their 
+chip stopped working? 
+
+
 ## The Symbiosis of Human and Machine Intelligence
 
 [This section represents the climax, exploring the potential convergence of human and artificial intelligence]
 
+
+
 ## The Future of Human Cognition
 
 [Falling action and resolution, summarizing the potential paths forward and their implications]
+
+
 
 ## Conclusion: An Open Question
 

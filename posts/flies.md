@@ -13,6 +13,13 @@ how long have they been around
 how long do they live
 how many scpecies of them there are
 
+
+<figure>
+  <img src="https://static01.nyt.com/images/2012/07/03/science/03OBFLY3/03OBOX3-superJumbo.jpg" alt="Moore's Law">
+  <figcaption>Moore's Law from 1970-2020.</figcaption>
+</figure>
+
+
 P.S
 and yes, i realize this article is high autism
 

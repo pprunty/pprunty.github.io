@@ -1,9 +1,9 @@
 ---
 title: "How to Transform Your NextJS/ReactJS Project into a Progressive Web App (PWA)"
 date: "2024-06-20"
-image: "/images/articles/next-js-pwa/sonoma.jpeg"
+image: "/images/articles/pwa.jpg"
 description: "A comprehensive guide to making your NextJS/ReactJS frontend a progressive web application (PWA)."
-artwork: "Apple Sonoma"
+artwork: "iStock / Getty Images"
 ---
 
 Recently, I transformed my personal website, [patrickprunty.com](https://patrickprunty.com), into a Progressive Web
