@@ -2,8 +2,8 @@
 title: "Just Do It All: Do Everything, Manage Nothing"
 #title: "Just Do It All: Do All Your Interests, Manage None of Them"
 date: "2024-08-01"
-image: "/images/articles/just-do-it/just-do-it.jpeg"
-description: "Work sucks. So how do I make it better?"
+image: "/images/articles/just-do-it.WEBP"
+description: "Variety is the spice of life. Do what you love when you love it."
 artwork: "You know what it is"
 ---
 

@@ -206,7 +206,7 @@ const Home: React.FC = () => {
       </Head>
       <Title>The Product & Design Work of Patrick Prunty</Title>
       <Subtitle>
-        I am a full-stack web developer currently working in applications of Artificial Intelligence with a passion for software, education, and creative media. Explore my projects below to learn more about my work. If you wish to connect, I offer one-on-one consultations to discuss projects, ideas, or any questions you have.
+        I am a full-stack web developer working in applications of Artificial Intelligence with a passion for software, education, and creative media. Explore my projects below to learn more about my work. If you wish to connect, I offer one-on-one consultations to discuss projects, ideas, or any questions you have.
       </Subtitle>
       {caseStudies.map((caseStudy) => (
         <CaseStudyComponent
