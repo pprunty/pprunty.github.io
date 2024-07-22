@@ -1,6 +1,6 @@
 ---
 title: "Untitled 02"
-date: "2024-08-22"
+date: "2024-07-22"
 image: "/images/articles/IMG_6469.JPG"
 description: "An experimental poem by Patrick Prunty from the Untitled Collection."
 artwork: "William Kentridge"
