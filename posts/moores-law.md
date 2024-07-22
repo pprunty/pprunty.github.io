@@ -1,5 +1,6 @@
 ---
-title: "Is There a Moore's Law for the Human Brain?"
+#title: "Is There a Moore's Law for the Human Brain?"
+title: "AI vs. Human Brain: The Future of Cognitive Enhancement and Evolution"
 date: "2024-07-30"
 description: "Exploring the interplay between technological advancements in Artificial Intelligence and the evolution of the human brain."
 image: "/images/articles/brain.png"
@@ -8,6 +9,10 @@ artwork: "Surgeon examining a human brain"
 
 As Artificially Intelligent (AI) systems improve at an exponential rate, are we enhancing our cognitive abilities, or
 conversely, is our reliance on technology leading to a cognitive decline?
+
+## The AI Revolution and Human Cognition
+
+[This section serves as the hook, presenting the central question and setting up the tension between AI advancement and human cognitive capabilities]
 
 In 1965, Gordon Moore, co-founder of Intel, observed what would become known today as Moore's Law. Moore's Law states
 that the number of transistors
@@ -21,59 +26,90 @@ blowing up...
   <figcaption>Moore's Law from 1970-2020.</figcaption>
 </figure>
 
-[//]: # (The pressing question remains: Is there a Moore's Law for the human brain? As AI systems grow more sophisticated, do we risk becoming 'dumber', or does technology have the potential to enhance our cognitive functions in ways we've yet to fully understand?)
-
-## The AI Revolution and Human Cognition
-
-[This section serves as the hook, presenting the central question and setting up the tension between AI advancement and human cognitive capabilities]
-
 This principle has propelled the advancement of AI, as more transistors mean more powerful hardware systems to run AI
 programs on. Some fear that these AI systems might eventually surpass human capabilities and 'take over'. However,
-OpenAI's latest GPT 4 model utilizes up to 1.76 trillion
-parameters and still falls short of the human brain's estimated 100 trillion synaptic connections. This vast
+OpenAI's latest GPT 4 model utilizes only 1.76 trillion
+parameters compared to the human brain's estimated 100 trillion synaptic connections. This vast
 difference highlights the unique complexity and evolutionary refinement of the human brain, which spans 3 billion years
 of natural evolution.
 
 So, is there a Moore's Law equivalent for the evolution of the human brain?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aQ5PeJjZqBY?si=UIpTD8eXlovMaIoX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[//]: # (<iframe width="560" height="315" src="https://www.youtube.com/embed/aQ5PeJjZqBY?si=UIpTD8eXlovMaIoX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>)
 
 ## High-Performance Computing: Driving Computational Evolution
 
-At the beating heart of AI development is high-performance computing. Companies like NVIDIA, whom specialize in
-manufacturing
-Graphical Processing Units (GPUs) are the modern day shuffle manufacture in today's AI gold rush. This is why NVIDIA
-for a brief time held the title as the most valuable company in the world, more valuable even than than both Microsoft
-and Apple. Additionally, in a recent report by The Financial Times, early Tesla and Amazon backer James Anderson backs
-NVIDIA to
-reach $50 trillion in market cap in the next decade, highlighting the incalculable ceiling for NVIDIA.
+At the beating heart of AI development is high-performance computing. Companies like NVIDIA, which specialize in
+manufacturing Graphical Processing Units (GPUs), are the modern-day shuffle manufacturer in today's AI gold rush. This
+explains why NVIDIA briefly held the title of the world's most valuable company, surpassing even Microsoft and Apple. In
+a recent report by The Financial Times, early Tesla and Amazon backer James Anderson projected NVIDIA to reach a $50
+trillion market cap in the next decade, highlighting the company's incalculable potential.
 
-GPUs were initially
-designed for ... however, the number of cores on GPUs lends itself to parallel computing.
+GPUs were initially designed for rendering complex graphics in video games and professional applications. However, their
+architecture, consisting of thousands of smaller, more efficient cores, lends itself exceptionally well to parallel
+computing – a crucial component in AI processing.
 
 Parallel computing, in simpler terms, is the ability to divide a task into smaller sub-tasks and process them
-concurrently. This is similar to a team of people working together on a project, where each person handles a specific
-part of the work. However, unlike human workers who may have varying efficiency, GPU cores operate uniformly, ensuring
-consistent and rapid processing speeds.
+concurrently. Imagine a team of people working together on a project, where each person handles a specific part of the
+work simultaneously. However, unlike human workers who may have varying efficiency, GPU cores operate uniformly,
+ensuring consistent and rapid processing speeds.
 
-While GPUs excel at parallel processing, the human brain operates differently. The brain is not naturally adept at
-parallel processing; instead, it excels at integrating diverse types of information and making complex decisions based
-on experience and intuition. For example, a simple test involving alternating between reading letters of the alphabet
-and counting numbers demonstrates the brain's struggle with parallel tasks. Take the table below and alternate reading 
-the alphabet and numbers, i.e "A, 1, B, 2, 3, C, 4, D ..."
+This parallel processing capability is what makes GPUs ideal for AI applications, particularly in training large neural
+networks. The ability to perform multiple calculations simultaneously dramatically speeds up the learning process for AI
+models such as ChatGPT, enabling them to process vast amounts of data and recognize complex patterns much faster than
+traditional
+processors.
+
+While GPUs excel at parallel processing, the human brain operates differently. Our brains are not naturally adept at
+parallel processing; instead, they excel at integrating diverse types of information and making complex decisions based
+on experience, environment and intuition. A simple test demonstrates this limitation: try alternating between reading letters of the
+alphabet and counting numbers, like so: "A, 1, B, 2, C, 3, D, 4 ..."
 
 <figure>
-  <img src="https://patrickprunty.com/images/articles/table.png" alt="Moore's Law">
-  <figcaption>Alphabet and Numbers Exercise</figcaption>
+  <img src="https://patrickprunty.com/images/articles/table.png" alt="Brain Exercise">
+  <figcaption>Alphabet and Numbers Brain Exercise</figcaption>
 </figure>
 
-Whilst this is simple when you have the ability to read the information, try without looking at the table.
+While this task may seem simple when you can read the information on screen, try it without looking at the table. The
+difficulty you'll likely experience highlights the brain's struggle with true parallel tasks.
 
-
+This contrast between GPU capabilities and human cognition raises intriguing questions about the future of AI and human
+intelligence. As we continue to enhance our computational power, how will it shape our approach to problem-solving and
+information processing? Will we find ways to augment our natural cognitive abilities with AI-powered tools, or will we
+increasingly rely on AI systems to handle tasks our brains aren't optimized for? These questions lead us to consider the
+potential for cognitive enhancement and the evolving relationship between human and artificial intelligence.
 
 ## The Plasticity of the Human Brain
 
 [Rising action begins here, discussing neuroplasticity and the brain's ability to adapt]
+
+While artificial intelligence progresses through hardware improvements and software updates, the human brain evolves
+through a process known as neuroplasticity. This remarkable ability allows our brains to reorganize themselves
+by forming new neural connections throughout life, adapting to new experiences, learning, and even recovering from brain
+injuries.
+
+The driving force behind the brain's evolution is fundamentally different from that of machines. Where AI systems rely
+on external programming and data input, the human brain is shaped by a complex interplay of genetics, environment, and
+experience. This dynamic process has been honed over millions of years of evolution, resulting in an organ of
+unparalleled adaptability and efficiency.
+
+Research by Maguire et al. (2000) on London taxi drivers revealed that the posterior hippocampi of experienced drivers
+were significantly larger than those of control subjects. This study suggests that the brain can physically change in
+response to environmental demands and acquired skills within a single lifetime.
+
+These studies underscore a crucial difference between human cognition and artificial intelligence. While AI systems can
+be rapidly updated or expanded by adding more processing power or data, the human brain's changes are more gradual but
+potentially more profound. Our brains don't just add information; they restructure themselves in response to new
+learning and experiences.
+
+This plasticity gives humans a unique advantage in adapting to novel situations and integrating diverse types of
+information - capabilities that current AI systems struggle to match. However, it also raises intriguing questions about
+the future of human-AI interaction. Could we harness our understanding of neuroplasticity to create more adaptive AI
+systems? Or could we use AI to enhance our own neuroplasticity, potentially accelerating learning and cognitive
+development?
+
+As we continue to push the boundaries of both human and artificial intelligence, the interplay between neuroplasticity
+and technological advancement may hold the key to unlocking new frontiers in cognitive enhancement and evolution.
 
 ## Cognitive Enhancement: A New Frontier
 
