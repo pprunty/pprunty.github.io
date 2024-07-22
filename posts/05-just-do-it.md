@@ -19,14 +19,14 @@ on opposite sides of the intellectual spectrum and say “you’re either a Math
 what
 are you saying? A maths student can’t be creative? And an English student can’t be rational? I disagree.
 
-Back in the day, from the 1920s through to the 1970s (sorry if you were born between then and you're reading this, but
-you old), college curricula for mathematics students often included general education requirements that spanned various
+Back in the day, from the 1920s through to the 1970s (sorry if you were born between then, and you're reading this, but
+you old), college curricula for Mathematics students often included general education requirements that spanned various
 disciplines, including English literature. The concept of a well-rounded education was prevalent, meaning that even
-specialized fields like mathematics were expected to have a broader academic foundation. So don't tell me the greatest
+specialized fields like Mathematics were expected to have a broader academic foundation. So don't tell me the greatest
 mathematicians were not creative, or the best writers irrational? Additionally, I received a social experience like no
 other through doing the degree I did. What other degree would have you sitting beside a young man who smelled of false
 tan in
-an english tutorial, only to scutter across to the science building an hour later for a mathematics lecture where
+an English literature tutorial, only to scutter across to the science building an hour later for a Mathematics lecture where
 everybody looks the same?
 
 During my undergraduate degree, I burned through books, and I mean _burned_ through them; fiction, non-fiction,
