@@ -16,7 +16,6 @@ In just 11 hours, I created an AI agent that could do the work of an entire data
 
 So, what is Magikarp?
 
-
 ## An Unconventional Interview Experience
 
 It started with an unconventional interview for a software developer position at a mobile device startup. Instead of
@@ -154,26 +153,37 @@ and its [Python SDK](https://github.com/ollama/ollama-python).
 
 [//]: # (  on [AWS Bedrock]&#40;https://docs.anthropic.com/en/api/claude-on-amazon-bedrock&#41;.)
 
+By embracing AI as a tool for innovation rather than a threat, SaaS entrepreneurs can gain a significant competitive
+advantage in an increasingly AI-driven market.
+
 ## The Future of AI-Powered SaaS
 
-The integration of AI, particularly LLMs, has become a pivotal trend in the tech industry. For executives in tech companies, it's
-all about having the ability to pitch and sell — to stakeholders, to intimidate competition, to motivate engineers. This is likely why your Product Manager or Owner is so eager
-to incorporate AI into your development projects, often without full consideration of its implications. Simply
-connecting your SaaS product to a LLM's API does not make you an AI company. Once 'AI' becomes associated with your product, 
-you are at immediate risk of over-promising and under-delivering.
+As we look
+to the future, it's crucial to understand the broader implications and challenges of AI adoption in the tech industry.
 
-In the wake of Apple's WWDC announcement about releasing a new Apple AI, powered by OpenAI's GPT
-models, on iOS 18 devices later this year (2024), Marques Brownlee [posted an interesting video on YouTube](https://www.youtube.com/watch?v=sDIi95CqTiM&pp=ygUbYnJvd25sZWUgcHJvZHVjdCB2cyBmZWF0dXJl)
-discussing whether AI should be considered a product in itself or merely a
-feature. This move by Apple exemplifies how major tech companies are
-positioning AI as a core product feature, blurring the lines between product and feature.
+The integration of AI, particularly LLMs, has become a pivotal trend in the tech industry. For
+many executives, AI has become a buzzword to impress stakeholders, intimidate competition, and motivate engineers. This
+is likely why Product Managers are often eager to incorporate AI into development projects, sometimes without fully
+considering its implications. However, simply connecting a SaaS product to an LLM's API
+doesn't make it an _AI_ company.
+
+The debate over AI's role in products is ongoing. In the wake of Apple's WWDC announcement about releasing a new Apple
+AI, powered by OpenAI's GPT models, on iOS 18 devices later this year (2024), Marques
+Brownlee [posted an interesting video on YouTube](https://www.youtube.com/watch?v=sDIi95CqTiM&pp=ygUbYnJvd25sZWUgcHJvZHVjdCB2cyBmZWF0dXJl)
+discussing whether AI should be considered a product in itself or merely a feature. This move by Apple exemplifies how
+major tech companies are positioning AI as a core product feature, blurring the lines between product and feature.
 
 <iframe src="https://www.youtube.com/embed/sDIi95CqTiM?si=dUospjSmpiJCFZVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 As AI advancements continue and more companies jump on the bandwagon, we're poised to see an influx of new AI-powered
 products. However, not all of these will succeed. The winners in this new landscape will be those who can leverage AI
-and LLM features most effectively, going beyond surface-level integration to create truly innovative solutions that complement their core offerings.
+and LLM features most effectively, going beyond surface-level integration to create truly innovative solutions that
+complement their core offerings.
 
+The Magikarp project revealed that effective AI integration goes beyond technical implementation. It requires
+understanding user needs, enhancing core features, balancing AI capabilities with user control, and continuous
+refinement. By following this approach, SaaS entrepreneurs can create valuable AI-powered products that truly serve
+their users, just as Magikarp did with its personalized interactions.
 
 [//]: # (## Challenges in AI Integration)
 
