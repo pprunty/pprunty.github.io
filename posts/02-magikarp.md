@@ -180,7 +180,7 @@ connecting your SaaS product to a LLM's API does not make you an AI company. Onc
 you are at immediate risk of over-promising and under-delivering.
 
 In the wake of Apple's WWDC announcement about releasing a new Apple AI, powered by OpenAI's GPT
-models, on iOS 18 devices later this year (2024), Marcus Brownlee [posted an interesting video on YouTube](https://www.youtube.com/watch?v=sDIi95CqTiM&pp=ygUbYnJvd25sZWUgcHJvZHVjdCB2cyBmZWF0dXJl)
+models, on iOS 18 devices later this year (2024), Marques Brownlee [posted an interesting video on YouTube](https://www.youtube.com/watch?v=sDIi95CqTiM&pp=ygUbYnJvd25sZWUgcHJvZHVjdCB2cyBmZWF0dXJl)
 discussing whether AI should be considered a product in itself or merely a
 feature. This move by Apple exemplifies how major tech companies are
 positioning AI as a core product feature, blurring the lines between product and feature.
