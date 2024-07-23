@@ -14,6 +14,32 @@ import formatDate from '@/utils/formatDate';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
+
+const StyledLink = styled.a`
+  color: #666; // Default text color
+  text-decoration: none; // Remove underline by default
+  transition: color 0.3s, text-decoration 0.3s;
+
+  &:hover {
+    color: #000; // Ensure color stays black on hover
+    text-decoration: underline; // Underline text on hover
+  }
+
+//   display: inline-block;
+  align-items: center;
+
+  svg {
+    margin: 0px 3px;
+  }
+`;
+
+
+const SvgIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 30 30" fill="currentColor">
+    <path d="M 25.980469 2.9902344 A 1.0001 1.0001 0 0 0 25.869141 3 L 20 3 A 1.0001 1.0001 0 1 0 20 5 L 23.585938 5 L 13.292969 15.292969 A 1.0001 1.0001 0 1 0 14.707031 16.707031 L 25 6.4140625 L 25 10 A 1.0001 1.0001 0 1 0 27 10 L 27 4.1269531 A 1.0001 1.0001 0 0 0 25.980469 2.9902344 z M 6 7 C 4.9069372 7 4 7.9069372 4 9 L 4 24 C 4 25.093063 4.9069372 26 6 26 L 21 26 C 22.093063 26 23 25.093063 23 24 L 23 14 L 23 11.421875 L 21 13.421875 L 21 16 L 21 24 L 6 24 L 6 9 L 14 9 L 16 9 L 16.578125 9 L 18.578125 7 L 16 7 L 14 7 L 6 7 z" />
+  </svg>
+);
+
 interface Post {
   slug: string;
   title: string;
@@ -133,7 +159,12 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
       </Head>
       <PageLoader loading={loading} />
       <Title>Patrick Prunty's Blog</Title>
-      <Subtitle>Welcome to my personal blog where I share insights, stories, and updates on my work and interests. Explore the posts below to read more.</Subtitle>
+      <Subtitle>
+        Welcome to my personal blog where I share insights, stories, and updates on my work and interests. I currently write for a variety of Medium Publications
+        such as <StyledLink href="https://www.levelupcoding.com">Level Up Coding<SvgIcon /></StyledLink>,
+        <StyledLink href="https://www.digitalglobaltraveler.com">Digital Global Traveler<SvgIcon /></StyledLink>,
+        <StyledLink href="https://www.startitup.com"> Start it Up<SvgIcon /></StyledLink>, and more. Explore the posts below to read more.
+      </Subtitle>
       {years.map(year => (
         <YearSection key={year}>
           <YearHeader>{year}</YearHeader>

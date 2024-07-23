@@ -2,14 +2,14 @@
 title: "The Magikarp Lesson: Integrate AI in Your SaaS Product or Get Left Behind" 
 date: "2024-07-24"
 description: "In just 11 hours, I created an AI agent that could do the work of an entire data science team; providing me with wake-up call for the future of software development."
-image: "/images/articles/magikarp.WEBP"
-artwork: "Poster of Magikarp, the fish-type Pokémon"
+image: "/images/articles/magikarp2.png"
+artwork: "Mock-up of the fish-typed Pokémon Magikarp, as an AI Agent iPhone Application"
 ---
 
 I used to think integrating Artificial Intelligence (AI) into my Software as a Service (SaaS) entrepreneurial projects
 was cheating.
 Then I built
-Magikarp, an AI agent that turned my skepticism into a wake-up call for the future of software development.
+Magikarp, an AI agent, named after a fish-type Pokémon, that turned my skepticism into a wake-up call for the future of software development.
 In just 11 hours, I created an AI agent that could do the work of an entire data science team.
 
 So, what is Magikarp?

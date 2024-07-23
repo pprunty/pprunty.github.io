@@ -60,7 +60,7 @@ models such as ChatGPT, enabling them to process vast amounts of data and recogn
 traditional
 processors.
 
-While GPUs excel at parallel processing, the human brain operates differently. Our brains are not naturally adept at
+While GPUs excel at parallel processing, the human brain operates differently. The human brain is not naturally adept at
 parallel processing; instead, they excel at integrating diverse types of information and making complex decisions based
 on experience, environment and intuition. A simple test demonstrates this limitation: try alternating between reading letters of the
 alphabet and counting numbers, like so: "A, 1, B, 2, C, 3, D, 4 ..."
@@ -84,7 +84,7 @@ potential for cognitive enhancement and the evolving relationship between human 
 [Rising action begins here, discussing neuroplasticity and the brain's ability to adapt]
 
 While artificial intelligence progresses through hardware improvements and software updates, the human brain evolves
-through a process known as neuroplasticity. This remarkable ability allows our brains to reorganize themselves
+through a process known as neuroplasticity. This remarkable ability allow the brain to reorganize itself
 by forming new neural connections throughout life, adapting to new experiences, learning, and even recovering from brain
 injuries.
 
