@@ -19,7 +19,7 @@
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2024-07-24T00:00:00.000Z</news:publication_date>
-      <news:title>How Magikarp Transformed My SaaS Strategy In Just 11 Hours</news:title>
+      <news:title>The Magikarp Lesson: Integrate AI in Your SaaS Product or Get Left Behind</news:title>
     </news:news>
   </url>
   <url>
@@ -45,13 +45,24 @@
     </news:news>
   </url>
   <url>
+    <loc>https://patrickprunty.com/blog/05-just-do-it</loc>
+    <news:news xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+      <news:publication>
+        <news:name>Patrick Prunty Blog</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-07-25T00:00:00.000Z</news:publication_date>
+      <news:title>Just Do It All: Do Everything, Manage Nothing</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://patrickprunty.com/blog/07-untitled</loc>
     <news:news xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
       <news:publication>
         <news:name>Patrick Prunty Blog</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2024-08-22T00:00:00.000Z</news:publication_date>
+      <news:publication_date>2024-07-22T00:00:00.000Z</news:publication_date>
       <news:title>Untitled 02</news:title>
     </news:news>
   </url>
