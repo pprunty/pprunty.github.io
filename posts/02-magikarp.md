@@ -3,7 +3,7 @@ title: "The Magikarp Lesson: Integrate AI in Your SaaS Product or Get Left Behin
 date: "2024-07-24"
 description: "In just 11 hours, I created an AI agent that could do the work of an entire data science team; providing me with wake-up call for the future of software development."
 image: "/images/articles/magikarp2.png"
-artwork: "Mock-up of the fish-typed Pokémon Magikarp, as an AI Agent iPhone Application"
+artwork: "Mock-up of the fish-typed Pokémon Magikarp, as an iPhone Application and AI agent"
 ---
 
 I used to think integrating Artificial Intelligence (AI) into my Software as a Service (SaaS) entrepreneurial projects

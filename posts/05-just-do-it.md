@@ -1,7 +1,7 @@
 ---
 title: "Just Do It All: Do Everything, Manage Nothing"
 #title: "Just Do It All: Do All Your Interests, Manage None of Them"
-date: "2024-08-01"
+date: "2024-07-25"
 image: "/images/articles/just-do-it.WEBP"
 description: "Don't worry about having multiple interests. Do whatever you want, when you want to do it. Variety after all, is the spice of life."
 artwork: "You know what it is"
