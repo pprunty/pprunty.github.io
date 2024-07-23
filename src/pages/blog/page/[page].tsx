@@ -162,7 +162,7 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
       <Subtitle>
         Welcome to my personal blog where I share insights, stories, and updates on my work and interests. I currently write for a variety of Medium Publications
         such as <StyledLink href="https://levelup.gitconnected.com/">Level Up Coding<SvgIcon /></StyledLink>,
-        <StyledLink href="https://medium.com/digital-global-traveler">Digital Global Traveler<SvgIcon /></StyledLink>,
+        <StyledLink href="https://medium.com/digital-global-traveler"> Digital Global Traveler<SvgIcon /></StyledLink>,
         <StyledLink href="https://medium.com/swlh"> Start it Up<SvgIcon /></StyledLink>, and more. Explore the posts below to read more.
       </Subtitle>
       {years.map(year => (
