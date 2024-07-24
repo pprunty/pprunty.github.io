@@ -36,7 +36,7 @@ It's like edging but with food.
 
 I appreciate the artistry. But I must admit, I also appreciate triple cheeseburgers, soda refills and spice-bags. 
 
-The difference is I don't feel the same way after eating at a fancy restaurant compared to the way I do after eating at
+The difference is I don't feel the same way after eating at a fancy restaurant compared to at
 McDonald's.
 
 It wasn't too little, it wasn't too much. It was just right.
