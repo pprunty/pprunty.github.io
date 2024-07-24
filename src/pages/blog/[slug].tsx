@@ -146,6 +146,16 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
           <span style={{ margin: '0 10px' }}>&bull;</span>
         </p>
       <Content dangerouslySetInnerHTML={{ __html: content }} />
+              <p style={{ textAlign: 'center' }}>
+                <span style={{ margin: '0 10px' }}>&bull;</span>
+                <span style={{ margin: '0 10px' }}>&bull;</span>
+                <span style={{ margin: '0 10px' }}>&bull;</span>
+              </p>
+<Content dangerouslySetInnerHTML={{ __html: `
+  <p><strong><em>Hold up...</em></strong> <em>Did you enjoy this article? Learn something new? If so, I'd be grateful if you'd <a href="https://medium.com/@pprunty" target="_blank" rel="noopener noreferrer">follow me on Medium</a>. Your
+  support encourages me to keep writing and sharing my thoughts. Thank you for reading, and I hope to connect with you
+  again soon. With appreciation. Patrick.</em></p>
+`}} />
       <BottomBar>
         <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
         <ShareButton />
