@@ -20,7 +20,7 @@ And so, that forces us as writers to adapt.
 Ever go to a fancy restaurant or watch The Bear? If so, you might remember the one-word mantra repeated by the
 main character and top chef Carmy to his co-chefs:
 
-_"Subtract."_
+_"Subtract!"_
 
 <figure>
   <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/irishtimes/2Q7O4N2AIZSIEEKFUP52DFY4ZQ.jpg" alt="PWA on Mobile Devices">
@@ -28,15 +28,13 @@ _"Subtract."_
 </figure>
 
 Now, my non-expert theory on why restaurants and chefs do this is because they want to provide you with high-quality 
-substance but also leave you wanting. 
+dish but also leave you wanting. 
 
 They do this with every single dish they serve, making you wait a considerable time for each, and then, hit you with the dessert.
 
-It's like edging but with food.
+It's like edging but with food. 
 
-I appreciate the artistry. But I must admit, I also appreciate triple cheeseburgers, soda refills and spice-bags. 
+I appreciate the artistry. I also appreciate triple cheeseburgers, soda refills and spice-bags.
 
-The difference is I don't feel the same way after eating at a fancy restaurant compared to at
-McDonald's.
-
-It wasn't too little, it wasn't too much. It was just right.
+The difference being I don't feel the same way after eating at a fancy restaurant compared to binging
+at McDonald's; it's not too little, it's not too much. It's just right.
