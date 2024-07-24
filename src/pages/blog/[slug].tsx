@@ -438,6 +438,10 @@ const Content = styled.div`
     }
   }
 
+    del {
+      text-decoration: line-through;
+    }
+
   figure {
     text-align: center;
     margin: 20px 0;

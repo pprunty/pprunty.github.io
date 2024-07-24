@@ -14,25 +14,16 @@ import formatDate from '@/utils/formatDate';
 
 const isExport = process.env.NEXT_PUBLIC_IS_EXPORT === 'true';
 
-
 const StyledLink = styled.a`
-  color: #666; // Default text color
-  text-decoration: none; // Remove underline by default
+  color: #666;
+  text-decoration: none;
   transition: color 0.3s, text-decoration 0.3s;
 
   &:hover {
-    color: #000; // Ensure color stays black on hover
-    text-decoration: underline; // Underline text on hover
-  }
-
-//   display: inline-block;
-  align-items: center;
-
-  svg {
-    margin: 0px 3px;
+    color: #000;
+    text-decoration: underline;
   }
 `;
-
 
 const SvgIcon = () => (
   <svg width="18" height="18" viewBox="0 0 30 30" fill="currentColor">
@@ -60,6 +51,19 @@ interface BlogListProps {
   totalPages: number;
 }
 
+const MinimalBlogPost = ({ post, formattedDate, onClick }: { post: Post, formattedDate: string, onClick: () => void }) => {
+  return (
+    <MPostItem onClick={onClick}>
+      <MPostContent>
+        <MPostText>
+          <MPostDateAuthor>{formattedDate}</MPostDateAuthor>
+          <MPostTitle>{post.title}</MPostTitle>
+          <MPostDescription>{post.description}</MPostDescription>
+        </MPostText>
+      </MPostContent>
+    </MPostItem>
+  );
+};
 
 const BlogPost = ({ post, formattedDate, onClick }: { post: Post, formattedDate: string, onClick: () => void }) => {
   const contentToDisplay = (post.excerpt.length < 200 || post.excerpt.length > 15000 || post.type === "poem") ? post.description : post.excerpt;
@@ -90,9 +94,10 @@ const BlogPost = ({ post, formattedDate, onClick }: { post: Post, formattedDate:
   );
 };
 
-export default function BlogList({ posts, currentPage, totalPages }: BlogListProps) {
+export default function BlogList({ posts, paginatedPosts, currentPage, totalPages }: BlogListProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [minimalView, setMinimalView] = useState(false);
 
   useEffect(() => {
     const handleRouteChangeStart = () => setLoading(true);
@@ -110,41 +115,25 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
     };
   }, [router]);
 
-
-
   const handlePostClick = (slug: string) => {
     setLoading(true);
     router.push(`/blog/${slug}`);
   };
 
-  // Calculate a random position for the ad
-  const randomIndex = Math.floor(Math.random() * (posts.length - 2)) + 1;
+  // Use paginatedPosts or all posts based on the view mode
+  const displayedPosts = minimalView ? posts : paginatedPosts;
 
-  // Insert the ad at the random position
-  const postsWithAd = [
-    ...posts.slice(0, randomIndex),
-    { isAd: true },
-    ...posts.slice(randomIndex)
-  ];
-
-  // Group posts by year, including ads, just for the displayed posts
-  const postsByYear: Record<number, (Post | Ad)[]> = {};
-
-  postsWithAd.forEach((post) => {
-    if ('date' in post && post.date) {
-      const year = new Date(post.date).getFullYear();
-      if (!postsByYear[year]) {
-        postsByYear[year] = [];
-      }
-      postsByYear[year].push(post);
+  // Group posts by year
+  const postsByYear: Record<number, Post[]> = {};
+  displayedPosts.forEach(post => {
+    const year = new Date(post.date).getFullYear();
+    if (!postsByYear[year]) {
+      postsByYear[year] = [];
     }
+    postsByYear[year].push(post);
   });
 
-  // Filter out years that have no posts to display on the current page
-  const years = Object.keys(postsByYear)
-    .map(Number)
-    .filter(year => postsByYear[year].length > 0) // Ensure there are posts in this year
-    .sort((a, b) => b - a);
+  const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
 
   return (
     <>
@@ -165,25 +154,54 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
         <StyledLink href="https://medium.com/digital-global-traveler" target="_blank" rel="noopener noreferrer"> Digital Global Traveler<SvgIcon /></StyledLink>,
         <StyledLink href="https://medium.com/swlh" target="_blank" rel="noopener noreferrer"> Start it Up<SvgIcon /></StyledLink>, and more. Explore the posts below to read more.
       </Subtitle>
+      <ToggleViewButton onClick={() => setMinimalView(!minimalView)}>
+        {minimalView ? 'Show Full View' : 'Show Minimal View'}
+      </ToggleViewButton>
       {years.map(year => (
         <YearSection key={year}>
           <YearHeader>{year}</YearHeader>
           <PostList>
-            {postsByYear[year].map((post, index) => (
-              <BlogPost
-                key={(post as Post).slug}
-                post={post as Post}
-                formattedDate={formatDate((post as Post).date)}
-                onClick={() => handlePostClick((post as Post).slug)}
-              />
-            ))}
+            {postsByYear[year].map(post =>
+              minimalView ? (
+                <MinimalBlogPost
+                  key={post.slug}
+                  post={post}
+                  formattedDate={formatDate(post.date)}
+                  onClick={() => handlePostClick(post.slug)}
+                />
+              ) : (
+                <BlogPost
+                  key={post.slug}
+                  post={post}
+                  formattedDate={formatDate(post.date)}
+                  onClick={() => handlePostClick(post.slug)}
+                  minimalView={minimalView}
+                />
+              )
+            )}
           </PostList>
         </YearSection>
       ))}
-      <Pagination currentPage={currentPage} totalPages={totalPages} />
+      {!minimalView && <Pagination currentPage={currentPage} totalPages={totalPages} />}
     </>
   );
 }
+
+const ToggleViewButton = styled.button`
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #555;
+  }
+`;
 
 const POSTS_PER_PAGE = 5;
 
@@ -216,12 +234,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      posts: paginatedPosts,
+      posts, // Provide all posts here
+      paginatedPosts, // Provide paginated posts for the current page
       currentPage: page,
       totalPages,
     },
   };
 };
+
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const postsDirectory = path.join(process.cwd(), 'posts');
@@ -269,6 +289,57 @@ const Subtitle = styled.p`
   }
 `;
 
+// Minimal Styled Components
+const MPostItem = styled.li`
+  padding: 2px 0px;
+//   text-align: center;
+justify-content: center;
+//   border-left: 4px solid #333;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: transform 0.3s opacity 0.3s ease-in-out;
+//   border-bottom: 1px solid #666;
+  &:hover {
+//     background-color: #f9f9f9;
+  }
+    &:active {
+      transform: scale(0.99);
+      opacity: 0.8;
+    }
+`;
+
+const MPostContent = styled.div`
+  display: flex;
+  align-items: flex-start;
+`;
+
+const MPostText = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const MPostDateAuthor = styled.div`
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 5px;
+`;
+
+const MPostTitle = styled.h2`
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+`;
+
+const MPostDescription = styled.p`
+  font-size: 1rem;
+  color: #666;
+  margin-top: 5px;
+`;
+
+// Non minimal
 const PostTitle = styled.div`
   font-size: 2rem;
   font-weight: 700;
