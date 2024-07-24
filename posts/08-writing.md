@@ -6,7 +6,7 @@ description: "A writer's reflection on the art of balancing substance and brevit
 artwork: "Brentley Frazer"
 ---
 
-Of late, I find myself grappling with the desire to expand on the points I want to get across to the reader in 
+Of late, I find myself grappling with the desire to expand on the points I want to get across to my readers in 
 an educational and accessible manner with the need to remove redundancy and conform to the mantra: less is more.
 
 They say less is more — but in the writing world, that's only if you can make more less.
