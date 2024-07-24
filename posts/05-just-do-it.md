@@ -49,7 +49,7 @@ He replied, in typical fashion:
 
 **LIGHTBULB**. 
 
-Yeah, I probably didn't like the book. After all, who made it a rule that you gotta real the whole damn
+Yeah, I probably didn't like the book. After all, who made it a rule that you gotta real the whole
 thing? If a book has you hooked, you'll read it back-to-front. You might even go back for seconds.
 
 For as long as I can remember, I have enjoyed exercise. Moreover, I love the feeling exercise gives you after you finish a really tough session. As a child, my
