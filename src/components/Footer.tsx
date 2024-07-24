@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <>
       <LogoWrapper>
         <ExportedImage
-                  src='/images/book_guy.svg'
+                  src='/images/woman.svg'
                   alt="logo"
                   layout="intrinsic" // Changed from responsive to intrinsic for better control over size
                   width={300} // Adjusted width
