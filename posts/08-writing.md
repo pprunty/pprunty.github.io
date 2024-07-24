@@ -28,7 +28,7 @@ _"Subtract."_
 </figure>
 
 Now, my non-expert theory on why restaurants and chefs do this is because they want to provide you with high-quality 
-substance but also leave you wanting more. 
+substance but also leave you wanting. 
 
 They do this with every single dish they serve, making you wait a considerable time for each, and then, hit you with the dessert.
 
