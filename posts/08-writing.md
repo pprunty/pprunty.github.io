@@ -11,7 +11,7 @@ an educational and accessible manner with the need to remove redundancy and conf
 
 They say less is more — but in the writing world, that's only if you can make more less.
 
-I believe striking this balance is ultimately what separates an average writer from a great one.
+I believe the ability to strike a balance is what ultimately separates an average writer from a great one.
 
 For some, the expectation is for a slow, deliberate experience that leaves them having learned something new. For the insidious doom-scrolling-attention-deficit-disordered generation, who want it _quick_, and want it _now_, maybe not so much.
 
