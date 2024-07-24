@@ -15,9 +15,9 @@ that'll
 make you 'great'. As someone who's always enjoyed being sporadic in my interests, pardon my French, but I think it's all
 bullshit.
 
-After initially dropping out of a general Engineering undergraduate degree after, ehm, 3 weeks, I decided to go back to
-college a year later to study a joint degree in Mathematics and English literature. Today, people often put these two
-subjects on opposite sides of the intellectual spectrum and say:
+After dropping out of a General Engineering program just ehm, three weeks in, I decided to return to college a year later,
+to study a joint degree in Mathematics and English literature. Nowadays, people consider these two subjects to be 
+on opposite sides of the intellectual spectrum and say things like:
 
 "You're either a Math person or an English person."
 
@@ -38,7 +38,7 @@ science building an hour later for a Mathematics lecture where everybody looked 
 During my undergraduate degree, I burned through books, and I mean _burned_ through them; fiction, non-fiction,
 biographical, you name it. This was partly down to having been assigned these books in college modules and wholly down
 to my mammoth 45-minute commute back-and-forth to college I had to do on the train every day. Fast-forward to today,
-where I work as a software developer in a completely different world. One day, I found myself chatting with one of my 
+where I work as a software developer in a completely different world. One day, I found myself chatting with one of my
 senior colleague, a self-described hippy, about books and confessed:
 
 "Man, I don't know why, but I just can't get back into reading — every time I read a book, I end up putting it down at
@@ -50,7 +50,7 @@ He replied, in his typical laid-back, philosophical fashion:
 
 **LIGHTBULB**.
 
-Yeah, I probably didn't like the book. After all, who made it a rule that you gotta real the whole
+Yeah, I probably didn't like the book. After all, who says you need to read the whole
 thing? If a book has you hooked, you'll read it back-to-front. You might even go back for seconds.
 
 This realization reminded me of another passion in my life: exercise. I love exercise. Moreover, I love the feeling
