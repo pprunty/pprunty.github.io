@@ -66,7 +66,9 @@ I swim, when I get bored with triathlon, I roll — you get my drift. And yeah, 
 3-hour marathon, or get a black belt. But that's OK, because I'm happy to just be there, tapped in, doing it, and
 getting a little better each day.
 
-There's this saying: "Jack of all trades, master of none."
+There's this saying: 
+
+_"Jack of all trades, master of none."_
 
 To that, I ask you, what do you want to be a master in? What do you want people to approach you for and ask for your
 expertise in? If you have an answer, then pursue it. If you're not already doing it, then do it. Shit, get a PhD and
