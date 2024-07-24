@@ -11,6 +11,8 @@ artwork: "Surgeon examining a human brain"
 As Artificially Intelligent (AI) systems improve at an exponential rate, are we enhancing our cognitive abilities, or
 conversely, is our reliance on technology leading to a cognitive decline?
 
+[//]: # (are we witness a cognitive decline in the age of doom-scrolling?)
+
 ## The AI Revolution and Human Cognition
 
 [This section serves as the hook, presenting the central question and setting up the tension between AI advancement and human cognitive capabilities]
