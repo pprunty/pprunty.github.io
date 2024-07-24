@@ -2,7 +2,7 @@
 title: "On Writing: More or Less?"
 date: "2024-07-30"
 image: "/images/articles/typewriter.jpeg"
-description: ""
+description: "A writer's reflection on the art of balancing substance and brevity, using fine dining as a metaphor for crafting engaging content in an age of fleeting attention spans."
 artwork: "Brentley Frazer"
 ---
 
