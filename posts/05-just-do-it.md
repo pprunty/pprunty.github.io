@@ -5,7 +5,7 @@ title: "Just Do It All: How NOT to Manage All of Your Interests"
 date: "2024-07-25"
 image: "/images/articles/just-do-it.WEBP"
 description: "Don't worry about having multiple interests. Do whatever you want, when you want to do it. Variety after all, is the spice of life."
-artwork: "Still of Shia LaBeouf from the 'Just Do It' video, courtesy of LaBeouf, as featured in the #INTRODUCTIONS art project."
+artwork: "Still of Shia LaBeouf from the 'Just Do It' video, as featured in the #INTRODUCTIONS art project."
 ---
 
 Recently, I've seen a flurry of posts on social media on "how to manage multiple interests" getting a lot
