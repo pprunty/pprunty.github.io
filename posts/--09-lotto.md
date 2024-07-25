@@ -8,6 +8,109 @@ artwork: "Brentley Frazer"
 
 Feeling lucky? You'd better be if you play the lottery. The odds, to put it plainly, are not in your favour.
 
+According to my ehm, \*fixes glasses\*, calculations, the probability of winning the Powerball jackpot — which means
+matching 5 numbers plus the powerball from a selection of 69 numbers, is one in 292 million.
+
+[equation here]
+
+To put that in perspective, there's a higher chance that Margot Robbie will call over to your house in the next 5 minutes for
+a game of Call of Duty (disclaimer: I don't have the calculations on hand for that one).
+
+## Powerball Time (The Stupid Way)
+
+Let's play us some lotto!
+
+Well, actually, I don't want to pay to play the lotto...
+
+Let's make our machine slave simulate playing the lotto instead (_hooray!_).
+
+Let's start by playing how most people play: purchase a single ticket for 3 bucks, watch the draw on ___ night, check
+the ticket to see if they match, repeat.
+
+That means each time we play, we have a one in 292 million chance in winning. That's not great odds right? But my machine is an addict, and knows
+if she stops playing her numbers will come up, so she keeps playing.
+
+Now, you might be thinking if you're a tech guy or gal, "this could take an _infinite_ time to run". And yes, you're right,
+it could. I wrote the code in C++ and used multithreading (8 threads) to speed it up. I got genuinely worried about 
+my machine, she got so hot. But she's an addict.
+
+_"Please_ don't die on me sweaty." I whispered and it didn't.
+
+But after _18_ hours, I pulled the plug. I couldn't stand seeing her that way.
+
+Turns out the lotto is hard.
+
+## Powerball Time (The Better Way, If You're Rich)
+
+Let's shake things up a little.
+
+In an imaginary world, where we have unlimited money, let's purchase an infinite number of lotto tickets until
+we purchase the ticket whose numbers match the 6 winning numbers. 
+
+[//]: # ([//]: # &#40;This is akin to a traditional lotto syndicate, &#41;)
+[//]: # (but now, my machine is a lone-wolf, and she doesn't like sharing.)
+
+[//]: # (where the six winning lotto numbers are fixed. Let's play the lotto an infinite number of)
+
+[//]: # (times until we match the winning tickets' numbers.)
+
+The probability of winning the lotto is one in 292 million, we can do some quick-math to
+determine that on average, we can expect to play 292 million times before we match the winning numbers.
+
+[equation here]
+
+But who knows, maybe the machine will get lucky, and we'll win with only couple hundred tickets bought and a lot of profit 
+in the bank?
+
+Let's set some ground rules: we'll only play the Powerball if the jackpot is $1bn, that way we have a considerable jackpot 
+to offset the cost of the tickets bought.
+
+Here are the results for 10 simulations, in ascending order from the smallest number of tickets bought to the largest:
+
+simulation_id, winning_lotto_numbers, num_of_tickets_bought, probability_of_winning_at_time_of_winning, cost_per_ticket, total_tickets_cost
+1. [1,12,17,50,51,64], 272m, 0.99, $3, $992m
+
+OK - so it looks like we got lucky!
+
+We're onto something here ladies and gentlemen.
+
+## Powerball Time (The Best Way)
+
+Sometimes the jackpot reaches a limit and the Powerball and other national lotteries alike (cough, cough, The Illuminati) 'guarantee' a 
+winner (i.e if nobody matches the six numbers, the prize will be split amongst those who matched 5 numbers, or 4 numbers and so on). 
+
+This is when you see stock market traders do a big syndicate and give the junior trader their credit cards to go down to the local 
+convenient store to buy them $10,000 worth of lotto tickets. 
+
+So, how does that work?
+
+Instead of buying an infinite number of lotto tickets ourselves, which in hindsight was pretty silly,
+let's join forces and play together!
+
+For the last record powerball jackpot, 9189382 numbers were bought, so we can simulate how many times on average we would 
+expect to see 5 numbers be matches minus the number of tickets where we matched 5 numbers.
+
+## Extra Fun Fact
+
+One of my friends was a trader and did a syndicate within his company. The jackpot was won by somebody else, he was 
+baffled as they had reduced their odds considerably given the number of tickets they had bought, turned out the winning 
+lotto ticket looked like this:
+
+
+
+
+
+
+OK, entry fee is $10,000. If there's 100 of us in the company, then that's $1m, or 333,333 tickets we can buy.
+
+Before, we said the probability of winning the lotto is one in 292 million. Now, it's one in 87,660 or 0.00114065%
+
+Let's play 
+
+
+
+
+
 To test this out, I wrote some code to simulate playing the Powerball Lotto an infinite number of times until I won. 
 I ran this code 5 times, and here were the results, ordered in ascending order of ...
 
