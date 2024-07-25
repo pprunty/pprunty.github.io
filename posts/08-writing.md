@@ -7,11 +7,11 @@ artwork: "Brentley Frazer"
 ---
 
 Of late, I find myself grappling with the desire to expand on the points I want to get across to my readers in 
-an educational and accessible manner with the need to remove redundancy and conform to the mantra: less is more.
+an educational and accessible manner with the need to remove redundancy and conform to the mantra: "less is more."
 
-They say less is more — but in the writing world, that's only if you can make more less.
+They _say_ less is more — but in the writing world, that's only if you can make more less.
 
-I believe the ability to strike a balance is what ultimately separates an average writer from a great one.
+I believe the ability to strike this balance is what distinguishes an average writer from a great one.
 
 For some, the expectation is for a slow, deliberate experience that leaves them having learned something new. For the insidious doom-scrolling-attention-deficit-disordered generation, who want it _quick_, and want it _now_, maybe not so much.
 
@@ -24,17 +24,17 @@ _"Subtract!"_
 
 <figure>
   <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/irishtimes/2Q7O4N2AIZSIEEKFUP52DFY4ZQ.jpg" alt="PWA on Mobile Devices">
-  <figcaption>Dish from Michelin Star Restaurant Chapter One located in Dublin, Ireland.</figcaption>
+  <figcaption>A dish from Michelin Star Restaurant Chapter One located in Dublin, Ireland.</figcaption>
 </figure>
 
-Now, my non-expert theory on why restaurants and chefs do this is because they want to provide you with high-quality 
-dish but also leave you wanting. 
+Now, my non-expert theory on why restaurants and chefs do this is because they want to provide you with high-quality substance
+but also leave you wanting. 
 
-They do this with every single dish they serve, making you wait a considerable time for each, and then, hit you with the dessert.
+They do this with every dish they serve, making you wait a considerable time for each, and then, hit you with the dessert.
 
 It's like edging but with food. 
 
-I appreciate the artistry. But I also appreciate triple cheeseburgers, soda refills and spice-bags.
+I appreciate the artistry. But I also appreciate triple cheeseburgers, soda refills and spice bags.
 
-The difference being I don't feel the same way after eating at a fancy restaurant compared to binging
-at McDonald's; it's not too little, it's not too much. It's just right.
+The difference is that I don't feel the same way after eating at a fancy restaurant compared to binging
+at McDonald's; it's neither too little, nor too much. It's just right.
