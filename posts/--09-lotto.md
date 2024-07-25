@@ -104,20 +104,25 @@ expect to see 5 numbers be matches minus the number of tickets where we matched 
 
 ## Extra
 
-Fun fact. In __- 2019, Ireland had its record jackpot for the national loterry, €18.96 million. My friend, who worked as a
-trader at the time, participated in a syndicate. They purchased a considerable amount of tickets, and he confessed to me,
-he fancied their chances.
+Fun fact. In __- 2019, Ireland had its record will-be-won jackpot for the national lottery, €18.96 million. 
+My friend, who worked as a trader at the time, participated in a syndicate with his trading company. They purchased 
+a considerable amount of tickets, and he confessed to me, he fancied their chances.
 
-He was understandably disappointed when the draw was made. Nobody won the jackpot, which is actually a good thing for
+He was understandably disappointed when the draw was made. Nobody won the jackpot, which was actually good news for
 their syndicate strategy, however 149 players matched 5 numbers and won the second prize. To put that in perspective, an
 average of 1.3 people win the Match 5 + Bonus prize in each Lotto draw - but this increased to _149_ ticket holders 
-in the will-be-won draw.
+in the will-be-won draw. 
+
+This anomaly was attributed to a diagonal pattern in the lotto slip tickets that harried ticketers filled out.
 
 <figure>
   <img src="https://patrickprunty.com/images/articles/draw.png" alt="PWA on Mobile Devices">
-  <figcaption>PWA on Mobile Devices</figcaption>
+  <figcaption>Diagonal numbers in blue: 2,9,16,23,30,37,44. The missing winning number in red: 40.</figcaption>
 </figure>
 
+
+crushing their chances of
+making any meaningful return
 
 
 
