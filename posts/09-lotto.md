@@ -1,0 +1,314 @@
+---
+title: "Here's How Long it Took My Code to Win The Powerball Lotto"
+date: "2024-08-06"
+image: "/images/articles/lotto.png"
+description: "Don't play the lotto."
+artwork: "Brentley Frazer"
+---
+
+Feeling lucky? You'd better be if you play the lottery. The odds, to put it plainly, are not in your favour.
+
+To test this out, I wrote some code to simulate playing the Powerball Lotto an infinite number of times until I won. 
+I ran this code 5 times, and here were the results, ordered in ascending order of ...
+
+
+
+But what is the probability of winning the lotto?
+
+
+
+
+
+To determine probability of winning the Powerball Lotto jackpot (matching all 5 white balls and the
+Powerball), we calculate the total number of possible combinations and then determine the probability of your ticket
+being the winning combination.
+
+That is...
+
+\[
+C(n, k) = \frac{n!}{k!(n - k)!}
+\]
+
+where:
+- \( n \) = 69 (total white balls)
+- \( k \) = 5 (number of picks)
+
+So, the formula becomes:
+
+\[
+C(69, 5) = \frac{69!}{5!(69 - 5)!}
+\]
+
+Stick that into a calculator and your odds of winning the lotto is 1 in 292 million.
+
+But what if you buy 10, 100, or 1,000 tickets? 
+
+The probability of winning the lotto increases at a factor of how many times you play. 
+
+Therefore, 
+
+* 1 ticket = One in 292 million chance of winning
+* 10 tickets = One in 29.2 million chance of winning
+* 100 tickets = One in 2.92 million chance of winning
+* 1,000 tickets = One in 292,000 chance of winning
+* 10,000 tickets = One in 29,200 chance of winning
+* 100,000 tickets = One in 29,
+
+
+Therefore, we can create an equation to determine how many times we need to play the lotto in order to have the 
+same probability of winning the lotto as we do a 'fair game', such as a coin toss, which has 50/50 probability. 
+
+# Calculating the Number of Plays for a 50% Probability of Winning the Lottery
+
+## Step 1: Probability of Not Winning with One Ticket
+Let \( p \) be the probability of winning with one ticket. The probability of not winning with one ticket is:
+
+\[
+1 - p
+\]
+
+## Step 2: Probability of Not Winning with \( n \) Tickets
+If you play \( n \) times, the probability of not winning in any of those plays is:
+
+\[
+(1 - p)^n
+\]
+
+## Step 3: Probability of Winning at Least Once with \( n \) Tickets
+The probability of winning at least once after \( n \) plays is the complement of the probability of not winning at all:
+
+\[
+1 - (1 - p)^n
+\]
+
+## Step 4: Setting the Desired Probability
+To find the number of tickets needed for a 50% chance of winning, set the above expression equal to 0.5:
+
+\[
+1 - (1 - p)^n = 0.5
+\]
+
+## Step 5: Solving for \( n \)
+Isolate \( (1 - p)^n \) and solve for \( n \):
+
+\[
+(1 - p)^n = 0.5
+\]
+
+Taking the natural logarithm on both sides:
+
+\[
+\log((1 - p)^n) = \log(0.5)
+\]
+
+\[
+n \log(1 - p) = \log(0.5)
+\]
+
+\[
+n = \frac{\log(0.5)}{\log(1 - p)}
+\]
+
+Where:
+- \( n \) is the number of plays needed
+- \( p \) is the probability of winning with one ticket
+- \( \log \) denotes the natural logarithm
+
+Sticking this into a computer, we find that we need to buy 202,559 lotto tickets in order to have a 50% probability of 
+winning the powerball jackpot. 
+
+That is, we will need to spent 202,559 x $3 = $606,677 in order to have a 50% chance of winning.
+
+Powerball's jackpots often sit at the $1bn mark, so maybe you think that's pretty fair odds in terms of doubling your money.
+
+
+
+
+he number of ways to choose 5 numbers out of 69 (white balls) without replacement is calculated using the combination formula:
+
+\[
+C(n, k) = \frac{n!}{k!(n - k)!}
+\]
+
+where:
+- \( n \) = 69 (total white balls)
+- \( k \) = 5 (number of picks)
+
+So, the formula becomes:
+
+\[
+C(69, 5) = \frac{69!}{5!(69 - 5)!}
+\]
+
+## Total Number of Combinations Including the Powerball
+To win the jackpot, a player must also match the Powerball number. The Powerball is chosen from a separate pool of 26 numbers. Therefore, the total number of possible outcomes is the product of the combinations of the white balls and the number of possible Powerball numbers:
+
+\[
+\text{Total Combinations} = C(69, 5) \times 26
+\]
+
+## Probability of Winning
+The probability of winning the Powerball jackpot with a single ticket is the reciprocal of the total number of possible combinations:
+
+\[
+\text{Probability} = \frac{1}{C(69, 5) \times 26}
+\]
+
+## Probability as a Percentage
+To express the probability as a percentage, multiply the probability by 100:
+
+\[
+\text{Probability Percentage} = \left(\frac{1}{C(69, 5) \times 26}\right) \times 100
+\]
+
+Q. How dos lotto guarantee winner when jackpot is too big? - shared
+
+https://chatgpt.com/c/e76b034d-3396-4ba7-aaa5-59c35906f54a
+
+For as long as I can remember, I've always had a distaste for the lotto.
+
+I worked in a petrol station during college and there, we had a machine which allowed people to purchase and
+check their lotto tickets. The machine to check the lotto numbers was placed in alongside the cash register.
+So whilst I don't play the lotto, in the five years I spent checking lotto tickets for customers, I estimate having
+scanned between 30-50,000 lotto tickets, costing in total between €192,000-250,000.
+
+The highest prized ticket I scanned?
+
+_€4,500_.
+
+It was a quick-pick played by a woman who worked in the local off-license. When I told her, she was ecstatic.
+She started for the shop exit before taking back her ticket.
+
+"_Hey_," I said. "You'll be needing this."
+
+Fast-forward to today and as happy as that woman was, I can't help but feel she was a little hard done by the amount
+of money she won.
+
+I was studying mathematics whilst working there and whilst I had never done the math, I intuitively knew
+it was a foolish game to play.
+
+Now that I have some time and some computer skills behind me
+
+It was the Irish Lotto, and she had got 4/6 numbers in a 'quick-pick', or 'jjj' in United States.
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <tuple>
+#include <random>
+#include <algorithm>
+
+using PowerballTicket = std::tuple<std::vector<int>, int>;
+using WinningNumbers = PowerballTicket;
+
+// Function to generate a Powerball ticket with 5 unique numbers and a Powerball number
+PowerballTicket generate_ticket() {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<int> number_dist(1, 69);
+    std::uniform_int_distribution<int> powerball_dist(1, 26);
+    
+    std::vector<int> numbers;
+    while (numbers.size() < 5) {
+        int num = number_dist(gen);
+        if (std::find(numbers.begin(), numbers.end(), num) == numbers.end()) {
+            numbers.push_back(num);
+        }
+    }
+
+    int powerball = powerball_dist(gen);
+    return std::make_tuple(numbers, powerball);
+}
+
+// Function to check the ticket against the winning numbers and return a result
+std::string check_winning(const PowerballTicket& ticket, const WinningNumbers& winning_numbers) {
+    const auto& [ticket_numbers, ticket_powerball] = ticket;
+    const auto& [winning_numbers_list, winning_powerball] = winning_numbers;
+
+    std::vector<int> matched_numbers;
+    for (const int& num : ticket_numbers) {
+        if (std::find(winning_numbers_list.begin(), winning_numbers_list.end(), num) != winning_numbers_list.end()) {
+            matched_numbers.push_back(num);
+        }
+    }
+
+    bool powerball_matched = (ticket_powerball == winning_powerball);
+    int matched_count = matched_numbers.size();
+
+    if (matched_count == 5 && powerball_matched) {
+        return "Jackpot!";
+    } else if (matched_count == 5) {
+        return "Second Prize!";
+    } else if (matched_count == 4 && powerball_matched) {
+        return "Third Prize!";
+    } else if (matched_count == 4 || (matched_count == 3 && powerball_matched)) {
+        return "Fourth Prize!";
+    } else if (matched_count == 3 || (matched_count == 2 && powerball_matched)) {
+        return "Fifth Prize!";
+    } else if (matched_count == 1 && powerball_matched) {
+        return "Sixth Prize!";
+    } else if (powerball_matched) {
+        return "Seventh Prize!";
+    } else {
+        return "No Prize.";
+    }
+}
+
+// Function to simulate a Powerball draw and check a single ticket
+void simulate_powerball() {
+    PowerballTicket ticket = generate_ticket();
+    WinningNumbers winning_numbers = generate_ticket(); // Normally, these would be actual drawn numbers
+
+    // Display the ticket and winning numbers
+    std::cout << "Your ticket numbers: ";
+    for (int num : std::get<0>(ticket)) {
+        std::cout << num << " ";
+    }
+    std::cout << "Powerball: " << std::get<1>(ticket) << std::endl;
+
+    std::cout << "Winning numbers: ";
+    for (int num : std::get<0>(winning_numbers)) {
+        std::cout << num << " ";
+    }
+    std::cout << "Powerball: " << std::get<1>(winning_numbers) << std::endl;
+
+    // Check and display the result
+    std::string result = check_winning(ticket, winning_numbers);
+    std::cout << "Result: " << result << std::endl;
+}
+
+int main() {
+    simulate_powerball();
+    return 0;
+}
+```
+
+Simple combinatorics, we have the probability of you winning the lotto at...
+
+The powerball on the other hand, which has 69 balls,
+
+num_of_tickets_bought | cost_per_ticket | total_cost | winning_prob
+1 | €5 | €5 | 0.0000
+100 | €5 | 0.000001
+1000
+1000000
+
+it's only worth your while playing and buying so many tickets if the jackpot is greater than ___
+
+the idea is if you buy more tickets you have a higher chance of winning right? kind of like __ in charlie and
+the chocolate factory.
+
+syndicate:
+
+num of people in syndicate | num of tickets bought per person | total_cost | winning_prob |
+10 | 1 | €500 |
+20 | 2 |
+30 | 4 |
+
+10,0000
+
+the jackpots exceed $1bn and there's 380m people living in the USA. If a decentralized organizations asks every single
+american to put $3.33 dollars into some website, and they do it, at midnight every night the country would have a new
+billionaire.
+
+But billionaires don't play the lotto, poor people do.

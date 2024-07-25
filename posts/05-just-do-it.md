@@ -1,6 +1,6 @@
 ---
 #title: "Just Do It All: Do Everything & Manage Nothing"
-title: "Just Do It All: How NOT to Manage All of Your Interests"
+title: "Just Do It (When You Want to Do It)"
 #title: "Just Do It All: Do All Your Interests, Manage None of Them"
 date: "2024-07-25"
 image: "/images/articles/just-do-it.WEBP"
@@ -53,11 +53,11 @@ He replied, in his typical laid-back, philosophical fashion:
 Yeah, I probably didn't like the book. After all, who says you need to read the whole
 thing? If a book has you hooked, you'll read it back-to-front. You might even go back for seconds.
 
-This realization reminded me of another passion in my life: exercise. I love exercise. Moreover, I love the feeling
-exercise gives you after you finish
-a really tough session. As a child, my parents signed me up for almost every sport they could find: swimming, taekwondo,
+This realization reminded me of another passion in my life: exercise.
+
+For as long as I can remember, I have loved exercise. Moreover, I love the feeling exercise gives you after finishing a really tough workout. As a child, my parents signed me up for almost every sport they could find: swimming, taekwondo,
 judo, boxing, hurling, Gaelic football — the list goes on. In hindsight, I can understand why they were frustrated when,
-after buying me an expensive new judo kimono for Christmas that I asked for, I decided I didn't want to go to judo
+after buying me an expensive new judo kimono for Christmas that I asked for, only to find out I don't want to go to judo
 anymore...
 
 Today, I continue exploring various sports, albeit with a little bit more self-awareness. I do jiu

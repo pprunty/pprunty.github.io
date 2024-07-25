@@ -34,7 +34,7 @@ They do this with every single dish they serve, making you wait a considerable t
 
 It's like edging but with food. 
 
-I appreciate the artistry. I also appreciate triple cheeseburgers, soda refills and spice-bags.
+I appreciate the artistry. But I also appreciate triple cheeseburgers, soda refills and spice-bags.
 
 The difference being I don't feel the same way after eating at a fancy restaurant compared to binging
 at McDonald's; it's not too little, it's not too much. It's just right.
