@@ -8,6 +8,7 @@ import Head from 'next/head';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
 import 'highlight.js/styles/atom-one-dark.css'; // Import the Atom One Dark theme
+import 'katex/dist/katex.min.css';
 
 const updateMetaThemeColor = (color: string) => {
   const metaThemeColor = document.querySelector("meta[name=theme-color]");

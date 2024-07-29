@@ -355,9 +355,11 @@ const PostContent = styled.div`
 const PostText = styled.div`
   flex: 1;
   margin-right: 1.5em;
+  min-width: 300px;
 
   @media (max-width: 768px) {
     margin-right: 8px;
+      min-width: 150px;
   }
 `;
 
@@ -368,17 +370,20 @@ const PostImageWrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 125px;
+  min-width: 125px;
     height: 125px;
   }
 
   @media (max-width: 520px) {
     width: 110px;
     height: 110px;
+      min-width: 110px;
   }
 
   @media (max-width: 520px) {
     width: 100px;
     height: 100px;
+      min-width: 80px;
   }
 
   img {

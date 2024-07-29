@@ -72,7 +72,7 @@ export default Newsletter;
 // Styled Components
 const SubscribeContainer = styled.div`
   text-align: center;
-  margin-top: 2em;
+  margin-top: 4em;
   margin-bottom: 2em;
   padding-left: 10px;
   padding-right: 10px;

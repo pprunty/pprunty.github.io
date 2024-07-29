@@ -153,8 +153,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
               </p>
 <Content dangerouslySetInnerHTML={{ __html: `
   <p><strong><em>Hold up...</em></strong> <em>Did you enjoy this article? Learn something new? If so, I'd be grateful if you'd <a href="https://medium.com/@pprunty" target="_blank" rel="noopener noreferrer">follow me on Medium</a>. Your
-  support encourages me to keep writing and sharing my thoughts. Thank you for reading, and I hope to connect with you
-  again soon. With appreciation. Patrick.</em></p>
+  support encourages me to keep writing and sharing my thoughts. Thank you for reading, and I look forward to connecting with you again soon. With appreciation. Patrick.</em></p>
 `}} />
       <BottomBar>
         <BackArrow onClick={handleBackClick}>&larr; Back</BackArrow>
@@ -385,6 +384,22 @@ const Content = styled.div`
   width: 100%;
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
   color: #333;
+
+ .katex-display {
+    font-size: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 1em 0;
+    padding: 0.5em 0;
+  }
+
+  @media (max-width: 768px) {
+   .katex-display {
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+  }
+
 
   /* Additional styles for specific elements */
   h2, h3, h4, h5 {
