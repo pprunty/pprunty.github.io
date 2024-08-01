@@ -24,19 +24,19 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     }
 
     ::-webkit-scrollbar-track {
-      background: #f0f0f0;
+      background: #F0F0F0;
     }
 
     ::-webkit-scrollbar-thumb {
       background-color: #000;
       border-radius: 4px;
-      border: 2px solid #f0f0f0;
+      border: 2px solid #F0F0F0;
     }
 
     /* Customize scrollbar for Firefox */
     * {
       scrollbar-width: thin; /* Make scrollbar narrower */
-      scrollbar-color: #000 #f0f0f0;
+      scrollbar-color: #000 #F0F0F0;
     }
 `;
 

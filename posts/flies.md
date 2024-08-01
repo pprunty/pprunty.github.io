@@ -1,6 +1,6 @@
 ---
-#title: "The Secret Lives of Flies: What We Overlook in These Everyday Insects"
-title: "Flies: They're Everywhere But How Much Do We Know About Them?"
+title: "The Secret Lives of Flies: What We Overlook in These Everyday Insects"
+#title: "Flies: They're Everywhere But How Much Do We Know About Them?"
 date: "2024-06-18"
 image: "/images/articles/fly.jpg"
 description: "Japanese Haiku (three-line poem) by Patrick Prunty."
