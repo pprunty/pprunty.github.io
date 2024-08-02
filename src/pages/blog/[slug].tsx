@@ -122,7 +122,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
       <HeaderWrapper>
         <Title>{title}</Title>
         <MetaSection>
-          <AuthorImage src="/images/logo3.svg" alt="Author" />
+          <AuthorImage src="/images/avatar.svg" alt="Author" />
           <MetaInfo>
             <AuthorName>Patrick Prunty</AuthorName>
             <ReadingTime>{formatDate(date)} &#8226; {readingTime} min read</ReadingTime>
@@ -334,8 +334,8 @@ const MetaSection = styled.div`
 `;
 
 const AuthorImage = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   margin-right: 10px;
 `;

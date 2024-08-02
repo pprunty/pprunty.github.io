@@ -102,7 +102,7 @@ Place the manifest and images in your `public` directory of your NextJS or React
 
 ```shell
 public/
-├── favicon.ico
+├── favicon2.ico
 ├── icon-192x192.png
 ├── icon-196-maskable.png
 ├── icon-256x256.png

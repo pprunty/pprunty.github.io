@@ -114,11 +114,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Navbar>
         <LogoWrapper onClick={() => handleNavigation('/')}>
           <ExportedImage
-            src={'/images/logo3.svg'}
+            src={'/images/avatar.svg'}
             alt="logo"
             layout="responsive"
-            width={250}
-            height={100}
+            width={300}
+            height={200}
             placeholder={'blur'}
             unoptimized={true}
           />
@@ -201,7 +201,7 @@ const Navbar = styled.div`
 
 const LogoWrapper = styled.div`
   cursor: pointer;
-  width: 36px;
+  width: 50px;
 
   img {
     width: 44px;
