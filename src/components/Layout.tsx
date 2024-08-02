@@ -142,7 +142,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <MobileNavbar>
           <MobileLogoWrapper onClick={() => handleNavigation('/')}>
             <ExportedImage
-              src={'/images/logo3.svg'}
+              src={'/images/avatar.svg'}
               alt="logo"
               layout="responsive"
               width={250}
