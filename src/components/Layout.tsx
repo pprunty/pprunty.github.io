@@ -188,11 +188,11 @@ const Navbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 15px 140px;
+  width: 80%;
+  padding: 20px 20px;
   background-color: inherit;
-//   border-bottom: 2px solid black;
   color: black;
+  margin: 0 auto; /* Center the navbar */
 
   @media (max-width: 1000px) {
     display: none;
@@ -277,10 +277,10 @@ const MobileLogoWrapper = styled.div`
 
   @media (max-width: 1000px) {
     margin-top: 0.5rem;
-    width: 42px;
+    width: 55px;
 
     img {
-      width: 42px;
+      width: 55px;
     }
   }
 `;

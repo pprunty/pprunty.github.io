@@ -37,8 +37,9 @@ export default Footer;
 
 const LogoWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   width: 100%;
+  margin-top: 10vw;
   margin-bottom: 0; // No gap between logo and footer
 `;
 
