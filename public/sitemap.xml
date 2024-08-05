@@ -63,6 +63,16 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://patrickprunty.com/blog/page/2</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://patrickprunty.com/blog/page/3</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://patrickprunty.com/project/jigsaw-academy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
