@@ -204,6 +204,7 @@ const Home: React.FC = () => {
         <meta property="og:type" content="profile" />
         <meta name="keywords" content="software developer, software development blog, full-stack developer, jigsaw presents, Python, Artificial Intelligence, React, TypeScript, software engineering, technology insights" />
         <script type="application/ld+json">
+        {`
         {
           "@context": "https://schema.org",
           "@type": "Person",
@@ -216,6 +217,7 @@ const Home: React.FC = () => {
             "https://twitter.com/patrickprunty"
           ]
         }
+        `}
         </script>
       </Head>
         <Title>Patrick Prunty - Full-Stack Software Developer & Blog</Title>
