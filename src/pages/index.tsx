@@ -202,11 +202,11 @@ const Home: React.FC = () => {
         <meta property="og:image:height" content="630" />
         <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:type" content="profile" />
-        <meta name="keywords" content="patrick prunty, jigsaw presents, blog, software developer, artificial intelligence" />
+        <meta name="keywords" content="patrick prunty, patrick, prunty, jigsaw presents, blog, software developer, artificial intelligence" />
       </Head>
       <Title>The Product & Design Work of Patrick Prunty</Title>
       <Subtitle>
-        I am a full-stack web developer working in applications of Artificial Intelligence with a passion for software, education, and creative media. Explore my projects below to learn more about my work. If you wish to connect, I offer one-on-one consultations to discuss projects, ideas, or any questions you have.
+        I am a senior full-stack software developer with a passion for software, education, and creative media. Explore my projects below to learn more about my work. If you wish to connect, I offer one-on-one consultations to discuss projects, ideas, or any questions you have.
       </Subtitle>
       {caseStudies.map((caseStudy) => (
         <CaseStudyComponent

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://patrickprunty.com/news-sitemap.xml
+Sitemap: https://patrickprunty.com/sitemap.xml
