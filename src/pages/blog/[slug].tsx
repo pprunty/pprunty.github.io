@@ -25,21 +25,21 @@ interface BlogPostProps {
 
 const BlogPostHeader = ({ title, description, imagePath, router, date, author }) => (
   <Head>
-    <title>{title}</title>
+    <title>{title} | Patrick Prunty Blog</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={"https://patrickprunty.com" + imagePath} />
+    <meta property="og:image" content={`https://patrickprunty.com${imagePath}`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content={`${router.asPath}`} />
+    <meta property="og:url" content={`https://patrickprunty.com${router.asPath}`} />
     <meta property="og:site_name" content="Your Site Name" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={imagePath} />
-    <link rel="canonical" href={`${router.asPath}`} />
+    <meta name="twitter:image" content={`https://patrickprunty.com${imagePath}`} />
+    <link rel="canonical" href={`https://patrickprunty.com${router.asPath}`} />
     <script type="application/ld+json">
       {JSON.stringify({
         "@context": "https://schema.org",
@@ -48,7 +48,7 @@ const BlogPostHeader = ({ title, description, imagePath, router, date, author })
         "description": description,
         "image": {
           "@type": "ImageObject",
-          "url": "https://patrickprunty.com" + imagePath,
+          "url": `https://patrickprunty.com${imagePath}`,
           "width": 1200,
           "height": 630
         },
@@ -70,9 +70,7 @@ const BlogPostHeader = ({ title, description, imagePath, router, date, author })
           "@type": "WebPage",
           "@id": `https://patrickprunty.com${router.asPath}`
         },
-        "articleSection": "Blog",
-//         "wordcount": wordCount,
-        "commentCount": 0
+        "articleSection": "Blog"
       })}
     </script>
   </Head>

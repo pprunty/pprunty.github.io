@@ -194,19 +194,33 @@ const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Patrick Prunty</title>
+        <title>Patrick Prunty - Software Developer & Blog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Software, education, consultations & creative media." />
+        <meta name="description" content="Patrick Prunty is a full-stack software developer offering insights through his blog on software development, technology, and creative media. Explore his projects and connect for consultations." />
         <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:type" content="profile" />
-        <meta name="keywords" content="patrick prunty, patrick, prunty, jigsaw presents, blog, software developer, artificial intelligence" />
+        <meta name="keywords" content="software developer, software development blog, full-stack developer, jigsaw presents, Python, Artificial Intelligence, React, TypeScript, software engineering, technology insights" />
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Patrick Prunty",
+          "jobTitle": "Full-Stack Software Developer",
+          "description": "Patrick Prunty is a senior full-stack software developer who writes about software development, technology, and creative media.",
+          "url": "https://patrickprunty.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/patrickprunty",
+            "https://twitter.com/patrickprunty"
+          ]
+        }
+        </script>
       </Head>
-      <Title>The Product & Design Work of Patrick Prunty</Title>
+        <Title>Patrick Prunty - Full-Stack Software Developer & Blog</Title>
       <Subtitle>
-        I am a senior full-stack software developer with a passion for software, education, and creative media. Explore my projects below to learn more about my work. If you wish to connect, I offer one-on-one consultations to discuss projects, ideas, or any questions you have.
+        I am a senior full-stack software developer with expertise in Python, C++, and React. Explore my software development projects and blog posts for insights into technology, programming, and creative media.
       </Subtitle>
       {caseStudies.map((caseStudy) => (
         <CaseStudyComponent
