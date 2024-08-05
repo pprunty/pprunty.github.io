@@ -40,49 +40,41 @@ const BlogPostHeader = ({ title, description, imagePath, router, date, author })
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imagePath} />
     <link rel="canonical" href={`${router.asPath}`} />
-<script type="application/ld+json">
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",  // Changed from NewsArticle to BlogPosting
-    "headline": title,
-    "description": description,
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://patrickprunty.com" + imagePath,
-      "width": 1200,  // You can adjust these based on your actual image dimensions
-      "height": 630
-    },
-    "datePublished": date,
-    "dateModified": date,
-    "author": {
-      "@type": "Person",
-      "name": author || "Patrick Prunty"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Patrick Prunty",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://patrickprunty.com/icon-512-maskable.png"  // Ensure this URL is correct
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://patrickprunty.com${router.asPath}`
-    },
-    "articleSection": "Blog",  // You can specify the section or category if applicable
-    "wordcount": content.split(/\s+/).length,
-    "commentCount": 0,  // If applicable, update dynamically based on the number of comments
-    "publisher": {
-      "@type": "Organization",
-      "name": "Patrick Prunty",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://patrickprunty.com/icon-512-maskable.png"  // Update this if necessary
-      }
-    }
-  })}
-</script>
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": description,
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://patrickprunty.com" + imagePath,
+          "width": 1200,
+          "height": 630
+        },
+        "datePublished": date,
+        "dateModified": date,
+        "author": {
+          "@type": "Person",
+          "name": author || "Patrick Prunty"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Patrick Prunty",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://patrickprunty.com/icon-512-maskable.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://patrickprunty.com${router.asPath}`
+        },
+        "articleSection": "Blog",
+//         "wordcount": wordCount,
+        "commentCount": 0
+      })}
+    </script>
   </Head>
 );
 
