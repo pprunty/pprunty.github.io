@@ -201,7 +201,7 @@ const Navbar = styled.div`
 
 const LogoWrapper = styled.div`
   cursor: pointer;
-  width: 50px;
+  width: 44px;
 
   img {
     width: 44px;
@@ -277,10 +277,10 @@ const MobileLogoWrapper = styled.div`
 
   @media (max-width: 1000px) {
     margin-top: 0.5rem;
-    width: 55px;
+    width: 48px;
 
     img {
-      width: 55px;
+      width: 48px;
     }
   }
 `;

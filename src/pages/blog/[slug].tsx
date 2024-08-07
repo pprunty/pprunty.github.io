@@ -21,7 +21,7 @@ interface BlogPostProps {
   image: string;
   description: string;
   artwork?: string;
-  tags: string[];
+  tags?: string[];
 }
 
 const BlogPostHeader = ({ title, description, imagePath, router, date, author, tags }) => (
