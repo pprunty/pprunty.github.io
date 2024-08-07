@@ -130,7 +130,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
       <HeaderWrapper>
         <Title>{title}</Title>
         <MetaSection>
-          <AuthorImage src="/images/avatar.svg" alt="Author" />
+          <AuthorImage src="/images/avatar2.svg" alt="Author" />
           <MetaInfo>
             <AuthorName>Patrick Prunty</AuthorName>
             <ReadingTime>{formatDate(date)} &#8226; {readingTime} min read</ReadingTime>

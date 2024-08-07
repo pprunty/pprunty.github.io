@@ -1,5 +1,5 @@
 ---
-title: "The Brilliant Technology Behind µTorrent"
+title: "How uTorrent Works: The Brilliant Technology Behind uTorrent"
 date: "2024-08-10"
 description: ""
 image: "/images/articles/utorrent.webp"

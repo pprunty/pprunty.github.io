@@ -114,7 +114,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Navbar>
         <LogoWrapper onClick={() => handleNavigation('/')}>
           <ExportedImage
-            src={'/images/avatar.svg'}
+            src={'/images/avatar2.svg'}
             alt="logo"
             layout="responsive"
             width={300}
@@ -142,7 +142,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <MobileNavbar>
           <MobileLogoWrapper onClick={() => handleNavigation('/')}>
             <ExportedImage
-              src={'/images/avatar.svg'}
+              src={'/images/avatar2.svg'}
               alt="logo"
               layout="responsive"
               width={250}

@@ -1,7 +1,7 @@
 ---
 #title: "Is There a Moore's Law for the Human Brain?"
 #title: "AI vs. Human Brain: The Future of Cognitive Enhancement and Evolution"
-title: "AI & The Human Brain: Moore's Law, Cognitive Enhancement & Evolution"
+title: "AI and The Human Brain: Moore's Law, Brain Implants & Evolution"
 date: "2024-07-30"
 description: "Exploring the interplay between technological advancements in Artificial Intelligence and the evolution of the human brain."
 image: "/images/articles/brain.png"

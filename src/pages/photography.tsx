@@ -76,6 +76,7 @@ const images = [
   '/images/photography/3cf5f5a9-843c-44e2-9482-45c765a84d30.JPG',
   '/images/photography/62b1ca5f-d849-41a7-a83e-42ca04b3b47c.jpg',
   '/images/photography/IMG_6023.jpg',
+//   '/images/photography/me.png',
   '/images/photography/c57ad8ca-ee1e-4d3d-a9f6-9b0222e211da.JPG',
   '/images/photography/IMG_4648.jpg',
   '/images/photography/IMG_3572.jpg',

@@ -167,18 +167,18 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
   <link rel="icon" href="/images/favicon.ico" />
 </Head>
       <PageLoader loading={loading} />
-<Title>Patrick Prunty's Blog: Insights in Technology, AI, and Software Development</Title>
+<Title>Patrick Prunty's Blog: Technology, AI, and Software Development</Title>
 <Subtitle>
-  Explore topics in technology, software engineering, and artificial intelligence, as well as cultural observations and personal opinions. As a contributor to leading publications like{" "}
+  Discover insights on technology, software engineering, AI, cultural topics, and personal views. Featured in top publications like
   <StyledLink href="https://levelup.gitconnected.com/" target="_blank" rel="noopener noreferrer">
     Level Up Coding<SvgIcon />
-  </StyledLink>,{" "}
+  </StyledLink>,
   <StyledLink href="https://medium.com/digital-global-traveler" target="_blank" rel="noopener noreferrer">
     Digital Global Traveler<SvgIcon />
-  </StyledLink>, and{" "}
+  </StyledLink>, and
   <StyledLink href="https://medium.com/swlh" target="_blank" rel="noopener noreferrer">
     Start it Up<SvgIcon />
-  </StyledLink>, I share valuable insights and practical advice for developers and tech enthusiasts.
+  </StyledLink>, offering practical advice for developers and tech enthusiasts.
 </Subtitle>
       {years.map(year => (
         <YearSection key={year}>
@@ -258,7 +258,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 const Title = styled.h1`
   font-size: 6vw;
   font-weight: 600;
-  line-height: .9em;
+  line-height: 1em;
   color: black;
   width: 100%;
   text-align: left;

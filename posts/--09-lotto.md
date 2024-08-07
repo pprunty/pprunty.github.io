@@ -1,6 +1,5 @@
 ---
-#title: "Beating the Lottery: A Machine's Perspective"
-title: "Can My Machine Beat The Powerball Lottery?"
+title: "How to Play Powerball Lottery: A Computer's Perspective"
 date: "2024-08-06"
 image: "/images/articles/lotto2.png"
 description: "Don't play the lotto."
