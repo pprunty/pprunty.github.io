@@ -4,6 +4,7 @@ date: "2024-06-20"
 image: "/images/articles/pwa.jpeg"
 description: "A comprehensive guide to making your NextJS/ReactJS frontend a progressive web application (PWA)."
 artwork: "iStock / Getty Images"
+tags: ["NextJS", "ReactJS", "PWA", "web development", "frontend", "JavaScript", "mobile-first", "performance optimization"]
 ---
 
 Recently, I transformed my personal website, [patrickprunty.com](https://patrickprunty.com), into a Progressive Web

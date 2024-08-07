@@ -148,28 +148,37 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
 
   return (
     <>
-      <Head>
-        <title>Patrick Prunty - Blog</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Patrick Prunty's Blog" />
-        <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
-        <meta property="og:description" content="Welcome to my personal blog where I share insights, stories, and updates on my work and interests." />
-        <meta name="keywords" content="patrick prunty, jigsaw, programming, python, youtube, education, blog" />
-        <link rel="icon" href="/images/favicon.ico" />
-      </Head>
+<Head>
+  <title>Patrick Prunty's Blog: Tech, AI, and Software Development Insights</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore Patrick Prunty's blog for expert insights on technology, AI, software development, and entrepreneurship. Contributor to Level Up Coding, Digital Global Traveler, and Start it Up." />
+  <meta property="og:title" content="Patrick Prunty's Blog: Tech, AI, and Software Development Insights" />
+  <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
+  <meta property="og:description" content="Dive into cutting-edge topics in technology, AI, and software engineering with Patrick Prunty. Expert advice and insights for developers and tech enthusiasts." />
+  <meta name="keywords" content="patrick prunty, software development, artificial intelligence, programming, python, technology trends, entrepreneurship, tech blog" />
+  <link rel="canonical" href="https://patrickprunty.com/blog" />
+  <meta name="author" content="Patrick Prunty" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://patrickprunty.com/blog" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Patrick Prunty's Blog: Tech, AI, and Software Development Insights" />
+  <meta name="twitter:description" content="Expert insights on technology, AI, software development, and entrepreneurship from Patrick Prunty." />
+  <meta name="twitter:image" content="https://patrickprunty.com/images/favicon.png" />
+  <link rel="icon" href="/images/favicon.ico" />
+</Head>
       <PageLoader loading={loading} />
-      <Title>Patrick Prunty's Blog</Title>
+<Title>Patrick Prunty's Blog: Insights in Technology, AI, and Software Development</Title>
 <Subtitle>
-  Welcome to my personal blog, where I share insights in technology, software development, and AI, as well as cultural experiences and entrepreneurial advice. I currently write for several Medium publications, including{" "}
+  Explore topics in technology, software engineering, and artificial intelligence, as well as cultural observations and personal opinions. As a contributor to leading publications like{" "}
   <StyledLink href="https://levelup.gitconnected.com/" target="_blank" rel="noopener noreferrer">
     Level Up Coding<SvgIcon />
   </StyledLink>,{" "}
   <StyledLink href="https://medium.com/digital-global-traveler" target="_blank" rel="noopener noreferrer">
     Digital Global Traveler<SvgIcon />
-  </StyledLink>,{" "}
+  </StyledLink>, and{" "}
   <StyledLink href="https://medium.com/swlh" target="_blank" rel="noopener noreferrer">
     Start it Up<SvgIcon />
-  </StyledLink>, and more. Explore the posts below to read further.
+  </StyledLink>, I share valuable insights and practical advice for developers and tech enthusiasts.
 </Subtitle>
       {years.map(year => (
         <YearSection key={year}>

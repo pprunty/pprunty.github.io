@@ -1,9 +1,10 @@
 ---
-title: "The Magikarp Lesson: Integrate AI in Your SaaS Product or Get Left Behind" 
+title: "The Magikarp Lesson: Integrate AI in Your SaaS Product or Get Left Behind"
 date: "2024-07-24"
 description: "In just 11 hours, I created an AI agent that could do the work of an entire data science team; providing me with wake-up call for the future of software development."
 image: "/images/articles/magikarp.WEBP"
 artwork: "Concept design of the Magikarp AI agent as an iPhone Application"
+tags: ["AI", "SaaS", "software development", "data science", "machine learning", "technology trends", "business strategy"]
 ---
 
 I used to think integrating Artificial Intelligence (AI) into my Software as a Service (SaaS) entrepreneurial projects

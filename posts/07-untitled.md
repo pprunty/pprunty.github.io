@@ -5,6 +5,7 @@ image: "/images/articles/IMG_6469.JPG"
 description: "An experimental poem by Patrick Prunty from the Untitled Collection."
 artwork: "William Kentridge"
 type: "poem"
+tags: ["poetry", "experimental", "untitled collection"]
 ---
 
 reducing experiences to binary classifications

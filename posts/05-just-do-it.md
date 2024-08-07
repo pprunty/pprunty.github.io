@@ -1,11 +1,10 @@
 ---
-#title: "Just Do It All: Do Everything & Manage Nothing"
 title: "Just Do It (When You Want to Do It)"
-#title: "Just Do It All: Do All Your Interests, Manage None of Them"
 date: "2024-07-25"
 image: "/images/articles/just-do-it.WEBP"
 description: "Don't worry about having multiple interests. Do whatever you want, when you want to do it. Variety after all, is the spice of life."
 artwork: "Still of Shia LaBeouf from the 'Just Do It' video, as featured in the #INTRODUCTIONS art project."
+tags: ["personal development", "motivation", "productivity", "multidisciplinary", "lifelong learning", "self-improvement", "work-life balance", "career advice"]
 ---
 
 Recently, I noticed a wave of social media posts on "how to manage multiple interests" gain much attention. They usually involve some Zen analytics, reflection, and time management diagrams to narrow your interests. The goal? To put you on the path to success by specialising in that one thing or idea that'll make you 'great'. As someone who's always enjoyed being sporadic in my interests, pardon my French, but I think it's all bullshit.

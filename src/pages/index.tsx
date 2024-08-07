@@ -220,7 +220,7 @@ const Home: React.FC = () => {
         `}
         </script>
       </Head>
-        <Title>Patrick Prunty - Full-Stack Software Developer & Blog</Title>
+        <Title>Patrick Prunty — Full-Stack Software Developer & Technology Blog</Title>
       <Subtitle>
         I am a senior full-stack software developer with expertise in Python, C++, and React. Explore my software development projects and blog posts for insights into technology, programming, and creative media.
       </Subtitle>

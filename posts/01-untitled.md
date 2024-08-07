@@ -5,6 +5,7 @@ image: "/images/articles/mad.jpg"
 description: "An experimental poem by Patrick Prunty from the Untitled Collection."
 artwork: "Jak Ruiz"
 type: "poem"
+tags: ["poetry", "experimental", "untitled collection"]
 ---
 
 Deliciously delicate so delectable this.

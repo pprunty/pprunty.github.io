@@ -23,10 +23,11 @@ interface BlogPostProps {
   artwork?: string;
 }
 
-const BlogPostHeader = ({ title, description, imagePath, router, date, author }) => (
+const BlogPostHeader = ({ title, description, imagePath, router, date, author, tags }) => (
   <Head>
     <title>{title} | Patrick Prunty Blog</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content={tags.join(', ')} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={`https://patrickprunty.com${imagePath}`} />
@@ -34,7 +35,7 @@ const BlogPostHeader = ({ title, description, imagePath, router, date, author })
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content={`https://patrickprunty.com${router.asPath}`} />
-    <meta property="og:site_name" content="Your Site Name" />
+    <meta property="og:site_name" content="Patrick Prunty Blog" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -56,7 +57,7 @@ const BlogPostHeader = ({ title, description, imagePath, router, date, author })
         "dateModified": date,
         "author": {
           "@type": "Person",
-          "name": author || "Patrick Prunty"
+          "name": author
         },
         "publisher": {
           "@type": "Organization",
@@ -70,6 +71,7 @@ const BlogPostHeader = ({ title, description, imagePath, router, date, author })
           "@type": "WebPage",
           "@id": `https://patrickprunty.com${router.asPath}`
         },
+        "keywords": tags.join(', '),
         "articleSection": "Blog"
       })}
     </script>
@@ -143,6 +145,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
           width={750}
           height={400}
           placeholder={'blur'}
+          loading="lazy"
         />
         {artwork && <Artwork>Artwork: {artwork}</Artwork>}
       </ImageWrapper>
@@ -171,7 +174,7 @@ const BlogPostContent: React.FC<{ title: string; date: string; content: string; 
   );
 };
 
-export default function BlogPost({ title, date, content, image, description, artwork }: BlogPostProps) {
+export default function BlogPost({ title, date, content, image, description, artwork, tags }: BlogPostProps) {
   const router = useRouter();
   const imagePath = image;
 
@@ -183,7 +186,8 @@ export default function BlogPost({ title, date, content, image, description, art
         imagePath={imagePath}
         router={router}
         date={date}
-        author="Patrick Prunty"  // Or use a dynamic author if you have multiple authors
+        author="Patrick Prunty"
+        tags={tags}
       />
       <BlogPostContent title={title} date={date} content={content} imagePath={imagePath} artwork={artwork} />
     </>
@@ -204,7 +208,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
   const htmlContent = await markdownToHtml(content);
-  return { props: { ...data, content: htmlContent, artwork: data.artwork || null } };
+  return {
+    props: {
+      ...data,
+      content: htmlContent,
+      artwork: data.artwork || null,
+      tags: data.tags || []
+    }
+  };
 };
 
 const BottomBar = styled.div`
