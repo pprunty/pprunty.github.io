@@ -197,10 +197,10 @@ const Home: React.FC = () => {
         <title>Patrick Prunty - Software Developer & Blog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Patrick Prunty is a full-stack software developer offering insights through his blog on software development, technology, and creative media. Explore his projects and connect for consultations." />
-        <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
+        <meta property="og:image" content="https://patrickprunty.com/favicon.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <link rel="icon" href="/images/favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
         <meta property="og:type" content="profile" />
         <meta name="keywords" content="software developer, software development blog, full-stack developer, jigsaw presents, Python, Artificial Intelligence, React, TypeScript, software engineering, technology insights" />
         <script type="application/ld+json">
