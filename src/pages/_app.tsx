@@ -32,7 +32,7 @@ const Container = styled.div`
 
   @media(min-width: 768px) {
     width: 80%; /* Increase the width to 90% on larger screens */
-    max-width: 1200px; /* Optionally increase the max-width */
+    max-width: 1300px; /* Optionally increase the max-width */
     margin-left: auto;
     margin-right: auto;
   }

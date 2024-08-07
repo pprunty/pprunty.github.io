@@ -188,16 +188,22 @@ const Navbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  padding: 20px 20px;
+  width: 100%; /* Set initial width to 100% */
+  max-width: 1400px; /* Maximum width for large screens */
+  padding: 20px;
   background-color: inherit;
   color: black;
-  margin: 0 auto; /* Center the navbar */
+  margin: 0 auto; /* Center the navbar horizontally */
+
+  @media (max-width: 1200px) {
+    width: 90%; /* Adjust width for medium screens */
+  }
 
   @media (max-width: 1000px) {
-    display: none;
+    display: none; /* Hide navbar on smaller screens */
   }
 `;
+
 
 const LogoWrapper = styled.div`
   cursor: pointer;

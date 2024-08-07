@@ -224,7 +224,7 @@ const BottomBar = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 680px;
+  max-width: 700px;
   margin-top: 40px;
   margin-bottom: 20px;
 
@@ -267,7 +267,7 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 680px;
+  max-width: 700px;
   margin: 0 auto;
 `;
 
@@ -329,7 +329,7 @@ const Title = styled.div`
   margin-top: 100px;
   color: #000;
   text-align: left;
-  max-width: 680px;
+  max-width: 700px;
   margin-block-start: 0.6em !important;
   margin-block-end: 0.6em !important;
 
@@ -347,7 +347,7 @@ const MetaSection = styled.div`
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
-  max-width: 680px;
+  max-width: 700px;
   gap: 5px;
 `;
 
@@ -398,7 +398,7 @@ const Date = styled.div`
 const Content = styled.div`
   font-size: 20px;
   line-height: 1.6;
-  max-width: 680px;
+  max-width: 700px;
   width: 100%;
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
   color: #333;
