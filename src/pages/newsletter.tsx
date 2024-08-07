@@ -71,8 +71,8 @@ const NewsletterPage: React.FC = () => {
       <Head>
         <title>Patrick Prunty - Newsletter</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/images/favicon.ico" />
-        <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="https://patrickprunty.com/favicon.png" />
         <meta property="og:title" content="Patrick Prunty's Newsletter" />
         <meta property="og:description" content={`Join over ${process.env.NEXT_PUBLIC_SUBSCRIBERS} subscribers and stay up to date with my latest blog posts!`} />
         <meta property="og:type" content="article" />

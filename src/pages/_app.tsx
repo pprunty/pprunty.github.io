@@ -87,7 +87,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta name="description" content="Software, education, blog, YouTube creative media & consultations." />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <link rel="icon" href="/images/favicon.png" />
+        <link rel="icon" href="favicon.png" />
       </Head>
       <StyledThemeProvider theme={lightTheme}>
         <GlobalStyle theme={lightTheme} />

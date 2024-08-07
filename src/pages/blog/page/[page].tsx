@@ -153,7 +153,7 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Explore Patrick Prunty's blog for expert insights on technology, AI, software development, and entrepreneurship. Contributor to Level Up Coding, Digital Global Traveler, and Start it Up." />
   <meta property="og:title" content="Patrick Prunty's Blog: Tech, AI, and Software Development Insights" />
-  <meta property="og:image" content="https://patrickprunty.com/images/favicon.png" />
+  <meta property="og:image" content="https://patrickprunty.com/favicon.png" />
   <meta property="og:description" content="Dive into cutting-edge topics in technology, AI, and software engineering with Patrick Prunty. Expert advice and insights for developers and tech enthusiasts." />
   <meta name="keywords" content="patrick prunty, software development, artificial intelligence, programming, python, technology trends, entrepreneurship, tech blog" />
   <link rel="canonical" href="https://patrickprunty.com/blog" />
@@ -163,8 +163,8 @@ export default function BlogList({ posts, currentPage, totalPages }: BlogListPro
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Patrick Prunty's Blog: Tech, AI, and Software Development Insights" />
   <meta name="twitter:description" content="Expert insights on technology, AI, software development, and entrepreneurship from Patrick Prunty." />
-  <meta name="twitter:image" content="https://patrickprunty.com/images/favicon.png" />
-  <link rel="icon" href="/images/favicon.ico" />
+  <meta name="twitter:image" content="https://patrickprunty.com/favicon.png" />
+  <link rel="icon" href="/favicon.ico" />
 </Head>
       <PageLoader loading={loading} />
 <Title>Patrick Prunty's Blog: Technology, AI, and Software Development</Title>
