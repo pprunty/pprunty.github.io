@@ -133,8 +133,8 @@ const SubscribeButton = styled.button`
   padding: 0; /* Remove padding to maintain consistent size */
   font-size: 16px;
   cursor: pointer;
-  background-color: #333;
-  border: 1px solid #333;
+  background-color: #111;
+  border: 1px solid #111;
   font-weight: 600;
   color: #F0F0F0;
   display: flex;
